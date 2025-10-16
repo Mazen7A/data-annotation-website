@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title id="page-title">تفاصيل المشروع</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+  <style>
+    .app-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:1100;display:flex;align-items:center;justify-content:space-between;background:#fff;padding:0 20px;border-bottom:1px solid #eee;}
+    .site-logo-fixed{height:54px;margin-left:12px;}
+    .brand{font-weight:bold;color:#14532d;font-size:20px;}
+    .header-actions{display:flex;gap:10px;}
+    .header-actions button{padding:6px 14px;border-radius:8px;border:none;background:#f0fdf4;color:#14532d;font-weight:bold;cursor:pointer;}
+    .header-actions button:hover{background:#bbf7d0;}
+    body{direction:rtl;text-align:right;padding-top:90px;background:#f7f8fa;}
+    .page{padding:16px;}
+    .container{max-width:980px;margin:0 auto;}
+    .page-title{font-size:28px;font-weight:800;color:#14532d;margin:6px 0 18px 0;text-align:center;}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin-bottom:16px;}
+    .section-title{margin:0 0 10px 0;font-size:18px;color:#0f5132;}
+    .small-gray{color:#1f2937;line-height:1.9;}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+    .chip{padding:6px 12px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.95rem;}
+    .chip-muted{color:#374151;border-style:dashed;}
+    .qtype-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+    .qtype-card{display:block;background:#fff;border:1px solid #c7d3c9;border-radius:14px;padding:18px;text-decoration:none;}
+    .qtype-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.06);}
+    .qtype-card h3{margin:0;font-size:16px;color:#0f5132;}
+    .stats-btn { margin-bottom: 16px; background: #d1fae5; border: none; color: #14532d; font-weight: bold; padding: 10px 20px; border-radius: 8px; font-size: 16px; cursor: pointer;}
+    .stats-btn:hover { background: #bbf7d0;}
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+    <div class="brand">منصة إثراء الثقافة السعودية</div>
+  <div class="header-actions">
+    <button class="link" onclick="goToHome()">الرئيسية</button>
+    <button class="btn-back" onclick="history.back()">رجوع</button>
+    <button onclick="logout()">تسجيل خروج</button>
+  </div>
+  </header>
+
+  <div class="page">
+    <div class="container">
+      <h1 id="project-name" class="page-title">تفاصيل المشروع</h1>
+      <!-- زر الإحصائيات حسب الدور -->
+      <div id="stats-bar"></div>
+      <!-- ملخص + ميتا -->
+      <div class="card">
+        <h2 class="section-title">ملخص المشروع</h2>
+        <p id="project-summary" class="small-gray">جاري التحميل...</p>
+        <div id="pd-meta" class="chips"></div>
+      </div>
+      <!-- أنواع الأسئلة كبطاقات -->
+      <h2 class="section-title" style="margin-top:18px">ابدأ التقييم</h2>
+      <p class="small-gray" style="margin-top:-6px;margin-bottom:10px">اختر نوع الأسئلة لبدء الجلسة:</p>
+      <div id="qtype-wrap" class="qtype-grid"></div>
+      <!-- (اختياري) لوحة المدير -->
+      <div id="manager-panel" style="display:none">
+        <h2 class="section-title" style="margin-top:18px">إحصائيات المشروع</h2>
+        <div class="card">
+          <p><strong>عدد المقيمين:</strong> 3</p>
+          <p id="manager-stats" class="small-gray">—</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goToHome(){ window.location.href = "../home/select-role.html"; }
+    function logout(){ window.location.href = "../auth/login.html"; }
+    function goToStatsManager(){ window.location.href = "manager-stats.html"; }
+    function goToStatsUser(){ window.location.href = "my-stats.html"; }
+    function qp(name){ const u = new URL(location.href); return u.searchParams.get(name)||""; }
+    function safeNum(v){ return (v!=null && String(v).trim()!=="" && !isNaN(v)) ? Number(v) : null; }
+    function pickCardSummary(p){
+      return (
+        p.summaryShort || p.cardSummary || p.summary || p.shortDescription ||
+        p.userCardText || p.userDescription || p.managerDescription ||
+        "لا توجد نبذة متاحة."
+      );
+    }
+    const TYPE_MAP = [
+      {test:/open/i, label:'أسئلة مفتوحة', url:'../annotate/open-ended.html'},
+      {test:/mcq/i,  label:'اختيار من متعدد (MCQ)', url:'../annotate/mcq.html'},
+      {test:/list/i, label:'قائمة اختيار', url:'../annotate/list.html'},
+      {test:/(true|false)/i, label:'صحيح/خطأ', url:'../annotate/true-false.html'}
+    ];
+    function labelFor(t){ const m=TYPE_MAP.find(x=>x.test.test(t)); return m?m.label:t; }
+    function urlFor(t){ const m=TYPE_MAP.find(x=>x.test.test(t)); return m?m.url:'../annotate/open-ended.html'; }
+    function fromQuery(){
+      const types = (qp('qtypes')||'').split(',').map(s=>s.trim()).filter(Boolean);
+      return {
+        id: qp('id') || null,
+        name: qp('title') || null,
+        summary: qp('summary') || null,
+        questionTypes: types.length? types : null,
+        totalQuestions: safeNum(qp('total')),
+        role: (qp('role')||'user').toLowerCase()
+      };
+    }
+    function fromSession(){
+      try{ const raw = sessionStorage.getItem('lastProject'); return raw? JSON.parse(raw) : null; }catch(e){ return null; }
+    }
+    function fromMock(id){
+      const list = window.PROJECTS||[];
+      return list.find(p => String(p.id)===String(id)) || null;
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const q = fromQuery();
+      const s = fromSession();
+      const m = q.id ? fromMock(q.id) : null;
+      const prj = {
+        id:             q.id             || (s && s.id)             || (m && m.id)             || null,
+        name:           q.name           || (s && s.name)           || (m && m.name)           || "تفاصيل المشروع",
+        summary:        q.summary        || (s && (s.summaryShort||s.cardSummary||s.summary||s.shortDescription||s.userCardText||s.userDescription)) || (m && pickCardSummary(m)) || "لا توجد نبذة متاحة.",
+        questionTypes:  q.questionTypes  || (s && s.questionTypes)  || (m && m.questionTypes)  || [],
+        totalQuestions: (q.totalQuestions!=null ? q.totalQuestions : (s && s.totalQuestions!=null ? s.totalQuestions : (m && m.totalQuestions!=null ? m.totalQuestions : null))),
+        role:           q.role           || (s && s.role)           || 'user',
+        annotatorsCount:(m && m.annotatorsCount) || (s && s.annotatorsCount) || 3,
+        managerStats:   (m && m.managerStats) || (s && s.managerStats) || ''
+      };
+
+      document.getElementById('page-title').textContent = prj.name || 'تفاصيل المشروع';
+      document.getElementById('project-name').textContent = prj.name || 'تفاصيل المشروع';
+      document.getElementById('project-summary').textContent = prj.summary;
+
+      const chips = [];
+      (prj.questionTypes || []).forEach(t => chips.push(`<span class="chip">${labelFor(t)}</span>`));
+      if (prj.totalQuestions!=null) chips.push(`<span class="chip chip-muted">عدد الأسئلة: ${prj.totalQuestions}</span>`);
+      document.getElementById('pd-meta').innerHTML = chips.join('');
+      const wrap = document.getElementById('qtype-wrap');
+      wrap.innerHTML = '';
+      (prj.questionTypes || []).forEach(t=>{
+        const a = document.createElement('a');
+        a.className = 'qtype-card';
+        a.href = `${urlFor(t)}?projectId=${encodeURIComponent(prj.id || '')}`;
+        a.innerHTML = `<h3>${labelFor(t)}</h3>`;
+        wrap.appendChild(a);
+      });
+
+      // زر الإحصائيات حسب الدور
+      const statsBar = document.getElementById('stats-bar');
+      if (prj.role==='manager' || prj.role==='admin'){
+        statsBar.innerHTML = `<button class="stats-btn" onclick="goToStatsManager()">إحصائيات جميع المستخدمين</button>`;
+        document.getElementById('manager-panel').style.display='block';
+        document.getElementById('manager-stats').textContent = prj.managerStats || 'لا توجد إحصائيات حالياً.';
+      } else {
+        statsBar.innerHTML = `<button class="stats-btn" onclick="goToStatsUser()">إحصائياتي</button>`;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* assets/css/style.css - النسخة النهائية (تنسيق الهيدر الجديد) */
+*{box-sizing:border-box;font-family:system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;} 
+:root{
+    --brand: #14532d; 
+    --brand-text: #fff;
+    --brand-accent: #1e7145;
+    --gray-bg: #f7f7fb;
+    --card-bg: #fff;
+    --back-button-color: #6c757d; 
+}
+html,body{height:100%   padding-top:100px;}
+body{margin:0;background:var(--gray-bg);color:#000   padding-top:100px;}
+
+.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:var(--card-bg);
+    border-bottom:2px solid var(--brand); 
+    z-index:1000;
+    padding:12px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between; 
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+}
+.brand img{height:52px;width:auto}
+.brand strong{font-size:20px;color:var(--brand);font-weight: 800;}
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 0; 
+    margin-left: auto; 
+}
+.container{max-width:1000px;margin:0 auto;padding:0 16px}
+.page{padding-top:98px;padding-bottom:24px}
+h1,h2{margin:16px 0;color:var(--brand);font-weight: 700;}
+.card{background:var(--card-bg);padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin:16px 0}
+label{display:block;margin:8px 0 4px;font-weight:700;color:#000}
+input{width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;color:#000;background:#fff}
+button:not(.btn-back),.link{
+    padding:10px 14px;border:0;border-radius:10px;background:var(--brand);color:var(--brand-text);
+    text-decoration:none;display:inline-block;cursor:pointer;font-weight: 600;transition: opacity 0.2s;
+}
+button:not(.btn-back):hover,.link:hover{opacity:.9}
+.btn-back {
+    background: var(--back-button-color);
+    color: #fff;
+    padding:10px 14px;border:0;border-radius:10px;text-decoration:none;
+    display:inline-block;cursor:pointer;font-weight: 600;transition: background 0.2s;
+}
+.btn-back:hover {background: #5a6268;}
+.msg{margin:8px 0;padding:10px;border-radius:10px;background:#f0f0f0;color:#000}
+.msg.error{background:#ffe7e7;color:#b00020}
+.msg.success{background:#e7ffe9;color:#0b7a2a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.small{color:#555;font-size:12px}
+a{color:var(--brand)}
+a:hover {color: var(--brand-accent);}
+.hero-intro{
+    background:var(--card-bg);border:1px solid var(--brand);border-radius:12px;
+    padding:14px 16px;box-shadow:0 2px 10px rgba(0,0,0,.04);margin:16px 0
+}
+.hero-intro h2{margin:0 0 8px 0;font-size:18px; color:var(--brand); font-weight: 700;}
+.hero-intro p{margin:6px 0;line-height:1.6}
+.card.link { background-color: var(--card-bg); color: #000; border: 1px solid var(--back-button-color); text-decoration: none;}
+.card.link:hover { background-color: #f0f0f0; opacity: 1; }
+.card.link h2 { color: var(--brand); }
+
+/* === injected (title/logo/padding and cleanup) === */
+
+
+/* do NOT hide info-card; only target explicit boxes */
+.top-box,#top-right-box{display:none!important}
+body{color:#14532d;line-height:1.9;margin:1.2rem 0   padding-top:100px;}
+.prelogin-blurb h2{font-size:20px;margin-bottom:.6rem}
+/* unified header */
+.app-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:1100;pointer-events:none}
+.site-logo-fixed{position:absolute;top:6px;left:16px;height:84px;width:auto;object-fit:contain;z-index:1101;pointer-events:auto}
+.site-title{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-size:20px;font-weight:700;color:#14532d;background:#fff;padding:6px 14px;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,.05);white-space:nowrap;z-index:1100}
+body{color:#14532d;line-height:1.9;margin:1.2rem 0  padding-top:100px;}
+.prelogin-blurb h2{font-size:18px;margin-bottom:.4rem}
+
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+.prelogin-blurb h2,.prelogin-blurb p{color:#14532d;font-weight:700}
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+body{padding-top:100px}
+/* chips/badges for project meta */
+.chip{padding:4px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.92rem}
+.chip-muted{color:#374151;border-style:dashed}

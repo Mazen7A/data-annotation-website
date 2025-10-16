@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <script src="../assets/js/app.js" defer></script>
+  <style>
+    body { direction: rtl; text-align: right; }
+    .app-header { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0 20px; border-bottom: 1px solid #eee; height: 72px; position: fixed; top: 0; left: 0; right: 0; z-index: 1100;}
+    .site-logo-fixed { height: 54px; margin-left: 12px; }
+    .brand { font-weight: bold; color: #14532d; font-size: 20px; }
+    .header-actions { display: flex; gap: 10px; }
+    .page { padding-top: 90px; }
+    .msg.error { color: crimson; margin-bottom: 10px; }
+    .msg.success { color: #14532d; margin-bottom: 10px; }
+    .prelogin-blurb h2 { font-size: 20px; font-style: normal; font-weight: 700; color: #14532d; margin-bottom: .6rem; }
+    .prelogin-blurb strong { font-style: normal; font-weight: 700; color: #14532d; }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+    <div class="brand">منصة إثراء الثقافة السعودية</div>
+    <div class="header-actions"></div>
+  </header>
+  <div class="page">
+    <div class="container">
+      <h1>تسجيل الدخول</h1>
+      <div id="loginMsg" class="msg"></div>
+      <div class="card">
+        <section class="prelogin-blurb" dir="rtl">
+          <h2>سعوديتنا.. من كل منطقة قصة، ومن كل قصة هوية</h2>
+          <p>نوثّق تنوّع الثقافة السعودية بمناطقها المختلفة في تجربة تفاعلية تجمع بين الأصالة والتقنية.</p>
+          <p>انضم معنا، سواء كنت طالبًا، باحثًا، أو شغوفًا بثقافة وطنك، وكن جزءًا من مشروع يوثّق <strong>سعوديتنا</strong> بعيون المستقبل.</p>
+        </section>
+        <form id="loginForm">
+          <label>اسم المستخدم أو البريد الإلكتروني</label>
+          <input type="text" id="loginId" placeholder="مثال: مازن أو mazen@example.com" required />
+          <label>كلمة المرور</label>
+          <input type="password" id="loginPw" placeholder="أدخل كلمة المرور" required />
+          <button type="submit">تسجيل الدخول</button>
+        </form>
+        <p class="small" style="margin-top:10px">ليس لديك حساب؟ <a href="./register.html">إنشاء حساب</a></p>
+        <p class="small" style="margin-top:10px"><a href="./forgot.html">نسيت كلمة المرور؟</a></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const id = document.getElementById("loginId").value.trim();
+      const pw = document.getElementById("loginPw").value;
+      const msg = document.getElementById("loginMsg"); msg.textContent = "";
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      const found = users.find(u => (u.username === id || u.email === id));
+      if (!found) {
+        msg.textContent = "اسم المستخدم أو البريد الإلكتروني غير صحيح.";
+        msg.className = "msg error"; return;
+      }
+      if (found.password !== pw) {
+        msg.textContent = "كلمة المرور غير صحيحة.";
+        msg.className = "msg error"; return;
+      }
+      setCurrentUser({username: found.username, email: found.email});
+      window.location.href = "../home/select-role.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+/* === injected (title/logo/padding and cleanup) === */
+
+
+/* do NOT hide info-card; only target explicit boxes */
+.top-box,#top-right-box{display:none!important}
+body{color:#14532d;line-height:1.9;margin:1.2rem 0   padding-top:100px;}
+.prelogin-blurb h2{font-size:20px;margin-bottom:.6rem}
+/* unified header */
+.app-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:1100;pointer-events:none}
+.site-logo-fixed{position:absolute;top:6px;left:16px;height:84px;width:auto;object-fit:contain;z-index:1101;pointer-events:auto}
+.site-title{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-size:20px;font-weight:700;color:#14532d;background:#fff;padding:6px 14px;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,.05);white-space:nowrap;z-index:1100}
+body{color:#14532d;line-height:1.9;margin:1.2rem 0  padding-top:100px;}
+.prelogin-blurb h2{font-size:18px;margin-bottom:.4rem}
+
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+.prelogin-blurb h2,.prelogin-blurb p{color:#14532d;font-weight:700}
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+body{padding-top:100px}
