@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>إدارة المشروع</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+  <style>
+    body {
+      direction: rtl;
+      text-align: right;
+      background: #f7f8fa;
+      padding-top: 90px;
+    }
+
+    .app-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 0 20px;
+      border-bottom: 1px solid #eee;
+      height: 72px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1100;
+    }
+
+    .site-logo-fixed {
+      height: 54px;
+      margin-left: 12px;
+    }
+
+    .brand {
+      font-weight: bold;
+      color: #14532d;
+      font-size: 20px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .header-actions button {
+      font-size: 16px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: none;
+      background: #f0fdf4;
+      color: #14532d;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .header-actions button:hover {
+      background: #bbf7d0;
+    }
+
+    .page {
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #14532d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      color: #0f5132;
+    }
+
+    .stat {
+      font-size: 18px;
+      color: #1f2937;
+      margin-bottom: 6px;
+    }
+
+    .chip {
+      display: inline-block;
+      background: #d1fae5;
+      color: #14532d;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin: 4px 6px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed" />
+    <div class="brand">منصة إثراء الثقافة السعودية</div>
+    <div class="header-actions">
+      <button onclick="goToHome()">الرئيسية</button>
+      <button onclick="history.back()">رجوع</button>
+      <button onclick="logout()">تسجيل خروج</button>
+    </div>
+  </header>
+
+  <div class="page">
+    <h1 id="project-title">تفاصيل المشروع</h1>
+
+    <div class="section">
+      <h2>وصف المشروع</h2>
+      <p id="project-description" class="stat">--</p>
+    </div>
+
+    <div class="section">
+      <h2>إحصائيات المشروع</h2>
+      <p class="stat" id="project-questions">عدد الأسئلة: --</p>
+      <p class="stat" id="project-annotators">عدد المقيمين: --</p>
+      <p class="stat" id="project-progress">نسبة الإنجاز: --</p>
+      <p class="stat" id="project-completed">المهام المنجزة: --</p>
+    </div>
+
+    <div class="section">
+      <h2>أنواع الأسئلة</h2>
+      <div id="qtypes"></div>
+    </div>
+  </div>
+
+  <script>
+    function getProjectFromQuery() {
+      const url = new URL(window.location.href);
+      return url.searchParams.get("id");
+    }
+
+    function loadProjectDetails() {
+      const pid = getProjectFromQuery();
+      const p = (window.PROJECTS || []).find(x => x.id === pid);
+
+      if (!p) return;
+
+      document.getElementById("project-title").textContent = p.name || "تفاصيل المشروع";
+      document.getElementById("project-description").textContent = p.managerDescription || "لا يوجد وصف.";
+      document.getElementById("project-questions").textContent = "عدد الأسئلة: " + (p.totalQuestions || "--");
+      document.getElementById("project-annotators").textContent = "عدد المقيمين: " + (p.annotatorsCount || "--");
+      document.getElementById("project-completed").textContent = "المهام المنجزة: " + (p.completedTasks || "--");
+      document.getElementById("project-progress").textContent = "نسبة الإنجاز: " + (p.progressPercent || "--") + "%";
+
+      const qwrap = document.getElementById("qtypes");
+      (p.questionTypes || []).forEach(t => {
+        const span = document.createElement("span");
+        span.className = "chip";
+        span.textContent = t;
+        qwrap.appendChild(span);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", loadProjectDetails);
+  </script>
+</body>
+</html>

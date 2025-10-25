@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>إحصائياتي</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <script src="../assets/js/mockData.js"></script>
+  <style>
+    body {
+      direction: rtl;
+      text-align: right;
+      background: #f7f8fa;
+      padding-top: 90px;
+    }
+
+    .app-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 0 20px;
+      border-bottom: 1px solid #eee;
+      height: 72px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999 !important;
+    }
+
+    .site-logo-fixed {
+      height: 54px;
+      margin-left: 12px;
+    }
+
+    .brand {
+      font-weight: bold;
+      color: #14532d;
+      font-size: 20px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      position: relative;
+      z-index: 10000;
+    }
+
+    .header-actions button {
+      font-size: 16px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: none;
+      background: #f0fdf4;
+      color: #14532d;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      position: relative;
+      z-index: 10001;
+      pointer-events: auto;
+    }
+
+    .header-actions button:hover {
+      background: #bbf7d0;
+    }
+
+    .page {
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #14532d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .stat-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .stat-card h2 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      color: #0f5132;
+    }
+
+    .stat {
+      font-size: 18px;
+      color: #1f2937;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+    <div class="brand">منصة إثراء الثقافة السعودية</div>
+    <div class="header-actions">
+      <button onclick="goToHome()">الرئيسية</button>
+      <button onclick="history.back()">رجوع</button>
+      <button onclick="logout()">تسجيل خروج</button>
+    </div>
+  </header>
+
+  <div class="page">
+    <h1>إحصائياتي</h1>
+
+    <div id="stats-content">
+      <div class="stat-card">
+        <h2>عدد المهام المخصصة لي</h2>
+        <p class="stat" id="assigned-tasks">--</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>عدد المهام المنجزة</h2>
+        <p class="stat" id="completed-tasks">--</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>نسبة الإنجاز</h2>
+        <p class="stat" id="progress">--</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goToHome() {
+      window.location.href = "select-role.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("currentUser");
+      window.location.href = "../auth/login.html";
+    }
+
+    function safeNum(v) {
+      return (v != null && String(v).trim() !== "" && !isNaN(v)) ? Number(v) : null;
+    }
+
+    function getCurrentUser() {
+      const u = localStorage.getItem("currentUser");
+      return u ? JSON.parse(u) : null;
+    }
+
+    function loadUserStats() {
+      const projects = window.PROJECTS || [];
+      const currentUser = getCurrentUser();
+      const myId = currentUser?.username || "user-1";
+      let assigned = 0;
+      let completed = 0;
+
+      projects.forEach(p => {
+        const userStats = p.userStats?.[myId];
+        if (userStats) {
+          assigned += safeNum(userStats.assigned) || 0;
+          completed += safeNum(userStats.completed) || 0;
+        }
+      });
+
+      document.getElementById('assigned-tasks').textContent = assigned;
+      document.getElementById('completed-tasks').textContent = completed;
+      const progress = assigned > 0 ? Math.round((completed / assigned) * 100) : 0;
+      document.getElementById('progress').textContent = progress + "%";
+    }
+
+    document.addEventListener('DOMContentLoaded', loadUserStats);
+  </script>
+</body>
+</html>
