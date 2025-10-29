@@ -1,66 +1,74 @@
 window.PROJECTS = [
   {
-    id: "SC_NATIONAL",
-    name: "الثقافة السعودية: العادات الوطنية (على مستوى المملكة)",
-    userDescription: "شارك في تقييم وتصنيف العادات والتقاليد المشتركة في جميع مناطق المملكة، مثل آداب الأكل والتحيات، لبناء قاعدة بيانات تمثل الثقافة السعودية العامة.",
-    managerDescription: "منصة شاملة لمتابعة سير عمل مشروع العادات الوطنية. يمكنك مراقبة أداء الين، تتبع دقة التصنيفات، واستعراض الإحصائيات.",
-    totalQuestions: 10,
-    annotatorsCount: 18,
-    questionTypes: ["أسئلة مفتوحة", "اختيار من متعدد", "قائمة اختيار", "صحيح/خطأ"],
-    completedTasks: 150,
-    progressPercent: 75,
-    managerStats: "تم إنجاز 150 مهمة بنسبة 75٪، والمشاركة من 18 مقيّم.",
-    userStats: {
-      "user-1": { assigned: 40, completed: 30 },
-      "user-2": { assigned: 60, completed: 50 }
-    }
+      id: "SC_GENERAL", 
+      name: "المشروع الوطني العام",
+      managerDescription: "ملخص المشروع الوطني لمديري التقييم: يتضمن أسئلة مفتوحة واختيار من متعدد تغطي جميع الفئات العامة.",
+      userDescription: "المهمة: تقييم جودة إجابات الأسئلة العامة حول العادات والتقاليد الوطنية.",
+      questionTypes: ["Open-ended", "MCQ (one correct)"],
+      annotatorsCount: 15,
+      stats: { completedTasks: 120, totalTasks: 250 },
+      categories: [
+          { id: "Food", label: "الطعام والمشروبات" },
+          { id: "Clothes", label: "الملابس والزي التقليدي" },
+          { id: "Crafts and Work", label: "الحرف والأعمال اليدوية" },
+          { id: "Celebration", label: "الاحتفالات والمناسبات" },
+          { id: "Entertainment", label: "الترفيه والفنون" },
+          { id: "Dating", label: "المناسبات الاجتماعية والتعارف" }
+      ]
   },
   {
-    id: "SC_CENTRAL",
-    name: "الثقافة السعودية: المنطقة الوسطى (نجد)",
-    userDescription: "يركز هذا المشروع على التراث النجدي في وسط المملكة، بما في ذلك الأكلات الشعبية والأزياء التقليدية والفنون مثل العرضة والسامري. مهمتك هي توثيق العادات الدقيقة.",
-    managerDescription: "متابعة وتقييم مدى تطابق التقييمات في مشروع المنطقة الوسطى. يمكنك استخراج التقارير اللازمة لتقييم كفاءة فريق العمل.",
-    totalQuestions: 10,
-    annotatorsCount: 12,
-    questionTypes: ["أسئلة مفتوحة", "اختيار من متعدد", "قائمة اختيار", "صحيح/خطأ"],
-    completedTasks: 80,
-    progressPercent: 60,
-    managerStats: "تم إنجاز 80 مهمة بنسبة 60٪، والمشاركة من 12 مقيّم.",
-    userStats: {
-      "user-1": { assigned: 20, completed: 15 },
-      "user-2": { assigned: 30, completed: 25 }
-    }
+      id: "SC_SOUTH", 
+      name: "المشروع الجنوبي: عادات وتقاليد المنطقة الجنوبية",
+      managerDescription: "ملخص المشروع الجنوبي لمديري التقييم: تركيز على تنوع العادات في مناطق عسير ونجران وجازان والباحة.",
+      userDescription: "المهمة: تقييم جودة إجابات الأسئلة حول عادات وتقاليد المنطقة الجنوبية.",
+      questionTypes: ["Open-ended", "MCQ (one correct)", "MCQ (multiple correct)"],
+      annotatorsCount: 8,
+      stats: { completedTasks: 60, totalTasks: 100 },
+      categories: [
+          { id: "Food", label: "أطباق المنطقة الجنوبية" },
+          { id: "Clothes", label: "أزياء المنطقة الجنوبية" },
+          { id: "Crafts and Work", label: "حرف وصناعات المنطقة الجنوبية" },
+          { id: "Celebration", label: "احتفالات المنطقة الجنوبية" },
+          { id: "Entertainment", label: "فنون وأهازيج المنطقة الجنوبية" },
+          { id: "Dating", label: "التعارف والزواج في الجنوب" }
+      ]
   },
   {
-    id: "SC_EASTERN",
-    name: "الثقافة السعودية: المنطقة الشرقية",
-    userDescription: "يتناول هذا المشروع التراث الساحلي والبحري للمنطقة الشرقية، مثل أكلات البلاليط والساقو، والحرف مثل صناعة السفن وحياكة البشوت. الهدف هو توثيق العادات والأنشطة البحرية.",
-    managerDescription: "لوحة تحكم لمراقبة جودة البيانات في مشروع المنطقة الشرقية. يمكنك مراجعة تقدم الين بانتظام.",
-    totalQuestions: 10,
-    annotatorsCount: 15,
-    questionTypes: ["أسئلة مفتوحة", "اختيار من متعدد", "قائمة اختيار", "صحيح/خطأ"],
-    completedTasks: 120,
-    progressPercent: 70,
-    managerStats: "تم إنجاز 120 مهمة بنسبة 70٪، والمشاركة من 15 مقيّم.",
-    userStats: {
-      "user-1": { assigned: 25, completed: 20 },
-      "user-2": { assigned: 35, completed: 30 }
-    }
+      id: "SC_NORTH", 
+      name: "المشروع الشمالي: عادات وتقاليد المنطقة الشمالية",
+      managerDescription: "ملخص المشروع الشمالي لمديري التقييم: يغطي عادات مناطق الحدود الشمالية والجوف وحائل وتبوك.",
+      userDescription: "المهمة: تقييم جودة إجابات الأسئلة حول عادات وتقاليد المنطقة الشمالية.",
+      questionTypes: ["Open-ended", "MCQ (one correct)"],
+      annotatorsCount: 6,
+      stats: { completedTasks: 35, totalTasks: 80 },
+      categories: [
+          { id: "Food", label: "أطباق المنطقة الشمالية" },
+          { id: "Clothes", label: "أزياء المنطقة الشمالية" },
+          { id: "Celebration", label: "احتفالات المنطقة الشمالية" },
+          { id: "Dating", label: "التعارف والزواج في الشمال" }
+      ]
   },
   {
-    id: "SC_NORTHERN",
-    name: "الثقافة السعودية: المنطقة الشمالية",
-    userDescription: "يستعرض هذا المشروع العادات والتقاليد في شمال المملكة، بما في ذلك المأكولات مثل المنسف والمريس، وأساليب الضيافة، والملابس مثل السديرية والشرش، والفنون الشعبية مثل الدحة والسامري. ساهم في توثيق التراث الشمالي.",
-    managerDescription: "متابعة سير العمل في مشروع المنطقة الشمالية. يجب التركيز على متابعة مدى دقة الإجابات في هذا القسم.",
-    totalQuestions: 10,
-    annotatorsCount: 9,
-    questionTypes: ["أسئلة مفتوحة", "اختيار من متعدد", "قائمة اختيار", "صحيح/خطأ"],
-    completedTasks: 65,
-    progressPercent: 50,
-    managerStats: "تم إنجاز 65 مهمة بنسبة 50٪، والمشاركة من 9 مقيّمين.",
-    userStats: {
-      "user-1": { assigned: 10, completed: 8 },
-      "user-2": { assigned: 15, completed: 10 }
-    }
+      id: "SC_EAST", 
+      name: "المشروع الشرقي: عادات وتقاليد المنطقة الشرقية",
+      managerDescription: "ملخص المشروع الشرقي لمديري التقييم: يركز على عادات مناطق الدمام والخبر والأحساء والجبيل.",
+      userDescription: "المهمة: تقييم جودة إجابات الأسئلة حول عادات وتقاليد المنطقة الشرقية.",
+      questionTypes: ["Open-ended", "MCQ (multiple correct)"],
+      annotatorsCount: 10,
+      stats: { completedTasks: 80, totalTasks: 150 },
+      categories: [
+          { id: "Food", label: "أطباق المنطقة الشرقية" },
+          { id: "Clothes", label: "أزياء المنطقة الشرقية" },
+          { id: "Crafts and Work", label: "صناعات المنطقة الشرقية" },
+          { id: "Entertainment", label: "تراث المنطقة الشرقية" }
+      ]
   }
+];
+
+window.RATING_OPTIONS = [
+  { id: 'perfect', label: 'إجابة ممتازة (100%)', score: 100 },
+  { id: 'good', label: 'إجابة جيدة (75%)', score: 75 },
+  { id: 'average', label: 'إجابة مقبولة (50%)', score: 50 },
+  { id: 'poor', label: 'إجابة ضعيفة (25%)', score: 25 },
+  { id: 'irrelevant', label: 'غير ذات صلة (0%)', score: 0 }
 ];
