@@ -1,0 +1,758 @@
+[
+  {
+    "Question": "In Saudi culture, which hand is traditionally used when eating?",
+    "Choices": "–",
+    "Answer": "Right hand",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "In traditional Saudi culture, how is rice typically eaten?",
+    "Choices": "–",
+    "Answer": "By hand",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "In traditional Saudi culture, how do people shape the rice before eating it?",
+    "Choices": "–",
+    "Answer": "Into a ball shape",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the common dining customs in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Cutting meat by hand and serving it to the guest; pouring ghee on the guest’s hand",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the drink that helps relieve stomach cramps?",
+    "Choices": "–",
+    "Answer": "Fennel, anise, or cumin",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the drink that helps relieve menstrual pain in women in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Cinnamon and Qishr",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the main traditional dishes served during Ramadan in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Sambusa, dates, and soup",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is a common gesture of hospitality offered to guests in Saudi homes?",
+    "Choices": "–",
+    "Answer": "Serving Qahwa (coffee) and dates",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the spices traditionally added before serving Saudi coffee?",
+    "Choices": "–",
+    "Answer": "Cardamom and saffron",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What distinguishes the attire of Saudi women in public?",
+    "Choices": "–",
+    "Answer": "Modesty",
+    "Domain": "Common",
+    "Category": "Clothes",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Do students in Saudi Arabia adhere to a uniform dress code?",
+    "Choices": "–",
+    "Answer": "Yes",
+    "Domain": "Common",
+    "Category": "Clothes",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the traditional clothing for an Imam in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Bisht",
+    "Domain": "Common",
+    "Category": "Clothes",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the traditional color of Saudi women's abayas?",
+    "Choices": "–",
+    "Answer": "Black",
+    "Domain": "Common",
+    "Category": "Clothes",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Is it acceptable to wear an agal during a condolence gathering?",
+    "Choices": "–",
+    "Answer": "No",
+    "Domain": "Common",
+    "Category": "Clothes",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the traditional clothing for Saudi women in the street?",
+    "Choices": "–",
+    "Answer": "Abaya",
+    "Domain": "Common",
+    "Category": "Clothes",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What does the gesture of raising the agal in front of an audience mean?",
+    "Choices": "–",
+    "Answer": "Pride, agreement, or excitement",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "When two people meet in their cars and honk their horns, what does this gesture signify?",
+    "Choices": "–",
+    "Answer": "Greeting",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What Arabic phrase is often used to express gratitude?",
+    "Choices": "–",
+    "Answer": "Alhamdulillah",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the second language taught in Saudi schools?",
+    "Choices": "–",
+    "Answer": "English",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the formal greeting in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "As-Salamu Alaikum",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What does the gesture of throwing the shemagh at another person signify?",
+    "Choices": "–",
+    "Answer": "Asking a favor, inviting to dinner, or showing pride",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What does the gesture of shaking a coffee cup mean?",
+    "Choices": "–",
+    "Answer": "The guest has had enough coffee",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the famous welcoming phrases in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Marhaban, Ahlan wa Sahlan",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What does the gesture of snapping fingers while touching the thumb and index finger together signify?",
+    "Choices": "–",
+    "Answer": "Urgency or to draw attention",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What Arabic phrase is used to express hope or intention for the future?",
+    "Choices": "–",
+    "Answer": "Insha’Allah",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What word is commonly used in Saudi Arabia when responding to a request as confirmation?",
+    "Choices": "–",
+    "Answer": "Abshir",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "On which day do most teachers in Saudi Arabia typically gather outside of work?",
+    "Choices": "–",
+    "Answer": "Tuesday",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the most popular communication method used by Saudis?",
+    "Choices": "–",
+    "Answer": "WhatsApp and Snapchat",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the traditional board game in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Keram",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is a traditional musical instrument in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Rababa",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the traditional activity Saudis enjoy in winter?",
+    "Choices": "–",
+    "Answer": "Al-Kashta (desert picnic)",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the place where friends and families gather on occasions?",
+    "Choices": "–",
+    "Answer": "Al-Majlis",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the common traditions in Saudi Arabia on Fridays?",
+    "Choices": "–",
+    "Answer": "Eating fish, family gathering, attending Jumu’ah prayer",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the most commonly used type of fragrance in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Oud",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the tradition when the groom sees the bride for the first time?",
+    "Choices": "–",
+    "Answer": "Al-Shoufah",
+    "Domain": "Common",
+    "Category": "Dating",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What items is the bride not required to buy from the money given by the groom?",
+    "Choices": "–",
+    "Answer": "Jewelry (gold)",
+    "Domain": "Common",
+    "Category": "Dating",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the traditional name for the bride’s night before the wedding?",
+    "Choices": "–",
+    "Answer": "Laylat Al-Henna",
+    "Domain": "Common",
+    "Category": "Dating",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the concept of “association” among coworkers in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Group savings among coworkers",
+    "Domain": "Common",
+    "Category": "Crafts and work",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Where do children traditionally kiss their grandparents in Saudi culture?",
+    "Choices": "–",
+    "Answer": "On the head",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Is it acceptable to stay in the host’s house after the host burns oud?",
+    "Choices": "–",
+    "Answer": "No",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the appropriate days to visit parents in Saudi culture?",
+    "Choices": "–",
+    "Answer": "Any day",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the appropriate days to visit family and friends in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Weekends",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the main cities Saudis travel to in the summer?",
+    "Choices": "–",
+    "Answer": "Riyadh, Jeddah, Makkah, Madinah, Abha, Khobar",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the most popular traditional medicine in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Cauterization",
+    "Domain": "Common",
+    "Category": "Crafts and work",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What illness is commonly treated using cauterization?",
+    "Choices": "–",
+    "Answer": "Stroke",
+    "Domain": "Common",
+    "Category": "Crafts and work",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is a natural remedy that helps soothe throat inflammation in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Honey, orange, or lemon",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is referred to as the “mute doctor” in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Black pepper",
+    "Domain": "Common",
+    "Category": "Food",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Is education in Saudi Arabia mixed between genders?",
+    "Choices": "–",
+    "Answer": "No",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Do Saudi university students receive a stipend?",
+    "Choices": "–",
+    "Answer": "Yes, around 900–1000 SAR",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the hidden reason behind arguments between friends or family at the cashier in Saudi Arabia?",
+    "Choices": "–",
+    "Answer": "Because everyone wants to pay as an act of generosity",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Which traditional Saudi Arabian game involves the use of a hat and is commonly played in social gatherings?",
+    "Choices": "A. Al-Sadu B. Tag Tag Taqia C. Fersha D. Al-Kattab",
+    "Answer": "B. Tag Tag Taqia",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the traditional Saudi game that mimics football?",
+    "Choices": "A. Al-Sadu B. Fersha C. Al-Farfeera D. Tag Tagia",
+    "Answer": "C. Al-Farfeera",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the traditional Saudi activity involving hunting trips with trained birds such as falcons?",
+    "Choices": "A. Al-Mahamel B. Al-Miqnas C. Al-Mirfaq D. Al-Marsad",
+    "Answer": "B. Al-Miqnas",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is one of the names of the traditional Saudi game \"Al-Barbar\"?",
+    "Choices": "A. Umm Al-Khutoot B. Al-Dananeh C. Al-Ziqtah D. Al-Ghammah",
+    "Answer": "A. Umm Al-Khutoot",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What shape do players sit in during the game \"Tag Tag Tagia\"?",
+    "Choices": "A. Circle B. Square C. Rectangle D. Straight line",
+    "Answer": "A. Circle",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What activity is referred to as \"Al-Kashta\" in Saudi culture?",
+    "Choices": "A. Desert trips B. Sea trips C. Mountain trips D. Urban excursions",
+    "Answer": "A. Desert trips",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What shape does the \"Taraha\" take in Saudi traditional play?",
+    "Choices": "A. Square B. Rectangle C. Circle D. Triangle",
+    "Answer": "B. Rectangle",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the traditional game played by girls aged 5–9, similar to jumping rope?",
+    "Choices": "A. Qumrah Shabrah B. Al-Habl C. Al-Mal’aab D. Al-Dawrah",
+    "Answer": "A. Qumrah Shabrah",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the traditional Saudi game that begins with a draw to decide who will jump over others?",
+    "Choices": "A. Sabt Al-Suboot B. Azeem Sari C. Tug of War D. Tag Tag Tagia",
+    "Answer": "A. Sabt Al-Suboot",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "How is the game \"Jakom Al-Theeb\" played in Saudi Arabia?",
+    "Choices": "A. Players hide while one searches for them B. Players chant in a circle C. Players jump over obstacles D. Players catch a thrown object",
+    "Answer": "A. Players hide while one searches for them",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What determines the color of the \"Mishlah\" (traditional cloak) at official Saudi events?",
+    "Choices": "A. The nature of the event B. The presence of the King or Crown Prince C. The location of the event D. The number of attendees",
+    "Answer": "B. The presence of the King or Crown Prince",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is traditionally applied to the hands before weddings in some Saudi regions?",
+    "Choices": "A. Henna B. Oud incense C. Scented oils D. Fragrant powders",
+    "Answer": "A. Henna",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the small door within a large door used for entry without opening the entire door?",
+    "Choices": "A. Bab Abu Khokha B. Bab Al-Masraf C. Bab Al-Qibla D. Bab Al-Safha",
+    "Answer": "A. Bab Abu Khokha",
+    "Domain": "Common",
+    "Category": "Architecture",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the traditional Saudi window or wooden covering that extends outward?",
+    "Choices": "A. Roshan B. Mashrabiya C. Qamariya D. Shubbak",
+    "Answer": "A. Roshan",
+    "Domain": "Common",
+    "Category": "Architecture",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the traditional Saudi door made from a single panel of wooden planks?",
+    "Choices": "A. Bab Bosaer B. Bab Al-Masraf C. Bab Al-Qibla D. Bab Al-Shurfa",
+    "Answer": "A. Bab Bosaer",
+    "Domain": "Common",
+    "Category": "Architecture",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "In which month does the traditional role of the \"Musaharati\" typically take place in Islamic culture?",
+    "Choices": "A. Muharram B. Ramadan C. Shawwal D. Dhul-Hijjah",
+    "Answer": "B. Ramadan",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "When is the Eid Al-Fitr prayer performed in the Islamic Hijri calendar?",
+    "Choices": "A. The first day of Shawwal B. The last day of Ramadan C. The tenth of Dhul-Hijjah D. The fifteenth of Sha’ban",
+    "Answer": "A. The first day of Shawwal",
+    "Domain": "Common",
+    "Category": "celebration",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What does the phrase \"Sammu\" mean in Saudi culture?",
+    "Choices": "A. Say \"Bismillah\" (In the name of Allah) B. Welcome the guests C. Start the meal D. Enjoy your drink",
+    "Answer": "A. Say \"Bismillah\" (In the name of Allah)",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the night of marriage called in Saudi Arabia?",
+    "Choices": "A. Wedding night B. Laylat Al-Dukhla C. Laylat Al-Zafaf D. Celebration night",
+    "Answer": "B. Laylat Al-Dukhla",
+    "Domain": "Common",
+    "Category": "Dating",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What distinguishes \"Al-Mas’houb\" in Saudi folk poetry?",
+    "Choices": "A. It is a poetic meter in Nabati poetry performed with a dragging tone B. It is always performed with traditional dance C. It requires the accompaniment of the Rababa instrument D. It is exclusively sung in desert regions",
+    "Answer": "A & C",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the primary characteristic of the poetic dialogue (Al-Muhawara) in Saudi Arabia?",
+    "Choices": "A. It is a mental competition requiring quick poetic creativity B. It is limited to highly skilled poets due to its complexity C. It involves musical instruments D. The performers repeat the final poetic response",
+    "Answer": "A, B & D",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "How many points must one team score to win in the game of Baloot?",
+    "Choices": "A. 152 points B. 200 points C. 100 points D. 120 points",
+    "Answer": "A. 152 points",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What preparations are made for birds in \"Al-Miqnas\" (hunting trips)?",
+    "Choices": "A. Sharpening the bird's beak B. Trimming the bird's claws C. Cleaning the bird's feathers D. Training for long-distance flights",
+    "Answer": "A & B",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "When is the game \"Al-Dananeh\" typically played?",
+    "Choices": "A. In the morning B. At night C. In the afternoon D. At sunset",
+    "Answer": "B. At night",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the name of the traditional Saudi game that relies on intuition and quick wit?",
+    "Choices": "A. Gleimait B. Keram C. Al-Sibba D. Dominoes",
+    "Answer": "A. Gleimait",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "How many small stones and slots are used in the game \"Al-Huwaila\"?",
+    "Choices": "A. 28 stones and 13 slots B. 30 rocks and 15 slots C. 28 rocks and 15 slots D. 30 rocks and 13 slots",
+    "Answer": "A. 28 stones and 13 slots",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What is the \"Raya Al-Ardah Al-Saudia\" (Saudi Ardah Flag)?",
+    "Choices": "A. A small flag carried by hand B. A large flag placed in the middle of performers during the Saudi Ardah C. A symbol hung on the wall D. A piece of cloth used as decoration",
+    "Answer": "B. A large flag placed in the middle of performers",
+    "Domain": "Common",
+    "Category": "entertainment",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "The palm tree is a significant symbol in Saudi culture, representing various values. Which of the following are true?",
+    "Choices": "A. Blessing B. Generosity and giving C. Stability and pride D. None of the above",
+    "Answer": "A, B & C",
+    "Domain": "Common",
+    "Category": "Crafts and work",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Which of the following names are derived from the aesthetic significance of a long and well-shaped nose in Saudi cultural heritage?",
+    "Choices": "A. Khushm Al-Bab (Door Nose) B. Khushm Al-Saif (Sword Nose) C. Khushm Al-Jabal (Mountain Nose) D. Khushm Al-Bahr (Sea Nose)",
+    "Answer": "A & B",
+    "Domain": "Common",
+    "Category": "languages and communication",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the names of parts of stone houses in Saudi Arabia?",
+    "Choices": "A. Al-Ulou and Al-Misraa B. Al-Saih and Al-Qawa’i C. Al-Jahwa and Al-Musha D. None of the above",
+    "Answer": "A, B & C",
+    "Domain": "Common",
+    "Category": "Architecture",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the traditional building methods used in constructing heritage houses, walls, and towers in Saudi Arabia?",
+    "Choices": "A. Mudbrick construction (Al-Labin) B. Layered masonry (Al-Madameek) C. Wooden beam construction D. Clay-only construction",
+    "Answer": "A & B",
+    "Domain": "Common",
+    "Category": "Architecture",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Where is the traditional \"Bab Bosaer\" door commonly used in Saudi Arabia?",
+    "Choices": "A. Internal doors for livestock enclosures B. Large courtyards C. Modern homes D. Heritage palaces",
+    "Answer": "A & B",
+    "Domain": "Common",
+    "Category": "Architecture",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "Which of the following are traditional Saudi palm frond crafts?",
+    "Choices": "A. Water bottles B. Zanabeel (baskets) C. Storage boxes D. Makans (brooms)",
+    "Answer": "B & D",
+    "Domain": "Common",
+    "Category": "Crafts and work",
+    "completed": false,
+    "annotator": ""
+  },
+  {
+    "Question": "What are the main uses of gypsum in traditional Saudi construction?",
+    "Choices": "A. Building and decoration B. Coating mud walls C. Covering ceilings D. All of the above",
+    "Answer": "D. All of the above",
+    "Domain": "Common",
+    "Category": "Crafts and work",
+    "completed": false,
+    "annotator": ""
+  }
+]
