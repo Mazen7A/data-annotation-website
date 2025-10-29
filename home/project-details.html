@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title id="page-title">تفاصيل المشروع</title>
-  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
   <style>
     .app-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:1100;display:flex;align-items:center;justify-content:space-between;background:#fff;padding:0 20px;border-bottom:1px solid #eee;}
     .site-logo-fixed{height:54px;margin-left:12px;}
@@ -32,7 +32,7 @@
 </head>
 <body>
   <header class="app-header">
-    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+    <img src="/assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
     <div class="brand">منصة إثراء الثقافة السعودية</div>
     <div class="header-actions">
       <button class="link" onclick="goToHome()">الرئيسية</button>
@@ -53,18 +53,27 @@
       <h2 class="section-title" style="margin-top:18px">ابدأ التقييم</h2>
       <p class="small-gray" style="margin-top:-6px;margin-bottom:10px">اختر نوع الأسئلة لبدء الجلسة:</p>
       <div id="qtype-wrap" class="qtype-grid"></div>
+      
       <div id="manager-panel" style="display:none">
         <h2 class="section-title" style="margin-top:18px">إحصائيات المشروع</h2>
+        
         <div class="card">
-          <p><strong>عدد المقيمين:</strong> 3</p>
-          <p id="manager-stats" class="small-gray">—</p>
+          <canvas id="categoryChart"></canvas> 
+        </div>
+        
+        <div class="card" style="margin-top: 10px;">
+            <h3 class="section-title">بيانات إضافية</h3>
+            <p id="manager-stats" class="small-gray">—</p>
         </div>
       </div>
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script> 
+    
   <script src="../assets/js/app.js"></script>
-  <script src="../assets/js/mockData.js"></script>
-  <script src="../assets/js/projectDetails.js"></script>
+  <script src="../assets/js/mockData.js"></script> 
+  <script src="../assets/js/projectDetails.js"></script> 
 </body>
 </html>
+
