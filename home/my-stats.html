@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>إحصائياتي</title>
-  <link rel="stylesheet" href="../assets/css/style.css"/>
-  <script src="../assets/js/mockData.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       direction: rtl;
       text-align: right;
       background: #f7f8fa;
       padding-top: 90px;
+      font-family: "Cairo", sans-serif;
     }
 
     .app-header {
@@ -68,41 +69,59 @@
 
     .page {
       padding: 20px;
-      max-width: 960px;
+      max-width: 800px;
       margin: auto;
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 28px;
       color: #14532d;
       margin-bottom: 20px;
       text-align: center;
     }
 
-    .stat-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
+    #statsChart {
+      background-color: #ffffff;
+      border-radius: 16px;
       padding: 20px;
-      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
-    .stat-card h2 {
-      margin: 0 0 10px 0;
-      font-size: 20px;
-      color: #0f5132;
+    .reload-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px auto;
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
     }
 
-    .stat {
+    .reload-btn:hover {
+      background: linear-gradient(135deg, #15803d, #16a34a);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .task-count {
+      text-align: center;
       font-size: 18px;
-      color: #1f2937;
-      margin-bottom: 6px;
+      font-weight: bold;
+      color: #14532d;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <header class="app-header">
-    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed" />
     <div class="brand">منصة إثراء الثقافة السعودية</div>
     <div class="header-actions">
       <button onclick="goToHome()">الرئيسية</button>
@@ -113,23 +132,9 @@
 
   <div class="page">
     <h1>إحصائياتي</h1>
-
-    <div id="stats-content">
-      <div class="stat-card">
-        <h2>عدد المهام المخصصة لي</h2>
-        <p class="stat" id="assigned-tasks">--</p>
-      </div>
-
-      <div class="stat-card">
-        <h2>عدد المهام المنجزة</h2>
-        <p class="stat" id="completed-tasks">--</p>
-      </div>
-
-      <div class="stat-card">
-        <h2>نسبة الإنجاز</h2>
-        <p class="stat" id="progress">--</p>
-      </div>
-    </div>
+    <canvas id="statsChart" width="400" height="300"></canvas>
+    <div class="task-count" id="task-count-text">عدد المهام: --</div>
+    <button class="reload-btn" onclick="loadUserStats()">🔄 تحديث البيانات</button>
   </div>
 
   <script>
@@ -142,34 +147,80 @@
       window.location.href = "../auth/login.html";
     }
 
-    function safeNum(v) {
-      return (v != null && String(v).trim() !== "" && !isNaN(v)) ? Number(v) : null;
-    }
-
-    function getCurrentUser() {
-      const u = localStorage.getItem("currentUser");
-      return u ? JSON.parse(u) : null;
-    }
+    let chartInstance = null;
 
     function loadUserStats() {
-      const projects = window.PROJECTS || [];
-      const currentUser = getCurrentUser();
-      const myId = currentUser?.username || "user-1";
-      let assigned = 0;
-      let completed = 0;
+      const assigned = Math.floor(Math.random() * 16) + 5;
+      const completed = Math.floor(Math.random() * (assigned + 1));
+      const completionRate = assigned > 0 ? Math.round((completed / assigned) * 100) : 0;
 
-      projects.forEach(p => {
-        const userStats = p.userStats?.[myId];
-        if (userStats) {
-          assigned += safeNum(userStats.assigned) || 0;
-          completed += safeNum(userStats.completed) || 0;
+      document.getElementById('task-count-text').textContent = `عدد المهام: ${assigned}`;
+
+      const ctx = document.getElementById('statsChart').getContext('2d');
+
+      if (chartInstance) {
+        chartInstance.destroy();
+      }
+
+      chartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['عدد المهام المخصصة', 'عدد المهام المنجزة', 'نسبة الإنجاز'],
+          datasets: [{
+            label: 'إحصائياتي (بيانات تجريبية)',
+            data: [assigned, completed, completionRate],
+            backgroundColor: [
+              'rgba(34, 197, 94, 0.6)',
+              'rgba(59, 130, 246, 0.6)',
+              'rgba(255, 193, 7, 0.6)'
+            ],
+            borderColor: [
+              'rgba(34, 197, 94, 1)',
+              'rgba(59, 130, 246, 1)',
+              'rgba(255, 193, 7, 1)'
+            ],
+            borderWidth: 2,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': ' + context.parsed.y;
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 5,
+                color: '#14532d',
+                font: { size: 14, weight: 'bold' }
+              },
+              grid: {
+                color: 'rgba(0, 0, 0, 0.05)'
+              }
+            },
+            x: {
+              ticks: {
+                color: '#14532d',
+                font: { size: 14, weight: 'bold' }
+              },
+              grid: {
+                display: false
+              }
+            }
+          }
         }
       });
-
-      document.getElementById('assigned-tasks').textContent = assigned;
-      document.getElementById('completed-tasks').textContent = completed;
-      const progress = assigned > 0 ? Math.round((completed / assigned) * 100) : 0;
-      document.getElementById('progress').textContent = progress + "%";
     }
 
     document.addEventListener('DOMContentLoaded', loadUserStats);
