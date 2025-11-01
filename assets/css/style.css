@@ -99,3 +99,20 @@ body{padding-top:100px}
 /* chips/badges for project meta */
 .chip{padding:4px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.92rem}
 .chip-muted{color:#374151;border-style:dashed}
+
+/* Annotation pages */
+.meta { display:flex; gap:12px; align-items:center; margin:12px 0 16px; }
+.meta progress { width:220px; height:14px; }
+.container { max-width:960px; margin:0 auto; padding:16px; }
+.q-area .card { background:#fff; border-radius:16px; padding:18px; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+.q-area h3 { margin:0 0 12px; font-size:1.1rem; }
+.choice { display:flex; gap:8px; padding:8px 0; align-items:center; cursor:pointer; }
+.choices { display:grid; gap:8px; }
+#list-select { width:100%; padding:8px; border-radius:12px; }
+.nav-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:14px; }
+.btn-primary { background:#198754; color:#fff; }
+.card.error { border:1px solid #c0392b; color:#c0392b; background:#fff5f5; }
+.site-header { display:flex; justify-content:space-between; align-items:center; padding:10px 16px; background:#f8fbf8; border-bottom:1px solid #e9efe9;}
+.brand { font-weight:700; color:#2e5f3e; }
+.actions .btn { margin-inline-start:8px; }
+
