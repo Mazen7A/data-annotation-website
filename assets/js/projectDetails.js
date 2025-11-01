@@ -21,7 +21,27 @@ const TYPE_PAGE = {
   OPEN_ENDED: '../annotate/open-ended.html'
 };
 
-const REMOTE_SOURCES = {};
+const REMOTE_SOURCES = {
+ const REMOTE_SOURCES = {
+  'SC_GENERAL': {
+    source: 'sheet',
+    url: 'https://docs.google.com/spreadsheets/d/1nwVsA24SzxqITv_-jVQ_rQWxQ4eqpGJmIifyxZq2jsY/gviz/tq?tqx=out:csv&gid=993750005'
+  },
+  'SC_NORTH': {
+    source: 'sheet',
+    url: 'https://docs.google.com/spreadsheets/d/1nwVsA24SzxqITv_-jVQ_rQWxQ4eqpGJmIifyxZq2jsY/gviz/tq?tqx=out:csv&gid=993750005'
+  },
+  'SC_SOUTH': {
+    source: 'sheet',
+    url: 'https://docs.google.com/spreadsheets/d/1nwVsA24SzxqITv_-jVQ_rQWxQ4eqpGJmIifyxZq2jsY/gviz/tq?tqx=out:csv&gid=993750005'
+  },
+  'SC_EAST': {
+    source: 'sheet',
+    url: 'https://docs.google.com/spreadsheets/d/1nwVsA24SzxqITv_-jVQ_rQWxQ4eqpGJmIifyxZq2jsY/gviz/tq?tqx=out:csv&gid=993750005'
+  }
+};
+
+};
 
 let dataFile = DATA_FILES.GENERAL;
 if (projectId.includes('NORTH')) dataFile = DATA_FILES.NORTH;
