@@ -1,50 +1,112 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>إحصائيات المشرف</title>
-  <link rel="stylesheet" href="../assets/css/style.css"/>
-  <script src="../assets/js/app.js"></script>
-  <script src="../assets/js/mockData.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body { direction: rtl; text-align: right; background: #f7f8fa; padding-top: 90px; }
+    body {
+      direction: rtl;
+      text-align: right;
+      background: #f7f8fa;
+      padding-top: 90px;
+      font-family: "Cairo", sans-serif;
+    }
+
     .app-header {
-      display: flex; align-items: center; justify-content: space-between;
-      background: #fff; padding: 0 20px; border-bottom: 1px solid #eee;
-      height: 72px; position: fixed; top: 0; left: 0; right: 0; z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 0 20px;
+      border-bottom: 1px solid #eee;
+      height: 72px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
     }
-    .site-logo-fixed { height: 54px; margin-left: 12px; }
-    .brand { font-weight: bold; color: #14532d; font-size: 20px; }
+
+    .site-logo-fixed {
+      height: 54px;
+      margin-left: 12px;
+    }
+
+    .brand {
+      font-weight: bold;
+      color: #14532d;
+      font-size: 20px;
+    }
+
     .header-actions {
-      display: flex; gap: 10px;
+      display: flex;
+      gap: 10px;
     }
+
     .header-actions button {
-      font-size: 16px; padding: 6px 14px; border-radius: 8px; border: none;
-      background: #f0fdf4; color: #14532d; font-weight: bold; cursor: pointer;
+      font-size: 16px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: none;
+      background: #f0fdf4;
+      color: #14532d;
+      font-weight: bold;
+      cursor: pointer;
       transition: background 0.2s;
     }
-    .header-actions button:hover { background: #bbf7d0; }
-    .page { padding: 20px; max-width: 960px; margin: auto; }
-    h1 { font-size: 26px; color: #14532d; margin-bottom: 20px; text-align: center; }
-    .stat-card {
-      background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
-      padding: 20px; margin-bottom: 16px;
+
+    .header-actions button:hover {
+      background: #bbf7d0;
     }
-    .stat-card h2 {
-      margin: 0 0 10px 0; font-size: 20px; color: #0f5132;
+
+    .page {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
     }
-    .stat {
-      font-size: 18px; color: #1f2937; margin-bottom: 6px;
+
+    h1 {
+      font-size: 28px;
+      color: #14532d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #adminStatsChart {
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .reload-btn {
+      display: block;
+      margin: 24px auto;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .reload-btn:hover {
+      background: #15803d;
     }
   </style>
 </head>
 <body>
   <header class="app-header">
-    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed" />
     <div class="brand">منصة إثراء الثقافة السعودية</div>
     <div class="header-actions">
-      <button onclick="goToHome()">الرئيسية</button>
+      <button onclick="window.location.href='select-role.html'">الرئيسية</button>
       <button onclick="history.back()">رجوع</button>
       <button onclick="logout()">تسجيل خروج</button>
     </div>
@@ -52,50 +114,83 @@
 
   <div class="page">
     <h1>إحصائيات المشرف</h1>
-
-    <div id="stats-content">
-      <div class="stat-card">
-        <h2>عدد المقيمين</h2>
-        <p class="stat" id="count-annotators">--</p>
-      </div>
-
-      <div class="stat-card">
-        <h2>عدد المهام المنجزة</h2>
-        <p class="stat" id="count-completed">--</p>
-      </div>
-
-      <div class="stat-card">
-        <h2>نسبة التقدم</h2>
-        <p class="stat" id="progress-percent">--</p>
-      </div>
-    </div>
+    <canvas id="adminStatsChart" width="400" height="300"></canvas>
+    <button class="reload-btn" onclick="loadAdminStats()">🔄 تحديث البيانات</button>
   </div>
 
   <script>
-    function goToHome(){ window.location.href = "select-role.html"; }
-    function logout(){ window.location.href = "../auth/login.html"; }
-
-    function safeNum(v){ return (v!=null && String(v).trim()!=="" && !isNaN(v)) ? Number(v) : null; }
-
-    function loadManagerStats(){
-      const projects = window.PROJECTS || [];
-      let annotators = 0;
-      let completed = 0;
-      let total = 0;
-
-      projects.forEach(p => {
-        annotators += safeNum(p.annotatorsCount) || 0;
-        completed += safeNum(p.stats?.completedTasks) || 0;
-        total += safeNum(p.stats?.totalTasks) || 0;
-      });
-
-      document.getElementById('count-annotators').textContent = annotators;
-      document.getElementById('count-completed').textContent = completed;
-      const progress = total > 0 ? Math.round((completed / total) * 100) : 0;
-      document.getElementById('progress-percent').textContent = progress + "%";
+    function logout() {
+      localStorage.removeItem("currentUser");
+      window.location.href = "../auth/login.html";
     }
 
-    document.addEventListener('DOMContentLoaded', loadManagerStats);
+    let adminChart = null;
+
+    function getRandomStats() {
+      const evaluators = Math.floor(Math.random() * 50) + 20;
+      const completedTasks = Math.floor(Math.random() * 400) + 100;
+      const progressRate = Math.floor((completedTasks / (evaluators * 10)) * 100);
+      return [evaluators, completedTasks, Math.min(progressRate, 100)];
+    }
+
+    function loadAdminStats() {
+      const [evaluators, completedTasks, progressRate] = getRandomStats();
+      const ctx = document.getElementById('adminStatsChart').getContext('2d');
+
+      if (adminChart) adminChart.destroy();
+
+      adminChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['عدد المقيّمين', 'عدد المهام المنجزة', 'نسبة التقدم'],
+          datasets: [{
+            label: 'بيانات المشرف',
+            data: [evaluators, completedTasks, progressRate],
+            backgroundColor: [
+              'rgba(34, 197, 94, 0.6)',
+              'rgba(59, 130, 246, 0.6)',
+              'rgba(255, 193, 7, 0.6)'
+            ],
+            borderColor: [
+              'rgba(34, 197, 94, 1)',
+              'rgba(59, 130, 246, 1)',
+              'rgba(255, 193, 7, 1)'
+            ],
+            borderWidth: 2,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 50,
+                color: '#14532d',
+                font: { size: 14, weight: 'bold' }
+              },
+              grid: { color: 'rgba(0, 0, 0, 0.05)' }
+            },
+            x: {
+              ticks: {
+                color: '#14532d',
+                font: { size: 14, weight: 'bold' }
+              },
+              grid: { display: false }
+            }
+          }
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadAdminStats();
+      setInterval(loadAdminStats, 30000); // تحديث كل 30 ثانية
+    });
   </script>
 </body>
 </html>
