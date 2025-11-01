@@ -1,78 +1,42 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>أسئلة مفتوحة</title>
-  <link rel="stylesheet" href="../assets/css/style.css"/>
-  <script src="../assets/js/app.js"></script>
-  <style>
-    body { direction: rtl; text-align: right; }
-    .app-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      padding: 0 20px;
-      border-bottom: 1px solid #eee;
-      height: 72px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1100;
-    }
-    .site-logo-fixed {
-      height: 54px;
-      margin-left: 12px;
-    }
-    .brand {
-      font-weight: bold;
-      color: #14532d;
-      font-size: 20px;
-    }
-    .header-actions {
-      display: flex;
-      gap: 10px;
-    }
-    .header-actions button {
-      pointer-events: auto;
-      font-size: 16px;
-      padding: 6px 14px;
-      border-radius: 8px;
-      border: none;
-      background: #f0fdf4;
-      color: #14532d;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .header-actions button:hover {
-      background: #bbf7d0;
-    }
-    .page { padding-top: 90px; }
-  </style>
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header class="app-header">
-    <img src="assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
-    <div class="brand">
-      منصة إثراء الثقافة السعودية
-    </div>
-    <div class="header-actions">
-      <button class="link" onclick="goToHome()">الرئيسية</button>
-      <button class="btn-back" onclick="history.back()">رجوع</button>
-      <button onclick="logout()">تسجيل خروج</button>
-    </div>
+  <header class="site-header">
+    <div class="brand">منصّة إثراء الثقافة السعودية</div>
+    <nav class="actions">
+      <a class="btn" href="../home/project-list.html">الرئيسية</a>
+      <button class="btn" onclick="history.back()">رجوع</button>
+      <a class="btn" href="../auth/login.html" onclick="localStorage.removeItem('currentUser')">تسجيل خروج</a>
+    </nav>
   </header>
 
-  <div class="page">
-    <div class="container">
-      <h1>أسئلة مفتوحة</h1>
-      <div class="card">
-        <p class="small">هذه صفحة مبدئية لنوع الأسئلة: أسئلة مفتوحة. يمكن ربطها لاحقاً بمصدر البيانات (CSV/JSON) لعرض الأسئلة الفعلية.</p>
-      </div>
+  <main class="container">
+    <h1 id="page-title">أسئلة مفتوحة</h1>
+    <div class="meta">
+      <progress id="progress" value="0" max="100"></progress>
+      <span id="counter"></span>
+      <small id="meta"></small>
     </div>
-  </div>
+    <section id="question-container" class="q-area"></section>
+
+    <footer class="nav-actions">
+      <button id="btn-prev" class="btn">السابق</button>
+      <button id="btn-next" class="btn">التالي</button>
+      <button id="btn-finish" class="btn btn-primary" style="display:none">إنهاء الجلسة</button>
+    </footer>
+  </main>
+
+  <script>
+    const u = new URL(location.href);
+    if (!u.searchParams.get('type')) { u.searchParams.set('type','OPEN_ENDED'); location.replace(u); }
+  </script>
+  <script src="../assets/js/dataSources.js"></script>
+  <script src="../assets/js/annotate.js"></script>
 </body>
 </html>
