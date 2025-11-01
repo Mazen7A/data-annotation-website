@@ -14,6 +14,15 @@ const rawProjectId = getParam('id') || 'SC_GENERAL';
 const projectId    = rawProjectId.toUpperCase().trim();
 const role         = getParam('role') || 'user';
 
+const TYPE_PAGE = {
+  MCQ:        '../annotate/mcq.html',
+  TRUE_FALSE: '../annotate/true-false.html',
+  LIST:       '../annotate/list.html',
+  OPEN_ENDED: '../annotate/open-ended.html'
+};
+
+const REMOTE_SOURCES = {};
+
 let dataFile = DATA_FILES.GENERAL;
 if (projectId.includes('NORTH')) dataFile = DATA_FILES.NORTH;
 else if (projectId.includes('SOUTH')) dataFile = DATA_FILES.SOUTH;
@@ -54,6 +63,9 @@ function renderCategoryChart(allQuestions) {
     }
   });
 }
+
+function saveLastQType(val){ try{ localStorage.setItem('lastQType', val); }catch{} }
+function loadLastQType(){ try{ return localStorage.getItem('lastQType'); }catch{ return null; } }
 
 async function loadProjectDetails() {
   try {
@@ -96,18 +108,48 @@ async function loadProjectDetails() {
       `;
     }
 
+    const sel = document.getElementById('qTypeSelect');
+    if (sel) {
+      const last = loadLastQType();
+      if (last && sel.querySelector(`option[value="${last}"]`)) sel.value = last;
+      sel.addEventListener('change', () => saveLastQType(sel.value));
+    }
+
     const wrap = document.getElementById('qtype-wrap');
     if (wrap) {
       wrap.innerHTML = '';
       project.categories.forEach(category => {
         const count = allQuestions.filter(q => q.Category === category.id).length;
 
-        wrap.innerHTML += `
-          <a href="task.html?id=${projectId}&category=${category.id}" class="qtype-card">
-            <h3>${category.label}</h3>
-            <p class="small-gray">عدد الأسئلة: ${count}</p>
-          </a>
+        const card = document.createElement('div');
+        card.className = 'qtype-card';
+        card.setAttribute('data-cat', category.id);
+        card.innerHTML = `
+          <h3>${category.label}</h3>
+          <p class="small-gray">عدد الأسئلة: ${count}</p>
         `;
+
+        card.addEventListener('click', () => {
+          const pickedType = (document.getElementById('qTypeSelect')?.value || 'MCQ').toUpperCase();
+          const page = TYPE_PAGE[pickedType] || TYPE_PAGE.MCQ;
+
+          const url = new URL(page, location.href);
+          url.searchParams.set('id', projectId);
+          url.searchParams.set('role', role);
+          url.searchParams.set('type', pickedType);
+          url.searchParams.set('cat', category.id);
+
+          const remote = REMOTE_SOURCES[projectId];
+          if (remote?.source && remote?.url) {
+            url.searchParams.set('source', remote.source);
+            url.searchParams.set('url', remote.url);
+            url.searchParams.set('limit', '10');
+          }
+
+          location.href = url.toString();
+        });
+
+        wrap.appendChild(card);
       });
     }
   } catch (e) {
