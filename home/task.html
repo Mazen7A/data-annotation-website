@@ -1,145 +1,90 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title id="task-page-title">مهمة التقييم</title>
-    
-    <link rel="stylesheet" href="../assets/css/style.css"/>
-    <style>
-        /* أنماط خاصة بصفحة المهام */
-        body { direction: rtl; text-align: right; background: #f7f8fa; padding-top: 90px; }
-        .app-header {
-            display: flex; align-items: center; justify-content: space-between;
-            background: #fff; padding: 0 20px; border-bottom: 1px solid #eee;
-            height: 72px; position: fixed; top: 0; left: 0; right: 0; z-index: 1100;
-        }
-        .site-logo-fixed { height: 54px; margin-left: 12px; }
-        .brand { font-weight: bold; color: #14532d; font-size: 20px; }
-        .header-actions { display: flex; gap: 10px; }
-        .header-actions button {
-            font-size: 16px; padding: 6px 14px; border-radius: 8px; border: none;
-            background: #f0fdf4; color: #14532d; font-weight: bold; cursor: pointer;
-            transition: background 0.2s;
-        }
-        .header-actions button:hover { background: #bbf7d0; }
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title id="task-page-title">مهمة التقييم</title>
 
-        .page { padding: 20px; max-width: 980px; margin: auto; }
-        
-        .main-task-area {
-            display: grid;
-            grid-template-columns: 2fr 1fr; /* منطقة المهمة (70%) ولوحة التحكم (30%) */
-            gap: 20px;
-        }
-        
-        .task-card {
-            background: #fff; border: 1px solid #e5e7eb; border-radius: 14px;
-            padding: 25px; min-height: 400px;
-        }
-
-        .task-card h2 { color: #14532d; margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 20px;}
-        .task-content { font-size: 1.1rem; line-height: 1.8; color: #374151; }
-        
-        .controls-panel {
-            background: #fff; border: 1px solid #e5e7eb; border-radius: 14px;
-            padding: 20px;
-        }
-        
-        .progress-info {
-            background: #f0fdf4; color: #065f46; padding: 10px; border-radius: 8px;
-            margin-bottom: 20px; font-weight: bold;
-        }
-        
-        .task-navigation button {
-            width: 100%; padding: 10px; margin-top: 10px; border-radius: 8px;
-            font-weight: bold; cursor: pointer; border: none;
-        }
-        
-        #submit-btn { background: #14532d; color: #fff; }
-        #skip-btn { background: #fef2f2; color: #991b1b; }
-        
-        /* خيارات التقييم */
-        .rating-options div {
-            padding: 12px;
-            margin-bottom: 8px;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .rating-options div:hover { background: #f0fdf4; border-color: #14532d; }
-        .rating-options div.selected { background: #bbf7d0; border-color: #065f46; font-weight: bold; }
-        
-        textarea {
-            width: 100%;
-            min-height: 100px;
-            padding: 10px;
-            margin-top: 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-
-    </style>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <style>
+    body{direction:rtl;text-align:right;background:#f7f8fa;padding-top:90px}
+    .app-header{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:0 20px;border-bottom:1px solid #eee;height:72px;position:fixed;top:0;left:0;right:0;z-index:1100}
+    .site-logo-fixed{height:54px;margin-left:12px}
+    .brand{font-weight:bold;color:#14532d;font-size:20px}
+    .header-actions{display:flex;gap:10px}
+    .header-actions button{font-size:16px;padding:6px 14px;border-radius:8px;border:none;background:#f0fdf4;color:#14532d;font-weight:bold;cursor:pointer;transition:background .2s}
+    .header-actions button:hover{background:#bbf7d0}
+    .page{padding:20px;max-width:980px;margin:auto}
+    .main-task-area{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+    .task-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:25px;min-height:400px}
+    .task-card h2{color:#14532d;margin-top:0;border-bottom:2px solid #eee;padding-bottom:15px;margin-bottom:20px}
+    .task-content{font-size:1.1rem;line-height:1.8;color:#374151}
+    .controls-panel{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px}
+    .progress-info{background:#f0fdf4;color:#065f46;padding:10px;border-radius:8px;margin-bottom:20px;font-weight:bold}
+    .task-navigation button{width:100%;padding:10px;margin-top:10px;border-radius:8px;font-weight:bold;cursor:pointer;border:none}
+    #submit-btn{background:#14532d;color:#fff}
+    #skip-btn{background:#fef2f2;color:#991b1b}
+    .rating-options div{padding:12px;margin-bottom:8px;border:1px solid #e5e7eb;border-radius:8px;cursor:pointer;transition:background .2s}
+    .rating-options div:hover{background:#f0fdf4;border-color:#14532d}
+    .rating-options div.selected{background:#bbf7d0;border-color:#065f46;font-weight:bold}
+    textarea{width:100%;min-height:100px;padding:10px;margin-top:15px;border:1px solid #ccc;border-radius:8px}
+  </style>
 </head>
 <body>
-    <header class="app-header">
-        <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
-        <div class="brand" id="project-header-name">منصة إثراء الثقافة السعودية</div>
-        <div class="header-actions">
-            <button onclick="history.back()">العودة للتفاصيل</button>
-            <button onclick="logout()">تسجيل خروج</button>
-        </div>
-    </header>
-
-    <div class="page">
-        <h1 id="task-title">مهمة تقييم: [جاري التحميل...]</h1>
-
-        <div class="main-task-area">
-            
-            <div class="task-card">
-                <h2 id="question-category">فئة السؤال: -</h2>
-                
-                <div class="task-content">
-                    <p id="question-text">جاري البحث عن السؤال التالي...</p>
-                </div>
-
-                <hr style="margin: 25px 0; border-top: 1px solid #eee;">
-                
-                <h3 style="color: #065f46;">اختر التقييم المناسب:</h3>
-                <div class="rating-options" id="rating-options-container">
-                    </div>
-                
-                <h3 style="color: #065f46; margin-top: 20px;">ملاحظات (اختياري):</h3>
-                <textarea id="task-notes" placeholder="اكتب أي ملاحظات تتعلق بجودة السؤال أو التقييم..."></textarea>
-            </div>
-
-            <div class="controls-panel">
-                
-                <div class="progress-info">
-                    <p>التقدم في الفئة:</p>
-                    <p id="category-progress">0/0 (0%)</p>
-                </div>
-                
-                <h3 style="margin-top: 0; color: #1f2937;">إجراء المهمة:</h3>
-                <div class="task-navigation">
-                    <button id="submit-btn" onclick="submitTask()">إرسال التقييم (Enter)</button>
-                    <button id="skip-btn" onclick="skipTask()">تخطي المهمة (S)</button>
-                </div>
-                
-                <hr style="margin: 20px 0;">
-                
-                <div style="font-size: 0.9rem; color: #6b7280;">
-                    <p>ID المهمة الحالية: <span id="current-task-id">-</span></p>
-                    <p>متبقي في الجلسة: <span id="remaining-tasks">-</span> سؤال</p>
-                </div>
-
-            </div>
-
-        </div>
+  <header class="app-header">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+    <div class="brand" id="project-header-name">منصة إثراء الثقافة السعودية</div>
+    <div class="header-actions">
+      <button onclick="history.back()">العودة للتفاصيل</button>
+      <button onclick="logout()">تسجيل خروج</button>
     </div>
+  </header>
 
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/mockData.js"></script>
-    <script src="../assets/js/tasks.js"></script>
+  <div class="page">
+    <h1 id="task-title">مهمة تقييم: [جاري التحميل...]</h1>
+
+    <div class="main-task-area">
+      <div class="task-card">
+        <h2 id="question-category">فئة السؤال: -</h2>
+        <div class="task-content"><p id="question-text">جاري البحث عن السؤال التالي...</p></div>
+        <hr style="margin:25px 0;border-top:1px solid #eee;">
+        <h3 style="color:#065f46;">اختر التقييم المناسب:</h3>
+        <div class="rating-options" id="rating-options-container"></div>
+        <h3 style="color:#065f46;margin-top:20px;">ملاحظات (اختياري):</h3>
+        <textarea id="task-notes" placeholder="اكتب أي ملاحظات تتعلق بجودة السؤال أو التقييم..."></textarea>
+      </div>
+
+      <div class="controls-panel">
+        <div class="progress-info">
+          <p>التقدم في الفئة:</p>
+          <p id="category-progress">0/0 (0%)</p>
+        </div>
+        <h3 style="margin-top:0;color:#1f2937;">إجراء المهمة:</h3>
+        <div class="task-navigation">
+          <button id="submit-btn">إرسال التقييم (Enter)</button>
+          <button id="skip-btn">تخطي المهمة (S)</button>
+        </div>
+        <hr style="margin:20px 0;">
+        <div style="font-size:.9rem;color:#6b7280;">
+          <p>ID المهمة الحالية: <span id="current-task-id">-</span></p>
+          <p>متبقي في الجلسة: <span id="remaining-tasks">-</span> سؤال</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/mockData.js"></script>
+
+  <script>
+     window.RATING_OPTIONS = window.RATING_OPTIONS || [
+      { id: 'excellent', label: 'ممتاز' },
+      { id: 'good',      label: 'جيد' },
+      { id: 'fair',      label: 'مقبول' },
+      { id: 'poor',      label: 'ضعيف' }
+    ];
+  </script>
+
+   <script src="../assets/js/task.js"></script>
 </body>
 </html>
