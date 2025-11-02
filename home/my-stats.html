@@ -7,223 +7,158 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body {
-      direction: rtl;
-      text-align: right;
-      background: #f7f8fa;
-      padding-top: 90px;
-      font-family: "Cairo", sans-serif;
-    }
-
-    .app-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      padding: 0 20px;
-      border-bottom: 1px solid #eee;
-      height: 72px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999 !important;
-    }
-
-    .site-logo-fixed {
-      height: 54px;
-      margin-left: 12px;
-    }
-
-    .brand {
-      font-weight: bold;
-      color: #14532d;
-      font-size: 20px;
-    }
-
-    .header-actions {
-      display: flex;
-      gap: 10px;
-      position: relative;
-      z-index: 10000;
-    }
-
-    .header-actions button {
-      font-size: 16px;
-      padding: 6px 14px;
-      border-radius: 8px;
-      border: none;
-      background: #f0fdf4;
-      color: #14532d;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.2s;
-      position: relative;
-      z-index: 10001;
-      pointer-events: auto;
-    }
-
-    .header-actions button:hover {
-      background: #bbf7d0;
-    }
-
-    .page {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 28px;
-      color: #14532d;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    #statsChart {
-      background-color: #ffffff;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .reload-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin: 20px auto;
-      background: linear-gradient(135deg, #16a34a, #22c55e);
-      color: white;
-      border: none;
-      border-radius: 12px;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-    }
-
-    .reload-btn:hover {
-      background: linear-gradient(135deg, #15803d, #16a34a);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    .task-count {
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      color: #14532d;
-      margin-top: 10px;
-    }
+    body { background:#f7f8fa; padding-top:90px; font-family:"Cairo",sans-serif; }
+    .app-header{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:0 20px;border-bottom:1px solid #eee;height:72px;position:fixed;top:0;left:0;right:0;z-index:9}
+    .brand{font-weight:700;color:#14532d;font-size:20px}
+    .page{max-width:980px;margin:auto;padding:20px}
+    h1{color:#14532d;text-align:center}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}
+    .card{background:#fff;border-radius:14px;padding:16px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+    .card h3{margin:0 0 8px 0;font-size:16px;color:#064e3b}
+    .big{font-size:28px;font-weight:800;color:#111}
+    .muted{color:#64748b;font-size:13px}
+    .chart-wrap{background:#fff;border-radius:16px;padding:16px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+    .btn{background:#16a34a;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer}
+    .btn.secondary{background:#0ea5e9}
   </style>
 </head>
 <body>
   <header class="app-header">
-    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed" />
     <div class="brand">منصة إثراء الثقافة السعودية</div>
     <div class="header-actions">
-      <button onclick="goToHome()">الرئيسية</button>
-      <button onclick="history.back()">رجوع</button>
-      <button onclick="logout()">تسجيل خروج</button>
+      <button class="btn secondary" onclick="history.back()">رجوع</button>
+      <button class="btn" onclick="goToHome()">الرئيسية</button>
     </div>
   </header>
 
   <div class="page">
     <h1>إحصائياتي</h1>
-    <canvas id="statsChart" width="400" height="300"></canvas>
-    <div class="task-count" id="task-count-text">عدد المهام: --</div>
-    <button class="reload-btn" onclick="loadUserStats()">🔄 تحديث البيانات</button>
+
+    <div id="flash" class="muted"></div>
+
+    <section class="cards">
+      <div class="card">
+        <h3>عدد الجلسات</h3>
+        <div class="big" id="sessCount">0</div>
+        <div class="muted" id="sessLast">—</div>
+      </div>
+      <div class="card">
+        <h3>إجمالي الأسئلة التي أجبتها</h3>
+        <div class="big" id="answeredCount">0</div>
+        <div class="muted">تشمل المفتوحة وغير المصحَّحة</div>
+      </div>
+      <div class="card">
+        <h3>أسئلة قابلة للتصحيح (MCQ/TF/…)</h3>
+        <div class="big" id="gradedCount">0</div>
+        <div class="muted" id="correctCount">صحيحة: 0</div>
+      </div>
+      <div class="card">
+        <h3>الدقة العامة</h3>
+        <div class="big" id="accuracy">0%</div>
+        <div class="muted">= الصحيحة / القابلة للتصحيح</div>
+      </div>
+    </section>
+
+    <div class="chart-wrap">
+      <canvas id="chartByType" height="120"></canvas>
+    </div>
+
+    <div class="chart-wrap" style="margin-top:16px">
+      <canvas id="chartByCategory" height="140"></canvas>
+    </div>
   </div>
 
   <script>
-    function goToHome() {
-      window.location.href = "select-role.html";
+    function goToHome(){ location.href = "select-role.html"; }
+
+    function readUser(){
+      try{
+        const u = JSON.parse(localStorage.getItem('currentUser') || '{}');
+        return u.username || u.email || 'guest';
+      }catch{ return 'guest'; }
+    }
+    function readStore(username){
+      const key = `thq_results_v1:${username}`;
+      try{ return JSON.parse(localStorage.getItem(key) || '{"sessions":[]}'); }catch{ return {sessions:[]}; }
+    }
+    function fmtDate(ts){
+      const d = new Date(ts);
+      return d.toLocaleString('ar-SA', {hour12:false});
     }
 
-    function logout() {
-      localStorage.removeItem("currentUser");
-      window.location.href = "../auth/login.html";
-    }
+    function loadStats(){
+      const user = readUser();
+      const store = readStore(user);
+      const sessions = store.sessions || [];
 
-    let chartInstance = null;
+      document.getElementById('sessCount').textContent = sessions.length;
+      document.getElementById('sessLast').textContent  = sessions.length ? ('آخر جلسة: ' + fmtDate(sessions[sessions.length-1].ts)) : 'لا يوجد بعد';
 
-    function loadUserStats() {
-      const assigned = Math.floor(Math.random() * 16) + 5;
-      const completed = Math.floor(Math.random() * (assigned + 1));
-      const completionRate = assigned > 0 ? Math.round((completed / assigned) * 100) : 0;
+      let answered = 0, graded = 0, correct = 0;
+      const byType = {};
+      const byCat  = {};
 
-      document.getElementById('task-count-text').textContent = `عدد المهام: ${assigned}`;
+      sessions.forEach(s => {
+        answered += (s.answers || []).length;
+        graded   += +s.gradedTotal || 0;
+        correct  += +s.correct || 0;
 
-      const ctx = document.getElementById('statsChart').getContext('2d');
+        const t = s.type || 'OTHER';
+        byType[t] = byType[t] || {graded:0,correct:0};
+        byType[t].graded += (+s.gradedTotal || 0);
+        byType[t].correct+= (+s.correct || 0);
 
-      if (chartInstance) {
-        chartInstance.destroy();
-      }
-
-      chartInstance = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['عدد المهام المخصصة', 'عدد المهام المنجزة', 'نسبة الإنجاز'],
-          datasets: [{
-            label: 'إحصائياتي (بيانات تجريبية)',
-            data: [assigned, completed, completionRate],
-            backgroundColor: [
-              'rgba(34, 197, 94, 0.6)',
-              'rgba(59, 130, 246, 0.6)',
-              'rgba(255, 193, 7, 0.6)'
-            ],
-            borderColor: [
-              'rgba(34, 197, 94, 1)',
-              'rgba(59, 130, 246, 1)',
-              'rgba(255, 193, 7, 1)'
-            ],
-            borderWidth: 2,
-            borderRadius: 6
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-              callbacks: {
-                label: function(context) {
-                  return context.label + ': ' + context.parsed.y;
-                }
-              }
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              ticks: {
-                stepSize: 5,
-                color: '#14532d',
-                font: { size: 14, weight: 'bold' }
-              },
-              grid: {
-                color: 'rgba(0, 0, 0, 0.05)'
-              }
-            },
-            x: {
-              ticks: {
-                color: '#14532d',
-                font: { size: 14, weight: 'bold' }
-              },
-              grid: {
-                display: false
-              }
-            }
-          }
-        }
+        const c = s.category || '—';
+        byCat[c] = byCat[c] || {graded:0,correct:0};
+        byCat[c].graded += (+s.gradedTotal || 0);
+        byCat[c].correct+= (+s.correct || 0);
       });
+
+      document.getElementById('answeredCount').textContent = answered;
+      document.getElementById('gradedCount').textContent   = graded;
+      document.getElementById('correctCount').textContent  = 'صحيحة: ' + correct;
+
+      const acc = graded>0 ? Math.round((correct/graded)*100) : 0;
+      document.getElementById('accuracy').textContent = acc + '%';
+
+      // Charts
+      const ctx1 = document.getElementById('chartByType').getContext('2d');
+      const tLabels = Object.keys(byType);
+      const tGraded = tLabels.map(k => byType[k].graded);
+      const tCorrect= tLabels.map(k => byType[k].correct);
+      new Chart(ctx1, {
+        type:'bar',
+        data:{
+          labels:tLabels,
+          datasets:[
+            {label:'قابلة للتصحيح', data:tGraded, borderWidth:1},
+            {label:'إجابات صحيحة', data:tCorrect, borderWidth:1}
+          ]
+        },
+        options:{ responsive:true, scales:{y:{beginAtZero:true}} }
+      });
+
+      const ctx2 = document.getElementById('chartByCategory').getContext('2d');
+      const cLabels = Object.keys(byCat);
+      const cAcc = cLabels.map(k => {
+        const g = byCat[k].graded || 0; const c = byCat[k].correct || 0;
+        return g>0 ? Math.round((c/g)*100) : 0;
+      });
+      new Chart(ctx2, {
+        type:'bar',
+        data:{ labels:cLabels, datasets:[{label:'الدقة ٪ حسب القسم', data:cAcc, borderWidth:1}]},
+        options:{ responsive:true, scales:{y:{beginAtZero:true, max:100}} }
+      });
+
+      // Flash
+      if (new URLSearchParams(location.search).get('flash') === 'saved'){
+        const f = document.getElementById('flash');
+        f.textContent = '✅ تم حفظ نتائج جلستك بنجاح';
+        setTimeout(()=> f.textContent='', 4000);
+      }
     }
 
-    document.addEventListener('DOMContentLoaded', loadUserStats);
+    document.addEventListener('DOMContentLoaded', loadStats);
   </script>
 </body>
 </html>
