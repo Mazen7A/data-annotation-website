@@ -1,21 +1,24 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>تسجيل الدخول</title>
-  <link rel="stylesheet" href="../assets/css/style.css"/>
-  <script src="../assets/js/app.js" defer></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header class="site-header">
+
+   <header class="site-header">
     <div class="header-left">
-      <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo">
+      <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo" />
     </div>
     <div class="brand">منصة إثراء الثقافة السعودية</div>
-    <nav class="actions"></nav>
+    <nav class="actions">
+      <a class="btn-back" href="../home/project-list.html">الرئيسية</a>
+    </nav>
   </header>
 
+  <!-- المحتوى -->
   <main class="auth-page">
     <section class="auth-card">
       <header class="auth-header">
@@ -23,14 +26,21 @@
         <p class="auth-subtitle">مرحبًا بك مجددًا 👋</p>
       </header>
 
-      <div id="loginMsg" class="msg"></div>
+      <section class="hero-intro" style="margin-top:6px;">
+        <h2>سعوديتنا.. من كل منطقة قصة، ومن كل قصة هوية</h2>
+        <p>نوثّق تنوّع الثقافة السعودية بمناطقها المختلفة في تجربة تفاعلية تجمع بين الأصالة والتقنية.</p>
+        <p>انضم معنا وكن جزءًا من مشروع يوثّق <strong>سعوديتنا</strong> بعيون المستقبل.</p>
+      </section>
 
-      <form id="loginForm" class="form">
+      <div id="loginMsg" class="msg" style="display:none"></div>
+
+      <form id="loginForm" class="form" autocomplete="off">
         <div class="form-group">
           <label>اسم المستخدم أو البريد الإلكتروني</label>
-          <input type="text" id="loginId" placeholder="مثال: mazen أو mazen@example.com" required />
+          <input type="text" id="loginId" placeholder="مثال: noura أو noura@example.com" required />
         </div>
-        <div class="form-group input-with-icon">
+
+        <div class="form-group">
           <label>كلمة المرور</label>
           <input type="password" id="loginPw" placeholder="أدخل كلمة المرور" required />
         </div>
@@ -45,22 +55,46 @@
           </div>
         </div>
       </form>
+
+      <footer class="auth-footer">
+        <span>© ثقافتنا</span>
+      </footer>
     </section>
   </main>
 
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
+   <script>
+    function getUsers(){
+      try { return JSON.parse(localStorage.getItem('users') || '[]'); }
+      catch { return []; }
+    }
+    function setCurrentUser(user){
+      try { localStorage.setItem('currentUser', JSON.stringify(user)); } catch {}
+    }
+    function showMsg(text, type){
+      const box = document.getElementById('loginMsg');
+      box.textContent = text;
+      box.className = 'msg ' + (type || '');
+      box.style.display = 'block';
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function(e){
       e.preventDefault();
-      const id = loginId.value.trim();
-      const pw = loginPw.value;
-      const msg = loginMsg; msg.textContent = ""; msg.className = "msg";
-      const users = JSON.parse(localStorage.getItem("users") || "[]");
-      const found = users.find(u => (u.username === id || u.email === id));
-      if (!found) { msg.textContent = "اسم المستخدم أو البريد الإلكتروني غير صحيح."; msg.className="msg error"; return; }
-      if (found.password !== pw) { msg.textContent = "كلمة المرور غير صحيحة."; msg.className="msg error"; return; }
-      setCurrentUser({username: found.username, email: found.email});
-      window.location.href = "../home/select-role.html";
+      const id = document.getElementById('loginId').value.trim();
+      const pw = document.getElementById('loginPw').value;
+
+      if(!id || !pw){ showMsg('يرجى إدخال جميع الحقول.', 'error'); return; }
+
+      const users = getUsers();
+      const user = users.find(u => u.username === id || u.email === id);
+
+      if(!user){ showMsg('اسم المستخدم أو البريد الإلكتروني غير صحيح.', 'error'); return; }
+      if(user.password !== pw){ showMsg('كلمة المرور غير صحيحة.', 'error'); return; }
+
+      setCurrentUser({ username: user.username, email: user.email });
+      showMsg('تم تسجيل الدخول بنجاح. يتم تحويلك...', 'success');
+      setTimeout(()=>{ window.location.href = '../home/project-list.html?role=user'; }, 700);
     });
   </script>
+
 </body>
 </html>
