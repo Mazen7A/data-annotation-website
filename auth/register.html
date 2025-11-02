@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>إنشاء حساب</title>
+  <title>إعادة تعيين كلمة المرور</title>
   <link rel="stylesheet" href="../assets/css/style.css"/>
-  <script src="../assets/js/app.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -21,66 +20,60 @@
   <main class="auth-page">
     <section class="auth-card">
       <header class="auth-header">
-        <h1 class="auth-title">إنشاء حساب</h1>
-        <p class="auth-subtitle">انضم إلى منصّتنا وابدأ الرحلة 🎉</p>
+        <h1 class="auth-title">إعادة تعيين كلمة المرور</h1>
+        <p class="auth-subtitle">أدخل كلمة المرور الجديدة</p>
       </header>
 
-      <div id="regMsg" class="msg"></div>
+      <div id="resetMsg" class="msg"></div>
 
-      <form id="regForm" class="form" autocomplete="off">
-        <div class="form-group">
-          <label>اسم المستخدم</label>
-          <input id="regUser" required pattern="[A-Za-z0-9]{3,20}" />
-          <span class="field-hint">3–20 حرفًا/رقمًا بدون مسافات</span>
-        </div>
-        <div class="form-group">
-          <label>البريد الإلكتروني</label>
-          <input id="regEmail" type="email" required />
-        </div>
+      <form id="resetForm" class="form">
         <div class="form-row two-col">
           <div class="form-group">
-            <label>كلمة المرور</label>
-            <input id="regPassword" type="password" minlength="8" required />
-            <span class="field-hint">8+ أحرف وتضم رقمًا وحرفًا كبيرًا وصغيرًا</span>
+            <label>كلمة المرور الجديدة</label>
+            <input id="pw1" type="password" minlength="8" required />
           </div>
           <div class="form-group">
             <label>تأكيد كلمة المرور</label>
-            <input id="regConfirm" type="password" minlength="8" required />
+            <input id="pw2" type="password" minlength="8" required />
           </div>
         </div>
-
         <div class="auth-actions">
-          <div class="left">
-            <a href="./login.html">لديك حساب؟ سجّل الدخول</a>
-          </div>
-          <div class="right">
-            <button type="submit" class="auth-submit">تسجيل</button>
-          </div>
+          <div class="right"><button class="auth-submit" type="submit">حفظ</button></div>
         </div>
       </form>
     </section>
   </main>
 
   <script>
-    document.getElementById("regForm").addEventListener("submit", function(e){
+    document.getElementById("resetForm").addEventListener("submit", (e)=>{
       e.preventDefault();
-      const msg = regMsg; msg.textContent = ""; msg.className = "msg";
-      const username = regUser.value.trim();
-      const email = regEmail.value.trim();
-      const password = regPassword.value;
-      const confirm  = regConfirm.value;
+      const msg = document.getElementById("resetMsg");
+      const pw1 = document.getElementById("pw1").value;
+      const pw2 = document.getElementById("pw2").value;
+      const email = localStorage.getItem("resetEmail");
 
-      const users = JSON.parse(localStorage.getItem("users") || "[]");
-      if (users.find(u => u.username === username)) { msg.className="msg error"; msg.textContent="اسم المستخدم مستخدم سابقًا."; return; }
-      if (users.find(u => u.email === email))     { msg.className="msg error"; msg.textContent="البريد الإلكتروني مستخدم سابقًا."; return; }
-      if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password)) { msg.className="msg error"; msg.textContent="كلمة المرور ضعيفة. اتبع المتطلبات أعلاه."; return; }
-      if (password !== confirm) { msg.className="msg error"; msg.textContent="كلمتا المرور غير متطابقتين."; return; }
+      if (!email){ msg.textContent="لم يتم تحديد البريد. أعد العملية من البداية."; msg.className="msg error"; return; }
 
-      users.push({username, email, password});
+      if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(pw1)) {
+        msg.textContent="كلمة المرور ضعيفة. يجب أن تحتوي على حرف صغير وكبير ورقم."; 
+        msg.className="msg error"; 
+        return; 
+      }
+      if (pw1 !== pw2) { 
+        msg.textContent="كلمتا المرور غير متطابقتين."; 
+        msg.className="msg error"; 
+        return; 
+      }
+
+      let users = JSON.parse(localStorage.getItem("users") || "[]");
+      users = users.map(u => ((u.email||"").toLowerCase() === email.toLowerCase()) ? {...u, password:pw1} : u);
       localStorage.setItem("users", JSON.stringify(users));
-      setCurrentUser({username, email});
-      msg.className="msg success"; msg.textContent="تم إنشاء الحساب! يتم تحويلك...";
-      setTimeout(()=>location.href="../home/select-role.html", 900);
+
+      msg.textContent="تم حفظ كلمة المرور الجديدة بنجاح!"; 
+      msg.className="msg success";
+      localStorage.removeItem("resetEmail");
+
+      setTimeout(()=>{ window.location.href = "./login.html"; }, 1500);
     });
   </script>
 </body>
