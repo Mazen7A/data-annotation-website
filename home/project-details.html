@@ -6,12 +6,16 @@
   <title id="page-title">تفاصيل المشروع</title>
   <link rel="stylesheet" href="/assets/css/style.css"/>
  <style>
-    .app-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:1100;display:flex;align-items:center;justify-content:space-between;background:#fff;padding:0 20px;border-bottom:1px solid #eee;}
-    .site-logo-fixed{height:48px;margin-left:12px;}
-    .brand{font-weight:bold;color:#14532d;font-size:20px;}
-    .header-actions{display:flex;gap:10px;}
-    .header-actions button{padding:6px 14px;border-radius:8px;border:none;background:#f0fdf4;color:#14532d;font-weight:bold;cursor:pointer;}
-    .header-actions button:hover{background:#bbf7d0;}
+      .app-header { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0 20px; border-bottom: 1px solid #eee; height: 72px; position: fixed; top: 0; left: 0; right: 0; z-index: 1100;}
+    .site-logo-fixed { height: 54px; margin-left: 12px; }
+    .brand { font-weight: bold; color: #14532d; font-size: 20px; }
+    .header-actions { display: flex; gap: 10px; }
+    .header-actions button { pointer-events: auto; font-size: 16px; padding: 6px 14px; border-radius: 8px; border: none; background: #f0fdf4; color: #14532d; font-weight: bold; cursor: pointer; transition: background 0.2s;}
+    .header-actions button:hover { background: #bbf7d0; }
+    .page { padding-top: 90px; }
+    .stats-btn { margin-bottom: 16px; background: #d1fae5; border: none; color: #14532d; font-weight: bold; padding: 10px 20px; border-radius: 8px; font-size: 16px; cursor: pointer;}
+    .stats-btn:hover { background: #bbf7d0;}
+  
     body{direction:rtl;text-align:right;padding-top:90px;background:#f7f8fa;}
     .page{padding:16px;}
     .container{max-width:980px;margin:0 auto;}
