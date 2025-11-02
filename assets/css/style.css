@@ -1,4 +1,4 @@
-  /* assets/css/style.css - النسخة النهائية (تنسيق الهيدر الجديد) */
+ /* assets/css/style.css - النسخة النهائية (تنسيق الهيدر الجديد) */
 *{box-sizing:border-box;font-family:system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;} 
 :root{
     --brand: #14532d; 
@@ -11,108 +11,55 @@
 html,body{height:100%   padding-top:100px;}
 body{margin:0;background:var(--gray-bg);color:#000   padding-top:100px;}
 
- /* ===== Enhanced Site Header ===== */
-.site-header {
+ .app-header { display: none !important; }
+.site-logo-fixed { display: none !important; } /* تمنع الشعار العائم الكبير */
+
+/* هيدر موحّد وجميل */
+.site-header{
   position: fixed;
+  inset-inline: 0;
   top: 0;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  border-bottom: 2px solid #14532d; /* نفس لون الهوية */
   z-index: 1000;
+  background: #fff;
+  border-bottom: 2px solid #14532d;
+  box-shadow: 0 3px 8px rgba(0,0,0,.05);
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* الشعار + العنوان */
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  height: 48px;
-  width: 48px;
+.header-left{ display:flex; align-items:center; gap:10px; }
+.logo{
+  inline-size: 48px; block-size: 48px;
   border-radius: 50%;
   object-fit: contain;
   background: #f7faf9;
   border: 1px solid #e5e7eb;
 }
+.brand{ font-size:20px; font-weight:800; color:#14532d; white-space:nowrap; letter-spacing:.3px; }
 
-.brand {
-  font-size: 20px;
-  font-weight: 800;
-  color: #14532d;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
+/* أزرار الهيدر */
+.actions{ display:flex; gap:10px; }
+.actions .btn{
+  background:#f0fdf4; color:#14532d; font-weight:700;
+  border:1px solid #bbf7d0; border-radius:10px;
+  padding:6px 14px; font-size:15px; text-decoration:none; cursor:pointer;
+  transition:background .2s, box-shadow .2s, transform .15s;
 }
-
-/* الأزرار */
-.actions {
-  display: flex;
-  gap: 10px;
+.actions .btn:hover{ background:#bbf7d0; box-shadow:0 4px 12px rgba(0,0,0,.08); transform:translateY(-1px); }
+.actions .btn-logout{ background:#14532d; color:#fff; border-color:#14532d; }
+.actions .btn-logout:hover{ background:#0e4022; }
+.brand img{height:52px;width:auto}
+.brand strong{font-size:20px;color:var(--brand);font-weight: 800;}
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 0; 
+    margin-left: auto; 
 }
-
-.actions .btn {
-  background: #f0fdf4;
-  color: #14532d;
-  font-weight: bold;
-  border: 1px solid #bbf7d0;
-  border-radius: 10px;
-  padding: 6px 14px;
-  font-size: 15px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
-}
-
-.actions .btn:hover {
-  background: #bbf7d0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transform: translateY(-1px);
-}
-
-/* زر تسجيل الخروج مميز */
-.actions .btn-logout {
-  background: #14532d;
-  color: #fff;
-  border-color: #14532d;
-}
-
-.actions .btn-logout:hover {
-  background: #0e4022;
-}
-
-/* تعديل للمحتوى تحت الهيدر */
-body {
-  scroll-padding-top: 90px;
-}
-
-/* استجابة للشاشات الصغيرة */
-@media (max-width: 640px) {
-  .site-header {
-    padding: 8px 12px;
-  }
-
-  .brand {
-    font-size: 16px;
-  }
-
-  .logo {
-    height: 40px;
-    width: 40px;
-  }
-
-  .actions .btn {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-}
-
 .container{max-width:1000px;margin:0 auto;padding:0 16px}
 .page{padding-top:98px;padding-bottom:24px}
 h1,h2{margin:16px 0;color:var(--brand);font-weight: 700;}
@@ -171,7 +118,22 @@ body{padding-top:100px}
 .chip{padding:4px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.92rem}
 .chip-muted{color:#374151;border-style:dashed}
 
- 
+/* Annotation pages */
+.meta { display:flex; gap:12px; align-items:center; margin:12px 0 16px; }
+.meta progress { width:220px; height:14px; }
+.container { max-width:960px; margin:0 auto; padding:16px; }
+.q-area .card { background:#fff; border-radius:16px; padding:18px; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+.q-area h3 { margin:0 0 12px; font-size:1.1rem; }
+.choice { display:flex; gap:8px; padding:8px 0; align-items:center; cursor:pointer; }
+.choices { display:grid; gap:8px; }
+#list-select { width:100%; padding:8px; border-radius:12px; }
+.nav-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:14px; }
+.btn-primary { background:#198754; color:#fff; }
+.card.error { border:1px solid #c0392b; color:#c0392b; background:#fff5f5; }
+.site-header { display:flex; justify-content:space-between; align-items:center; padding:10px 16px; background:#f8fbf8; border-bottom:1px solid #e9efe9;}
+.brand { font-weight:700; color:#2e5f3e; }
+.actions .btn { margin-inline-start:8px; }
+
 
 /* ===================== Annotation pages (clean) ===================== */
 
