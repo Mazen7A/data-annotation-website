@@ -928,5 +928,168 @@
     "question": "صف أساليب الضيافة الشائعة في حفلات الزواج.",
     "options": [],
     "answer": ""
+  },
+
+,
+  /* ===== TRUE / FALSE ===== */
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "القهوة السعودية تُقدَّم تقليديًا في فناجيل صغيرة مع التمر.",
+    "answer": true
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "صناعة القرصان تعتمد على الأرز أولًا.",
+    "answer": false
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Clothes",
+    "question": "العقال يُلبس فوق الغترة أو الشماغ.",
+    "answer": true
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Clothes",
+    "question": "الشماغ غالبًا لونه أزرق في السعودية.",
+    "answer": false
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "السدو حياكة بدوية تُستخدم في بيوت الشعر والمفارش.",
+    "answer": true
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الدلة النحاسية تُستخدم لشرب الماء فقط.",
+    "answer": false
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Celebration",
+    "question": "العيدية عادة اجتماعية مرتبطة بالأعياد.",
+    "answer": true
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Celebration",
+    "question": "تقام صلاة العيد قبل الفجر.",
+    "answer": false
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Entertainment",
+    "question": "العرضة رقصة شعبية معروفة في منطقة نجد.",
+    "answer": true
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Entertainment",
+    "question": "آلة العود آلة غربية المنشأ تُستخدم فقط في الموسيقى الكلاسيكية الغربية.",
+    "answer": false
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Dating",
+    "question": "الملكة تعني إشهار عقد الزواج رسميًا.",
+    "answer": true
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Dating",
+    "question": "بطاقات الدعوة تُوزَّع عادةً بعد انتهاء المناسبة.",
+    "answer": false
+  },
+
+  /* ===== LIST (single-correct) ===== */
+  {
+    "type": "LIST",
+    "Category": "Food",
+    "question": "اختر بهارًا يُستخدم تقليديًا في القهوة السعودية:",
+    "options": ["الهيل", "الكركم", "الزعتر", "الشطة"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Food",
+    "question": "اختر طبقًا يرتبط بالمنطقة الجنوبية:",
+    "options": ["المعصوب", "اللازانيا", "الكشري", "السوشي"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Clothes",
+    "question": "اختر لباسًا نسائيًا تقليديًا في السعودية:",
+    "options": ["العباءة", "تي-شيرت", "بنطال جينز", "معطف شتوي"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Clothes",
+    "question": "اختر النقش الشائع للشماغ:",
+    "options": ["أحمر وأبيض", "أسود وأبيض", "أزرق وأبيض", "أخضر وأبيض"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Crafts and Work",
+    "question": "اختر مادة تُستخدم في حياكة بيوت الشعر:",
+    "options": ["الصوف/الوبر", "البلاستيك", "الألومنيوم", "الفايبر"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Crafts and Work",
+    "question": "اختر منتجًا يُصنع من سعف النخيل:",
+    "options": ["السلال والقفف", "الزجاجات", "الحبال المعدنية", "الورق المقوى"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Celebration",
+    "question": "اختر مناسبة تؤدّى فيها العرضة:",
+    "options": ["اليوم/المناسبات الوطنية", "عيد الميلاد", "حفل تخرّج مدرسي", "مؤتمر علمي"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Celebration",
+    "question": "اختر حلوى رمضانية مشهورة في الحجاز:",
+    "options": ["الكنافة والقطايف", "تيراميسو", "باڤلوفا", "ماكرون"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Entertainment",
+    "question": "اختر آلة موسيقية شعبية تراثية:",
+    "options": ["المزمار/الناي الشعبي", "الترومبيت", "الجيتار الكهربائي", "الكيبورد"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Entertainment",
+    "question": "اختر رقصة شعبية مرتبطة بالجنوب:",
+    "options": ["الخطوة", "الدحة", "العرضة", "المجرور"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Dating",
+    "question": "اختر مناسبة ترتبط بتقديم المهر غالبًا:",
+    "options": ["العقد/الملكة", "الخطوبة غير الرسمية", "بعد سنوات من الزواج", "لا علاقة"],
+    "answer": 0
+  },
+  {
+    "type": "LIST",
+    "Category": "Dating",
+    "question": "اختر عنصرًا مرتبطًا بدعوات الزواج:",
+    "options": ["بطاقات الدعوة", "فاتورة كهرباء", "إيصال صرف", "شهادة صحية"],
+    "answer": 0
   }
+
+  
 ]
