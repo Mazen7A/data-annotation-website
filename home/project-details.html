@@ -6,12 +6,7 @@
   <title id="page-title">تفاصيل المشروع</title>
   <link rel="stylesheet" href="/assets/css/style.css"/>
    <style>
-    .app-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:1100;display:flex;align-items:center;justify-content:space-between;background:#fff;padding:0 20px;border-bottom:1px solid #eee;}
-    .site-logo-fixed{height:54px;margin-left:12px;}
-    .brand{font-weight:bold;color:#14532d;font-size:20px;}
-    .header-actions{display:flex;gap:10px;}
-    .header-actions button{padding:6px 14px;border-radius:8px;border:none;background:#f0fdf4;color:#14532d;font-weight:bold;cursor:pointer;}
-    .header-actions button:hover{background:#bbf7d0;}
+ 
     body{direction:rtl;text-align:right;padding-top:90px;background:#f7f8fa;}
     .page{padding:16px;}
     .container{max-width:980px;margin:0 auto;}
@@ -33,14 +28,16 @@
   </style>
 </head>
 <body>
- <header class="app-header" role="banner">
-  <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
-  <div class="brand">منصة إثراء الثقافة السعودية</div>
-  <div class="header-actions">
-    <button class="link" onclick="goToHome()">الرئيسية</button>
-    <button class="btn-back" onclick="history.back()">رجوع</button>
-    <button onclick="logout()">تسجيل خروج</button>
+   <header class="site-header" role="banner">
+  <div class="header-left">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="شعار ثقافتنا" class="logo">
+    <div class="brand">منصّة إثراء الثقافة السعودية</div>
   </div>
+  <nav class="actions">
+    <a class="btn" href="../home/project-list.html">الرئيسية</a>
+    <button class="btn" onclick="history.back()">رجوع</button>
+    <a class="btn btn-logout" href="../auth/login.html" onclick="localStorage.removeItem('currentUser')">تسجيل خروج</a>
+  </nav>
 </header>
  
 
