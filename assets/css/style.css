@@ -1,269 +1,227 @@
- 
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   0) GLOBAL RESET + COLOR SYSTEM
-   -------------------------------------------------------------------------- */
-
-* { box-sizing: border-box; font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-
-/* Color tokens (tune once, affect everywhere) */
-:root {
-  --brand:            #14532d; /* Primary green */
-  --brand-600:        #0f3a2a; /* Hover/darker */
-  --brand-text:       #ffffff; /* Text on brand */
-  --brand-accent:     #1e7145; /* Links hover, accents */
-
-  --bg:               #f7f7fb; /* App background */
-  --card-bg:          #ffffff; /* Cards and header */
-  --ring:             #e5e7eb; /* Borders / outlines */
-  --muted:            #6b7280; /* Secondary text */
-
-  --back-button:      #6c757d; /* Neutral button */
+/* assets/css/style.css - النسخة النهائية (تنسيق الهيدر الجديد) */
+*{box-sizing:border-box;font-family:system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;} 
+:root{
+    --brand: #14532d; 
+    --brand-text: #fff;
+    --brand-accent: #1e7145;
+    --gray-bg: #f7f7fb;
+    --card-bg: #fff;
+    --back-button-color: #6c757d; 
 }
 
-/* --------------------------------------------------------------------------
-   1) PAGE BASICS
-   -------------------------------------------------------------------------- */
+/* (تصحيح طفيف فقط: فاصلة منقوطة) */
+html,body{height:100%; padding-top:100px;}
+/* (تصحيح طفيف فقط: فاصلة منقوطة) */
+body{margin:0;background:var(--gray-bg);color:#000; padding-top:100px;}
 
-html, body { height: 100%; padding-top: 100px; } /* reserve space for fixed header */
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--brand);     /* brand text color */
-  line-height: 1.7;
-  padding-top: 100px;      /* safety pad for fixed header */
+.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:var(--card-bg);
+    border-bottom:2px solid var(--brand); 
+    z-index:1000;
+    padding:12px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between; 
 }
-
-/* Reusable container for page width */
-.container { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
-.page      { padding-top: 98px; padding-bottom: 24px; }
-
-h1, h2 { margin: 16px 0; color: var(--brand); font-weight: 700; }
-
-/* --------------------------------------------------------------------------
-   2) FIXED SITE HEADER (brand centered)
-   -------------------------------------------------------------------------- */
-
-.site-header {
-  position: fixed; top: 0; left: 0; right: 0;
-  background: var(--card-bg);
-  border-bottom: 2px solid var(--brand);
-  z-index: 1000;
-  padding: 12px 18px;
-  display: flex; align-items: center; justify-content: space-between;
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
 }
-
-/* Centered brand row (logo + title) */
-.brand {
-  display: flex; align-items: center; gap: 12px;
-  position: absolute; left: 50%; transform: translateX(-50%);
-  width: auto;
+.brand img{height:52px;width:auto}
+.brand strong{font-size:20px;color:var(--brand);font-weight: 800;}
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 0; 
+    margin-left: auto; 
 }
-.brand img    { height: 52px; width: auto; }
-.brand strong { font-size: 20px; color: var(--brand); font-weight: 800; }
-
-/* Right-side actions (e.g., Home / Back / Logout) */
-.header-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
-
-/* --------------------------------------------------------------------------
-   3) GENERIC UI PRIMITIVES (cards, labels, inputs, messages, grid)
-   -------------------------------------------------------------------------- */
-
-.card {
-  background: var(--card-bg);
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
-  margin: 16px 0;
-  border: 1px solid var(--ring);
+.container{max-width:1000px;margin:0 auto;padding:0 16px}
+.page{padding-top:98px;padding-bottom:24px}
+h1,h2{margin:16px 0;color:var(--brand);font-weight: 700;}
+.card{background:var(--card-bg);padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin:16px 0}
+label{display:block;margin:8px 0 4px;font-weight:700;color:#000}
+input{width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;color:#000;background:#fff}
+button:not(.btn-back),.link{
+    padding:10px 14px;border:0;border-radius:10px;background:var(--brand);color:var(--brand-text);
+    text-decoration:none;display:inline-block;cursor:pointer;font-weight: 600;transition: opacity 0.2s;
 }
-
-label { display: block; margin: 8px 0 4px; font-weight: 700; color: #000; }
-
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--ring);
-  border-radius: 10px;
-  color: #000;
-  background: #fff;
+button:not(.btn-back):hover,.link:hover{opacity:.9}
+.btn-back {
+    background: var(--back-button-color);
+    color: #fff;
+    padding:10px 14px;border:0;border-radius:10px;text-decoration:none;
+    display:inline-block;cursor:pointer;font-weight: 600;transition: background 0.2s;
 }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
-.small { color: #555; font-size: 12px; }
-
-/* State messages */
-.msg { margin: 8px 0; padding: 10px; border-radius: 10px; background: #f0f0f0; color: #000; }
-.msg.error   { background: #ffe7e7; color: #b00020; }
-.msg.success { background: #e7ffe9; color: #0b7a2a; }
-
-/* Hero/intro panel */
-.hero-intro {
-  background: var(--card-bg); border: 1px solid var(--brand); border-radius: 12px;
-  padding: 14px 16px; box-shadow: 0 2px 10px rgba(0,0,0,.04); margin: 16px 0;
+.btn-back:hover {background: #5a6268;}
+.msg{margin:8px 0;padding:10px;border-radius:10px;background:#f0f0f0;color:#000}
+.msg.error{background:#ffe7e7;color:#b00020}
+.msg.success{background:#e7ffe9;color:#0b7a2a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.small{color:#555;font-size:12px}
+a{color:var(--brand)}
+a:hover {color: var(--brand-accent);}
+.hero-intro{
+    background:var(--card-bg);border:1px solid var(--brand);border-radius:12px;
+    padding:14px 16px;box-shadow:0 2px 10px rgba(0,0,0,.04);margin:16px 0
 }
-.hero-intro h2 { margin: 0 0 8px 0; font-size: 18px; color: var(--brand); font-weight: 700; }
-.hero-intro p  { margin: 6px 0; line-height: 1.6; }
-
-/* Link cards */
-.card.link { background-color: var(--card-bg); color: #000; border: 1px solid var(--back-button); text-decoration: none; }
+.hero-intro h2{margin:0 0 8px 0;font-size:18px; color:var(--brand); font-weight: 700;}
+.hero-intro p{margin:6px 0;line-height:1.6}
+.card.link { background-color: var(--card-bg); color: #000; border: 1px solid var(--back-button-color); text-decoration: none;}
 .card.link:hover { background-color: #f0f0f0; opacity: 1; }
 .card.link h2 { color: var(--brand); }
 
-/* --------------------------------------------------------------------------
-   4) BUTTONS (primary, neutral/back)
-   -------------------------------------------------------------------------- */
+/* === injected (title/logo/padding and cleanup) === */
 
-.btn {
-  padding: 10px 14px;
-  border: 1px solid var(--ring);
-  border-radius: 12px;
-  background: #fff;
-  color: #111;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 700;
-  transition: background .15s ease, transform .05s ease, border-color .15s ease, opacity .2s ease;
-}
-.btn:hover  { background: #f3f4f6; }
-.btn:active { transform: translateY(1px); }
 
-.btn-primary {
-  background: var(--brand);
-  color: var(--brand-text);
-  border-color: var(--brand);
-}
-.btn-primary:hover { background: var(--brand-600); }
+/* do NOT hide info-card; only target explicit boxes */
+.top-box,#top-right-box{display:none!important}
+body{color:#14532d;line-height:1.9;margin:1.2rem 0   padding-top:100px;}
+.prelogin-blurb h2{font-size:20px;margin-bottom:.6rem}
+/* unified header */
+.app-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:1100;pointer-events:none}
+.site-logo-fixed{position:absolute;top:6px;left:16px;height:84px;width:auto;object-fit:contain;z-index:1101;pointer-events:auto}
+.site-title{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-size:20px;font-weight:700;color:#14532d;background:#fff;padding:6px 14px;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,.05);white-space:nowrap;z-index:1100}
+body{color:#14532d;line-height:1.9;margin:1.2rem 0  padding-top:100px;}
+.prelogin-blurb h2{font-size:18px;margin-bottom:.4rem}
 
-.btn-back {
-  background: var(--back-button);
-  color: #fff;
-  padding: 10px 14px;
-  border: 0; border-radius: 10px;
-  text-decoration: none; display: inline-block; cursor: pointer;
-  font-weight: 600; transition: background .2s ease;
-}
-.btn-back:hover { background: #5a6268; }
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+.prelogin-blurb h2,.prelogin-blurb p{color:#14532d;font-weight:700}
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+body>ol:first-child,body>ul:first-child,body>hr:first-of-type{display:none!important}
+body{padding-top:100px}
+/* chips/badges for project meta */
+.chip{padding:4px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.92rem}
+.chip-muted{color:#374151;border-style:dashed}
 
-/* --------------------------------------------------------------------------
-   5) CHIPS / BADGES
-   -------------------------------------------------------------------------- */
+/* Annotation pages */
+.meta { display:flex; gap:12px; align-items:center; margin:12px 0 16px; }
+.meta progress { width:220px; height:14px; }
+.container { max-width:960px; margin:0 auto; padding:16px; }
+.q-area .card { background:#fff; border-radius:16px; padding:18px; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+.q-area h3 { margin:0 0 12px; font-size:1.1rem; }
+.choice { display:flex; gap:8px; padding:8px 0; align-items:center; cursor:pointer; }
+.choices { display:grid; gap:8px; }
+#list-select { width:100%; padding:8px; border-radius:12px; }
+.nav-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:14px; }
+.btn-primary { background:#198754; color:#fff; }
+.card.error { border:1px solid #c0392b; color:#c0392b; background:#fff5f5; }
+.site-header { display:flex; justify-content:space-between; align-items:center; padding:10px 16px; background:#f8fbf8; border-bottom:1px solid #e9efe9;}
+.brand { font-weight:700; color:#2e5f3e; }
+.actions .btn { margin-inline-start:8px; }
 
-.chip {
-  padding: 4px 10px;
-  border: 1px solid var(--ring);
-  border-radius: 999px;
-  background: #fff;
-  color: var(--brand);
-  font-size: .92rem;
-}
-.chip-muted { color: #374151; border-style: dashed; }
-
-/* --------------------------------------------------------------------------
-   6) LINKS (brand-colored)
-   -------------------------------------------------------------------------- */
-
-a { color: var(--brand); }
-a:hover { color: var(--brand-accent); }
-
-/* --------------------------------------------------------------------------
-   7) ANNOTATION PAGES (MCQ + OPEN ENDED)
-   --------------------------------------------------------------------------
-   This section styles:
-   - Meta bar (progress + info)
-   - Question card (title + body)
-   - Options list (Radio-based MCQs)
-   - Open-ended textarea
-   - Navigation bar (Prev / Next / Finish)
-   - RTL alignment
-   -------------------------------------------------------------------------- */
-
-/* Meta bar (progress + small info) */
-.meta { display: flex; gap: 12px; align-items: center; margin: 12px 0 16px; }
-.meta small { color: var(--muted); }
-
-/* Accessible progress bar */
-progress {
-  width: 260px; height: 10px; appearance: none; border-radius: 999px; background: #e5e7eb;
-}
-progress::-webkit-progress-bar   { background: #e5e7eb; border-radius: 999px; }
-progress::-webkit-progress-value { background: #1f9d7a;  border-radius: 999px; }
-
-/* Ensure annotation pages use a wider container */
-.container { max-width: 980px; margin: 0 auto; padding: 16px; }
-
-/* Question card */
-.q-area .card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 22px 20px;
-  border: 1px solid var(--ring);
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
-}
-#q-title { margin: 0 0 6px; font-size: 1.28rem; line-height: 1.9rem; color: #111; font-weight: 800; }
-#q-body  { margin: 0; color: var(--muted); }
-
-/* Options list (MCQ) */
-#mcqForm { display: grid; gap: 10px; margin-top: 14px; }
-
-.option {
-  background: #fff; border: 1px solid var(--ring); border-radius: 12px;
-  transition: .15s ease; overflow: hidden;
-}
-.option:hover { box-shadow: 0 2px 10px rgba(0,0,0,.05); }
-
-.option label {
-  display: flex; gap: 12px; align-items: center; justify-content: space-between;
-  padding: 14px 16px; cursor: pointer;
-}
-
-/* Radio look + brand accent */
-.option input[type="radio"] {
-  inline-size: 18px; block-size: 18px; margin: 0; accent-color: var(--brand);
-}
-
-/* Selected state (visual emphasis) */
-.option:has(input[type="radio"]:checked) {
-  border-color: var(--brand);
-  box-shadow: 0 0 0 3px rgba(20,83,45,.09);
-}
-.option:has(input[type="radio"]:checked) span {
-  font-weight: 700; color: #0b1f18;
-}
-
-/* RTL alignment for options (text on right, radio on left) */
-[dir="rtl"] .option label { flex-direction: row-reverse; }
-[dir="rtl"] .option label span { margin-inline-end: auto; }
-
-/* Open-ended textarea */
-#oe-input {
-  width: 100%; min-height: 140px;
-  padding: 12px 14px; border-radius: 12px;
-  border: 1px solid var(--ring); background: #fff;
-  outline: none; font: inherit; resize: vertical;
-}
-#oe-input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(20,83,45,.10); }
-
-/* Sticky navigation (Prev / Next / Finish) */
-.nav-actions {
-  position: sticky; bottom: 0;
-  display: flex; gap: 10px; justify-content: center;
-  margin-top: 16px; padding-bottom: 8px; background: transparent;
-}
-.nav-actions .btn { min-width: 96px; }
-#btnDone { min-width: 120px; }
-
-/* Error-styled card (if you need it) */
-.card.error { border: 1px solid #c0392b; color: #c0392b; background: #fff5f5; }
-
-/* --------------------------------------------------------------------------
-   8) OPTIONAL: LIST SELECT (if you use list-type items)
-   -------------------------------------------------------------------------- */
-
-#list-select { width: 100%; padding: 8px; border-radius: 12px; border: 1px solid var(--ring); background: #fff; }
-
-/* ========================================================================== 
-   END OF FILE 
+/* ==========================================================================
+   SAFE ADD-ONS (مقيدة - لا تغيّر الأنماط القديمة)
    ========================================================================== */
+
+/* بطاقات الأقسام في صفحة تفاصيل المشروع */
+.qtype-card {
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+.qtype-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  transform: translateY(-2px);
+}
+.qtype-card .count-badge{
+  display:inline-block;
+  min-width:56px;
+  text-align:center;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#ecfeff;
+  color:#0369a1;
+  font-weight:800;
+  border:1px solid #bae6fd;
+  margin:6px 0 10px;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);
+  line-height:1;
+}
+.qtype-card .card-actions{
+  margin-top:6px;
+  display:flex;
+  gap:8px;
+}
+.qtype-card h3{
+  margin-top:0;
+  font-weight:800;
+  word-wrap:break-word;
+  overflow-wrap:anywhere;
+}
+/* التفاف شرائح الميتاداتا عند الضيق */
+.chips{ flex-wrap:wrap; }
+
+/* ========================= صفحات التوسيم (لمسات خفيفة) ====================== */
+/* لا تغيّر الأنماط القديمة؛ كلها تحت عناصر معيّنة */
+
+/* تمييز خيار MCQ عند المرور/التحديد */
+#mcqForm .option{
+  padding:6px 8px;
+  border-radius:10px;
+  transition:background .15s ease, box-shadow .15s ease;
+}
+#mcqForm .option:hover{
+  background:#f7faf7;
+  box-shadow:0 1px 0 rgba(0,0,0,.04) inset;
+}
+#mcqForm .option input[type="radio"]{
+  width:auto; /* لا نكسر input العام */
+}
+
+/* مجموعة أزرار صح/خطأ (لو استخدمت buttons) */
+.tf-controls{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+.tf-btn{
+  padding:10px 16px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  cursor:pointer;
+  font-weight:700;
+  transition:transform .08s ease, box-shadow .18s ease, background .18s ease;
+}
+.tf-btn:hover{ box-shadow:0 6px 16px rgba(0,0,0,.06); transform:translateY(-1px); }
+.tf-btn.is-true{ color:#166534; background:#ecfdf5; border-color:#bbf7d0; }
+.tf-btn.is-false{ color:#991b1b; background:#fef2f2; border-color:#fecaca; }
+.tf-btn.active{ outline:3px solid rgba(20,83,45,.15); }
+
+/* مربع الإدخال للأسئلة المفتوحة (لا يمس input العام) */
+#oe-input, .oe-input{
+  width:100%;
+  min-height:120px;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  line-height:1.7;
+}
+
+/* تحسين شريط التقدّم (اختياري خفيف) */
+.meta progress{
+  -webkit-appearance:none;
+  appearance:none;
+  height:12px;
+  border-radius:999px;
+  overflow:hidden;
+}
+.meta progress::-webkit-progress-bar{ background:#eef2ef; }
+.meta progress::-webkit-progress-value{ background:#1e7145; }
+
+/* محاذاة أزرار التنقّل أسفل السؤال بشكل متسق */
+.nav-actions{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:16px;
+}
