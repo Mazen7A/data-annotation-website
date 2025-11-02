@@ -22,7 +22,7 @@ const TYPE_PAGE = {
   OPEN_ENDED: '../annotate/open-ended.html'
 };
 
-const REMOTE_SOURCES = {};  
+const REMOTE_SOURCES = {}; // نتركها فارغة هنا؛ التصفح داخل تفاصيل المشروع يعتمد على المحلي فقط لعرض العدّ
 
 let dataFile = DATA_FILES.GENERAL;
 if (projectId.includes('NORTH')) dataFile = DATA_FILES.NORTH;
@@ -30,7 +30,7 @@ else if (projectId.includes('SOUTH')) dataFile = DATA_FILES.SOUTH;
 else if (projectId.includes('EAST'))  dataFile = DATA_FILES.EAST;
 
 let categoryChartInstance = null;
-let RAW_ITEMS = [];  
+let RAW_ITEMS = []; // نحتفظ بنسخة خام لنعيد الحساب عند تغيير نوع الأسئلة
 
 // Helpers to detect types (مطابقة لطريقة annotate.js/dataSources.js)
 function isMCQ(x) {
@@ -42,7 +42,8 @@ function isTrueFalse(x) {
 }
 function isOpenEnded(x) {
   const t = String(x.type||x.Type||'').toUpperCase();
-   return t.includes('OPEN') || (!isMCQ(x) && !isTrueFalse(x));
+  // لا توجد خيارات (أو أقل من 2) وليس true/false
+  return t.includes('OPEN') || (!isMCQ(x) && !isTrueFalse(x));
 }
 function filterByPickedType(items, picked) {
   switch (picked) {
