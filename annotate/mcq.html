@@ -19,8 +19,6 @@
   </nav>
 </header>
 
-
-
   <main class="container" style="max-width:900px;margin:auto">
     <h1>أسئلة اختيار من متعدد</h1>
 
@@ -29,24 +27,20 @@
       <small id="meta"></small>
     </div>
 
-    <!-- هذه العناصر مطلوبة للعرض -->
     <section class="question card" style="margin-top:12px">
       <h3 id="q-title">—</h3>
       <p id="q-body" class="muted"></p>
     </section>
 
-    <!-- هنا تتولّد الاختيارات -->
     <form id="mcqForm" style="margin-top:12px"></form>
 
     <footer class="nav-actions" style="display:flex;gap:8px;justify-content:center;margin-top:16px">
-      <!-- استخدم data-nav أو IDs التالية -->
       <button class="btn" data-nav="prev"  id="btnPrev">السابق</button>
       <button class="btn" data-nav="next"  id="btnNext">التالي</button>
       <button class="btn btn-primary" data-nav="finish" id="btnDone" style="display:none">إنهاء الجلسة</button>
     </footer>
   </main>
 
-  <!-- ضامن النوع -->
   <script>
     const u = new URL(location.href);
     if (!u.searchParams.get('type')) { u.searchParams.set('type', 'MCQ'); location.replace(u); }
