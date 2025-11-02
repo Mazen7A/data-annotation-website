@@ -33,17 +33,15 @@
   </style>
 </head>
 <body>
-  <header class="app-header">
-  <div class="header-left">
-    <img src="../assets/images/thaqafatna-circle.svg" alt="شعار ثقافتنا" class="logo">
-    <div class="brand">منصّة إثراء الثقافة السعودية</div>
-  </div>
-  <nav class="actions">
-    <a class="btn" href="../home/project-list.html">الرئيسية</a>
-    <button class="btn" onclick="history.back()">رجوع</button>
-    <a class="btn btn-logout" href="../auth/login.html" onclick="localStorage.removeItem('currentUser')">تسجيل خروج</a>
-  </nav>
-</header>
+   <header class="app-header">
+    <img src="/assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+    <div class="brand">منصة إثراء الثقافة السعودية</div>
+    <div class="header-actions">
+      <button class="link" onclick="goToHome()">الرئيسية</button>
+      <button class="btn-back" onclick="history.back()">رجوع</button>
+      <button onclick="logout()">تسجيل خروج</button>
+    </div>
+  </header>
  
 
   <div class="page">
@@ -61,8 +59,7 @@
       <h2 class="section-title" style="margin-top:18px">ابدأ التقييم</h2>
       <p class="small-gray" style="margin-top:-6px;">اختر نوع الأسئلة ثم اضغط على القسم:</p>
 
-      <!-- ✅ مُحدد نوع الأسئلة -->
-      <div class="qtype-picker">
+       <div class="qtype-picker">
         <label for="qTypeSelect"><b>نوع الأسئلة:</b></label>
         <select id="qTypeSelect">
           <option value="MCQ">اختيار من متعدد (MCQ)</option>
