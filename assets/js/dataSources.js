@@ -1,3 +1,4 @@
+
 const LOCAL_FILES = {
   SC_GENERAL: '../assets/data/GENERAL-questions.json',
   SC_NORTH:   '../assets/data/NORTH-questions.json',
@@ -51,7 +52,7 @@ function normalizeRow(row = {}) {
     }
   }
 
-  return { type, category, question: q, options, answer: ans };
+  return { type, category, question: q, options, answer: ans, Category: category };
 }
 
 async function fetchFromGitHubRaw(rawUrl) {
@@ -101,15 +102,22 @@ async function fetchFromLocal(projectId) {
 }
 
 async function loadQuestions({ projectId, source, url }) {
-  if (source === 'sheet'  && url) return await fetchFromGoogleSheetCsv(url);
-  if (source === 'github' && url) return await fetchFromGitHubRaw(url);
+  // Try remote first if provided, then fallback to local on any error.
+  if (source === 'sheet'  && url) {
+    try { return await fetchFromGoogleSheetCsv(url); } 
+    catch(e) { console.warn('Sheet fetch failed, falling back to local:', e?.message); }
+  }
+  if (source === 'github' && url) {
+    try { return await fetchFromGitHubRaw(url); } 
+    catch(e) { console.warn('GitHub fetch failed, falling back to local:', e?.message); }
+  }
   return await fetchFromLocal(projectId);
 }
 
 function filterByCategory(items, cat) {
   if (!cat) return items;
   const key = String(cat).toLowerCase();
-  return items.filter(x => String(x.category || '').toLowerCase() === key);
+  return items.filter(x => String((x.category||x.Category) || '').toLowerCase() === key);
 }
 
 function onlyMCQ(items) {
@@ -120,7 +128,7 @@ function onlyTrueFalse(items) {
   return items.filter(x => (x.type || '').includes('TRUE') || typeof x.answer === 'boolean');
 }
 
-function takeTenRandom(items, seedKey = '') {
+function takeNRandom(items, n=10, seedKey='') {
   const rand = (s) => {
     let x = 0;
     for (let i = 0; i < s.length; i++) x = (x * 31 + s.charCodeAt(i)) >>> 0;
@@ -129,7 +137,7 @@ function takeTenRandom(items, seedKey = '') {
   const r = rand(seedKey || String(Date.now()));
   const clone = [...items];
   clone.sort(() => r() - 0.5);
-  return clone.slice(0, Math.min(10, clone.length));
+  return clone.slice(0, Math.min(n, clone.length));
 }
 
 window.DATA_SOURCES = {
@@ -141,5 +149,5 @@ window.DATA_SOURCES = {
   filterByCategory,
   onlyMCQ,
   onlyTrueFalse,
-  takeTenRandom
+  takeNRandom
 };
