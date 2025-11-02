@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -8,7 +8,8 @@
 </head>
 <body>
 
-   <header class="site-header">
+  <!-- الهيدر -->
+  <header class="site-header">
     <div class="header-left">
       <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo" />
     </div>
@@ -56,13 +57,14 @@
         </div>
       </form>
 
-      <footer class="auth-footer">
+      <footer class="auth-footer" style="margin-top:10px;text-align:center;color:#6b7280">
         <span>© ثقافتنا</span>
       </footer>
     </section>
   </main>
 
-   <script>
+  <!-- منطق تسجيل الدخول (محليًا عبر localStorage) -->
+  <script>
     function getUsers(){
       try { return JSON.parse(localStorage.getItem('users') || '[]'); }
       catch { return []; }
@@ -92,7 +94,12 @@
 
       setCurrentUser({ username: user.username, email: user.email });
       showMsg('تم تسجيل الدخول بنجاح. يتم تحويلك...', 'success');
-      setTimeout(()=>{ window.location.href = '../home/project-list.html?role=user'; }, 700);
+
+      // ====== التعديل المطلوب: التحويل إلى select-role ======
+      setTimeout(function () {
+        window.location.href = '../home/select-role.html';
+      }, 700);
+      // ======================================================
     });
   </script>
 
