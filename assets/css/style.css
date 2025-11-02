@@ -1,4 +1,4 @@
-/* assets/css/style.css - النسخة النهائية (تنسيق الهيدر الجديد) */
+  /* assets/css/style.css - النسخة النهائية (تنسيق الهيدر الجديد) */
 *{box-sizing:border-box;font-family:system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;} 
 :root{
     --brand: #14532d; 
@@ -11,61 +11,19 @@
 html,body{height:100%   padding-top:100px;}
 body{margin:0;background:var(--gray-bg);color:#000   padding-top:100px;}
 
- /* ===== Header polish (additive) ===== */
-.app-header{
-  display:flex;align-items:center;justify-content:space-between;
-  background:#fff;padding:0 20px;border-bottom:1px solid #eee;
-  height:72px;position:fixed;top:0;left:0;right:0;z-index:1100;
-  inset-inline:0;backdrop-filter:saturate(1.1) blur(1.5px);
+.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:var(--card-bg);
+    border-bottom:2px solid var(--brand); 
+    z-index:1000;
+    padding:12px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between; 
 }
-.app-header .site-logo-fixed{height:44px;width:44px;object-fit:contain;border-radius:50%;
-  background:#f7faf9;border:1px solid #e6efe9}
-.app-header .brand{font-weight:800;color:#14532d;font-size:18px;letter-spacing:.2px;white-space:nowrap}
-.app-header .header-actions{display:flex;align-items:center;gap:8px}
-.app-header .header-actions .link,
-.app-header .header-actions .btn-back,
-.app-header .header-actions button{
-  border:1px solid #e6efe9;background:#f8faf8;color:#0e4022;
-  padding:7px 12px;border-radius:10px;font-weight:700;cursor:pointer;
-  transition:transform .06s, box-shadow .18s, background .2s;
-}
-.app-header .header-actions .link:hover,
-.app-header .header-actions .btn-back:hover,
-.app-header .header-actions button:hover{
-  box-shadow:0 6px 16px rgba(0,0,0,.06);transform:translateY(-1px)
-}
-.app-header .header-actions button:last-child{background:#14532d;color:#fff;border-color:#14532d}
-body{scroll-padding-top:80px}
-
-/* Cards polish (additive) */
-.card{border:1px solid #e9efe9;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
-.card h2{margin-top:0}
-.card .chip{padding:4px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.92rem}
-.grid .card .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.grid .card .actions .link{background:#14532d;color:#fff}
-.grid .card .actions .btn-back{background:#f3f7f3;color:#0e4022;border:1px solid #e6efe9}
-@media (max-width:640px){
-  .app-header{height:64px;padding-inline:12px}
-  .app-header .brand{font-size:16px}
-  .app-header .site-logo-fixed{height:38px;width:38px}
-}
-
- body { scroll-padding-top: 80px; }
-
-/* الاستجابة للجوال */
-@media (max-width: 640px) {
-  .app-header { height: 64px; padding-inline: 12px; }
-  .app-header .brand { font-size: 16px; }
-  /* لو المساحة ضيقة، نُصغّر الشعار ونسمح بالالتفاف */
-  .app-header .site-logo-fixed { height: 38px; width: 38px; }
-  .app-header .header-actions { gap: 6px; }
-  .app-header .header-actions .link,
-  .app-header .header-actions .btn-back,
-  .app-header .header-actions button {
-    padding: 6px 10px;
-  }
-}
-
 .brand{
     display:flex;
     align-items:center;
@@ -141,6 +99,8 @@ body{padding-top:100px}
 /* chips/badges for project meta */
 .chip{padding:4px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.92rem}
 .chip-muted{color:#374151;border-style:dashed}
+
+ 
 
 /* ===================== Annotation pages (clean) ===================== */
 
