@@ -1,3 +1,4 @@
+
 const DATA_FILES = {
   GENERAL: '../assets/data/GENERAL-questions.json',
   NORTH:   '../assets/data/NORTH-questions.json',
@@ -21,25 +22,17 @@ const TYPE_PAGE = {
   OPEN_ENDED: '../annotate/open-ended.html'
 };
 
- const REMOTE_SOURCES = {
-  'SC_GENERAL': {
-    source: 'sheet',
-    url: 'https://docs.google.com/spreadsheets/d/1nwVsA24SzxqITv_-jVQ_rQWxQ4eqpGJmIifyxZq2jsY/gviz/tq?tqx=out:csv&gid=993750005'
-  },
-  'SC_NORTH': {
-    source: 'sheet',
-    url: 'https://docs.google.com/spreadsheets/d/1nwVsA24SzxqITv_-jVQ_rQWxQ4eqpGJmIifyxZq2jsY/gviz/tq?tqx=out:csv&gid=993750005'
-  },
-  'SC_SOUTH': {
-    source: 'sheet',
-    url: 'https://docs.google.com/spreadsheets/d/1nwVsA24SzxqITv_-jVQ_rQWxQ4eqpGJmIifyxZq2jsY/gviz/tq?tqx=out:csv&gid=993750005'
-  },
-  'SC_EAST': {
-    source: 'sheet',
-    url: 'https://docs.google.com/spreadsheets/d/1nwVsA24SzxqITv_-jVQ_rQWxQ4eqpGJmIifyxZq2jsY/gviz/tq?tqx=out:csv&gid=993750005'
-  }
+/** 
+ * Remote sources are optional. Leave empty to rely on local JSON files.
+ * If you later want Google Sheet CSV, put a public export link like:
+ *   https://docs.google.com/spreadsheets/d/<ID>/export?format=csv&gid=<GID>
+ */
+const REMOTE_SOURCES = {
+  // 'SC_GENERAL': { source: 'sheet', url: '' },
+  // 'SC_SOUTH':   { source: 'sheet', url: '' },
+  // 'SC_NORTH':   { source: 'sheet', url: '' },
+  // 'SC_EAST':    { source: 'sheet', url: '' },
 };
-
 
 let dataFile = DATA_FILES.GENERAL;
 if (projectId.includes('NORTH')) dataFile = DATA_FILES.NORTH;
@@ -50,7 +43,7 @@ let categoryChartInstance = null;
 
 function renderCategoryChart(allQuestions) {
   const categoryCounts = allQuestions.reduce((acc, q) => {
-    const category = q.Category || 'غير مصنف';
+    const category = q.Category || q.category || 'غير مصنف';
     acc[category] = (acc[category] || 0) + 1;
     return acc;
   }, {});
@@ -69,8 +62,6 @@ function renderCategoryChart(allQuestions) {
       datasets: [{
         label: 'عدد الأسئلة',
         data,
-        backgroundColor: ['#047857','#065f46','#22c55e','#a3e635','#fde047','#f97316','#ef4444','#7c3aed','#1e40af','#4f46e5'],
-        borderColor: '#14532d',
         borderWidth: 1
       }]
     },
@@ -112,9 +103,11 @@ async function loadProjectDetails() {
       if (panel) panel.style.display = 'block';
     }
 
-    const res = await fetch(dataFile);
+    // Prefer local JSON; annotate pages can still use remote if configured.
+    const res = await fetch(dataFile, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status} عند تحميل ${dataFile}`);
-    const allQuestions = await res.json();
+    const allRaw = await res.json();
+    const allQuestions = Array.isArray(allRaw) ? allRaw : (allRaw.items || []);
 
     if (role === 'manager') renderCategoryChart(allQuestions);
 
@@ -137,7 +130,7 @@ async function loadProjectDetails() {
     if (wrap) {
       wrap.innerHTML = '';
       project.categories.forEach(category => {
-        const count = allQuestions.filter(q => q.Category === category.id).length;
+        const count = allQuestions.filter(q => (q.Category || q.category) === category.id).length;
 
         const card = document.createElement('div');
         card.className = 'qtype-card';
