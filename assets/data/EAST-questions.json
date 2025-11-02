@@ -1,672 +1,622 @@
 [
   {
-    "Question": "What is the most common dish in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Mahammar, Al-Thareed, Al-Mufallaq Al-Hasawi, Al-Makbous",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "طبق بحري مشهور في الشرقية:",
+    "options": [
+      "سمك مشوي/مكبوس روبيان",
+      "سوشي",
+      "برغر",
+      "تاكو"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the most common sweet in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Mafrouka, Al-Hanini, Al-Sago",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "الأحساء تشتهر بـ:",
+    "options": [
+      "الخلاص والتمور",
+      "الزيتون",
+      "التفاح",
+      "العنب فقط"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the common traditional street food in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Samosa, Falafel, Mutabbaq",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "الشاي الكرك منتشر في:",
+    "options": [
+      "الشرقية والخليج",
+      "الشمال فقط",
+      "الجنوب فقط",
+      "الغرب فقط"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the most common breakfast dish in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Balaleet (sweet vermicelli with egg)",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "الخبز في الجبيل والدمام:",
+    "options": [
+      "تنور/طاروج",
+      "خبز فرنسي فقط",
+      "توست",
+      "بيتزا"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the common traditional drink in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Tea with Taif Rose",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "طبق يُطهى بالأرز والسمك:",
+    "options": [
+      "مكبوس السمك",
+      "باستا",
+      "تايلندي",
+      "لازانيا"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the traditional clothing for men in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Dishdasha (Thobe)",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "مشروب رمضاني:",
+    "options": [
+      "السوبيا/التمر هندي",
+      "الليموناضة الأجنبية",
+      "القهوة السوداء فقط",
+      "الكابتشينو"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "يُستخدم الليمون العماني:",
+    "options": [
+      "في تتبيل السمك",
+      "في القهوة",
+      "في الحليب",
+      "لا يستخدم"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "حلوى شرقية:",
+    "options": [
+      "رهش/هريسة",
+      "تشيز كيك",
+      "بافlova",
+      "تيراميسو"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "طبق شعبي:",
+    "options": [
+      "ثريد/مرقوق",
+      "برغر",
+      "سوشي",
+      "نودلز"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "الروبيان يُطهى:",
+    "options": [
+      "مشوي/مقلي/كبسة",
+      "نيّ فقط",
+      "لا يؤكل",
+      "مخلّل"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "اذكر أطباقًا بحرية مشهورة في الخبر/الدمام.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "صف تتبيلات السمك بالليمون العماني.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "قارن بين مكبوس السمك ومجبوس الروبيان.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "أثر الخليج على المطبخ الشرقي.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "حلويات شعبية في الأحساء.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
     "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
+    "question": "أزياء الشرقية للرجال:",
+    "options": [
+      "ثوب وغترة/عقال",
+      "بدلة فقط",
+      "جينز",
+      "ساري"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the traditional clothing for women in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Daraa, Thobe Hashemi, Masrah, Manthour, Thobe Al-Thuraya, Abaya, Sheilah, Nafnaf",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
+    "question": "الأزياء النسائية:",
+    "options": [
+      "عباءة سوداء مع تفاصيل بسيطة",
+      "ملون ساطع دائمًا",
+      "رياضي فقط",
+      "بدون عباءة"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the traditional breakfast dish during Eid Al-Fitr in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Balaleet, Aseeda, Fateet, Liver, Zalabia",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Celebration",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the common traditional dances in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Ardah Saifiyah (Sword Dance), Fijri Art (Hasawi Style), Daq Al-Hubb, Harvest Dance, Freisa Dance",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Celebration",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the common traditional music in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Fijri, Nahhamah (sea chant), Liwa",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the common traditional craft in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Pottery, Palm-Frond Weaving (Khoos), Cloak Weaving (Mishlah), Rope Making, Leatherwork, Sword Making, Basket Weaving, Metalwork, Fish Traps (Gargoor)",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the items the bride buys for her wedding in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Shabkah (Bridal Jewelry Set)",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Dating",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the average amount of dowry presented to the wife in East Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "25,000–60,000 SAR",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Dating",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What type of dessert dish in the Eastern Province of Saudi Arabia is made from starchy granules, water, sugar, and ghee?",
-    "Choices": "–",
-    "Answer": "Sago (Al-Sago)",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is a traditional dish of the Eastern Province, eaten on the first day of Eid Al-Fitr, made of mashed dates, ghee, and flour?",
-    "Choices": "–",
-    "Answer": "Al-Mamroos",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is Harees soup made of in the east of Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Hassawi wheat",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the dish from the east that relies on rice cooked with sugar and served with fried fish?",
-    "Choices": "–",
-    "Answer": "Al-Mahammar",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the striped fabric worn by men around the lower body, especially by divers in the east?",
-    "Choices": "–",
-    "Answer": "Izar",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
+    "question": "إكسسوارات شائعة:",
+    "options": [
+      "ذهب/ألماس وفضة",
+      "حديد",
+      "خشب",
+      "زجاج"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the name of the traditional sea folklore of Saudi Arabia, common in the east, especially in Qatif?",
-    "Choices": "–",
-    "Answer": "Sanakli Art",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the traditional game popular in Darin Center in the Eastern Region of Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Jadeer",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the traditional dance performed in the east, considered an ancient heritage, particularly in the Al-Ahsa region?",
-    "Choices": "–",
-    "Answer": "Al-Haida Dance",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the celebration observed in the east during Sha’ban or Ramadan?",
-    "Choices": "–",
-    "Answer": "Garangao (Al-Garqee’an)",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Celebration",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "The craft of making Mishlahs (traditional cloaks) is an inherited profession in which families?",
-    "Choices": "–",
-    "Answer": "Al-Ahsa families",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "There is a similarity between the jewelry in the eastern and northern regions of Saudi Arabia and the jewelry of which other region?",
-    "Choices": "–",
-    "Answer": "Riyadh",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "“Al-Frisi” is a traditional performing art in Saudi Arabia that originated in which region?",
-    "Choices": "–",
-    "Answer": "Eastern Region",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the traditional craft referred to as “Al-Qallafa” in Saudi culture?",
-    "Choices": "–",
-    "Answer": "Shipbuilding",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What handicraft, common in the east, is primarily made by women using palm tree products?",
-    "Choices": "–",
-    "Answer": "Palm-Frond Weaving (Khoos)",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What material is used for building ships in the east of Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Wood",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the three main architectural planning styles in the Eastern Region of Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Coastal architecture, Desert architecture, Agricultural (Oasis) architecture",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Architecture",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the most common dish in East Saudi Arabia?",
-    "Choices": "A. Areeka B. Ma’asoub C. Mansaf D. Al-Thareed",
-    "Answer": "D. Al-Thareed",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the most popular sweet in East Saudi Arabia?",
-    "Choices": "A. Kleija B. Marsa C. Al-Sago D. Kunafa",
-    "Answer": "C. Al-Sago",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Which of the following is a common traditional street food in East Saudi Arabia?",
-    "Choices": "A. Shawarma B. Mutabbaq C. Balila D. All of the above",
-    "Answer": "B. Mutabbaq",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the traditional breakfast dish in Eid Al-Fitr in East Saudi Arabia?",
-    "Choices": "A. Ful Medames B. Haneeth C. Mandi D. Balaleet",
-    "Answer": "D. Balaleet",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Which of the following is a common traditional drink in East Saudi Arabia?",
-    "Choices": "A. Tea with Rose B. Sobya C. Toronj Juice D. Qishr Coffee",
-    "Answer": "A. Tea with Rose",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Which of the following is a traditional breakfast dish enjoyed during Eid Al-Fitr in East Saudi Arabia?",
-    "Choices": "A. Areeka B. Zalabiya C. Mansaf D. Hanini",
-    "Answer": "B. Zalabiya",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Celebration",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Which of the following are common traditional dances in East Saudi Arabia?",
-    "Choices": "A. Ardah B. Saifiya C. Al-Qazzwai D. Al-Dahha and Samri",
-    "Answer": "B. Saifiya",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Celebration",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the traditional clothing for men in East Saudi Arabia?",
-    "Choices": "A. Al-Mirwaden B. Al-Thobe and Al-Sudairi C. Al-Dishdasha D. Al-Mufraj",
-    "Answer": "C. Al-Dishdasha",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
+    "question": "المشلح/البشت:",
+    "options": [
+      "في المناسبات",
+      "رياضة",
+      "عمل تقني",
+      "لا يستخدم"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the traditional clothing for women in East Saudi Arabia?",
-    "Choices": "A. Dara’aah B. Thobe Asiri C. Short Skirt D. Al-Mufraj",
-    "Answer": "A. Dara’aah",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
+    "question": "الأقمشة المناسبة للمناخ:",
+    "options": [
+      "خفيفة صيفًا",
+      "ثقيلة دائمًا",
+      "مطاطية فقط",
+      "جلدية"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What are the common traditional dances in East Saudi Arabia?",
-    "Choices": "A. Al-Fajri B. Al-Qazoui C. Al-Dabka D. Al-Khutwa",
-    "Answer": "A. Al-Fajri",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the items the bride buys for her wedding in East Saudi Arabia?",
-    "Choices": "A. Al-Dibsh B. Al-Jihaz C. Al-Mahr D. Al-Shabka",
-    "Answer": "D. Al-Shabka",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Dating",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the average amount of dowry presented to the wife in East Saudi Arabia?",
-    "Choices": "A. 10,000–20,000 SAR B. 25,000–60,000 SAR C. 70,000–100,000 SAR D. Above 100,000 SAR",
-    "Answer": "B. 25,000–60,000 SAR",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Dating",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the common traditional craft in East Saudi Arabia?",
-    "Choices": "A. Woodwork B. Bisht Making C. Al-Qatt Painting D. Flower Decoration",
-    "Answer": "B. Bisht Making",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Which Saudi dessert is known for its starchy granules?",
-    "Choices": "A. Al-Mamroos B. Al-Sago C. Al-Aseeda D. Al-Haneeni",
-    "Answer": "B. Al-Sago",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the main traditional dessert in the Eastern region of Saudi Arabia, also known as “Masabeeb” or “Marageesh”?",
-    "Choices": "A. Al-Aseeda B. Al-Haneeni C. Al-Mamroos D. Al-Marasee’",
-    "Answer": "C. Al-Mamroos",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the dish in East Saudi Arabia that is prepared using rice cooked with sugar and served with fried fish?",
-    "Choices": "A. Jareesh B. Marqooq C. Mansaf D. Muhammar",
-    "Answer": "D. Muhammar",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is Harees soup made of?",
-    "Choices": "A. Hassawi Wheat B. African Wheat C. Egyptian Wheat D. Yemeni Wheat",
-    "Answer": "A. Hassawi Wheat",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the striped fabric traditionally worn by men around the lower body, especially by divers in East Saudi Arabia?",
-    "Choices": "A. Izaar B. Thobe C. Tannoura D. Shemagh",
-    "Answer": "A. Izaar",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
+    "question": "الشماغ والغترة:",
+    "options": [
+      "منتشرة",
+      "ممنوعة",
+      "نادرة",
+      "غير موجودة"
+    ],
+    "answer": 0
   },
   {
-    "Question": "The craft of making Mishlahs (traditional cloaks) is an inherited profession in which families?",
-    "Choices": "A. Makkah Families B. Al-Ahsa Families C. Asir Families D. Hail Families",
-    "Answer": "B. Al-Ahsa Families",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الأحذية:",
+    "options": [
+      "جلدية تقليدية/حديثة",
+      "خشبية فقط",
+      "حديدية",
+      "مطاطية كلّها"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "النقوش البحرية:",
+    "options": [
+      "تظهر أحيانًا",
+      "لا تظهر",
+      "خاصة بالشمال",
+      "خاصة بالغرب"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "العباءة الشرقية:",
+    "options": [
+      "قد تحمل تطريزًا بسيطًا",
+      "بدون أي تفاصيل",
+      "ملونة جدًا دائمًا",
+      "لا تُلبس"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "البشت المطرّز:",
+    "options": [
+      "للاحتفالات",
+      "للسباحة",
+      "للرياضة",
+      "للنوم"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "قارن العباءات بين الشرقية والرياض.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "اذكر تأثير المناخ الرطب على الأقمشة.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما رمزية الذهب في المناسبات؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "تطور المشالح في الشرقية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "نماذج من تصميمات محلية حديثة.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
     "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
+    "question": "الأحساء تُعرف بـ:",
+    "options": [
+      "صناعة الفخار والسلال",
+      "صناعة الثلج",
+      "صناعة السيارات",
+      "صناعة الطائرات"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the traditional craft referred to as “Al-Qallafa” in Saudi culture?",
-    "Choices": "A. Lock Repairing B. Shipbuilding C. Jewelry Making D. Sword Repairing",
-    "Answer": "B. Shipbuilding",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
+    "question": "سعف النخيل يُستخدم في:",
+    "options": [
+      "القفف/الحصر",
+      "الحديد",
+      "الجلود",
+      "الزجاج"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What handicraft, common in the East, is primarily made by women using palm tree products?",
-    "Choices": "A. Khos B. Safin C. Sadu D. Jewelry",
-    "Answer": "A. Khos",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
+    "question": "الصناعات الحديثة في الشرقية:",
+    "options": [
+      "النفط والبتروكيماويات",
+      "القهوة فقط",
+      "المنسوجات فقط",
+      "الكتب"
+    ],
+    "answer": 0
   },
   {
-    "Question": "There is a similarity between the jewelry in the eastern and northern regions of Saudi Arabia and the jewelry of which other region?",
-    "Choices": "A. Mecca B. Medina C. Riyadh D. Asir",
-    "Answer": "C. Riyadh",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
+    "question": "الدلة النحاسية:",
+    "options": [
+      "تراث قهوة",
+      "زينة سيارات",
+      "معدات رياضية",
+      "أدوات مختبر"
+    ],
+    "answer": 0
   },
   {
-    "Question": "“Al-Frisi” is a traditional performing art in Saudi Arabia that originated in which region?",
-    "Choices": "A. Eastern Region B. Jazan Region C. Makkah Region D. Asir Region",
-    "Answer": "A. Eastern Region",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
+    "question": "الخشب المحفور:",
+    "options": [
+      "أبواب/نوافذ تراثية",
+      "أنابيب نفط",
+      "لوحات إلكترونية",
+      "زجاج"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What material is used for building ships in the east side of Saudi Arabia?",
-    "Choices": "A. Wood B. Metal C. Fiberglass D. Plastic",
-    "Answer": "A. Wood",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
+    "question": "الحلي:",
+    "options": [
+      "ذهب/فضة تقليدي",
+      "حديد",
+      "حجر صناعي فقط",
+      "مطاط"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the name of the traditional game popular in Darin Center in the Eastern Region of Saudi Arabia?",
-    "Choices": "A. Jidir B. Keram C. Dominoes D. Al-Sibba",
-    "Answer": "A. Jidir",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "الأقمشة:",
+    "options": [
+      "قطن/حرير",
+      "معدنية",
+      "ورقية",
+      "مطاطية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "الأسواق الشعبية:",
+    "options": [
+      "سوق القيصرية/القطيف",
+      "بازار أوروبي",
+      "خان أجنبي",
+      "مول حديث فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "الأدوات الجلدية:",
+    "options": [
+      "أحزمة/حافظات",
+      "معادن",
+      "زجاج",
+      "خشب"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "النقوش:",
+    "options": [
+      "عربية/إسلامية",
+      "رومانية",
+      "لاتينية",
+      "صينية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "اشرح دور القيصرية في دعم الحرف.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "قارن بين الحرف التراثية والحديثة بالشرقية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "أثر النفط على الهوية الحرفية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "اذكر مبادرات لحفظ الفخار والسعف.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "ما مكانة الدلة في الثقافة المحلية؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
     "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "question": "فنون الشرقية:",
+    "options": [
+      "عرضة/موسيقى بحرية",
+      "جاز أمريكي",
+      "أوبرا أوروبية",
+      "روك فقط"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the name of the traditional dance performed in the east, considered an ancient heritage, particularly in the Al-Ahsa region?",
-    "Choices": "A. Ardah B. Al-Dahha C. Al-Heyda D. Al-Mizmar",
-    "Answer": "C. Al-Heyda",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "question": "المزمار يُعرف أكثر:",
+    "options": [
+      "في الحجاز ويصل للشرقية",
+      "في الشمال فقط",
+      "لا يوجد",
+      "خاص بالغرب تمامًا"
+    ],
+    "answer": 0
   },
   {
-    "Question": "“Al-Sankali” is a type of maritime art associated with:",
-    "Choices": "A. Sailors of the Eastern Region B. Sailors of the Western Region C. Merchants of Northern Saudi Arabia D. Merchants of Southern Saudi Arabia",
-    "Answer": "A. Sailors of the Eastern Region",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "question": "مهرجانات الشرقية:",
+    "options": [
+      "تعزز الفنون والسياحة",
+      "لا تقام",
+      "للرياضة فقط",
+      "للتسوّق فقط"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the name of the celebration observed in the east during Sha’ban or Ramadan?",
-    "Choices": "A. Al-Fitr B. Al-Adha C. Al-Khidhab D. Al-Qarqiaan",
-    "Answer": "D. Al-Qarqiaan",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Celebration",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the three main architectural planning styles in the Eastern Region of Saudi Arabia?",
-    "Choices": "A. Urban, Rural, and Mixed-Use Architecture B. Coastal, Desert, and Agricultural (Oasis) Architecture C. Modern, Traditional, and Industrial Architecture D. Mountainous, Coastal, and Desert Architecture",
-    "Answer": "B. Coastal, Desert, and Agricultural (Oasis) Architecture",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Architecture",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is Hassawi rice locally and regionally known as?",
-    "Choices": "A. Yemeni Aish B. Green Aish C. Red Aish D. Egyptian Aish",
-    "Answer": "C. Red Aish",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the traditional jobs practiced in the coastal areas of Saudi Arabia, deeply rooted in cultural heritage and economic history?",
-    "Choices": "A. Fishing B. Pearl Diving C. Shipbuilding D. Salt Harvesting",
-    "Answer": "A, B, and C",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What was the Nu’ayriyah market in Saudi Arabia specialized in selling?",
-    "Choices": "A. Livestock B. Electrical Appliances C. Electronics D. Food Items",
-    "Answer": "A. Livestock",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "In which regions of Saudi Arabia was the traditional craft of making “Midad” (woven mats) previously popular?",
-    "Choices": "A. Riyadh B. Jazan C. Al-Ahsa D. Al-Qatif",
-    "Answer": "C and D",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Which of the following are traditional crafts in the Eastern Region of Saudi Arabia?",
-    "Choices": "A. Making Traditional Cloaks (Bishoot) and Headbands (Iqal) B. Crafting Handmade Weapons C. Creating Heritage Wooden Boxes D. All of the Above",
-    "Answer": "A, B, and C",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "How is traditional gypsum (“Juss”) produced in Saudi Arabia?",
-    "Choices": "A. Extracted from beneath the earth as clay or limestone B. Dried using palm-wood fires for a full day C. Crushed into a fine powder after being burned D. All of the above",
-    "Answer": "A, B, and C",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Which Saudi region is known for its distinct types of gypsum, including “Al-Arabi,” “Al-Khikri,” and “Al-Dhikri”?",
-    "Choices": "A. Riyadh B. Al-Ahsa C. Jazan D. Najran",
-    "Answer": "B. Al-Ahsa",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "The “Hida Dance” is a traditional dance performed by the people of which region in Saudi Arabia?",
-    "Choices": "A. Western Region B. Eastern Region C. Southern Region D. Northern Region",
-    "Answer": "B. Eastern Region",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "question": "العرضة:",
+    "options": [
+      "تؤدّى في المناسبات الوطنية",
+      "لا تؤدى",
+      "خاصة بالأطفال",
+      "في المختبر"
+    ],
+    "answer": 0
   },
   {
-    "Question": "Which of the following are styles of the “Laybooni” art form in Saudi Arabia?",
-    "Choices": "A. Al-Fajri and Al-Bahri B. Al-Haddadi and Al-Adasani C. Al-Makhlof and Al-Hassawi D. Al-Najdi and Al-Hejazi",
-    "Answer": "A, B, and C",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "question": "أهازيج البحر:",
+    "options": [
+      "مرتبطة بالصيادين",
+      "خاصة بالجبال",
+      "للبر فقط",
+      "لا تُعرف"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "الشعر النبطي:",
+    "options": [
+      "حاضر في الأمسيات",
+      "غير موجود",
+      "خاص بالشمال",
+      "خاص بالغرب"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "أماكن العرض:",
+    "options": [
+      "كورنيش/ساحات مهرجانات",
+      "مصانع",
+      "مختبرات",
+      "مدارس فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "آلات مستخدمة:",
+    "options": [
+      "طبول/عود",
+      "كمان كلاسيكي فقط",
+      "أورغن فقط",
+      "ساكسفون"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "الألعاب الشعبية:",
+    "options": [
+      "الكيرم/التيلة",
+      "البيسبول",
+      "الرجبي",
+      "الهوكي"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "الهوية البحرية تظهر في:",
+    "options": [
+      "الأغاني والإيقاعات",
+      "الجبال",
+      "الصحارى فقط",
+      "الثلوج"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "اذكر فعاليات فنية على كورنيش الخبر/الدمام.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "قارن بين فنون الشرقية والحجاز.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "كيف أثّر البحر على الفلكلور؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "دور الأمسيات الشعرية في المجتمع.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "اقترح أنشطة للمدارس لإحياء التراث البحري.",
+    "options": [],
+    "answer": ""
   }
 ]
