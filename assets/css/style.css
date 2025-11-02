@@ -42,6 +42,15 @@ body{margin:0;background:var(--gray-bg);color:#000   padding-top:100px;}
     margin-right: 0; 
     margin-left: auto; 
 }
+
+.header-left{ display:flex; align-items:center; gap:10px; }
+.logo{
+  inline-size: 48px; block-size: 48px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #f7faf9;
+  border: 1px solid #e5e7eb;
+}
 .container{max-width:1000px;margin:0 auto;padding:0 16px}
 .page{padding-top:98px;padding-bottom:24px}
 h1,h2{margin:16px 0;color:var(--brand);font-weight: 700;}
