@@ -41,8 +41,7 @@ h1,h2{margin:16px 0;color:var(--brand);font-weight:700;}
   background:#fff;color:#111;font-weight:700;cursor:pointer;
   transition:background .15s ease,transform .05s ease,border-color .15s ease;
 }
-.actions .btn:hover{background:#f3f4f6;}
-.actions .btn.btn-logout{background:var(--brand);color:#fff;border-color:var(--brand);}
+ .actions .btn.btn-logout{background:var(--brand);color:#fff;border-color:var(--brand);}
 .actions .btn.btn-logout:hover{background:#0f3a2a;}
 
 /* Cards & Links */
@@ -56,8 +55,7 @@ h1,h2{margin:16px 0;color:var(--brand);font-weight:700;}
   text-decoration:none;display:inline-block;cursor:pointer;font-weight:600;
   transition:opacity .2s;
 }
-button:not(.btn-back):hover,.link:hover{opacity:.9;}
-.btn-back{
+ .btn-back{
   background:var(--back-button-color);color:#fff;
   padding:10px 14px;border:0;border-radius:10px;text-decoration:none;
   display:inline-block;cursor:pointer;font-weight:600;
@@ -78,8 +76,7 @@ a:hover{color:var(--brand-accent);}
 .hero-intro h2{margin:0 0 8px 0;font-size:18px;color:var(--brand);font-weight:700;}
 .hero-intro p{margin:6px 0;line-height:1.6}
 .card.link{background-color:var(--card-bg);color:#000;border:1px solid var(--back-button-color);text-decoration:none;}
-.card.link:hover{background-color:#f0f0f0;opacity:1;}
-.card.link h2{color:var(--brand);}
+ .card.link h2{color:var(--brand);}
 
 /* Chips */
 .chip{padding:4px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.92rem}
@@ -122,11 +119,9 @@ a:hover{color:var(--brand-accent);}
   background:#fff;color:#111;font-weight:700;cursor:pointer;
   transition:background .15s ease,transform .05s ease,border-color .15s ease;
 }
-.btn:hover{background:#f3f4f6;}
-.btn:active{transform:translateY(1px);}
+ .btn:active{transform:translateY(1px);}
 .btn-primary{background:#14532d;color:#fff;border-color:#14532d;}
-.btn-primary:hover{background:#0f3a2a;}
-#btnDone{min-width:120px;}
+ #btnDone{min-width:120px;}
 
 
 
