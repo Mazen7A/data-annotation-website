@@ -6,40 +6,35 @@
   <title>المشاريع</title>
   <link rel="stylesheet" href="../assets/css/style.css"/>
   <script src="../assets/js/app.js"></script>
-  <script src="../assets/js/mockData.js"></script> 
-  <style>
-    body{direction:rtl;text-align:right;}
-    .app-header { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0 20px; border-bottom: 1px solid #eee; height: 72px; position: fixed; top: 0; left: 0; right: 0; z-index: 1100;}
-    .site-logo-fixed { height: 54px; margin-left: 12px; }
-    .brand { font-weight: bold; color: #14532d; font-size: 20px; }
-    .header-actions { display: flex; gap: 10px; }
-    .header-actions button { pointer-events: auto; font-size: 16px; padding: 6px 14px; border-radius: 8px; border: none; background: #f0fdf4; color: #14532d; font-weight: bold; cursor: pointer; transition: background 0.2s;}
-    .header-actions button:hover { background: #bbf7d0; }
-    .page { padding-top: 90px; }
-    .stats-btn { margin-bottom: 16px; background: #d1fae5; border: none; color: #14532d; font-weight: bold; padding: 10px 20px; border-radius: 8px; font-size: 16px; cursor: pointer;}
-    .stats-btn:hover { background: #bbf7d0;}
-  </style>
+  <script src="../assets/js/mockData.js"></script>
 </head>
 <body>
-<header class="app-header">
-  <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+
+<header class="site-header">
+  <div class="header-left">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo">
+  </div>
   <div class="brand">منصة إثراء الثقافة السعودية</div>
-  <div class="header-actions">
-    <button class="link" onclick="goToHome()">الرئيسية</button>
+  <nav class="actions">
     <button class="btn-back" onclick="history.back()">رجوع</button>
     <button onclick="logout()">تسجيل خروج</button>
-  </div>
+  </nav>
 </header>
-<div class="page"><div class="container">
-  <h1 id="list-title">المشاريع المتاحة</h1>
-  <div id="stats-bar"></div>
-  <div class="grid" id="projects-grid"></div>
-</div></div>
+
+<div class="page">
+  <div class="container">
+    <h1 id="list-title">المشاريع المتاحة</h1>
+    <div id="stats-bar" class="stats-bar"></div>
+    <div class="grid" id="projects-grid"></div>
+  </div>
+</div>
+
 <script>
 function getParam(name){
   const u=new URL(window.location.href);
   return u.searchParams.get(name)||"";
 }
+
 document.addEventListener("DOMContentLoaded", function() {
   const role = getParam('role') || 'user';
   const projectsGrid = document.getElementById('projects-grid');
@@ -49,8 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (role === 'manager') {
     title.textContent = "لوحة تحكم المدير: نظرة عامة على المشاريع";
     statsBar.innerHTML = `<button class="stats-btn" onclick="window.location.href='manager-stats.html'">إحصائيات جميع المستخدمين</button>`;
-  }
-  else {
+  } else {
     title.textContent = "المشاريع المتاحة للعميل";
     statsBar.innerHTML = `<button class="stats-btn" onclick="window.location.href='my-stats.html'">إحصائياتي</button>`;
   }
@@ -58,29 +52,30 @@ document.addEventListener("DOMContentLoaded", function() {
   (PROJECTS || []).forEach(project => {
     const card = document.createElement('div');
     card.className = 'card';
+
     const btnLabel = role === 'manager' ? 'عرض التفاصيل' : 'متاح للتسجيل';
     const btnHref = `./project-details.html?id=${project.id}&role=${role}`;
-    const extra = role === 'manager' 
-      ? `<p><strong>عدد المقيمين:</strong> 3</p>`
-      : '';
+    const extra = role === 'manager' ? `<span class="badge">عدد المقيمين: 3</span>` : '';
+
     card.innerHTML = `
       <h2>${project.name}</h2>
       <p class="small">${role === 'manager' ? project.managerDescription : project.userDescription}</p>
-
-     
-      <p><strong>عدد الأسئلة:</strong> 90</p>
-
-      ${extra}
-      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
-        <a class="link" href="${btnHref}" style="${role==='manager'?'background: var(--brand);':'background:#007bff;'}">${btnLabel}</a>
+      <div class="meta">
+        <span class="badge">عدد الأسئلة: 90</span>
+        ${extra}
+      </div>
+      <div class="actions-wrap">
+        <a class="link ${role==='manager'?'manager':'primary'}" href="${btnHref}">${btnLabel}</a>
         <a class="btn-back" href="${btnHref}">فتح البطاقة</a>
       </div>
     `;
+
     card.style.cursor = 'pointer';
     card.addEventListener('click', (ev)=> {
       if (ev.target.tagName.toLowerCase() === 'a') return;
       window.location.href = btnHref;
     });
+
     projectsGrid.appendChild(card);
   });
 
