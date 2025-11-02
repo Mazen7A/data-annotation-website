@@ -21,7 +21,6 @@ const TYPE_PAGE = {
   OPEN_ENDED: '../annotate/open-ended.html'
 };
 
-const REMOTE_SOURCES = {
  const REMOTE_SOURCES = {
   'SC_GENERAL': {
     source: 'sheet',
@@ -41,7 +40,6 @@ const REMOTE_SOURCES = {
   }
 };
 
-};
 
 let dataFile = DATA_FILES.GENERAL;
 if (projectId.includes('NORTH')) dataFile = DATA_FILES.NORTH;
