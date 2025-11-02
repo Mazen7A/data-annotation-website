@@ -1,166 +1,100 @@
-import { loadQuestions } from './dataSources.js';
 
-const $ = (s, p = document) => p.querySelector(s);
+/* annotate.js - renders MCQ / OPEN_ENDED using DATA_SOURCES */
+(function(){
+  const $ = (sel) => document.querySelector(sel);
+  const byId = (id) => document.getElementById(id);
+  const u = new URL(location.href);
+  const projectId = (u.searchParams.get('id') || 'SC_GENERAL').toUpperCase();
+  const type      = (u.searchParams.get('type') || 'MCQ').toUpperCase();
+  const cat       = u.searchParams.get('cat') || '';
+  const source    = u.searchParams.get('source') || '';
+  const url       = u.searchParams.get('url') || '';
+  const limit     = parseInt(u.searchParams.get('limit') || '10', 10);
 
-function getParams() {
-  const p = new URLSearchParams(location.search);
-  return {
-    projectId: (p.get('id') || 'SC_GENERAL').toUpperCase(),
-    type:      (p.get('type') || 'MCQ').toUpperCase(),
-    role:      (p.get('role') || 'user').toLowerCase(),
-    cat:        p.get('cat') || p.get('category') || '',
-    source:     p.get('source') || undefined,
-    url:        p.get('url') || undefined,
-    limit:    +(p.get('limit') || 10)
-  };
-}
+  const state = { items: [], idx: 0, answers: {} };
 
-function normalizeMCQ(rec) {
-  const text = rec.Question || rec.question || rec.Q || rec.text || '';
-  const category = rec.Category || rec.category || '';
-
-  const keys = Object.keys(rec);
-  const tryKey = (names) => names.find(n => keys.some(k => k.toLowerCase() === n.toLowerCase()));
-  const pick = (name) => {
-    const k = keys.find(k => k.toLowerCase() === name.toLowerCase());
-    return k ? rec[k] : '';
-  };
-
-  const choices = [];
-  ['optiona','optionb','optionc','optiond','choice1','choice2','choice3','choice4'].forEach(k=>{
-    const val = pick(k);
-    if (val) choices.push(val);
-  });
-
-  let correctIndex = -1;
-  const ans = rec.Answer || rec.answer || rec.Correct || rec.correct || '';
-  if (ans) {
-    const norm = String(ans).trim().toUpperCase();
-    const abcd = {A:0,B:1,C:2,D:3};
-    if (Object.prototype.hasOwnProperty.call(abcd, norm)) correctIndex = abcd[norm];
-    else if (/^[1-4]$/.test(norm)) correctIndex = +norm - 1;
-    else {
-      const i = choices.findIndex(c => String(c).trim() === String(ans).trim());
-      if (i >= 0) correctIndex = i;
-    }
+  function setMeta() {
+    const counter = byId('counter');
+    const meta    = byId('meta');
+    const prog    = byId('progress');
+    if (counter) counter.textContent = `${state.idx+1} / ${state.items.length}`;
+    if (prog) { prog.max = Math.max(1, state.items.length); prog.value = state.idx+1; }
+    if (meta) meta.textContent = `الفئة: ${cat || 'الكل'} — النوع: ${type}`;
   }
-
-  return { text, category, choices, correctIndex };
-}
-
-function toFallbackMCQ(rec) {
-  return {
-    text: rec.Question || rec.question || rec.Q || rec.text || '—',
-    category: rec.Category || rec.category || '',
-    choices: ['إجابة ممتازة (100%)', 'إجابة جيدة (75%)', 'إجابة مقبولة (50%)', 'إجابة ضعيفة (25%)'],
-    correctIndex: -1,
-    fallback: true
-  };
-}
-
-function filterByTypeAndCat(all, wantedType, cat) {
-  const hasType = all.some(r => r.Type || r.type);
-  let list = all;
-
-  if (hasType) {
-    list = all.filter(r => {
-      const t = (r.Type || r.type || '').toString().toUpperCase();
-      return wantedType === 'MCQ' ? t.includes('MCQ') || t.includes('CHOICE')
-                                  : t.includes(wantedType) || t.includes('TRUE/FALSE');
-    });
-  }
-
-  if (cat) {
-    list = list.filter(r => (r.Category || r.category || '').toString().toLowerCase() === cat.toLowerCase());
-  }
-  return list;
-}
-
-async function runMCQ() {
-  const { projectId, source, url, limit, cat } = getParams();
-
-  const elTitle   = $('#page-title');
-  const elProg    = $('#progress');
-  const elCount   = $('#counter');
-  const elMeta    = $('#meta');
-  const elQArea   = $('#question-container');
-  const btnPrev   = $('#btn-prev');
-  const btnNext   = $('#btn-next');
-  const btnFinish = $('#btn-finish');
-
-  if (elTitle) elTitle.textContent = 'أسئلة اختيار من متعدد';
-
-  const all = await loadQuestions({ projectId, source, url, limit: 9999 });
-
-  const filtered = filterByTypeAndCat(all, 'MCQ', cat);
-
-  let items = filtered.map(r => {
-    const m = normalizeMCQ(r);
-    if ((m.choices || []).filter(Boolean).length >= 2) return m;
-    return toFallbackMCQ(r);
-  });
-
-  items = items.slice(0, limit);
-
-  if (!items.length) {
-    elQArea.innerHTML = `
-      <div class="card" style="padding:16px">لا توجد أسئلة لهذا النوع.</div>
-    `;
-    if (elCount) elCount.textContent = 'عدد الأسئلة المعروضة: 0';
-    return;
-  }
-
-  let idx = 0;
-  const total = items.length;
 
   function render() {
-    const it = items[idx];
-    if (elMeta) elMeta.textContent = `الفئة: ${it.category || '—'} • السؤال ${idx+1} من ${total}`;
-    if (elCount) elCount.textContent = `عدد الأسئلة المعروضة: ${total}`;
-    if (elProg) { elProg.max = total; elProg.value = idx+1; }
+    const qArea = byId('question-container');
+    if (!qArea) return;
+    qArea.innerHTML = '';
 
-    elQArea.innerHTML = `
-      <div class="card" style="padding:16px">
-        <div style="font-size:1.1rem;line-height:1.9">${it.text}</div>
-        <div id="choices" style="margin-top:12px"></div>
-        ${it.fallback ? `<div style="margin-top:8px;color:#6b7280;font-size:.9rem">* لا تتوفر خيارات أصلية في المصدر؛ تم عرض سُلّم تقييم بديل.</div>` : ''}
-      </div>
-    `;
+    const item = state.items[state.idx];
+    if (!item) { qArea.innerHTML = '<p class="muted">لا توجد أسئلة متاحة.</p>'; return; }
 
-    const holder = $('#choices', elQArea);
-    it.choices.forEach((c, i) => {
-      const btn = document.createElement('button');
-      btn.className = 'btn';
-      btn.style.cssText = 'display:block;width:100%;text-align:right;margin:6px 0;';
-      btn.textContent = c;
-      btn.onclick = () => {
-        next();
-      };
-      holder.appendChild(btn);
-    });
+    const title = document.createElement('h2');
+    title.textContent = item.question || '—';
+    qArea.appendChild(title);
 
-    btnPrev.style.visibility = (idx === 0) ? 'hidden' : 'visible';
-    btnNext.style.display    = (idx === total-1) ? 'none'   : 'inline-block';
-    btnFinish.style.display  = (idx === total-1) ? 'inline-block' : 'none';
+    if (type === 'OPEN_ENDED') {
+      const ta = document.createElement('textarea');
+      ta.id = 'answer';
+      ta.style.width = '100%';
+      ta.rows = 6;
+      ta.placeholder = 'اكتب إجابتك هنا...';
+      ta.value = state.answers[state.idx] || '';
+      ta.addEventListener('input', (e)=> state.answers[state.idx] = e.target.value);
+      qArea.appendChild(ta);
+    } else {
+      // MCQ (and default)
+      const ul = document.createElement('div');
+      (item.options || []).forEach((opt, i) => {
+        const id = `opt_${i}`;
+        const wrap = document.createElement('label');
+        wrap.style.display = 'block';
+        wrap.style.margin = '8px 0';
+        wrap.innerHTML = `
+          <input type="radio" name="mcq" value="${i}" id="${id}"> ${opt}
+        `;
+        ul.appendChild(wrap);
+      });
+      qArea.appendChild(ul);
+      // restore selection
+      const saved = state.answers[state.idx];
+      if (saved !== undefined) {
+        const radio = qArea.querySelector(`input[name="mcq"][value="${saved}"]`);
+        if (radio) radio.checked = true;
+      }
+      qArea.addEventListener('change', (e)=>{
+        if (e.target && e.target.name === 'mcq') {
+          state.answers[state.idx] = parseInt(e.target.value, 10);
+        }
+      });
+    }
+    setMeta();
+    byId('btn-prev')?.toggleAttribute('disabled', state.idx === 0);
+    byId('btn-next')?.toggleAttribute('disabled', state.idx >= state.items.length - 1);
+    byId('btn-finish')?.style.setProperty('display', state.idx >= state.items.length - 1 ? 'inline-block' : 'none');
   }
 
-  function prev(){ if (idx>0) { idx--; render(); } }
-  function next(){ if (idx<total-1) { idx++; render(); } }
-  function finish(){ history.back(); }
-
-  btnPrev.addEventListener('click', prev);
-  btnNext.addEventListener('click', next);
-  btnFinish.addEventListener('click', finish);
-
-  render();
-}
-
-(async function main(){
-  const { type } = getParams();
-  if (type === 'MCQ') {
-    await runMCQ();
-  } else {
-    const area = document.getElementById('question-container');
-    if (area) area.innerHTML = `<div class="card" style="padding:16px">نوع الصفحة لا يطابق النوع المطلوب: ${type}</div>`;
+  function next(){ if (state.idx < state.items.length-1) { state.idx++; render(); } }
+  function prev(){ if (state.idx > 0) { state.idx--; render(); } }
+  function finish(){
+    alert('تم إنهاء الجلسة. سيتم حفظ إجاباتك مؤقتًا في هذه الصفحة فقط.');
   }
+
+  async function init(){
+    const all = await window.DATA_SOURCES.loadQuestions({ projectId, source, url });
+    let items = window.DATA_SOURCES.filterByCategory(all, cat);
+    if (type === 'MCQ') items = window.DATA_SOURCES.onlyMCQ(items);
+    else if (type === 'TRUE_FALSE') items = window.DATA_SOURCES.onlyTrueFalse(items);
+    const seed = `${projectId}-${cat}-${type}`;
+    state.items = window.DATA_SOURCES.takeNRandom(items, isFinite(limit)? limit: 10, seed);
+    state.idx = 0;
+
+    byId('btn-prev')?.addEventListener('click', prev);
+    byId('btn-next')?.addEventListener('click', next);
+    byId('btn-finish')?.addEventListener('click', finish);
+    render();
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
 })();
