@@ -24,23 +24,21 @@
       <small id="meta"></small>
     </div>
 
-    <!-- صندوق السؤال -->
     <section class="question card" style="margin-top:12px">
       <h3 id="q-title">—</h3>
       <p id="q-body" class="muted"></p>
     </section>
 
-     <form id="oeForm" style="margin-top:12px"></form>
+    <form id="oeForm" style="margin-top:12px"></form>
 
-    <!-- أزرار التنقل (IDs مطابقة لما يقرأه annotate.js) -->
     <footer class="nav-actions" style="display:flex;gap:8px;justify-content:center;margin-top:16px">
-      <button class="btn" id="btnPrev"  data-nav="prev">السابق</button>
-      <button class="btn" id="btnNext"  data-nav="next">التالي</button>
+      <button class="btn" id="btnPrev" data-nav="prev">السابق</button>
+      <button class="btn" id="btnNext" data-nav="next">التالي</button>
       <button class="btn btn-primary" id="btnDone" data-nav="finish" style="display:none">إنهاء الجلسة</button>
     </footer>
   </main>
 
-   <script>
+  <script>
     const u = new URL(location.href);
     if (!u.searchParams.get('type')) {
       u.searchParams.set('type','OPEN_ENDED');
@@ -48,7 +46,7 @@
     }
   </script>
 
-   <script src="../assets/js/dataSources.js"></script>
+  <script src="../assets/js/dataSources.js"></script>
   <script src="../assets/js/annotate.js"></script>
 </body>
 </html>
