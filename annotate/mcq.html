@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>اختيار من متعدد</title>
+  <title>أسئلة اختيار من متعدد</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
@@ -16,37 +16,41 @@
     </nav>
   </header>
 
-  <main class="container">
-    <h1 id="page-title">أسئلة اختيار من متعدد</h1>
+  <main class="container" style="max-width:900px;margin:auto">
+    <h1>أسئلة اختيار من متعدد</h1>
 
-    <div class="meta">
-      <progress id="progress" value="0" max="100"></progress>
-      <span id="counter"></span>
+    <div class="meta" style="display:flex;gap:10px;align-items:center">
+      <progress id="progress" value="0" max="100" style="width:240px"></progress>
       <small id="meta"></small>
     </div>
 
-    <section id="question-container" class="q-area" style="max-width:900px;margin:auto">
-      <article class="question card">
-        <h3 id="q-title">—</h3>
-        <p id="q-body" class="muted"></p>
-      </article>
-
-      <form id="mcqForm" style="margin-top:12px"></form>
+    <!-- هذه العناصر مطلوبة للعرض -->
+    <section class="question card" style="margin-top:12px">
+      <h3 id="q-title">—</h3>
+      <p id="q-body" class="muted"></p>
     </section>
 
+    <!-- هنا تتولّد الاختيارات -->
+    <form id="mcqForm" style="margin-top:12px"></form>
+
     <footer class="nav-actions" style="display:flex;gap:8px;justify-content:center;margin-top:16px">
-      <button id="btn-prev" class="btn" data-nav="prev">السابق</button>
-      <button id="btn-next" class="btn" data-nav="next">التالي</button>
-      <button id="btn-finish" class="btn btn-primary" data-nav="finish" style="display:none">إنهاء الجلسة</button>
+      <!-- استخدم data-nav أو IDs التالية -->
+      <button class="btn" data-nav="prev"  id="btnPrev">السابق</button>
+      <button class="btn" data-nav="next"  id="btnNext">التالي</button>
+      <button class="btn btn-primary" data-nav="finish" id="btnDone" style="display:none">إنهاء الجلسة</button>
     </footer>
   </main>
 
+  <!-- ضامن النوع -->
   <script>
     const u = new URL(location.href);
-    if (!u.searchParams.get('type')) { u.searchParams.set('type','MCQ'); location.replace(u); }
+    if (!u.searchParams.get('type')) { u.searchParams.set('type', 'MCQ'); location.replace(u); }
   </script>
 
+  <!-- مزوّد البيانات -->
   <script src="../assets/js/dataSources.js"></script>
-  <script src="../assets/js/annotate.js"></script>
+
+  <!-- سكربت العرض + الحفظ (لا تستخدم annotate.js القديم) -->
+  <script src="../assets/js/annotate.saved.js"></script>
 </body>
 </html>
