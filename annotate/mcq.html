@@ -7,15 +7,18 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-      <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+ <header class="site-header">
+  <div class="header-left">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="شعار ثقافتنا" class="logo">
     <div class="brand">منصّة إثراء الثقافة السعودية</div>
-    <nav class="actions">
-      <a class="btn" href="../home/project-list.html">الرئيسية</a>
-      <button class="btn" onclick="history.back()">رجوع</button>
-      <a class="btn" href="../auth/login.html" onclick="localStorage.removeItem('currentUser')">تسجيل خروج</a>
-    </nav>
-  </header>
+  </div>
+  <nav class="actions">
+    <a class="btn" href="../home/project-list.html">الرئيسية</a>
+    <button class="btn" onclick="history.back()">رجوع</button>
+    <a class="btn btn-logout" href="../auth/login.html" onclick="localStorage.removeItem('currentUser')">تسجيل خروج</a>
+  </nav>
+</header>
+
 
   <main class="container" style="max-width:900px;margin:auto">
     <h1>أسئلة اختيار من متعدد</h1>
