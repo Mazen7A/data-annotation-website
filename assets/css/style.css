@@ -41,8 +41,7 @@ h1,h2{margin:16px 0;color:var(--brand);font-weight:700;}
   background:#fff;color:#111;font-weight:700;cursor:pointer;
   transition:background .15s ease,transform .05s ease,border-color .15s ease;
 }
-.actions .btn:hover{background:#f3f4f6;}
-.actions .btn.btn-logout{background:var(--brand);color:#fff;border-color:var(--brand);}
+ .actions .btn.btn-logout{background:var(--brand);color:#fff;border-color:var(--brand);}
 .actions .btn.btn-logout:hover{background:#0f3a2a;}
 
 /* Cards & Links */
@@ -122,7 +121,6 @@ a:hover{color:var(--brand-accent);}
   background:#fff;color:#111;font-weight:700;cursor:pointer;
   transition:background .15s ease,transform .05s ease,border-color .15s ease;
 }
-.btn:hover{background:#f3f4f6;}
 .btn:active{transform:translateY(1px);}
 .btn-primary{background:#14532d;color:#fff;border-color:#14532d;}
 .btn-primary:hover{background:#0f3a2a;}
