@@ -22,17 +22,7 @@ const TYPE_PAGE = {
   OPEN_ENDED: '../annotate/open-ended.html'
 };
 
-/** 
- * Remote sources are optional. Leave empty to rely on local JSON files.
- * If you later want Google Sheet CSV, put a public export link like:
- *   https://docs.google.com/spreadsheets/d/<ID>/export?format=csv&gid=<GID>
- */
-const REMOTE_SOURCES = {
-  // 'SC_GENERAL': { source: 'sheet', url: '' },
-  // 'SC_SOUTH':   { source: 'sheet', url: '' },
-  // 'SC_NORTH':   { source: 'sheet', url: '' },
-  // 'SC_EAST':    { source: 'sheet', url: '' },
-};
+const REMOTE_SOURCES = {}; // نتركها فارغة هنا؛ التصفح داخل تفاصيل المشروع يعتمد على المحلي فقط لعرض العدّ
 
 let dataFile = DATA_FILES.GENERAL;
 if (projectId.includes('NORTH')) dataFile = DATA_FILES.NORTH;
@@ -40,6 +30,30 @@ else if (projectId.includes('SOUTH')) dataFile = DATA_FILES.SOUTH;
 else if (projectId.includes('EAST'))  dataFile = DATA_FILES.EAST;
 
 let categoryChartInstance = null;
+let RAW_ITEMS = []; // نحتفظ بنسخة خام لنعيد الحساب عند تغيير نوع الأسئلة
+
+// Helpers to detect types (مطابقة لطريقة annotate.js/dataSources.js)
+function isMCQ(x) {
+  return (String(x.type||x.Type||'').toUpperCase().includes('MCQ')) || (Array.isArray(x.options) && x.options.filter(Boolean).length >= 2);
+}
+function isTrueFalse(x) {
+  const t = String(x.type||x.Type||'').toUpperCase();
+  return t.includes('TRUE') || (typeof x.answer === 'boolean');
+}
+function isOpenEnded(x) {
+  const t = String(x.type||x.Type||'').toUpperCase();
+  // لا توجد خيارات (أو أقل من 2) وليس true/false
+  return t.includes('OPEN') || (!isMCQ(x) && !isTrueFalse(x));
+}
+function filterByPickedType(items, picked) {
+  switch (picked) {
+    case 'MCQ': return items.filter(isMCQ);
+    case 'TRUE_FALSE': return items.filter(isTrueFalse);
+    case 'OPEN_ENDED': return items.filter(isOpenEnded);
+    case 'LIST': return items.filter(x => String(x.type||'').toUpperCase().includes('LIST'));
+    default: return items;
+  }
+}
 
 function renderCategoryChart(allQuestions) {
   const categoryCounts = allQuestions.reduce((acc, q) => {
@@ -76,6 +90,43 @@ function renderCategoryChart(allQuestions) {
 function saveLastQType(val){ try{ localStorage.setItem('lastQType', val); }catch{} }
 function loadLastQType(){ try{ return localStorage.getItem('lastQType'); }catch{ return null; } }
 
+function refreshCategoryCards(project) {
+  const sel = document.getElementById('qTypeSelect');
+  const pickedType = (sel?.value || 'MCQ').toUpperCase();
+
+  const wrap = document.getElementById('qtype-wrap');
+  if (!wrap) return;
+
+  wrap.innerHTML = '';
+
+  // فلتر العناصر وفق النوع المختار
+  const filtered = filterByPickedType(RAW_ITEMS, pickedType);
+
+  project.categories.forEach(category => {
+    const count = filtered.filter(q => (q.Category || q.category) === category.id).length;
+
+    const card = document.createElement('div');
+    card.className = 'qtype-card';
+    card.setAttribute('data-cat', category.id);
+    card.innerHTML = `
+      <h3>${category.label}</h3>
+      <p class="small-gray">عدد الأسئلة: ${count}</p>
+    `;
+
+    card.addEventListener('click', () => {
+      const page = TYPE_PAGE[pickedType] || TYPE_PAGE.MCQ;
+      const url = new URL(page, location.href);
+      url.searchParams.set('id', projectId);
+      url.searchParams.set('role', role);
+      url.searchParams.set('type', pickedType);
+      url.searchParams.set('cat', category.id);
+      location.href = url.toString();
+    });
+
+    wrap.appendChild(card);
+  });
+}
+
 async function loadProjectDetails() {
   try {
     const allProjects = window.PROJECTS || [];
@@ -103,66 +154,34 @@ async function loadProjectDetails() {
       if (panel) panel.style.display = 'block';
     }
 
-    // Prefer local JSON; annotate pages can still use remote if configured.
     const res = await fetch(dataFile, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status} عند تحميل ${dataFile}`);
-    const allRaw = await res.json();
-    const allQuestions = Array.isArray(allRaw) ? allRaw : (allRaw.items || []);
+    const raw = await res.json();
+    RAW_ITEMS = Array.isArray(raw) ? raw : (raw.items || []);
 
-    if (role === 'manager') renderCategoryChart(allQuestions);
+    if (role === 'manager') renderCategoryChart(RAW_ITEMS);
 
+    // ميتاداتا أعلى البطاقة
     const pdMeta = document.getElementById('pd-meta');
     if (pdMeta) {
       pdMeta.innerHTML = `
-        <span class="chip">المهام الكلية: ${allQuestions.length}</span>
+        <span class="chip">المهام الكلية: ${RAW_ITEMS.length}</span>
         <span class="chip">نوع الأسئلة: ${project.questionTypes.join(', ')}</span>
       `;
     }
 
+    // حدث تغيير نوع الأسئلة → أعِد عدّ العناصر لكل بطاقة
     const sel = document.getElementById('qTypeSelect');
     if (sel) {
       const last = loadLastQType();
       if (last && sel.querySelector(`option[value="${last}"]`)) sel.value = last;
-      sel.addEventListener('change', () => saveLastQType(sel.value));
-    }
-
-    const wrap = document.getElementById('qtype-wrap');
-    if (wrap) {
-      wrap.innerHTML = '';
-      project.categories.forEach(category => {
-        const count = allQuestions.filter(q => (q.Category || q.category) === category.id).length;
-
-        const card = document.createElement('div');
-        card.className = 'qtype-card';
-        card.setAttribute('data-cat', category.id);
-        card.innerHTML = `
-          <h3>${category.label}</h3>
-          <p class="small-gray">عدد الأسئلة: ${count}</p>
-        `;
-
-        card.addEventListener('click', () => {
-          const pickedType = (document.getElementById('qTypeSelect')?.value || 'MCQ').toUpperCase();
-          const page = TYPE_PAGE[pickedType] || TYPE_PAGE.MCQ;
-
-          const url = new URL(page, location.href);
-          url.searchParams.set('id', projectId);
-          url.searchParams.set('role', role);
-          url.searchParams.set('type', pickedType);
-          url.searchParams.set('cat', category.id);
-
-          const remote = REMOTE_SOURCES[projectId];
-          if (remote?.source && remote?.url) {
-            url.searchParams.set('source', remote.source);
-            url.searchParams.set('url', remote.url);
-            url.searchParams.set('limit', '10');
-          }
-
-          location.href = url.toString();
-        });
-
-        wrap.appendChild(card);
+      sel.addEventListener('change', () => {
+        saveLastQType(sel.value);
+        refreshCategoryCards(project);
       });
     }
+
+    refreshCategoryCards(project);
   } catch (e) {
     document.getElementById('project-name').textContent   = "خطأ حاسم";
     document.getElementById('project-summary').textContent = `حدث خطأ أثناء تحميل البيانات: ${e.message}`;
