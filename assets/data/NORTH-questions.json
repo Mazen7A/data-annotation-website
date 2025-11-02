@@ -1,542 +1,622 @@
 [
   {
-    "Question": "What is the most common dish in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Marqooq",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "طبق (المنسف الحائلي) يعتمد على:",
+    "options": [
+      "اللحم والأرز واللبن",
+      "السمك والبطاطس",
+      "المعكرونة",
+      "الكسكس"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the most common dessert in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Bakliyah",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "تشتهر الجوف بـ:",
+    "options": [
+      "زيت الزيتون",
+      "التمر السكري",
+      "القهوة اليمنية",
+      "الشاي العدني"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the most popular street food in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Foul and Hummus",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "طبق (الجريش) في الشمال يُطهى من:",
+    "options": [
+      "القمح المجروش",
+      "الأرز",
+      "الذرة",
+      "الشعير فقط"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the most common breakfast dish in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Mrees Al-Tamr",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "خبز التنور الشمالي يُقدَّم مع:",
+    "options": [
+      "اللحم/المرق",
+      "الآيس كريم",
+      "المعجنات الغربية",
+      "الفواكه فقط"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the most popular traditional drink in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Bitter Orange Juice",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "question": "من أطباق تبوك:",
+    "options": [
+      "القرص",
+      "البيتزا",
+      "الفطيرة الفرنسية",
+      "الكشري"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the traditional men’s clothing in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Sidriyah",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "التمر المشهور في الشمال:",
+    "options": [
+      "الحلوة الجوفية",
+      "عجوة المدينة",
+      "خلاص الإحساء",
+      "برحي البصرة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "شروب تقليدي في البادية:",
+    "options": [
+      "اللبن",
+      "الصودا",
+      "العصير المعلّب",
+      "الكابتشينو"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "اللحم في الولائم الشمالية غالبًا:",
+    "options": [
+      "حاشي/غنم",
+      "سمك فقط",
+      "دجاج فقط",
+      "أرانب"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "يُستخدم السمن البلدي في:",
+    "options": [
+      "الكبسات والجريش",
+      "صلصة الباستا",
+      "السوشي",
+      "البرغر"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "أكلة شعبية تُفرد وتُسقى بالسمن:",
+    "options": [
+      "القرص",
+      "الكريب",
+      "الجلاش",
+      "الفطير المشلتت"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "اذكر وصفات شعبية تُحضّر بزيت زيتون الجوف.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "صف فروقات المنسف/الكبسة بين مناطق الشمال.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "كيف تُقدَّم الضيافة في مضارب البادية؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما دور السمن البلدي في الأطباق الشمالية؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "أمثلة لحلويات تقليدية في الشمال.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
     "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
+    "question": "زي الرجال في الشمال يتضمن:",
+    "options": [
+      "الثوب والشماغ/الغترة والعقال",
+      "البدلة الغربية",
+      "الساري",
+      "الجينز"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the traditional women’s clothing in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Sharsh and Al-Madraqah",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
+    "question": "نقوش السدو في الشمال تُستخدم في:",
+    "options": [
+      "العباءات والإكسسوارات",
+      "الزجاج",
+      "الحديد",
+      "السيراميك"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the traditional dish for breakfast on Eid Al-Fitr in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Hamisat Al-Lahm Wal-Kibdah",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "القحفية/الطاقية تُلبس:",
+    "options": [
+      "تحت الغترة",
+      "فوق العقال",
+      "بدون ثوب",
+      "على الحذاء"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الجاكيت الصوفي يُستخدم:",
+    "options": [
+      "في الأجواء الباردة الصحراوية",
+      "في السباحة",
+      "في الرياضة فقط",
+      "في الأعراس فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "المداس التقليدي يصنع من:",
+    "options": [
+      "جلد",
+      "حديد",
+      "قماش شتوي",
+      "خشب"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الثوب في الشتاء:",
+    "options": [
+      "قد يكون من صوف سميك",
+      "لا يُلبس",
+      "قطني خفيف فقط",
+      "نايلون"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الشماغ الغالب:",
+    "options": [
+      "أحمر وأبيض",
+      "أزرق",
+      "أخضر",
+      "أسود"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الحزام الجلدي يُستخدم:",
+    "options": [
+      "لتثبيت الخنجر أحيانًا",
+      "زينة للقبعة",
+      "للركض",
+      "لا يستخدم"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "عبارة عن وشاح صوفي تقليدي:",
+    "options": [
+      "مشلح/بشت",
+      "بدلة",
+      "جاكيت رسمي",
+      "ساري"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الإكسسوار التراثي للنساء:",
+    "options": [
+      "حُلي فضية ونقوش بدوية",
+      "ماس باهظ دائمًا",
+      "تيجان ذهبية فقط",
+      "بلا إكسسوار"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "اذكر تأثير البرد على خامات الأقمشة المستخدمة في الشمال.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "قارن بين الشماغ والغترة في الاستخدام شمالًا.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما دور السدو في ملحقات الملابس؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "صف تطوّر الأزياء النسائية البدوية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما رمزية البشت في المناسبات؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
     "Category": "Celebration",
-    "completed": false,
-    "annotator": ""
+    "question": "رقصة الدحة تُشتهر في:",
+    "options": [
+      "الشمال",
+      "الجنوب",
+      "الشرق",
+      "الغرب"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What are the traditional dances common in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Samri and Al-Dhahha",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the traditional musical style common in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Rababah",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the traditional crafts common in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Sadu, dairy products, soap, and olive pressing",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the items a bride buys for her wedding in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Jihaz",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Dating",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the average dowry given to the bride in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "50,000 SAR",
-    "Question Type": "Open-ended",
-    "Domain": "Common",
-    "Category": "Dating",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are some traditional meals associated with Eid Al-Adha in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Mansaf, Kabsa, Haneeth, Mufatah, Jareesh, Qursan",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the most common greetings in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Haywah, Yallah Haywah",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Languages and Communication",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What does placing your hand over a coffee cup mean in Northern Saudi culture?",
-    "Choices": "–",
-    "Answer": "Enough (contentment)",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the typical amount of coffee served to guests in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "One-third of the cup",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Is it acceptable for the host to eat with the guests in Northern Saudi hospitality?",
-    "Choices": "–",
-    "Answer": "Not acceptable",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Is it acceptable to serve coffee before dates in Northern Saudi hospitality?",
-    "Choices": "–",
-    "Answer": "Not acceptable",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the night before Eid in the Northern region of Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Laylat Al-Khidhab (Henna Night)",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Dating",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Where is the traditional game \"Al-Fashaq\" popular in Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Northern Saudi Arabia",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the Saudi traditional game similar to bowling in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Al-Fashaq",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "Where is the dance \"Al-Ashouri\" famous in Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "Northern Saudi Arabia",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "When is the game \"Adheem Lah Wayn Gada Wayn Rah\" played in Northern Saudi Arabia?",
-    "Choices": "–",
-    "Answer": "During full moon nights",
-    "Question Type": "Open-ended",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the most common dish in Northern Saudi Arabia?",
-    "Choices": "A. Al-Mansaf B. Al-Saliq C. Al-Mandi D. Al-Haneeth",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the most common dessert in Northern Saudi Arabia?",
-    "Choices": "A. Al-Bakliyah B. Luqaimat C. Kunafa D. Al-Kleija",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the most popular street food in Northern Saudi Arabia?",
-    "Choices": "A. Foul and Hummus B. Shawarma C. Mutabbaq D. Falafel",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the most common breakfast dish in Northern Saudi Arabia?",
-    "Choices": "A. Balaleet B. Areeka C. Foul and Tamees D. Mrees Al-Tamr",
-    "Answer": "D",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the most popular traditional drink in Northern Saudi Arabia?",
-    "Choices": "A. Sobia B. Qishr Al-Tamr C. Cinnamon D. Bitter Orange Juice",
-    "Answer": "D",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the traditional men’s clothing in Northern Saudi Arabia?",
-    "Choices": "A. Al-Sidriyah and Thobe B. Al-Marodn C. Al-Dishdashah D. Al-Mufrij",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the traditional women’s clothing in Northern Saudi Arabia?",
-    "Choices": "A. Al-Sharsh and Al-Madraqah B. Al-Abayah C. Al-Thuraya D. Al-Nashl",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Clothes",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the traditional musical style common in Northern Saudi Arabia?",
-    "Choices": "A. Al-Rababah B. Al-Samri C. Al-Mawal D. Al-Dhahha",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the traditional dances common in Northern Saudi Arabia?",
-    "Choices": "A. Al-Dhahha B. Al-Samri C. Al-Ardah D. Al-Rababah",
-    "Answer": "A and B",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Common",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the traditional dish for breakfast on Eid Al-Fitr in Northern Saudi Arabia?",
-    "Choices": "A. Hamisat Al-Lahm Wal-Kibdah B. Al-Jareesh C. Al-Marqooq D. Al-Qursan",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Celebration",
-    "completed": false,
-    "annotator": ""
+    "question": "العرضة الشمالية تعتمد على:",
+    "options": [
+      "الإيقاع والهتاف الجماعي",
+      "البيانو",
+      "الناي الغربي",
+      "الجاز"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What are the traditional crafts common in Northern Saudi Arabia?",
-    "Choices": "A. Olive Pressing B. Traditional Toolmaking C. Embroidery and Tailoring D. Honey Production",
-    "Answer": "C",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
-    "Category": "Crafts and Work",
-    "completed": false,
-    "annotator": ""
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "العانية/الفزعة تعني:",
+    "options": [
+      "مساندة وتعاون اجتماعي",
+      "تنافس رياضي",
+      "مهرجان تجاري",
+      "لا معنى"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What are the items a bride buys for her wedding in Northern Saudi Arabia?",
-    "Choices": "A. Al-Jihaz B. Al-Zeena C. Henna D. Gold",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "في الأعراس تُقدّم:",
+    "options": [
+      "القهوة والتمر والذبائح",
+      "الفشار فقط",
+      "المعجنات الغربية فقط",
+      "لا ضيافة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "القصيد النبطي يُلقى في:",
+    "options": [
+      "الاحتفالات الشعبية",
+      "المعامل",
+      "الفصول الدراسية فقط",
+      "المتاحف دائمًا"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "توقيت صلاة العيد:",
+    "options": [
+      "بعد الشروق بقليل",
+      "قبل الفجر",
+      "بعد العصر",
+      "بعد العشاء"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "الهدب/الملفع يُستخدم:",
+    "options": [
+      "كرداء دافئ",
+      "زينة سيارات",
+      "معدات رياضية",
+      "مظلة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "الدحية تُصاحبها:",
+    "options": [
+      "طبول وهتاف",
+      "كمان منفرد",
+      "بيانو",
+      "ساكسفون"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "الضيافة الأساسية:",
+    "options": [
+      "تمر وقهوة عربية",
+      "مشروبات غازية",
+      "شاي بالحليب فقط",
+      "ماء فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "في المناسبات الشتوية تُشعل:",
+    "options": [
+      "شبة النار",
+      "ألعاب إلكترونية",
+      "مصابيح LED فقط",
+      "لا شيء"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "صف طقوس الدحة ومتى تؤدّى.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "كيف تُنظم المجالس الشمالية في المناسبات؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "أمثلة على قصيد نبطي مشهور في الشمال.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "دور الفزعة/العانية اجتماعيًا.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "اختلاف الاحتفال بين المدن والبادية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
     "Category": "Dating",
-    "completed": false,
-    "annotator": ""
+    "question": "الجاهة تعني:",
+    "options": [
+      "وفد وجاهات للخطبة",
+      "فرقة فنية",
+      "رحلة",
+      "مسابقة"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the average dowry given to a bride in Northern Saudi Arabia?",
-    "Choices": "A. 30,000 SAR B. 40,000 SAR C. 50,000 SAR D. 60,000 SAR",
-    "Answer": "C",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Common",
+    "type": "MCQ",
     "Category": "Dating",
-    "completed": false,
-    "annotator": ""
+    "question": "الملكة تشير إلى:",
+    "options": [
+      "عقد الزواج رسميًا",
+      "خطبة غير رسمية",
+      "حفل توديع",
+      "لا علاقة"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What are some traditional meals associated with Eid Al-Adha in Northern Saudi Arabia?",
-    "Choices": "A. Mansaf B. Kabsa C. Haneeth D. Mufatah",
-    "Answer": "A. Mansaf",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are the most common greetings in Northern Saudi Arabia?",
-    "Choices": "A. Yallah Haywah B. Arhabu C. Marhaba Alf D. Ahlan Wa Sahlan",
-    "Answer": "A. Yallah Haywah",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Languages and Communication",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What is the name of the night before Eid in the Northern region of Saudi Arabia?",
-    "Choices": "A. Laylat Al-Henna B. Laylat Al-Khidhab C. Al-Mabruka D. Laylat Al-Zeena",
-    "Answer": "B. Laylat Al-Khidhab",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
+    "type": "MCQ",
     "Category": "Dating",
-    "completed": false,
-    "annotator": ""
+    "question": "تقديم الهدايا بين العائلتين:",
+    "options": [
+      "وفق الاتفاق والعرف",
+      "ممنوع",
+      "إجباري بكميات كبيرة",
+      "لا يحدث"
+    ],
+    "answer": 0
   },
   {
-    "Question": "Where is the traditional game \"Al-Fashaq\" popular in Saudi Arabia?",
-    "Choices": "A. Northern Saudi Arabia B. Eastern Saudi Arabia C. Western Saudi Arabia D. Southern Saudi Arabia",
-    "Answer": "A. Northern Saudi Arabia",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الوليمة تكون:",
+    "options": [
+      "بعد العقد/الزفاف",
+      "قبل الخطبة دائمًا",
+      "لا تُقام",
+      "بعد سنوات"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the Saudi traditional game similar to bowling?",
-    "Choices": "A. Al-Fashaq B. Al-Bakkoura C. Taq Taqiyyah D. Sabaa Al-Hajar",
-    "Answer": "A. Al-Fashaq",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الدبلة تُلبس:",
+    "options": [
+      "بحسب العرف",
+      "ممنوعة",
+      "للرجال فقط",
+      "للنساء فقط"
+    ],
+    "answer": 0
   },
   {
-    "Question": "Where is the dance \"Al-Ashouri\" famous in Saudi Arabia?",
-    "Choices": "A. Northern Saudi Arabia B. Central Saudi Arabia C. Eastern Saudi Arabia D. Western Saudi Arabia",
-    "Answer": "A. Northern Saudi Arabia",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "زيارة الأقارب قبل العقد:",
+    "options": [
+      "بحسب العادات",
+      "ممنوعة دومًا",
+      "واجبة شرعًا",
+      "لا تُعرف"
+    ],
+    "answer": 0
   },
   {
-    "Question": "When is the game \"Adheem Lah Wayn Gada Wayn Rah\" played in Northern Saudi Arabia?",
-    "Choices": "A. During full moon nights B. During Eid celebrations C. During weddings D. During winter evenings",
-    "Answer": "A. During full moon nights",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الدعوات تُوزّع:",
+    "options": [
+      "قبل المناسبة بوقت مناسب",
+      "بعد المناسبة",
+      "عشوائيًا",
+      "لا تُستخدم"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What does placing your hand over a coffee cup mean in Northern Saudi culture?",
-    "Choices": "A. Request for more coffee B. Refusal of more coffee C. Thanking the host D. Starting a conversation",
-    "Answer": "B. Refusal of more coffee",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "مشاركة الشيلات:",
+    "options": [
+      "في الأعراس والاحتفالات",
+      "في الدراسة",
+      "في العمل",
+      "في السفر"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What is the typical amount of coffee served to guests in Northern Saudi Arabia?",
-    "Choices": "A. Quarter of the cup B. One-third of the cup C. Half of the cup D. Full cup",
-    "Answer": "B. One-third of the cup",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "التفاهم بين العائلتين يشمل:",
+    "options": [
+      "الميزانية والالتزامات",
+      "اختيار المدرب الرياضي",
+      "السفر السياحي",
+      "لا شيء"
+    ],
+    "answer": 0
   },
   {
-    "Question": "What are the unique hospitality traditions in Northern Saudi Arabia?",
-    "Choices": "A. Dates are served first, then coffee is poured after finishing the dates. B. Coffee is served first, then dates after drinking the coffee. C. Coffee and dates are served together. D. Only dates are served without coffee during visits.",
-    "Answer": "A. Dates are served first, then coffee is poured after finishing the dates.",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الخطبة الرسمية تتم:",
+    "options": [
+      "بحضور الأهل",
+      "بدون أهل",
+      "عبر رسالة نصية",
+      "غير ضرورية"
+    ],
+    "answer": 0
   },
   {
-    "Question": "Is it acceptable for the host to eat with the guests in Northern Saudi hospitality?",
-    "Choices": "A. Yes, the host always eats with the guests. B. No, the host does not eat with the guests when serving food. C. The host eats only with close friends or family members. D. It depends on the occasion and the guest’s preference.",
-    "Answer": "B. No, the host does not eat with the guests when serving food.",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "اشرح خطوات الجاهة والاتفاق على المتطلبات.",
+    "options": [],
+    "answer": ""
   },
   {
-    "Question": "What architectural planning system does traditional architecture in Al-Jouf rely on?",
-    "Choices": "A. Linear architectural planning B. Modular architectural design C. Integrated architectural composition D. Open courtyard planning",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Architecture",
-    "completed": false,
-    "annotator": ""
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "كيف تُدار ميزانية الزواج شمالًا؟",
+    "options": [],
+    "answer": ""
   },
   {
-    "Question": "What happens during \"Al-Shabbat\" in Northern Saudi Arabia?",
-    "Choices": "A. A person opens their home after Asr, Maghrib, or Isha prayer. B. Guests are served traditional meals like Jareesh and Hamees. C. Coffee, tea, and desserts are served. D. Neighbors and friends gather to socialize.",
-    "Answer": "A, B, C, and D",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "ما دور الشعر في مناسبات الزواج؟",
+    "options": [],
+    "answer": ""
   },
   {
-    "Question": "What is \"Khashrat Al-Eid\" in Hail, and how is it celebrated?",
-    "Choices": "A. Preparing competition games for children. B. A gathering of women and children in one home. C. Enjoying light traditional foods, sweets, and nuts. D. A festive event held in mosques.",
-    "Answer": "A, B, and C",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Specialized",
-    "Category": "Entertainment",
-    "completed": false,
-    "annotator": ""
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "اذكر عادات مميزة في تبوك/الجوف.",
+    "options": [],
+    "answer": ""
   },
   {
-    "Question": "What is a common dish served in Hail during Eid, showcasing housewives’ cooking skills?",
-    "Choices": "A. Kabsa decorated with truffles and vegetables. B. Jareesh. C. Lamb Mandi. D. Qursan.",
-    "Answer": "A",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "How do families in Hail ensure everyone in the neighborhood tastes each other’s food during Eid breakfast?",
-    "Choices": "A. By inviting all neighbors to one central home. B. By delivering food to each home. C. By sharing meals with travelers and passersby. D. By rotating between plates and tables.",
-    "Answer": "D",
-    "Question Type": "MCQ (one correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
-  },
-  {
-    "Question": "What are common gathering places in Northern Saudi Arabia?",
-    "Choices": "A. Roshan B. Majlis C. Qahwa D. Shabbah",
-    "Answer": "B and C",
-    "Question Type": "MCQ (multiple correct)",
-    "Domain": "Specialized",
-    "Category": "Food",
-    "completed": false,
-    "annotator": ""
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "قارن بين أساليب الدعوة في الحضر والبادية.",
+    "options": [],
+    "answer": ""
   }
 ]
