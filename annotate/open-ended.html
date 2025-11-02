@@ -16,27 +16,39 @@
     </nav>
   </header>
 
-  <main class="container">
-    <h1 id="page-title">أسئلة مفتوحة</h1>
-    <div class="meta">
-      <progress id="progress" value="0" max="100"></progress>
-      <span id="counter"></span>
+  <main class="container" style="max-width:900px;margin:auto">
+    <h1>أسئلة مفتوحة</h1>
+
+    <div class="meta" style="display:flex;gap:10px;align-items:center">
+      <progress id="progress" value="0" max="100" style="width:240px"></progress>
       <small id="meta"></small>
     </div>
-    <section id="question-container" class="q-area"></section>
 
-    <footer class="nav-actions">
-      <button id="btn-prev" class="btn">السابق</button>
-      <button id="btn-next" class="btn">التالي</button>
-      <button id="btn-finish" class="btn btn-primary" style="display:none">إنهاء الجلسة</button>
+    <!-- صندوق السؤال -->
+    <section class="question card" style="margin-top:12px">
+      <h3 id="q-title">—</h3>
+      <p id="q-body" class="muted"></p>
+    </section>
+
+     <form id="oeForm" style="margin-top:12px"></form>
+
+    <!-- أزرار التنقل (IDs مطابقة لما يقرأه annotate.js) -->
+    <footer class="nav-actions" style="display:flex;gap:8px;justify-content:center;margin-top:16px">
+      <button class="btn" id="btnPrev"  data-nav="prev">السابق</button>
+      <button class="btn" id="btnNext"  data-nav="next">التالي</button>
+      <button class="btn btn-primary" id="btnDone" data-nav="finish" style="display:none">إنهاء الجلسة</button>
     </footer>
   </main>
 
-  <script>
+   <script>
     const u = new URL(location.href);
-    if (!u.searchParams.get('type')) { u.searchParams.set('type','OPEN_ENDED'); location.replace(u); }
+    if (!u.searchParams.get('type')) {
+      u.searchParams.set('type','OPEN_ENDED');
+      location.replace(u);
+    }
   </script>
-  <script src="../assets/js/dataSources.js"></script>
+
+   <script src="../assets/js/dataSources.js"></script>
   <script src="../assets/js/annotate.js"></script>
 </body>
 </html>
