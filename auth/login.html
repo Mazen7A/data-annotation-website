@@ -8,8 +8,7 @@
 </head>
 <body>
 
-  <!-- الهيدر -->
-  <header class="site-header">
+   <header class="site-header">
     <div class="header-left">
       <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo" />
     </div>
@@ -19,12 +18,11 @@
     </nav>
   </header>
 
-  <!-- المحتوى -->
-  <main class="auth-page">
+   <main class="auth-page">
     <section class="auth-card">
       <header class="auth-header">
         <h1 class="auth-title">تسجيل الدخول</h1>
-        <p class="auth-subtitle">مرحبًا بك مجددًا 👋</p>
+        <p class="auth-subtitle">مرحبًا بك مجددًا </p>
       </header>
 
       <section class="hero-intro" style="margin-top:6px;">
@@ -63,8 +61,7 @@
     </section>
   </main>
 
-  <!-- منطق تسجيل الدخول (محليًا عبر localStorage) -->
-  <script>
+   <script>
     function getUsers(){
       try { return JSON.parse(localStorage.getItem('users') || '[]'); }
       catch { return []; }
@@ -95,12 +92,10 @@
       setCurrentUser({ username: user.username, email: user.email });
       showMsg('تم تسجيل الدخول بنجاح. يتم تحويلك...', 'success');
 
-      // ====== التعديل المطلوب: التحويل إلى select-role ======
-      setTimeout(function () {
+       setTimeout(function () {
         window.location.href = '../home/select-role.html';
       }, 700);
-      // ======================================================
-    });
+     });
   </script>
 
 </body>
