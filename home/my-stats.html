@@ -4,12 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>إحصائياتي</title>
+
+  <!-- تنسيقات المشروع العامة -->
   <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- مخططات -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <style>
+    /* تنسيقات الصفحة */
     body { background:#f7f8fa; padding-top:90px; font-family:"Cairo",sans-serif; }
-    .app-header{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:0 20px;border-bottom:1px solid #eee;height:72px;position:fixed;top:0;left:0;right:0;z-index:9}
+    .app-header{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:0 20px;border-bottom:1px solid #eee;height:72px;position:fixed;top:0;left:0;right:0;z-index:1000}
     .brand{font-weight:700;color:#14532d;font-size:20px}
+    .header-actions{display:flex;gap:10px}
     .page{max-width:980px;margin:auto;padding:20px}
     h1{color:#14532d;text-align:center}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}
@@ -18,17 +25,23 @@
     .big{font-size:28px;font-weight:800;color:#111}
     .muted{color:#64748b;font-size:13px}
     .chart-wrap{background:#fff;border-radius:16px;padding:16px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
-    .btn{background:#16a34a;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer}
+    .btn{background:#16a34a;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
     .btn.secondary{background:#0ea5e9}
+
+    /* ✅ إصلاح عالمي: السماح بالنقر داخل الهيدر حتى لو وُجدت قاعدة قديمة pointer-events:none */
+    .app-header, .site-header { pointer-events:auto !important; }
   </style>
 </head>
 <body>
+  <!-- هيدر ثابت يعمل دائماً -->
   <header class="app-header">
     <div class="brand">منصة إثراء الثقافة السعودية</div>
-    <div class="header-actions">
-      <button class="btn secondary" onclick="history.back()">رجوع</button>
-      <button class="btn" onclick="goToHome()">الرئيسية</button>
-    </div>
+    <nav class="header-actions">
+      <!-- رجوع يعمل دائماً حتى بدون JavaScript -->
+      <a class="btn secondary" href="javascript:history.back()">رجوع</a>
+      <!-- الرئيسية: هذه الصفحة بداخل مجلد /home، لذا المسار نسبي -->
+      <a class="btn" href="./project-list.html">الرئيسية</a>
+    </nav>
   </header>
 
   <div class="page">
@@ -69,7 +82,8 @@
   </div>
 
   <script>
-    function goToHome(){ location.href = "select-role.html"; }
+    // (اختياري) دالة إن احتجتها بمكان آخر
+    function goToHome(){ location.href = "./project-list.html"; }
 
     function readUser(){
       try{
@@ -91,6 +105,7 @@
       const store = readStore(user);
       const sessions = store.sessions || [];
 
+      // بطاقات
       document.getElementById('sessCount').textContent = sessions.length;
       document.getElementById('sessLast').textContent  = sessions.length ? ('آخر جلسة: ' + fmtDate(sessions[sessions.length-1].ts)) : 'لا يوجد بعد';
 
@@ -121,7 +136,7 @@
       const acc = graded>0 ? Math.round((correct/graded)*100) : 0;
       document.getElementById('accuracy').textContent = acc + '%';
 
-      // Charts
+      // رسم حسب النوع
       const ctx1 = document.getElementById('chartByType').getContext('2d');
       const tLabels = Object.keys(byType);
       const tGraded = tLabels.map(k => byType[k].graded);
@@ -138,6 +153,7 @@
         options:{ responsive:true, scales:{y:{beginAtZero:true}} }
       });
 
+      // رسم حسب القسم (دقة %)
       const ctx2 = document.getElementById('chartByCategory').getContext('2d');
       const cLabels = Object.keys(byCat);
       const cAcc = cLabels.map(k => {
@@ -150,7 +166,7 @@
         options:{ responsive:true, scales:{y:{beginAtZero:true, max:100}} }
       });
 
-      // Flash
+      // رسالة حفظ
       if (new URLSearchParams(location.search).get('flash') === 'saved'){
         const f = document.getElementById('flash');
         f.textContent = '✅ تم حفظ نتائج جلستك بنجاح';
