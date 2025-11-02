@@ -50,6 +50,8 @@ body{margin:0;background:var(--gray-bg);color:#000   padding-top:100px;}
   object-fit: contain;
   background: #f7faf9;
   border: 1px solid #e5e7eb;
+ height:52px;
+ width:auto;
 }
 .container{max-width:1000px;margin:0 auto;padding:0 16px}
 .page{padding-top:98px;padding-bottom:24px}
