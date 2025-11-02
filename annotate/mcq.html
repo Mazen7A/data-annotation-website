@@ -36,7 +36,7 @@
     const u = new URL(location.href);
     if (!u.searchParams.get('type')) { u.searchParams.set('type','MCQ'); location.replace(u); }
   </script>
-  <script src="../assets/js/dataSources.js"></script>
-  <script src="../assets/js/annotate.js"></script>
+ <script type="module" src="../assets/js/annotate.js"></script>
+
 </body>
 </html>
