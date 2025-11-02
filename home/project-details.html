@@ -1,94 +1,65 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title id="page-title">تفاصيل المشروع</title>
-  <link rel="stylesheet" href="/assets/css/style.css"/>
- <style>
-      .app-header { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0 20px; border-bottom: 1px solid #eee; height: 72px; position: fixed; top: 0; left: 0; right: 0; z-index: 1100;}
-    .site-logo-fixed { height: 54px; margin-left: 12px; }
-    .brand { font-weight: bold; color: #14532d; font-size: 20px; }
-    .header-actions { display: flex; gap: 10px; }
-    .header-actions button { pointer-events: auto; font-size: 16px; padding: 6px 14px; border-radius: 8px; border: none; background: #f0fdf4; color: #14532d; font-weight: bold; cursor: pointer; transition: background 0.2s;}
-    .header-actions button:hover { background: #bbf7d0; }
-    .page { padding-top: 90px; }
-    .stats-btn { margin-bottom: 16px; background: #d1fae5; border: none; color: #14532d; font-weight: bold; padding: 10px 20px; border-radius: 8px; font-size: 16px; cursor: pointer;}
-    .stats-btn:hover { background: #bbf7d0;}
-  
-    body{direction:rtl;text-align:right;padding-top:90px;background:#f7f8fa;}
-    .page{padding:16px;}
-    .container{max-width:980px;margin:0 auto;}
-    .page-title{font-size:28px;font-weight:800;color:#14532d;margin:6px 0 18px 0;text-align:center;}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin-bottom:16px;}
-    .section-title{margin:0 0 10px 0;font-size:18px;color:#0f5132;}
-    .small-gray{color:#1f2937;line-height:1.9;}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
-    .chip{padding:6px 12px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#14532d;font-size:.95rem;}
-    .qtype-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
-    .qtype-card{display:block;background:#fff;border:1px solid #c7d3c9;border-radius:14px;padding:18px;text-decoration:none;cursor:pointer}
-    .qtype-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.06);}
-    .qtype-card h3{margin:0 0 6px 0;font-size:16px;color:#0f5132;}
-    .muted{color:#6b7280;font-size:.9rem;}
-    .stats-btn { margin-bottom: 16px; background: #d1fae5; border: none; color: #14532d; font-weight: bold; padding: 10px 20px; border-radius: 8px; font-size: 16px; cursor: pointer;}
-    .stats-btn:hover { background: #bbf7d0;}
-    .qtype-picker{display:flex;gap:10px;align-items:center;margin:0 0 12px}
-    .qtype-picker select{padding:8px 10px;border:1px solid #c7d3c9;border-radius:10px}
-  </style>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
 </head>
 <body>
-<header class="app-header">
-  <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+
+<header class="site-header">
+  <div class="header-left">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo">
+  </div>
   <div class="brand">منصة إثراء الثقافة السعودية</div>
-  <div class="header-actions">
-    <button class="link" onclick="goToHome()">الرئيسية</button>
+  <nav class="actions">
     <button class="btn-back" onclick="history.back()">رجوع</button>
     <button onclick="logout()">تسجيل خروج</button>
-  </div>
+  </nav>
 </header>
- 
 
-  <div class="page">
-    <div class="container">
-      <h1 id="project-name" class="page-title">تفاصيل المشروع</h1>
+<div class="page">
+  <div class="container">
+    <h1 id="project-name" class="page-title">تفاصيل المشروع</h1>
 
-      <div id="stats-bar"></div> 
+    <div id="stats-bar"></div>
 
-      <div class="card">
-        <h2 class="section-title">ملخص المشروع</h2>
-        <p id="project-summary" class="small-gray">جاري التحميل...</p>
-        <div id="pd-meta" class="chips"></div>
-      </div>
+    <div class="card">
+      <h2 class="section-title">ملخص المشروع</h2>
+      <p id="project-summary" class="small-gray">جاري التحميل...</p>
+      <div id="pd-meta" class="chips"></div>
+    </div>
 
-      <h2 class="section-title" style="margin-top:18px">ابدأ التقييم</h2>
-      <p class="small-gray" style="margin-top:-6px;">اختر نوع الأسئلة ثم اضغط على القسم:</p>
+    <h2 class="section-title" style="margin-top:18px">ابدأ التقييم</h2>
+    <p class="small-gray" style="margin-top:-6px;">اختر نوع الأسئلة ثم اضغط على القسم:</p>
 
-       <div class="qtype-picker">
-        <label for="qTypeSelect"><b>نوع الأسئلة:</b></label>
-        <select id="qTypeSelect">
-          <option value="MCQ">اختيار من متعدد (MCQ)</option>
-          <option value="TRUE_FALSE">صح / خطأ</option>
-          <option value="LIST">قائمة (List)</option>
-          <option value="OPEN_ENDED">أسئلة مفتوحة</option>
-        </select>
-      </div>
+    <div class="qtype-picker">
+      <label for="qTypeSelect"><b>نوع الأسئلة:</b></label>
+      <select id="qTypeSelect">
+        <option value="MCQ">اختيار من متعدد (MCQ)</option>
+        <option value="TRUE_FALSE">صح / خطأ</option>
+        <option value="LIST">قائمة (List)</option>
+        <option value="OPEN_ENDED">أسئلة مفتوحة</option>
+      </select>
+    </div>
 
-       <div id="qtype-wrap" class="qtype-grid"></div>
+    <div id="qtype-wrap" class="qtype-grid"></div>
 
-      <div id="manager-panel" style="display:none">
-        <h2 class="section-title" style="margin-top:18px">إحصائيات المشروع</h2>
-        <div class="card"><canvas id="categoryChart"></canvas></div>
-        <div class="card" style="margin-top: 10px;">
-          <h3 class="section-title">بيانات إضافية</h3>
-          <p id="manager-stats" class="small-gray">—</p>
-        </div>
+    <div id="manager-panel" style="display:none">
+      <h2 class="section-title" style="margin-top:18px">إحصائيات المشروع</h2>
+      <div class="card"><canvas id="categoryChart"></canvas></div>
+      <div class="card" style="margin-top: 10px;">
+        <h3 class="section-title">بيانات إضافية</h3>
+        <p id="manager-stats" class="small-gray">—</p>
       </div>
     </div>
   </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script src="../assets/js/app.js"></script>
-  <script src="../assets/js/mockData.js"></script>
-  <script src="../assets/js/projectDetails.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/mockData.js"></script>
+<script src="../assets/js/projectDetails.js"></script>
 </body>
 </html>
