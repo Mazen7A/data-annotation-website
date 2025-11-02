@@ -11,55 +11,114 @@
 html,body{height:100%   padding-top:100px;}
 body{margin:0;background:var(--gray-bg);color:#000   padding-top:100px;}
 
- .app-header { display: none !important; }
-.site-logo-fixed { display: none !important; } /* تمنع الشعار العائم الكبير */
-
-/* هيدر موحّد وجميل */
-.site-header{
+ 
+ 
+ /* ===== RTL Header: Logo & Title on Right ===== */
+.site-header {
   position: fixed;
-  inset-inline: 0;
   top: 0;
-  z-index: 1000;
+  right: 0;
+  left: 0;
   background: #fff;
   border-bottom: 2px solid #14532d;
-  box-shadow: 0 3px 8px rgba(0,0,0,.05);
+  z-index: 1000;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  direction: rtl; /* لتطبيق الاتجاه العام */
 }
 
-/* الشعار + العنوان */
-.header-left{ display:flex; align-items:center; gap:10px; }
-.logo{
-  inline-size: 48px; block-size: 48px;
+/* الشعار والعنوان على اليمين */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 48px;
+  width: 48px;
   border-radius: 50%;
   object-fit: contain;
   background: #f7faf9;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #c1a46e; /* إطار ذهبي خفيف */
+  padding: 4px;
 }
-.brand{ font-size:20px; font-weight:800; color:#14532d; white-space:nowrap; letter-spacing:.3px; }
 
-/* أزرار الهيدر */
-.actions{ display:flex; gap:10px; }
-.actions .btn{
-  background:#f0fdf4; color:#14532d; font-weight:700;
-  border:1px solid #bbf7d0; border-radius:10px;
-  padding:6px 14px; font-size:15px; text-decoration:none; cursor:pointer;
-  transition:background .2s, box-shadow .2s, transform .15s;
+.brand {
+  font-size: 20px;
+  font-weight: 800;
+  color: #14532d;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
 }
-.actions .btn:hover{ background:#bbf7d0; box-shadow:0 4px 12px rgba(0,0,0,.08); transform:translateY(-1px); }
-.actions .btn-logout{ background:#14532d; color:#fff; border-color:#14532d; }
-.actions .btn-logout:hover{ background:#0e4022; }
-.brand img{height:52px;width:auto}
-.brand strong{font-size:20px;color:var(--brand);font-weight: 800;}
-.header-actions{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 0; 
-    margin-left: auto; 
+
+/* الأزرار تنتقل إلى اليسار */
+.actions {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
 }
+
+/* الأزرار نفسها */
+.actions .btn {
+  background: #f0fdf4;
+  color: #14532d;
+  font-weight: 700;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.actions .btn:hover {
+  background: #bbf7d0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.actions .btn-logout {
+  background: #14532d;
+  color: #fff;
+  border-color: #14532d;
+}
+
+.actions .btn-logout:hover {
+  background: #0e4022;
+}
+
+/* تباعد المحتوى عن الهيدر */
+body {
+  padding-top: 90px !important;
+  scroll-padding-top: 90px;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 640px) {
+  .site-header {
+    padding: 8px 12px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .actions .btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
 .container{max-width:1000px;margin:0 auto;padding:0 16px}
 .page{padding-top:98px;padding-bottom:24px}
 h1,h2{margin:16px 0;color:var(--brand);font-weight: 700;}
