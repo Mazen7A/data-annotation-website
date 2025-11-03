@@ -1,4 +1,3 @@
-
 (function () {
   // ---------- Helpers ----------
   function getParam(name) {
@@ -42,6 +41,12 @@
   const btnNext  = document.getElementById("btnNext")  || document.querySelector('[data-nav="next"]');
   const btnDone  = document.getElementById("btnDone")  || document.querySelector('[data-nav="finish"]');
   const progress = document.getElementById("progress");
+
+  // عناصر الفيدباك
+  const fbBox    = document.getElementById("per-question-feedback");
+  const fbEmoji  = document.getElementById("q-emoji");
+  const fbC      = document.getElementById("q-correct-count");
+  const fbW      = document.getElementById("q-wrong-count");
 
   // ---------- Normalization ----------
   function normalizeQuestion(raw) {
@@ -156,11 +161,39 @@
   let QUESTIONS = [];
   let state = { index: 0, answers: [] };
 
+  // عدادات الجلسة + تتبع التقييم لكل سؤال
+  const stats = { correct: 0, wrong: 0 };
+  let evaluated = [];        // Boolean per question (تقييم لأول مرة أم لا)
+  let evaluatedOutcome = []; // true/false نتيجة السؤال عند آخر تقييم
+
   function updateMeta() {
     if (!metaEl) return;
     const total = QUESTIONS.length || 0;
     metaEl.textContent =
       `المشروع: ${projectId} | القسم: ${catParam || "الكل"} | النوع: ${type} | ${Math.min(state.index + 1, total)} / ${total}`;
+  }
+
+  function hidePerQuestionFeedback() {
+    if (!fbBox) return;
+    fbBox.classList.remove('ok', 'bad');
+    fbBox.style.display = 'none';
+  }
+
+  function showPerQuestionFeedback(isCorrect) {
+    if (!fbBox || !fbEmoji || !fbC || !fbW) return;
+    fbBox.classList.remove('ok', 'bad');
+    if (isCorrect) {
+      fbBox.classList.add('ok');
+      fbEmoji.textContent = '✅';
+      fbEmoji.setAttribute('aria-label', 'correct');
+    } else {
+      fbBox.classList.add('bad');
+      fbEmoji.textContent = '❌';
+      fbEmoji.setAttribute('aria-label', 'wrong');
+    }
+    fbC.textContent = stats.correct;
+    fbW.textContent = stats.wrong;
+    // display handled by class add
   }
 
   function renderCurrent() {
@@ -169,6 +202,7 @@
       if (titleEl) titleEl.textContent = "لا توجد أسئلة مطابقة …";
       if (formEl)  formEl.innerHTML = "";
       if (btnDone) btnDone.style.display = "none";
+      hidePerQuestionFeedback();
       updateMeta();
       return;
     }
@@ -210,6 +244,8 @@
       progress.value = pct; progress.max = 100;
     }
     if (btnDone) btnDone.style.display = (state.index === QUESTIONS.length - 1 ? "" : "none");
+
+    hidePerQuestionFeedback();
     updateMeta();
   }
 
@@ -246,11 +282,45 @@
     }
   }
 
+  // تقييم السؤال الحالي + تحديث العدادات + إظهار الفيدباك
+  function evaluateCurrentQuestion() {
+    const q = QUESTIONS[state.index];
+    if (!q) return null;
+
+    // نتأكد من وجود سجل الإجابة
+    captureCurrent();
+    const qid = uidFromQuestion(q);
+    const rec = state.answers.find(a => a.qid === qid);
+    if (!rec || rec.isGraded !== true) return null; // لا يوجد اختيار بعد
+
+    let isCorrect = !!rec.correct;
+
+    // أول مرة لهذا السؤال
+    if (!evaluated[state.index]) {
+      if (isCorrect) stats.correct++; else stats.wrong++;
+      evaluated[state.index] = true;
+      evaluatedOutcome[state.index] = isCorrect;
+    } else {
+      // سبق قيّمناه — لو تغيّرت النتيجة (غيّر اختياره)
+      if (evaluatedOutcome[state.index] !== isCorrect) {
+        if (isCorrect) { stats.correct++; stats.wrong--; }
+        else { stats.wrong++; stats.correct--; }
+        evaluatedOutcome[state.index] = isCorrect;
+      }
+    }
+
+    showPerQuestionFeedback(isCorrect);
+    return isCorrect;
+  }
+
   async function start() {
     try {
       QUESTIONS = await loadQuestions();
       state.index = 0;
       state.answers = [];
+      evaluated = Array(QUESTIONS.length).fill(false);
+      evaluatedOutcome = Array(QUESTIONS.length).fill(null);
+      stats.correct = 0; stats.wrong = 0;
       renderCurrent();
     } catch (e) {
       console.error(e);
@@ -260,16 +330,53 @@
   }
 
   // ---------- Navigation ----------
+  const AUTO_ADVANCE_DELAY_MS = 800; // وقت بسيط لإظهار الفيدباك قبل الانتقال
+
+  function goPrev() {
+    captureCurrent();
+    if (state.index > 0) {
+      state.index--;
+      renderCurrent();
+    }
+  }
+
+  function goNext() {
+    captureCurrent();
+    if (state.index < QUESTIONS.length - 1) {
+      state.index++;
+      renderCurrent();
+    }
+  }
+
   if (btnPrev) btnPrev.addEventListener("click", () => {
-    captureCurrent();
-    if (state.index > 0) { state.index--; renderCurrent(); }
+    goPrev();
   });
+
   if (btnNext) btnNext.addEventListener("click", () => {
-    captureCurrent();
-    if (state.index < QUESTIONS.length - 1) { state.index++; renderCurrent(); }
+    // قيّم السؤال الحالي (MCQ/TF فقط) ثم أعرض الفيدباك
+    // (ملف mcq.html هذا للـMCQ، لكن المنطق عام لو استُخدم للـTF)
+    const res = evaluateCurrentQuestion();
+    if (res === null) {
+      // ما تم اختيار إجابة — تقدر تعرض تنبيه لو تحب
+      // alert('اختاري إجابة أولاً');
+      return;
+    }
+    if (AUTO_ADVANCE_DELAY_MS > 0) {
+      setTimeout(() => {
+        hidePerQuestionFeedback();
+        goNext();
+      }, AUTO_ADVANCE_DELAY_MS);
+    } else {
+      hidePerQuestionFeedback();
+      goNext();
+    }
   });
+
   if (btnDone) btnDone.addEventListener("click", () => {
     captureCurrent();
+    // تأكد نحسب آخر سؤال (لو المستخدم ضغط إنهاء مباشرة)
+    evaluateCurrentQuestion();
+
     const username = readCurrentUser();
     const { key, data } = readStore(username);
     const graded  = state.answers.filter(a => a.isGraded);
@@ -280,6 +387,8 @@
       total: QUESTIONS.length,
       gradedTotal: graded.length,
       correct,
+      perQuestionCorrect: stats.correct,
+      perQuestionWrong: stats.wrong,
       answers: state.answers
     };
     data.sessions.push(session);
