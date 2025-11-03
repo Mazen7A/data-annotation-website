@@ -8,56 +8,47 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-left">
-      <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo">
-    </div>
     <div class="brand">منصة إثراء الثقافة السعودية</div>
     <nav class="actions">
-      <button class="btn-back" onclick="history.back()">رجوع</button>
+      <button class="btn" onclick="history.back()">رجوع</button>
     </nav>
   </header>
 
   <main class="auth-page">
     <section class="auth-card">
-      <header class="auth-header">
-        <h1 class="auth-title">إعادة تعيين كلمة المرور</h1>
-        <p class="auth-subtitle">أدخل الرمز ثم اختر كلمة مرور جديدة</p>
-      </header>
+      <h1>إعادة تعيين كلمة المرور</h1>
+      <p>أدخل كلمة مرور جديدة للبريد: <b id="emailDisplay"></b></p>
 
-      <div id="resetMsg" class="msg"></div>
+      <div id="msg" class="msg"></div>
 
-      <form id="resetForm" class="form">
-        <div class="form-group">
-          <label>رمز التحقق</label>
-          <input id="code" maxlength="6" required />
-        </div>
-        <div class="form-row two-col">
-          <div class="form-group">
-            <label>كلمة المرور الجديدة</label>
-            <input id="pw1" type="password" minlength="8" required />
-          </div>
-          <div class="form-group">
-            <label>تأكيد كلمة المرور</label>
-            <input id="pw2" type="password" minlength="8" required />
-          </div>
-        </div>
-        <div class="auth-actions">
-          <div class="right"><button class="auth-submit" type="submit">حفظ</button></div>
-        </div>
-      </form>
+      <input id="pw1" type="password" placeholder="كلمة المرور الجديدة" minlength="8"/><br>
+      <input id="pw2" type="password" placeholder="تأكيد كلمة المرور" minlength="8"/><br><br>
+      <button id="save">حفظ</button>
     </section>
   </main>
 
   <script>
-    document.getElementById("resetForm").addEventListener("submit", (e)=>{
-      e.preventDefault();
-      const msg = resetMsg;
-      const pw1 = document.getElementById("pw1").value;
-      const pw2 = document.getElementById("pw2").value;
-      if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(pw1)) { msg.textContent="كلمة المرور ضعيفة."; msg.className="msg error"; return; }
+    const emailDisplay = document.getElementById('emailDisplay');
+    const msg = document.getElementById('msg');
+    const email = sessionStorage.getItem('resetEmail');
+    emailDisplay.textContent = email || "غير محدد";
+
+    document.getElementById('save').onclick = function() {
+      const pw1 = document.getElementById('pw1').value;
+      const pw2 = document.getElementById('pw2').value;
+
+      if (pw1.length < 8) { msg.textContent="كلمة المرور قصيرة."; msg.className="msg error"; return; }
       if (pw1 !== pw2) { msg.textContent="كلمتا المرور غير متطابقتين."; msg.className="msg error"; return; }
-      msg.textContent="تم الحفظ. يمكنك تسجيل الدخول الآن."; msg.className="msg success";
-    });
+
+      msg.textContent="تم تعيين كلمة المرور بنجاح!";
+      msg.className="msg success";
+
+      // تنظيف البيانات
+      sessionStorage.removeItem("resetCode");
+      sessionStorage.removeItem("resetEmail");
+
+      setTimeout(()=> window.location.href="login.html", 1500);
+    };
   </script>
 </body>
 </html>
