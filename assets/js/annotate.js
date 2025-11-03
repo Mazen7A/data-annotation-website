@@ -10,7 +10,7 @@
   }
   function readCurrentUser() {
     try {
-      const u = JSON.parse(localStorage.getItem("currentUser") || "{}");
+      const u = JSON.parse(localStorage.getItem("currentUser") || "{}"); 
       return u.username || u.email || "guest";
     } catch { return "guest"; }
   }
