@@ -10,6 +10,7 @@
     .q-feedback.ok{border-color:#bbf7d0;background:#ecfdf5;color:#065f46;display:flex}
     .q-feedback.bad{border-color:#fecaca;background:#fef2f2;color:#7f1d1d;display:flex}
     .q-emoji{font-size:22px;line-height:1}
+    button:disabled{opacity:.6;cursor:not-allowed}
   </style>
 </head>
 <body>
@@ -40,7 +41,7 @@
 
   <form id="mcqForm" style="margin-top:12px"></form>
 
-  <!-- صندوق الفيدباك -->
+  <!-- فيدباك السؤال الحالي -->
   <div id="per-question-feedback" class="q-feedback" aria-live="polite">
     <span id="q-emoji" class="q-emoji" role="img" aria-label="feedback">✅</span>
     <div class="q-counts">
@@ -51,7 +52,7 @@
 
   <footer class="nav-actions" style="display:flex;gap:8px;justify-content:center;margin-top:16px">
     <button class="btn" id="btnPrev" type="button">السابق</button>
-    <button class="btn" id="btnNext" type="button">التالي</button>
+    <button class="btn" id="btnNext" type="button" disabled>التالي</button>
     <button class="btn btn-primary" id="btnDone" style="display:none" type="button">إنهاء الجلسة</button>
   </footer>
 </main>
@@ -61,7 +62,7 @@
   if(!u.searchParams.get('type')){u.searchParams.set('type','MCQ');location.replace(u);}
 </script>
 
-<!-- لاحظ ?v=20251103 لتجاوز الكاش -->
+<!-- زد رقم الإصدار لتجاوز الكاش -->
 <script src="../assets/js/dataSources.js?v=20251103"></script>
 <script src="../assets/js/annotate.js?v=20251103"></script>
 </body>
