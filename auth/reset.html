@@ -1,54 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>إعادة تعيين كلمة المرور</title>
-  <link rel="stylesheet" href="../assets/css/style.css"/>
-</head>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>إعادة تعيين كلمة المرور</title><link rel="stylesheet" href="../assets/css/style.css"/><script src="../assets/js/app.js"></script></head>
 <body>
-  <header class="site-header">
-    <div class="brand">منصة إثراء الثقافة السعودية</div>
-    <nav class="actions">
-      <button class="btn" onclick="history.back()">رجوع</button>
-    </nav>
-  </header>
+<header class="app-header">
+  <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
+  
+</header>
+\1
 
-  <main class="auth-page">
-    <section class="auth-card">
-      <h1>إعادة تعيين كلمة المرور</h1>
-      <p>أدخل كلمة مرور جديدة للبريد: <b id="emailDisplay"></b></p>
-
-      <div id="msg" class="msg"></div>
-
-      <input id="pw1" type="password" placeholder="كلمة المرور الجديدة" minlength="8"/><br>
-      <input id="pw2" type="password" placeholder="تأكيد كلمة المرور" minlength="8"/><br><br>
-      <button id="save">حفظ</button>
-    </section>
-  </main>
-
-  <script>
-    const emailDisplay = document.getElementById('emailDisplay');
-    const msg = document.getElementById('msg');
-    const email = sessionStorage.getItem('resetEmail');
-    emailDisplay.textContent = email || "غير محدد";
-
-    document.getElementById('save').onclick = function() {
-      const pw1 = document.getElementById('pw1').value;
-      const pw2 = document.getElementById('pw2').value;
-
-      if (pw1.length < 8) { msg.textContent="كلمة المرور قصيرة."; msg.className="msg error"; return; }
-      if (pw1 !== pw2) { msg.textContent="كلمتا المرور غير متطابقتين."; msg.className="msg error"; return; }
-
-      msg.textContent="تم تعيين كلمة المرور بنجاح!";
-      msg.className="msg success";
-
-      // تنظيف البيانات
-      sessionStorage.removeItem("resetCode");
-      sessionStorage.removeItem("resetEmail");
-
-      setTimeout(()=> window.location.href="login.html", 1500);
-    };
-  </script>
-</body>
-</html>
+  <div style="flex-grow:1;display:flex;justify-content:flex-start;"></div>
+  <div class="brand"><strong>منصة إثراء الثقافة السعودية</strong></div>
+  <div class="header-actions"><button class="btn-back" onclick="history.back()">رجوع</button></div>
+</header>
+<div class="page"><div class="container">
+  <h1>إعادة تعيين كلمة المرور</h1>
+  <div class="card">
+    <label>الرمز</label><input/>
+    <label>كلمة المرور الجديدة</label><input type="password"/>
+    <button>حفظ</button>
+  </div>
+</div></div>
+</body></html>
