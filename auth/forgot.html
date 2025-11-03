@@ -8,138 +8,62 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-left">
-      <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo">
-    </div>
     <div class="brand">منصة إثراء الثقافة السعودية</div>
     <nav class="actions">
-      <button class="btn-back" onclick="history.back()">رجوع</button>
+      <button class="btn" onclick="history.back()">رجوع</button>
     </nav>
   </header>
 
   <main class="auth-page">
     <section class="auth-card">
-      <header class="auth-header">
-        <h1 class="auth-title">استعادة كلمة المرور</h1>
-        <p class="auth-subtitle">أدخل بريدك لتصلك شفرة تحقق</p>
-      </header>
+      <h1>استعادة كلمة المرور</h1>
+      <p>أدخل بريدك الإلكتروني لإرسال رمز التحقق</p>
 
-      <div id="resetMsg" class="msg" aria-live="polite"></div>
+      <div id="msg" class="msg"></div>
 
-      <div class="form">
-        <div class="form-group">
-          <label for="fpEmail">البريد الإلكتروني</label>
-          <input id="fpEmail" type="email" placeholder="example@mail.com" autocomplete="email" required/>
-        </div>
+      <input id="email" type="email" placeholder="example@mail.com"/><br><br>
+      <button id="send">إرسال الرمز</button>
 
-        <div class="auth-actions">
-          <div class="left"><a href="./login.html">عودة لتسجيل الدخول</a></div>
-          <div class="right"><button id="sendCodeBtn" class="auth-submit" type="button">إرسال رمز</button></div>
-        </div>
-
-        <div id="code-section" style="display:none; margin-top:14px;">
-          <div class="form-row two-col">
-            <div class="form-group">
-              <label for="verification-code">رمز التحقق</label>
-              <input id="verification-code" inputmode="numeric" maxlength="6" placeholder="******"/>
-            </div>
-            <div class="form-group">
-              <label>الوقت والمحاولات</label>
-              <div>
-                <span id="timer">--:--</span>
-                <span id="attempts">المتبقي: 5</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="auth-actions">
-            <div class="right">
-              <button id="checkCodeBtn" class="auth-submit" type="button">تحقق من الرمز</button>
-            </div>
-          </div>
-        </div><!-- /code-section -->
+      <div id="codeBox" style="display:none; margin-top:10px;">
+        <input id="code" maxlength="6" placeholder="أدخل الرمز"/>
+        <button id="check">تحقق</button>
       </div>
     </section>
   </main>
 
   <script>
-    (function(){
-      'use strict';
+    const msg = document.getElementById('msg');
+    const emailInput = document.getElementById('email');
+    const codeBox = document.getElementById('codeBox');
+    const codeInput = document.getElementById('code');
+    let sentCode = "";
 
-      let generatedCode = "", codeValidUntil = 0, timerInterval = null, attemptsLeft = 5, fpUser = null;
+    document.getElementById('send').onclick = function() {
+      const email = emailInput.value.trim();
+      if (!email) { msg.textContent = "يرجى إدخال البريد."; msg.className="msg error"; return; }
 
-      const fpEmail        = document.getElementById('fpEmail');
-      const resetMsg       = document.getElementById('resetMsg');
-      const sendCodeBtn    = document.getElementById('sendCodeBtn');
-      const codeSection    = document.getElementById('code-section');
-      const codeInput      = document.getElementById('verification-code');
-      const attemptsEl     = document.getElementById('attempts');
-      const timerEl        = document.getElementById('timer');
-      const checkCodeBtn   = document.getElementById('checkCodeBtn');
+      // مثال بسيط: افترض المستخدم موجود
+      sentCode = Math.floor(100000 + Math.random() * 900000).toString();
+      sessionStorage.setItem("resetCode", sentCode);
+      sessionStorage.setItem("resetEmail", email);
 
-      function setMsg(txt, type){ resetMsg.textContent = txt || ""; resetMsg.className = "msg" + (type?(" "+type):""); }
+      msg.textContent = "تم إرسال الرمز: " + sentCode + " (تجريبي)";
+      msg.className="msg success";
+      codeBox.style.display = "block";
+    };
 
-      function stopTimer(){ if (timerInterval){ clearInterval(timerInterval); timerInterval = null; } }
-      function startTimer(){
-        stopTimer();
-        function update(){
-          const remainSec = Math.max(0, Math.floor((codeValidUntil - Date.now())/1000));
-          const m = Math.floor(remainSec/60), s = ('0'+(remainSec%60)).slice(-2);
-          timerEl.textContent = `الوقت المتبقي: ${m}:${s}`;
-          if (remainSec <= 0){
-            stopTimer();
-            timerEl.textContent = "انتهت صلاحية الرمز! اطلب رمز جديد.";
-            checkCodeBtn.disabled = true;
-          }
-        }
-        update();
-        timerInterval = setInterval(update, 1000);
+    document.getElementById('check').onclick = function() {
+      const entered = codeInput.value.trim();
+      const real = sessionStorage.getItem("resetCode");
+      if (entered === real && entered !== "") {
+        msg.textContent = "تم التحقق بنجاح! سيتم نقلك لتعيين كلمة المرور...";
+        msg.className = "msg success";
+        setTimeout(() => window.location.href = "reset.html", 1500);
+      } else {
+        msg.textContent = "الرمز غير صحيح.";
+        msg.className = "msg error";
       }
-
-      sendCodeBtn.addEventListener('click', function(){
-        const email = (fpEmail.value||"").trim().toLowerCase();
-        setMsg("", "");
-        if(!email){ setMsg("يرجى إدخال البريد.", "error"); return; }
-
-        const users = JSON.parse(localStorage.getItem("users") || "[]");
-        fpUser = users.find(u => (u && (u.email||"").toLowerCase() === email));
-        if(!fpUser){ setMsg("البريد غير موجود.", "error"); return; }
-
-        generatedCode  = Math.floor(100000 + Math.random()*900000).toString();
-        codeValidUntil = Date.now() + 7*60*1000;
-        attemptsLeft   = 5;
-
-        codeSection.style.display = "block";
-        codeInput.value = "";
-        attemptsEl.textContent = `المتبقي: ${attemptsLeft}`;
-        checkCodeBtn.disabled = false;
-
-         setMsg(`تم إرسال الرمز: ${generatedCode} (للتجربة)`, "success");
-
-        startTimer();
-      });
-
-      checkCodeBtn.addEventListener('click', function(){
-        if (Date.now() > codeValidUntil){ setMsg("انتهت صلاحية الرمز! اطلب جديدًا.", "error"); return; }
-        const code = (codeInput.value||"").trim();
-        if (code !== generatedCode){
-          attemptsLeft = Math.max(0, attemptsLeft - 1);
-          attemptsEl.textContent = `المتبقي: ${attemptsLeft}`;
-          setMsg("الرمز غير صحيح.", "error");
-          if (attemptsLeft <= 0){
-            setMsg("استنفدت المحاولات! اطلب رمز جديد.", "error");
-            codeSection.style.display = "none";
-            stopTimer();
-          }
-          return;
-        }
-
-         localStorage.setItem("resetEmail", fpUser.email);
-        setMsg("تم التحقق بنجاح! سيتم نقلك لتعيين كلمة المرور...", "success");
-        stopTimer();
-        setTimeout(()=>{ window.location.href = "./reset.html"; }, 1500);
-      });
-    })();
+    };
   </script>
 </body>
 </html>
