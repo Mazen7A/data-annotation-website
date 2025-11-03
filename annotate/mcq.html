@@ -5,37 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>أسئلة اختيار من متعدد</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
-
   <style>
-    /* Feedback panel */
-    .q-feedback {
-      margin-top: 12px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      display: none; /* يُظهر بالـJS */
-      align-items: center;
-      gap: 10px;
-      font-weight: 600;
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-    }
-    .q-feedback.ok {
-      border-color: #bbf7d0;   /* أخضر فاتح */
-      background: #ecfdf5;     /* خلفية خضراء فاتحة */
-      color: #065f46;          /* أخضر غامق */
-      display: flex;
-    }
-    .q-feedback.bad {
-      border-color: #fecaca;   /* أحمر فاتح */
-      background: #fef2f2;     /* خلفية حمراء فاتحة */
-      color: #7f1d1d;          /* أحمر غامق */
-      display: flex;
-    }
-    .q-emoji { font-size: 22px; line-height: 1; }
+    .q-feedback{margin-top:12px;padding:10px 12px;border-radius:12px;display:none;align-items:center;gap:10px;font-weight:600;background:#f9fafb;border:1px solid #e5e7eb}
+    .q-feedback.ok{border-color:#bbf7d0;background:#ecfdf5;color:#065f46;display:flex}
+    .q-feedback.bad{border-color:#fecaca;background:#fef2f2;color:#7f1d1d;display:flex}
+    .q-emoji{font-size:22px;line-height:1}
   </style>
 </head>
 <body>
- <header class="site-header">
+<header class="site-header">
   <div class="header-left">
     <img src="../assets/images/thaqafatna-circle.svg" alt="شعار ثقافتنا" class="logo">
     <div class="brand">منصّة إثراء الثقافة السعودية</div>
@@ -47,43 +25,44 @@
   </nav>
 </header>
 
-  <main class="container" style="max-width:900px;margin:auto">
-    <h1>أسئلة اختيار من متعدد</h1>
+<main class="container" style="max-width:900px;margin:auto">
+  <h1>أسئلة اختيار من متعدد</h1>
 
-    <div class="meta" style="display:flex;gap:10px;align-items:center">
-      <progress id="progress" value="0" max="100" style="width:240px"></progress>
-      <small id="meta"></small>
+  <div class="meta" style="display:flex;gap:10px;align-items:center">
+    <progress id="progress" value="0" max="100" style="width:240px"></progress>
+    <small id="meta"></small>
+  </div>
+
+  <section class="question card" style="margin-top:12px">
+    <h3 id="q-title">—</h3>
+    <p id="q-body" class="muted"></p>
+  </section>
+
+  <form id="mcqForm" style="margin-top:12px"></form>
+
+  <!-- صندوق الفيدباك -->
+  <div id="per-question-feedback" class="q-feedback" aria-live="polite">
+    <span id="q-emoji" class="q-emoji" role="img" aria-label="feedback">✅</span>
+    <div class="q-counts">
+      <strong><span id="q-correct-count">0</span></strong> صحيحة •
+      <strong><span id="q-wrong-count">0</span></strong> خاطئة
     </div>
+  </div>
 
-    <section class="question card" style="margin-top:12px">
-      <h3 id="q-title">—</h3>
-      <p id="q-body" class="muted"></p>
-    </section>
+  <footer class="nav-actions" style="display:flex;gap:8px;justify-content:center;margin-top:16px">
+    <button class="btn" id="btnPrev" type="button">السابق</button>
+    <button class="btn" id="btnNext" type="button">التالي</button>
+    <button class="btn btn-primary" id="btnDone" style="display:none" type="button">إنهاء الجلسة</button>
+  </footer>
+</main>
 
-    <form id="mcqForm" style="margin-top:12px"></form>
+<script>
+  const u=new URL(location.href);
+  if(!u.searchParams.get('type')){u.searchParams.set('type','MCQ');location.replace(u);}
+</script>
 
-    <!-- صندوق الفيدباك لكل سؤال -->
-    <div id="per-question-feedback" class="q-feedback" aria-live="polite">
-      <span id="q-emoji" class="q-emoji" role="img" aria-label="feedback">✅</span>
-      <div class="q-counts">
-        <strong><span id="q-correct-count">0</span></strong> صحيحة •
-        <strong><span id="q-wrong-count">0</span></strong> خاطئة
-      </div>
-    </div>
-
-    <footer class="nav-actions" style="display:flex;gap:8px;justify-content:center;margin-top:16px">
-      <button class="btn" data-nav="prev"  id="btnPrev" type="button">السابق</button>
-      <button class="btn" data-nav="next"  id="btnNext" type="button">التالي</button>
-      <button class="btn btn-primary" data-nav="finish" id="btnDone" style="display:none" type="button">إنهاء الجلسة</button>
-    </footer>
-  </main>
-
-  <script>
-    const u = new URL(location.href);
-    if (!u.searchParams.get('type')) { u.searchParams.set('type', 'MCQ'); location.replace(u); }
-  </script>
-
-  <script src="../assets/js/dataSources.js"></script>
-  <script src="../assets/js/annotate.js"></script>
+<!-- لاحظ ?v=20251103 لتجاوز الكاش -->
+<script src="../assets/js/dataSources.js?v=20251103"></script>
+<script src="../assets/js/annotate.js?v=20251103"></script>
 </body>
 </html>
