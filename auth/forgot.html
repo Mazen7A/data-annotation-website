@@ -36,30 +36,34 @@
           <div class="right"><button id="sendCodeBtn" class="auth-submit">إرسال رمز</button></div>
         </div>
 
-        <div id="code-section" style="display:none;">
+        <div id="code-section" style="display:none; margin-top:10px;">
           <div class="form-row two-col">
             <div class="form-group">
               <label>رمز التحقق</label>
-              <input id="verification-code" maxlength="6" />
+              <input id="verification-code" maxlength="6" inputmode="numeric" />
             </div>
             <div class="form-group">
               <label>الوقت والمحاولات</label>
-              <div><span id="timer"></span> <span id="attempts"></span></div>
+              <div>
+                <span id="timer"></span>
+                <span id="attempts"></span>
+              </div>
             </div>
           </div>
           <div class="auth-actions">
             <div class="right"><button id="checkCodeBtn" class="auth-submit">تحقق من الرمز</button></div>
           </div>
 
-          <div id="set-password-section" style="display:none;">
+          <div id="set-password-section" style="display:none; margin-top:10px;">
             <div class="form-row two-col">
               <div class="form-group">
                 <label>كلمة المرور الجديدة</label>
-                <input id="new-password" type="password" minlength="8" />
+                <input id="new-password" type="password" minlength="8" autocomplete="new-password" />
+                <small class="field-hint">8+ أحرف وتضم رقمًا وحرفًا كبيرًا وصغيرًا</small>
               </div>
               <div class="form-group">
                 <label>تأكيد كلمة المرور الجديدة</label>
-                <input id="confirm-password" type="password" minlength="8" />
+                <input id="confirm-password" type="password" minlength="8" autocomplete="new-password" />
               </div>
             </div>
             <div class="auth-actions">
@@ -72,60 +76,122 @@
   </main>
 
   <script>
-    let generatedCode = "", codeValidUntil = 0, timerInterval = null, attemptsLeft = 5, fpUser = null;
+    // حالة داخلية
+    let generatedCode = "";
+    let codeValidUntil = 0;
+    let timerInterval = null;
+    let attemptsLeft = 5;
+    let fpUser = null;
 
-    function startTimer() {
-      const timer = document.getElementById('timer');
-      function update() {
-        const remain = Math.max(0, Math.floor((codeValidUntil - Date.now())/1000));
-        timer.textContent = `الوقت المتبقي: ${Math.floor(remain/60)}:${('0'+(remain%60)).slice(-2)}`;
-        if (remain <= 0) { clearInterval(timerInterval); timer.textContent = "انتهت صلاحية الرمز! اطلب رمز جديد."; }
-      }
-      update(); timerInterval = setInterval(update, 1000);
+    // مساعدين سريعين
+    const $ = (id) => document.getElementById(id);
+    const msgBox = () => $('resetMsg');
+
+    function stopTimer(){
+      if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
     }
 
-    sendCodeBtn.onclick = function() {
-      const email = fpEmail.value.trim();
-      const msg = resetMsg; msg.textContent = ""; msg.className = "msg";
-      if (!email) { msg.textContent = "يرجى إدخال البريد."; msg.className="msg error"; return; }
-      const users = JSON.parse(localStorage.getItem("users") || "[]");
+    function startTimer() {
+      const timerEl = $('timer');
+      stopTimer();
+      function update() {
+        const remain = Math.max(0, Math.floor((codeValidUntil - Date.now()) / 1000));
+        const mm = Math.floor(remain / 60);
+        const ss = ('0' + (remain % 60)).slice(-2);
+        timerEl.textContent = `الوقت المتبقي: ${mm}:${ss}`;
+        if (remain <= 0) {
+          stopTimer();
+          timerEl.textContent = "انتهت صلاحية الرمز! اطلب رمز جديد.";
+        }
+      }
+      update();
+      timerInterval = setInterval(update, 1000);
+    }
+
+    function showMsg(text, type) {
+      const box = msgBox();
+      box.textContent = text;
+      box.className = "msg " + (type || "");
+    }
+
+    // إرسال الرمز
+    $('sendCodeBtn').onclick = function() {
+      const email = $('fpEmail').value.trim();
+      showMsg("", "");
+      if (!email) { showMsg("يرجى إدخال البريد.", "error"); return; }
+
+      let users = [];
+      try { users = JSON.parse(localStorage.getItem("users") || "[]"); } catch {}
       fpUser = users.find(u => u.email === email);
-      if (!fpUser) { msg.textContent = "البريد غير موجود."; msg.className="msg error"; return; }
+
+      if (!fpUser) {
+        showMsg("البريد غير موجود.", "error");
+        return;
+      }
+
       generatedCode = Math.floor(100000 + Math.random() * 900000).toString();
-      codeValidUntil = Date.now() + 7*60*1000; attemptsLeft = 5;
-      document.getElementById("code-section").style.display = "block";
-      verification-code.value = ""; attempts.textContent = `المتبقي: ${attemptsLeft}`;
-      document.getElementById("set-password-section").style.display = "none";
-      msg.textContent = `تم إرسال الرمز: ${generatedCode} (للتجربة)`; msg.className="msg success";
+      codeValidUntil = Date.now() + (7 * 60 * 1000); // 7 دقائق
+      attemptsLeft = 5;
+
+      // تفعيل واجهة التحقق
+      $('code-section').style.display = "block";
+      $('set-password-section').style.display = "none";
+      $('verification-code').value = "";
+      $('attempts').textContent = `المتبقي: ${attemptsLeft}`;
+
+      // للعرض في وضع التجربة
+      showMsg(`تم إرسال الرمز: ${generatedCode} (للتجربة)`, "success");
       startTimer();
     };
 
-    checkCodeBtn.onclick = function() {
-      const code = document.getElementById("verification-code").value.trim();
-      const msg = resetMsg;
-      if (Date.now() > codeValidUntil) { msg.textContent = "انتهت صلاحية الرمز! اطلب جديدًا."; msg.className="msg error"; return; }
-      if (code !== generatedCode) {
-        attemptsLeft--; attempts.textContent = `المتبقي: ${attemptsLeft}`;
-        msg.textContent = "الرمز غير صحيح."; msg.className="msg error";
-        if (attemptsLeft <= 0) { msg.textContent = "استنفدت المحاولات! اطلب رمز جديد."; document.getElementById("code-section").style.display="none"; }
+    // التحقق من الرمز
+    $('checkCodeBtn').onclick = function() {
+      const code = $('verification-code').value.trim();
+      if (!code) { showMsg("أدخل الرمز للتحقق.", "error"); return; }
+
+      if (Date.now() > codeValidUntil) {
+        showMsg("انتهت صلاحية الرمز! اطلب جديدًا.", "error");
         return;
       }
-      document.getElementById("set-password-section").style.display = "block";
-      msg.textContent = "تم التحقق. أدخل كلمة مرور جديدة."; msg.className="msg success";
+
+      if (code !== generatedCode) {
+        attemptsLeft--;
+        $('attempts').textContent = `المتبقي: ${attemptsLeft}`;
+        showMsg("الرمز غير صحيح.", "error");
+        if (attemptsLeft <= 0) {
+          showMsg("استنفدت المحاولات! اطلب رمز جديد.", "error");
+          $('code-section').style.display = "none";
+          stopTimer();
+        }
+        return;
+      }
+
+      $('set-password-section').style.display = "block";
+      showMsg("تم التحقق. أدخل كلمة مرور جديدة.", "success");
     };
 
-    saveNewPwBtn.onclick = function() {
-      const newPw = document.getElementById("new-password").value;
-      const confirmPw = document.getElementById("confirm-password").value;
-      const msg = resetMsg;
-      if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(newPw)) { msg.textContent="كلمة المرور ضعيفة."; msg.className="msg error"; return; }
-      if (newPw !== confirmPw) { msg.textContent="كلمتا المرور غير متطابقتين."; msg.className="msg error"; return; }
-      let users = JSON.parse(localStorage.getItem("users") || "[]");
-      users = users.map(u => u.email === fpUser.email ? {...u, password:newPw} : u);
+    // حفظ كلمة المرور الجديدة
+    $('saveNewPwBtn').onclick = function() {
+      const newPw = $('new-password').value;
+      const confirmPw = $('confirm-password').value;
+
+      const strong = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+      if (!strong.test(newPw)) { showMsg("كلمة المرور ضعيفة. اتبع المتطلبات أعلاه.", "error"); return; }
+      if (newPw !== confirmPw) { showMsg("كلمتا المرور غير متطابقتين.", "error"); return; }
+
+      let users = [];
+      try { users = JSON.parse(localStorage.getItem("users") || "[]"); } catch {}
+
+      if (!fpUser) { showMsg("الجلسة انتهت، أرسل رمزًا من جديد.", "error"); return; }
+
+      users = users.map(u => u.email === fpUser.email ? { ...u, password: newPw } : u);
       localStorage.setItem("users", JSON.stringify(users));
-      msg.textContent = "تم تغيير كلمة المرور بنجاح!"; msg.className="msg success";
-      document.getElementById("set-password-section").style.display = "none";
-      document.getElementById("code-section").style.display = "none";
+
+      // تنظيف الحالة
+      stopTimer();
+      $('set-password-section').style.display = "none";
+      $('code-section').style.display = "none";
+      showMsg("تم تغيير كلمة المرور بنجاح!", "success");
     };
   </script>
 </body>
