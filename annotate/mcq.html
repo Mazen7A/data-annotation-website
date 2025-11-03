@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>أسئلة اختيار من متعدد</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <style>
+    /* Feedback panel */
+    .q-feedback {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      display: none; /* يُظهر بالـJS */
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+    }
+    .q-feedback.ok {
+      border-color: #bbf7d0;   /* أخضر فاتح */
+      background: #ecfdf5;     /* خلفية خضراء فاتحة */
+      color: #065f46;          /* أخضر غامق */
+      display: flex;
+    }
+    .q-feedback.bad {
+      border-color: #fecaca;   /* أحمر فاتح */
+      background: #fef2f2;     /* خلفية حمراء فاتحة */
+      color: #7f1d1d;          /* أحمر غامق */
+      display: flex;
+    }
+    .q-emoji { font-size: 22px; line-height: 1; }
+  </style>
 </head>
 <body>
  <header class="site-header">
@@ -14,7 +42,7 @@
   </div>
   <nav class="actions">
     <a class="btn" href="../home/project-list.html">الرئيسية</a>
-    <button class="btn" onclick="history.back()">رجوع</button>
+    <button class="btn" onclick="history.length>1?history.back():location.href='../home/project-list.html'">رجوع</button>
     <a class="btn btn-logout" href="../auth/login.html" onclick="localStorage.removeItem('currentUser')">تسجيل خروج</a>
   </nav>
 </header>
@@ -34,10 +62,19 @@
 
     <form id="mcqForm" style="margin-top:12px"></form>
 
+    <!-- صندوق الفيدباك لكل سؤال -->
+    <div id="per-question-feedback" class="q-feedback" aria-live="polite">
+      <span id="q-emoji" class="q-emoji" role="img" aria-label="feedback">✅</span>
+      <div class="q-counts">
+        <strong><span id="q-correct-count">0</span></strong> صحيحة •
+        <strong><span id="q-wrong-count">0</span></strong> خاطئة
+      </div>
+    </div>
+
     <footer class="nav-actions" style="display:flex;gap:8px;justify-content:center;margin-top:16px">
-      <button class="btn" data-nav="prev"  id="btnPrev">السابق</button>
-      <button class="btn" data-nav="next"  id="btnNext">التالي</button>
-      <button class="btn btn-primary" data-nav="finish" id="btnDone" style="display:none">إنهاء الجلسة</button>
+      <button class="btn" data-nav="prev"  id="btnPrev" type="button">السابق</button>
+      <button class="btn" data-nav="next"  id="btnNext" type="button">التالي</button>
+      <button class="btn btn-primary" data-nav="finish" id="btnDone" style="display:none" type="button">إنهاء الجلسة</button>
     </footer>
   </main>
 
@@ -46,8 +83,7 @@
     if (!u.searchParams.get('type')) { u.searchParams.set('type', 'MCQ'); location.replace(u); }
   </script>
 
-<script src="../assets/js/dataSources.js"></script>
-<script src="../assets/js/annotate.js"></script>
-
+  <script src="../assets/js/dataSources.js"></script>
+  <script src="../assets/js/annotate.js"></script>
 </body>
 </html>
