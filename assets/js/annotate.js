@@ -72,7 +72,7 @@
 
   // ---------- State ----------
   let QUESTIONS=[];
-  let state={ index:0, answers:[] };              // answers: {qid, picked, correct, isGraded}
+  let state={ index:0, answers:[] };              // answers: {qid, picked, correct, isGraded, locked}
   const stats={ correct:0, wrong:0 };
   let evaluated=[], evaluatedOutcome=[];           // per-question evaluation flags
 
@@ -89,14 +89,25 @@
     else { fbBox.classList.add("bad"); fbEmoji.textContent="❌"; fbEmoji.setAttribute("aria-label","wrong"); }
     fbC.textContent=stats.correct; fbW.textContent=stats.wrong;
   }
-
-  function wireChoiceRequired(){
+  function disableNextIfNoSelection(){
     if(!btnNext || !formEl) return;
-    btnNext.disabled = true;
-    const choiceInputs = formEl.querySelectorAll('input[name="choice"], input[name="mcqOption"], input[name="tfOption"]');
-    choiceInputs.forEach(inp=>{
-      inp.addEventListener('change', ()=>{ btnNext.disabled=false; });
-    });
+    const hasSel = !!(formEl.querySelector('input[name="choice"]:checked') ||
+                      formEl.querySelector('input[name="mcqOption"]:checked') ||
+                      formEl.querySelector('input[name="tfOption"]:checked'));
+    btnNext.disabled = !hasSel;
+  }
+  function wireChoiceRequired(){
+    if(!formEl) return;
+    disableNextIfNoSelection();
+    formEl.addEventListener('change', disableNextIfNoSelection, { once:false });
+  }
+  function lockCurrentOptions(){
+    if(!formEl) return;
+    [...formEl.querySelectorAll('input[type="radio"]')].forEach(inp=>inp.disabled=true);
+  }
+  function unlockCurrentOptions(){
+    if(!formEl) return;
+    [...formEl.querySelectorAll('input[type="radio"]')].forEach(inp=>inp.disabled=false);
   }
 
   function renderCurrent(){
@@ -106,7 +117,7 @@
     if(bodyEl)  bodyEl.textContent=q.description||"";
     if(formEl)  formEl.innerHTML="";
 
-    // ارسم خيارات (MCQ/TF) باسم موحّد choice
+    // ارسم خيارات باسم موحّد choice
     (q.options||[]).forEach((opt,i)=>{
       const id=`opt_${i}`;
       const div=document.createElement("div");
@@ -119,11 +130,17 @@
       formEl.appendChild(div);
     });
 
-    // إعادة اختيار سابق
+    // إعادة اختيار سابق + قفل إن كان مُقيّم مسبقًا
     const prev=state.answers.find(a=>a.qid===uidFromQuestion(q));
-    if(prev && typeof prev.picked==="number"){
-      const inp=formEl.querySelector(`input[name="choice"][value="${prev.picked}"]`);
-      if(inp) inp.checked=true;
+    if(prev){
+      if(typeof prev.picked==="number"){
+        const inp=formEl.querySelector(`input[name="choice"][value="${prev.picked}"]`);
+        if(inp) inp.checked=true;
+      }
+      if(prev.locked){ lockCurrentOptions(); showPerQuestionFeedback(!!prev.correct); }
+      else { hidePerQuestionFeedback(); }
+    }else{
+      hidePerQuestionFeedback();
     }
 
     if(progress){
@@ -132,21 +149,20 @@
     }
     if(btnDone) btnDone.style.display=(state.index===QUESTIONS.length-1?"":"none");
 
-    hidePerQuestionFeedback();
     updateMeta();
-    wireChoiceRequired(); // زر «التالي» يظل معطّل حتى يختار المستخدم
+    wireChoiceRequired(); // زر «التالي» يُعطّل فقط إذا ما فيه اختيار
   }
 
   function captureCurrent(){
     const q=QUESTIONS[state.index]; if(!q) return;
     const qid=uidFromQuestion(q);
     let rec=state.answers.find(a=>a.qid===qid);
-    if(!rec){ rec={ qid, type, picked:null, correct:null, isGraded:false }; state.answers.push(rec); }
+    if(!rec){ rec={ qid, type, picked:null, correct:null, isGraded:false, locked:false }; state.answers.push(rec); }
 
     const sel = (formEl.querySelector('input[name="choice"]:checked')
               || formEl.querySelector('input[name="mcqOption"]:checked')
               || formEl.querySelector('input[name="tfOption"]:checked'));
-    if(sel){
+    if(sel && !rec.locked){ // لا نحدّث الاختيار إذا السؤال مقفول
       rec.picked=Number(sel.value);
       let correctIndex=null;
       if(typeof q.answer==="number") correctIndex=q.answer;
@@ -163,41 +179,83 @@
     }
   }
 
+  // يُقيّم السؤال (أول ضغط) ويعرض الإيموجي ويقفل الاختيارات ولا ينتقل
   function evaluateCurrentQuestion(){
     const q=QUESTIONS[state.index]; if(!q) return null;
-    captureCurrent();
-    const rec=state.answers.find(a=>a.qid===uidFromQuestion(q));
-    if(!rec || rec.isGraded!==true) return null;
+    const qid=uidFromQuestion(q);
+    // تأكد فيه اختيار
+    const hasSel = !!(formEl.querySelector('input[name="choice"]:checked') ||
+                      formEl.querySelector('input[name="mcqOption"]:checked') ||
+                      formEl.querySelector('input[name="tfOption"]:checked'));
+    if(!hasSel) return null;
 
-    const isCorrect=!!rec.correct;
-    if(!evaluated[state.index]){
-      if(isCorrect) stats.correct++; else stats.wrong++;
-      evaluated[state.index]=true; evaluatedOutcome[state.index]=isCorrect;
-    }else if(evaluatedOutcome[state.index]!==isCorrect){
-      if(isCorrect){ stats.correct++; stats.wrong--; } else { stats.wrong++; stats.correct--; }
-      evaluatedOutcome[state.index]=isCorrect;
+    captureCurrent();
+    const rec=state.answers.find(a=>a.qid===qid);
+    if(!rec) return null;
+
+    // إذا سبق قيّمناه: فقط أعرض الفيدباك، ولا تعيد العد
+    if(evaluated[state.index]){
+      showPerQuestionFeedback(!!rec.correct);
+      return !!rec.correct;
     }
-    showPerQuestionFeedback(isCorrect);
-    return isCorrect;
+
+    // تقييم أول مرة
+    if(rec.isGraded===true){
+      const isCorrect=!!rec.correct;
+      if(isCorrect) stats.correct++; else stats.wrong++;
+      evaluated[state.index]=true;
+      evaluatedOutcome[state.index]=isCorrect;
+
+      // اقفل الاختيارات بعد كشف النتيجة (لا تغيير بعدها)
+      rec.locked = true;
+      lockCurrentOptions();
+      showPerQuestionFeedback(isCorrect);
+      return isCorrect;
+    }
+
+    return null;
   }
 
   // ---------- Navigation ----------
-  const AUTO_ADVANCE_DELAY_MS = 800;
-
-  function goPrev(){ captureCurrent(); if(state.index>0){ state.index--; renderCurrent(); } }
-  function goNext(){ captureCurrent(); if(state.index<QUESTIONS.length-1){ state.index++; renderCurrent(); } }
+  function goPrev(){ 
+    // مسموح ترجع، العرض فقط
+    if(state.index>0){ state.index--; renderCurrent(); }
+  }
+  function goNext(){
+    if(state.index<QUESTIONS.length-1){ state.index++; renderCurrent(); }
+  }
 
   if(btnPrev) btnPrev.addEventListener("click", goPrev);
 
+  // سلوك زر "التالي":
+  // - أول ضغط مع اختيار ⇒ قيّم + أعرض الإيموجي + اقفل الاختيارات + لا تنتقل
+  // - ضغطة ثانية (نفس السؤال مُقيّم) ⇒ انتقل للسؤال التالي
   if(btnNext) btnNext.addEventListener("click", ()=>{
-    // ممنوع الانتقال بدون اختيار (الزر أصلاً معطّل)
-    const res=evaluateCurrentQuestion();     // يُظهر الإيموجي فوراً
-    if(res===null) return;
-    setTimeout(()=>{ hidePerQuestionFeedback(); goNext(); }, AUTO_ADVANCE_DELAY_MS);
+    // ممنوع بدون اختيار (الزر أصلاً يُعطّل بواسطة wireChoiceRequired)
+    const hasSel = !!(formEl.querySelector('input[name="choice"]:checked') ||
+                      formEl.querySelector('input[name="mcqOption"]:checked') ||
+                      formEl.querySelector('input[name="tfOption"]:checked'));
+    if(!hasSel) return;
+
+    const alreadyEvaluated = !!evaluated[state.index];
+    const res = evaluateCurrentQuestion(); // يعرض الفيدباك ويقفل إن كانت أول مرة
+    if(res === null) return;
+
+    if(alreadyEvaluated){
+      hidePerQuestionFeedback();
+      goNext();
+    } else {
+      // أول نقرة: نظهر الفيدباك فقط ولا ننتقل
+      // يبقى المستخدم على نفس السؤال، وزر التالي يبقى مفعّل
+    }
   });
 
   if(btnDone) btnDone.addEventListener("click", ()=>{
-    evaluateCurrentQuestion(); // احسب آخر سؤال وأظهر الفيدباك
+    // لو السؤال الحالي غير مُقيّم و فيه اختيار، قيّمه أولاً
+    if(!evaluated[state.index]){
+      const maybe = evaluateCurrentQuestion();
+      if(maybe === null) return; // ما فيه اختيار
+    }
     const username=currentUserName();
     const key=`thq_results_v1:${username}`;
     const store=readStore(key);
@@ -212,14 +270,6 @@
     writeStore(key, store);
     const u=new URL("../home/my-stats.html", location.href);
     u.searchParams.set("flash","saved"); location.href=u.toString();
-  });
-
-  // اختصار Enter بعد الاختيار
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && btnNext && !btnNext.disabled) {
-      e.preventDefault();
-      btnNext.click();
-    }
   });
 
   // ---------- Boot ----------
