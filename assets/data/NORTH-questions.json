@@ -620,7 +620,7 @@
     "answer": ""
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "تشتهر الجوف في الشمال بزيت الزيتون.",
     "options": [
@@ -630,7 +630,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "طبق الجريش في الشمال يُطهى من الأرز.",
     "options": [
@@ -640,7 +640,7 @@
     "answer": 1
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "المنسف الحائلي يعتمد على اللحم والأرز واللبن.",
     "options": [
@@ -650,7 +650,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "يُستخدم السمن البلدي في أطباق الشمال مثل الكبسات والجريش.",
     "options": [
@@ -660,7 +660,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "القرص أكلة تُفرد وتُسقى بالسمن في الشمال.",
     "options": [
@@ -670,7 +670,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "التمر المشهور في الشمال هو الحلوة الجوفية.",
     "options": [
@@ -680,7 +680,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "يُقدَّم خبز التنور الشمالي غالبًا مع اللحم/المرق.",
     "options": [
@@ -690,7 +690,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "الروبيان هو الطبق البحري الأشهر في تبوك.",
     "options": [
@@ -700,7 +700,7 @@
     "answer": 1
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "تبوك تُعرف بأكلة القرص ضمن الشمال.",
     "options": [
@@ -710,7 +710,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "اللبن من مشروبات البادية التقليدية في الشمال.",
     "options": [
@@ -720,7 +720,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "الشماغ الغالب في الشمال أحمر وأبيض.",
     "options": [
@@ -730,7 +730,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "القحفية/الطاقية تُلبس تحت الغترة.",
     "options": [
@@ -740,7 +740,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "المداس التقليدي في الشمال يصنع غالبًا من الجلد.",
     "options": [
@@ -750,7 +750,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "البشت/المشلح يُستخدم في المناسبات في الشمال.",
     "options": [
@@ -760,7 +760,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "نقوش السدو تُستخدم في عناصر من الأزياء بالشمال.",
     "options": [
@@ -770,7 +770,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "الثوب الشتوي في الشمال قد يكون من صوف سميك.",
     "options": [
@@ -780,7 +780,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "الحزام الجلدي يُستخدم لتثبيت الخنجر أحيانًا.",
     "options": [
@@ -790,7 +790,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "الجاكيت الصوفي لا يُستخدم في الشمال.",
     "options": [
@@ -800,7 +800,7 @@
     "answer": 1
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "الأحذية التقليدية الخشبية هي السائدة في الشمال.",
     "options": [
@@ -810,7 +810,7 @@
     "answer": 1
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "الغترة لا تُستخدم في الشمال.",
     "options": [
@@ -820,7 +820,7 @@
     "answer": 1
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "رقصة الدحة تُشتهر في الشمال.",
     "options": [
@@ -830,7 +830,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "توقيت صلاة العيد يكون بعد الشروق بقليل في الشمال.",
     "options": [
@@ -840,7 +840,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "العرضة الشمالية تعتمد على الإيقاع والهتاف الجماعي.",
     "options": [
@@ -850,7 +850,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "الدحية تُصاحبها طبول وهتاف.",
     "options": [
@@ -860,7 +860,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "الضيافة الأساسية تمر وقهوة عربية.",
     "options": [
@@ -870,7 +870,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "في المناسبات الشتوية تُشعل شبة النار.",
     "options": [
@@ -880,7 +880,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "القصيد النبطي يُلقى في الاحتفالات الشعبية.",
     "options": [
@@ -890,7 +890,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "العانية/الفزعة تعني مساندة وتعاون اجتماعي.",
     "options": [
@@ -900,7 +900,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "العرضة تؤدّى فقط في المدارس.",
     "options": [
@@ -910,7 +910,7 @@
     "answer": 1
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "لا توجد ضيافة في الأعراس الشمالية.",
     "options": [
@@ -920,7 +920,7 @@
     "answer": 1
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "يُستخدم السمن البلدي في أطباق الشمال التقليدية مثل الجريش.",
     "options": [
@@ -930,7 +930,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "القرص أكلة شمالية من عجين يُفرد ويُسقى بالسمن أو المرق.",
     "options": [
@@ -940,7 +940,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "تشتهر حائل بالمنسف المعتمد على اللبن.",
     "options": [
@@ -950,7 +950,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "تنتشر القحفية تحت الغترة ضمن أزياء الشمال.",
     "options": [
@@ -960,7 +960,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "المداس التقليدي في الشمال مصنوع من الجلد.",
     "options": [
@@ -970,7 +970,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "رقصة الدحة تُؤدّى في مناسبات الشمال.",
     "options": [
@@ -980,7 +980,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "شبة النار عادة مرتبطة بالمناسبات الشتوية في الشمال.",
     "options": [
@@ -990,7 +990,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Celebration",
     "question": "القهوة العربية مع التمر من الضيافة الأساسية في الشمال.",
     "options": [
@@ -1000,7 +1000,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Food",
     "question": "يُقدَّم خبز التنور الشمالي غالبًا مع اللحم أو المرق.",
     "options": [
@@ -1010,7 +1010,7 @@
     "answer": 0
   },
   {
-    "type": "MCQ",
+    "type": "TRUE_FALSE",
     "Category": "Clothes",
     "question": "الشماغ الأحمر والأبيض غير منتشر في الشمال.",
     "options": [
