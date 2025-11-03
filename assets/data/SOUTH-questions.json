@@ -2,931 +2,1393 @@
   {
     "type": "MCQ",
     "Category": "Food",
-    "question": "طبق (العصيدة) الجنوبية يُقدّم مع:",
+    "question": "What is the most common dish in South Saudi Arabia?",
     "options": [
-      "المرق/السمن",
-      "المثلجات",
-      "الصلصات الغربية",
-      "اللبن الزبادي فقط"
+      "Hanini",
+      "Jareesh",
+      "Mansaf",
+      "Areeka"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "What is the most popular sweet in South Saudi Arabia?",
+    "options": [
+      "Kleija",
+      "Marsa",
+      "Luqaimat",
+      "Kunafa"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "What is the most common traditional street food in South Saudi Arabia?",
+    "options": [
+      "Tanoor Bread",
+      "Areeka",
+      "Mutabbaq",
+      "Shawarma"
     ],
     "answer": 0
   },
   {
     "type": "MCQ",
     "Category": "Food",
-    "question": "السمن البلدي والبر تُستخدم في:",
+    "question": "What is the most common breakfast dish in South Saudi Arabia?",
     "options": [
-      "السليق والعريكة",
-      "السوشي",
-      "الفطائر الفرنسية",
-      "السباغيتي"
+      "Saleeq",
+      "Areeka",
+      "Ful Medames",
+      "Samboosa"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "What is the most common traditional drink in South Saudi Arabia?",
+    "options": [
+      "Mango Juice",
+      "Rose Latte",
+      "Qishr",
+      "Almond Coffee"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "What is the traditional clothing for men in South Saudi Arabia?",
+    "options": [
+      "A",
+      "Mirwaden",
+      "A",
+      "Thobe and A",
+      "Sudairi",
+      "A",
+      "Dishdasha",
+      "A",
+      "Mufraj"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "What is the traditional clothing for women in South Saudi Arabia?",
+    "options": [
+      "Dara’aah",
+      "Thobe Asiri",
+      "Short Skirt",
+      "A",
+      "Mufraj"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "What is the traditional breakfast dish during Eid Al-Fitr in South Saudi Arabia?",
+    "options": [
+      "Jareesh and Qursan",
+      "Areeka with Ghee",
+      "Mashghoutha",
+      "Kleija"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "What are the common traditional dances in South Saudi Arabia?",
+    "options": [
+      "A",
+      "Samri",
+      "A",
+      "Qazoui",
+      "A",
+      "Dabka",
+      "A",
+      "Tarouq"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "What is the common traditional music in South Saudi Arabia?",
+    "options": [
+      "A",
+      "Samri",
+      "A",
+      "Mawal",
+      "A",
+      "Damma",
+      "A",
+      "Aghani A",
+      "Bahriya"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "What is the common traditional craft in South Saudi Arabia?",
+    "options": [
+      "Sadu Weaving",
+      "A",
+      "Mawal",
+      "A",
+      "Qatt Painting",
+      "Palm Weaving"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "What is the name of the items the bride buys for her wedding in South Saudi Arabia?",
+    "options": [
+      "Shabka",
+      "Dabsh",
+      "Gold",
+      "Mirwah"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "What is the average amount of dowry presented to the wife in South Saudi Arabia?",
+    "options": [
+      "30,000–40,000 SAR",
+      "40,000–60,000 SAR",
+      "50,000–70,000 SAR",
+      "60,000–100,000 SAR"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "In which region of Saudi Arabia is “Al-Maghsh” considered a traditional dish?",
+    "options": [
+      "Jazan",
+      "Medina",
+      "Mecca",
+      "Tabuk"
     ],
     "answer": 0
   },
   {
     "type": "MCQ",
     "Category": "Food",
-    "question": "المعصوب يرتبط بـ:",
+    "question": "“Al-Mashghoutha” is a traditional Saudi dish. Which region is known for preparing it?",
     "options": [
-      "تهامة والجنوب",
-      "الوسطى",
-      "الشمال",
-      "الشرقية"
+      "Asir",
+      "Jazan",
+      "Mecca",
+      "Tabuk"
     ],
     "answer": 0
   },
   {
     "type": "MCQ",
     "Category": "Food",
-    "question": "الخبز التنوري في عسير:",
+    "question": "In which regions of Saudi Arabia is the traditional dish “Haneeth” popular?",
     "options": [
-      "رقيق ويُدخل التنور",
-      "مقلي",
-      "مجمّد",
-      "محشو شوكولاتة"
+      "Southwestern Saudi Arabia",
+      "Eastern Saudi Arabia",
+      "Northeastern Saudi Arabia",
+      "Western Saudi Arabia"
     ],
     "answer": 0
   },
   {
     "type": "MCQ",
     "Category": "Food",
-    "question": "طبق (اللحوح) يشبه:",
+    "question": "“Al-Haneeth” is a dish famous in which region of Saudi Arabia?",
     "options": [
-      "خبزًا رقيقًا مخمّرًا",
-      "أرزًا بالحليب",
-      "معكرونة",
-      "كيك"
+      "Asir",
+      "Jazan",
+      "Mecca",
+      "Medina"
     ],
     "answer": 0
   },
   {
     "type": "MCQ",
     "Category": "Food",
-    "question": "القهوة الجنوبية قد تُنكّه بـ:",
+    "question": "What is the name of the traditional butter dish served in South Saudi Arabia?",
     "options": [
-      "الزنجبيل",
-      "النعناع",
-      "الهيل فقط",
-      "الفانيلا"
+      "Radifah",
+      "Hanini",
+      "Haneeth",
+      "Mandi"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "In which region of Saudi Arabia is juniper wood (“Arar”) traditionally used in architecture?",
+    "options": [
+      "A",
+      "Baha",
+      "Asir",
+      "Najran",
+      "Jazan"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "What is the most expensive part of a traditional Saudi Janbiya (dagger) that determines its price?",
+    "options": [
+      "Hilt",
+      "Belt",
+      "Blade",
+      "Sheath"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "What is the most common traditional craft in Najran city?",
+    "options": [
+      "Making traditional white weapons",
+      "Pottery making",
+      "Weaving and carpet making",
+      "Wall decoration craftsmanship"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "What material is traditionally used to make the “Janbiya” dagger in Najran?",
+    "options": [
+      "Copper",
+      "Silver",
+      "Iron",
+      "Platinum"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "What is the name given to the artist who paints Al-Qatt Al-Asiri, the traditional Asiri wall art?",
+    "options": [
+      "A",
+      "Qattatah",
+      "A",
+      "Musaqqifah",
+      "A",
+      "Nassajah",
+      "A",
+      "Rassamah"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "What describes “Al-Qatt Al-Asiri,” a traditional art form in the Asir region?",
+    "options": [
+      "A women’s art of decoration and engraving",
+      "A type of weaving practiced by men",
+      "A culinary tradition unique to the region",
+      "A performance art involving storytelling"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Languages and Communication",
+    "question": "What are the most common greeting phrases in Al-Baha?",
+    "options": [
+      "Marhaban Heel… ‘Ad A",
+      "Seel",
+      "Ya Hala",
+      "Ahlan wa Sahlan",
+      "Haywah"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "“Beit Al-Esha” is a traditional architectural style. Which region in Saudi Arabia is known for this style?",
+    "options": [
+      "Jazan",
+      "Asir",
+      "Mecca",
+      "Medina"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "In which region of Saudi Arabia do traditional sitting rooms (majalis) include a stone fireplace used for cooking and preparing coffee in front of guests?",
+    "options": [
+      "Asir",
+      "Najran",
+      "Jazan",
+      "Riyadh"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "In which area is the “vegetative style” architecture, known as “Al-Ishash,” commonly found in the Asir region due to its ease of construction?",
+    "options": [
+      "Najran",
+      "Abha",
+      "Tihama",
+      "Jazan"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "The “Del’a Dance” is a traditional dance in Saudi Arabia. It is associated with which region?",
+    "options": [
+      "Southern Region",
+      "Eastern Region",
+      "Western Region",
+      "Northern Region"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "What is the form of singing performed individually, relying on creative embellishments, and usually performed during travels in South Saudi Arabia?",
+    "options": [
+      "Tarq",
+      "Mawal",
+      "Zamil",
+      "Shila"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "The “Sword Dance” is a traditional folk dance in Saudi Arabia associated with the people of which region?",
+    "options": [
+      "Riyadh",
+      "Asir",
+      "Tabuk",
+      "Jazan"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "The “Janabi Dance” is a traditional folk dance popular in which region of Saudi Arabia?",
+    "options": [
+      "Tabuk",
+      "Najran",
+      "Riyadh",
+      "Jazan"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "In which region of Saudi Arabia is the “Al-Azawi Dance” primarily performed?",
+    "options": [
+      "Najran",
+      "Jazan",
+      "A",
+      "Baha",
+      "Asir"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "What is the name of the traditional food served to guests in the afternoon in South Saudi Arabia?",
+    "options": [
+      "Wasl",
+      "Ghada",
+      "Brunch",
+      "Coffee"
     ],
     "answer": 0
   },
   {
     "type": "MCQ",
     "Category": "Food",
-    "question": "الحنيذ الجنوبي يُطهى:",
+    "question": "What is the traditional oven or pot used for baking in South Saudi Arabia?",
     "options": [
-      "في المندى/التنور",
-      "مقلاة منزلية",
-      "قدر ضغط فقط",
-      "فرن كهربائي صغير"
+      "Mahnadh",
+      "Mifah",
+      "Furn",
+      "Saj"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "What is the name of the traditional folklore for weddings and greeting guests from different tribes in South Saudi Arabia?",
+    "options": [
+      "Medgal",
+      "Arduh",
+      "Dahha",
+      "Samri"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "What does the guest room consist of in Jazan, Saudi Arabia?",
+    "options": [
+      "Floor Cushions",
+      "Beds",
+      "Wooden Seats",
+      "Sofas"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Languages and Communication",
+    "question": "Is it acceptable in South Saudi Arabia for the host to ask the guest about his updates before serving coffee?",
+    "options": [
+      "Acceptable",
+      "Not Acceptable",
+      "Depends on the guest",
+      "Only in formal gatherings"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "What is correct about Al-Masoub and Al-Areeqa?",
+    "options": [
+      "A",
+      "Masoub is more urban and modern than A",
+      "Areeq",
+      "A",
+      "Areeqa is more rural and traditional than A",
+      "Masou",
+      "Both are equally modern dishe",
+      "Neither has cultural significance in Saudi cuisin"
     ],
     "answer": 0
   },
   {
     "type": "MCQ",
     "Category": "Food",
-    "question": "السحاوق يُعتبر:",
+    "question": "What are the other names for “Al-Mashghootha” in Saudi culture?",
     "options": [
-      "صلصة طماطم وفلفل",
-      "شوربة",
-      "حلوى",
-      "مشروب"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Food",
-    "question": "العريكة تتكوّن من:",
-    "options": [
-      "برّ وسمن وعسل",
-      "أرز ولبن",
-      "شوفان وماء",
-      "ذرة فقط"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Food",
-    "question": "يشتهر جازان بـ:",
-    "options": [
-      "الفواكه الاستوائية",
-      "الجاودار",
-      "البنجر",
-      "الزيتون"
+      "A",
+      "Aseeda",
+      "A",
+      "Laheeda",
+      "A",
+      "Haneeni",
+      "A",
+      "Jareesh"
     ],
     "answer": 0
   },
   {
     "type": "OPEN_ENDED",
     "Category": "Food",
-    "question": "صف طرق إعداد الحنيذ والمندي في الجنوب.",
+    "question": "What is the most common dish in South Saudi Arabia?",
     "options": [],
     "answer": ""
   },
   {
     "type": "OPEN_ENDED",
     "Category": "Food",
-    "question": "اذكر فوارق النكهات بين تهامة وعسير.",
+    "question": "What is the most common sweet in South Saudi Arabia?",
     "options": [],
     "answer": ""
   },
   {
     "type": "OPEN_ENDED",
     "Category": "Food",
-    "question": "كيف تُقدّم الضيافة في القرى الجنوبية؟",
+    "question": "What is the common traditional street food in South Saudi Arabia?",
     "options": [],
     "answer": ""
   },
   {
     "type": "OPEN_ENDED",
     "Category": "Food",
-    "question": "حلّل تأثير التضاريس على المطبخ الجنوبي.",
+    "question": "What is the most common breakfast dish in South Saudi Arabia?",
     "options": [],
     "answer": ""
   },
   {
     "type": "OPEN_ENDED",
     "Category": "Food",
-    "question": "أمثلة حلويات جنوبية شائعة.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "الأزياء النسائية الجنوبية تتميّز بـ:",
-    "options": [
-      "ألوان زاهية وتطريز",
-      "لون أسود فقط",
-      "أقمشة موحّدة",
-      "بدون تطريز"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "الثوب الرجالي في الجنوب:",
-    "options": [
-      "مع بشت في المناسبات",
-      "بدلة غربية",
-      "جينز فقط",
-      "ساري"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "نقوش القط العسيري تُستخدم في:",
-    "options": [
-      "التطريز والزينة",
-      "الحدادة",
-      "الزجاج",
-      "الجلود فقط"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "المداس الجنوبي يصنع من:",
-    "options": [
-      "الجلد",
-      "الحديد",
-      "الخشب",
-      "النايلون"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "غطاء الرأس الشائع:",
-    "options": [
-      "شماغ/غترة مع عقال",
-      "قبعة تزلج",
-      "خوذة",
-      "بدون"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "الأكمام في بعض الأزياء:",
-    "options": [
-      "واسعة ومطرّزة",
-      "قصيرة جدًا",
-      "بدون أكمام",
-      "معدنية"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "القفطان يُلبس:",
-    "options": [
-      "في المناسبات",
-      "للسباحة",
-      "للرياضة",
-      "للعمل فقط"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "السدو الجنوبي:",
-    "options": [
-      "يوظّف في الحقائب/الأحزمة",
-      "لا يستخدم",
-      "يخص الزجاج",
-      "يخص الخشب"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "البشت:",
-    "options": [
-      "رمز وجاهة في المناسبات",
-      "لباس رياضي",
-      "غير مستخدم",
-      "لباس عمل"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Clothes",
-    "question": "الحلي التقليدية:",
-    "options": [
-      "فضة وأحجار",
-      "ماس فقط",
-      "بلا حلي",
-      "نحاس فقط"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Clothes",
-    "question": "اشرح حضور القط العسيري في الأزياء.",
+    "question": "What is the common traditional drink in South Saudi Arabia?",
     "options": [],
     "answer": ""
   },
   {
     "type": "OPEN_ENDED",
     "Category": "Clothes",
-    "question": "قارن بين العباءة السوداء والأثواب الملوّنة جنوبًا.",
+    "question": "What is the traditional clothing for men in South Saudi Arabia?",
     "options": [],
     "answer": ""
   },
   {
     "type": "OPEN_ENDED",
     "Category": "Clothes",
-    "question": "كيف تؤثر الجغرافيا على اختيار الأقمشة؟",
+    "question": "What is the traditional clothing for women in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "What is the traditional breakfast dish during Eid Al-Fitr in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "What are the common traditional dances in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "What is the common traditional music in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "What is the common traditional craft in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "What is the name of the items the bride buys for her wedding in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "What is the average amount of dowry presented to the wife in Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "What is the name of the traditional butter dish served in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "What is a popular dish known in the southern region of Saudi Arabia, served hot with honey, ghee, and dates?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "In which regions of Saudi Arabia is the traditional dish “Haneeth” popular?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "What is the name of the traditional food served to guests in the afternoon in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "What is the traditional oven or pot used for baking in South Saudi Arabia?",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "In which region of Saudi Arabia is “Al-Maghsh” considered a traditional dish?",
     "options": [],
     "answer": ""
   },
   {
     "type": "OPEN_ENDED",
     "Category": "Clothes",
-    "question": "اذكر قطع إكسسوار نسائية جنوبية.",
+    "question": "What is the name of the traditional clothes in Tehama in South Saudi Arabia?",
     "options": [],
     "answer": ""
   },
   {
-    "type": "OPEN_ENDED",
+    "type": "LIST",
+    "Category": "Food",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Food:",
+    "options": [
+      "Hanini",
+      "Jareesh",
+      "Tanoor Bread",
+      "Marsa",
+      "Mansaf",
+      "Areeka"
+    ],
+    "answer": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Crafts and Work",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Crafts and Work:",
+    "options": [
+      "Sadu Weaving",
+      "Making traditional white weapons",
+      "Hilt",
+      "A",
+      "Mawal"
+    ],
+    "answer": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "type": "LIST",
     "Category": "Clothes",
-    "question": "تطوّر البشت في الأعراس الجنوبية.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "القط العسيري هو:",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Clothes:",
     "options": [
-      "فن زخرفي جداري",
-      "حياكة سجاد",
-      "نقش خشب",
-      "خزف"
+      "Mirwaden",
+      "A",
+      "Thobe Asiri",
+      "Najran",
+      "Thobe and A"
     ],
-    "answer": 0
+    "answer": [
+      1,
+      2,
+      3
+    ]
   },
   {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "القعائد والسلال تُنسج من:",
+    "type": "LIST",
+    "Category": "Languages and Communication",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Languages and Communication:",
     "options": [
-      "سعف النخيل",
-      "الحديد",
-      "الزجاج",
-      "الحجر"
+      "Seel",
+      "Ahlan wa Sahlan",
+      "Not Acceptable",
+      "Ya Hala",
+      "Marhaban Heel… ‘Ad A"
     ],
-    "answer": 0
+    "answer": [
+      2,
+      4
+    ]
   },
   {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "الدلال النحاسية تُصنع في:",
-    "options": [
-      "نجران/عسير",
-      "تبوك",
-      "الجوف",
-      "حائل"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "الجنابي/الخناجر تنتشر:",
-    "options": [
-      "نجران وجازان",
-      "الرياض",
-      "المدينة",
-      "الشرقية فقط"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "الجلود تُستعمل في:",
-    "options": [
-      "الأدوات والحافظات",
-      "الحدادة",
-      "الإلكترونيات",
-      "الورق"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "النسيج البدوي يستخدم:",
-    "options": [
-      "السدو",
-      "الخشب",
-      "الزجاج",
-      "الحديد"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "الفضة تُستخدم في:",
-    "options": [
-      "الحُلي النسائية",
-      "الأواني فقط",
-      "الأسلحة النارية",
-      "الدروع المعدنية"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "الأسواق الشعبية مثل:",
-    "options": [
-      "سوق عكاظ/قرى تراثية",
-      "خان الخليلي",
-      "سوق الحميدية",
-      "سوق السمك"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "العقال الجنوبي قد يكون:",
-    "options": [
-      "أسود تقليدي",
-      "أخضر دائمًا",
-      "أزرق",
-      "أبيض"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Crafts and Work",
-    "question": "الخشب المحفور يُستخدم في:",
-    "options": [
-      "الأبواب والنوافذ التراثية",
-      "السيارات",
-      "الحواسيب",
-      "المعادن"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Crafts and Work",
-    "question": "صف خطوات صناعة الجنبية.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Crafts and Work",
-    "question": "كيف تُحافظ القرى التراثية على الحِرف؟",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Crafts and Work",
-    "question": "أثر المهرجانات على دعم الحرفيين.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Crafts and Work",
-    "question": "اذكر مشاريع لإحياء السدو والنسيج.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Crafts and Work",
-    "question": "ما دور المرأة في الحرف جنوبًا؟",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "الخطوة تُعد:",
-    "options": [
-      "رقصة جنوبية",
-      "نشيد مدرسي",
-      "رياضة",
-      "مسرحية"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "ليلة الحناء:",
-    "options": [
-      "تراث زواجي",
-      "مهرجان تجاري",
-      "لا علاقة",
-      "عيد وطني"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "إكرام الضيف يشمل:",
-    "options": [
-      "قهوة وتمور وذبائح",
-      "مشروبات غازية فقط",
-      "شاي فقط",
-      "بدون ضيافة"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "القصيد يلقى:",
-    "options": [
-      "في الأعراس والمناسبات",
-      "في المخابر",
-      "في الفصول",
-      "في السينما"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "المناسبات في القرى:",
-    "options": [
-      "يجتمع لها الجيران والأقارب",
-      "تقصر على الأسرة",
-      "بدون حضور",
-      "عبر بث مباشر فقط"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "توقيت صلاة العيد:",
-    "options": [
-      "بعد الشروق بقليل",
-      "قبل الفجر",
-      "بعد العصر",
-      "ليلًا"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "العانية تعني:",
-    "options": [
-      "مساعدة جماعية",
-      "مسابقة",
-      "رحلة",
-      "لا شيء"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "الشيلات:",
-    "options": [
-      "تُستخدم في الزواجات",
-      "لا تُستخدم",
-      "للدراسة",
-      "للرياضة"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "الضيافة الشتوية:",
-    "options": [
-      "السمن والعسل/القهوة",
-      "مثلجات",
-      "عصير بارد",
-      "ماء فقط"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Celebration",
-    "question": "الأكلات الشعبية في المناسبات:",
-    "options": [
-      "السليق/الحنيذ",
-      "السوشي",
-      "البرغر",
-      "اللازانيا"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "صف طقوس الخطوة ومتى تُؤدّى.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "قارن بين أعراس المدن والقرى جنوبًا.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "اذكر أهازيج جنوبية شائعة.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "أثر التضاريس على شكل المناسبات.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "دور الشيلات والقصائد في الأعراس.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "الخطوة تُؤدّى في:",
-    "options": [
-      "عسير",
-      "تبوك",
-      "القصيم",
-      "الجوف"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "آلة شعبية:",
-    "options": [
-      "الطبل/العود",
-      "البيانو",
-      "الكمان الكلاسيكي",
-      "الساكسفون"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "ألعاب شعبية:",
-    "options": [
-      "الصقلة/الغميمة",
-      "البيسبول",
-      "الغولف",
-      "الركبي"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "المهرجانات في أبها:",
-    "options": [
-      "تعزّز الفنون",
-      "خاصة بالرياضة فقط",
-      "تمنع الفولكلور",
-      "لا تقام"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "الفنون في تهامة:",
-    "options": [
-      "أهازيج وإيقاعات بحرية",
-      "جاز أمريكي",
-      "أوبرا",
-      "سلامبل"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "الشعر النبطي:",
-    "options": [
-      "حاضر بقوة",
-      "غير موجود",
-      "يقتصر على المدارس",
-      "خاص بالشمال فقط"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "المزمار الحجازي:",
-    "options": [
-      "منتشر غربًا ويُعرف جنوبًا",
-      "في الشمال فقط",
-      "في الشرق فقط",
-      "غير معروف"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "العرضة:",
-    "options": [
-      "تُعرف في نجد وتؤدّى جنوبًا أحيانًا",
-      "لا تُعرف",
-      "حصرية للشرقية",
-      "موسيقَى غربية"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "الفنون تُعرض في:",
-    "options": [
-      "مهرجانات صيفية",
-      "ملاعب فقط",
-      "مصانع",
-      "مختبرات"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "MCQ",
-    "Category": "Entertainment",
-    "question": "السامري:",
-    "options": [
-      "من القصيم/الوسطى ويُعرف جنوبًا",
-      "لا علاقة",
-      "من أوروبا",
-      "من شرق آسيا"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Entertainment",
-    "question": "اذكر فعاليات ثقافية في عسير وأبها.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Entertainment",
-    "question": "كيف يحافظ المجتمع على الفنون الشعبية؟",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Entertainment",
-    "question": "قارن إيقاع الخطوة والمزمار.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Entertainment",
-    "question": "أثر المهرجانات على السياحة جنوبًا.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Entertainment",
-    "question": "اقترح أفكار أنشطة مدرسية للفنون.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
+    "type": "LIST",
     "Category": "Dating",
-    "question": "الملكة تشير إلى:",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Dating:",
     "options": [
-      "إشهار العقد رسميًا",
-      "خطبة عادية",
-      "حفل وداعي",
-      "لا علاقة"
+      "Shabka",
+      "Mirwah",
+      "40,000–60,000 SAR",
+      "Dabsh",
+      "Medgal",
+      "Gold"
+    ],
+    "answer": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Celebration",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Celebration:",
+    "options": [
+      "Areeka with Ghee",
+      "Mashghoutha",
+      "Jareesh and Qursan",
+      "Kleija",
+      "A"
+    ],
+    "answer": [
+      0,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Entertainment",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Entertainment:",
+    "options": [
+      "Samri",
+      "A",
+      "Tarq",
+      "Mawal",
+      "Southern Region"
+    ],
+    "answer": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Food",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Food:",
+    "options": [
+      "Hanini",
+      "Tanoor Bread",
+      "Mansaf",
+      "Areeka",
+      "Marsa",
+      "Jareesh"
+    ],
+    "answer": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Crafts and Work",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Crafts and Work:",
+    "options": [
+      "Mawal",
+      "A",
+      "Sadu Weaving",
+      "Hilt",
+      "Making traditional white weapons"
+    ],
+    "answer": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Clothes",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Clothes:",
+    "options": [
+      "Mirwaden",
+      "Thobe Asiri",
+      "Thobe and A",
+      "A",
+      "Najran"
+    ],
+    "answer": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Languages and Communication",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Languages and Communication:",
+    "options": [
+      "Not Acceptable",
+      "Ahlan wa Sahlan",
+      "Marhaban Heel… ‘Ad A",
+      "Seel",
+      "Ya Hala"
+    ],
+    "answer": [
+      0,
+      2
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Dating",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Dating:",
+    "options": [
+      "Mirwah",
+      "Gold",
+      "Shabka",
+      "Medgal",
+      "40,000–60,000 SAR",
+      "Dabsh"
+    ],
+    "answer": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Celebration",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Celebration:",
+    "options": [
+      "A",
+      "Areeka with Ghee",
+      "Kleija",
+      "Jareesh and Qursan",
+      "Mashghoutha"
+    ],
+    "answer": [
+      0,
+      1
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Entertainment",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Entertainment:",
+    "options": [
+      "Samri",
+      "Mawal",
+      "A",
+      "Tarq",
+      "Southern Region"
+    ],
+    "answer": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Food",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Food:",
+    "options": [
+      "Jareesh",
+      "Tanoor Bread",
+      "Marsa",
+      "Mansaf",
+      "Hanini",
+      "Areeka"
+    ],
+    "answer": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Crafts and Work",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Crafts and Work:",
+    "options": [
+      "Hilt",
+      "Sadu Weaving",
+      "Making traditional white weapons",
+      "Mawal",
+      "A"
+    ],
+    "answer": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Clothes",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Clothes:",
+    "options": [
+      "Najran",
+      "Mirwaden",
+      "Thobe and A",
+      "A",
+      "Thobe Asiri"
+    ],
+    "answer": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Languages and Communication",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Languages and Communication:",
+    "options": [
+      "Ya Hala",
+      "Marhaban Heel… ‘Ad A",
+      "Ahlan wa Sahlan",
+      "Not Acceptable",
+      "Seel"
+    ],
+    "answer": [
+      1,
+      3
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Dating",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Dating:",
+    "options": [
+      "40,000–60,000 SAR",
+      "Mirwah",
+      "Dabsh",
+      "Medgal",
+      "Shabka",
+      "Gold"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "type": "LIST",
+    "Category": "Celebration",
+    "question": "اختر العناصر الصحيحة المرتبطة بتصنيف Celebration:",
+    "options": [
+      "Jareesh and Qursan",
+      "A",
+      "Areeka with Ghee",
+      "Mashghoutha",
+      "Kleija"
+    ],
+    "answer": [
+      1,
+      2
+    ]
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is the most common dish in South Saudi Arabia?» هي «Areeka».",
+    "options": [
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "الجاهة:",
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is the most popular sweet in South Saudi Arabia?» هي «Marsa».",
     "options": [
-      "وفد لطلب الزواج",
-      "فرقة موسيقية",
-      "رحلة",
-      "لا شيء"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "الهدايا:",
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is the most common traditional street food in South Saudi Arabia?» هي «Tanoor Bread».",
     "options": [
-      "تبادل وفق الاتفاق",
-      "ممنوعة",
-      "إجبارية بكثرة",
-      "لا تكون"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "الوليمة:",
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is the most common breakfast dish in South Saudi Arabia?» هي «Areeka».",
     "options": [
-      "بعد العقد/الزفاف",
-      "قبل الخطبة دائمًا",
-      "لا تقام",
-      "بعد سنوات"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "الدبلة تُلبس:",
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is the most common traditional drink in South Saudi Arabia?» هي «Qishr».",
     "options": [
-      "وفق العرف",
-      "ممنوعة",
-      "للرجال فقط",
-      "للنساء فقط"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "الدعوات:",
+    "type": "TRUE_FALSE",
+    "Category": "Clothes",
+    "question": "الإجابة الصحيحة لسؤال «What is the traditional clothing for men in South Saudi Arabia?» هي «A».",
     "options": [
-      "توزّع قبل المناسبة",
-      "بعد المناسبة",
-      "لا تُستخدم",
-      "عشوائيًا"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "القصائد والشيلات:",
+    "type": "TRUE_FALSE",
+    "Category": "Clothes",
+    "question": "الإجابة الصحيحة لسؤال «What is the traditional clothing for women in South Saudi Arabia?» هي «Thobe Asiri».",
     "options": [
-      "جزء من الاحتفال",
-      "ممنوعة",
-      "خاصة بالدراسة",
-      "لا علاقة"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "الضيافة:",
+    "type": "TRUE_FALSE",
+    "Category": "Celebration",
+    "question": "الإجابة الصحيحة لسؤال «What is the traditional breakfast dish during Eid Al-Fitr in South Saudi Arabia?» هي «Areeka with Ghee».",
     "options": [
-      "قهوة وتمور وأطباق شعبية",
-      "ماء فقط",
-      "حلويات مستوردة فقط",
-      "بدون"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "مشاركة المجتمع:",
+    "type": "TRUE_FALSE",
+    "Category": "Celebration",
+    "question": "الإجابة الصحيحة لسؤال «What are the common traditional dances in South Saudi Arabia?» هي «A».",
     "options": [
-      "مرتفعة بالقرى",
-      "منخفضة دائمًا",
-      "معدومة",
-      "لا علاقة"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "MCQ",
-    "Category": "Dating",
-    "question": "العادات تختلف:",
+    "type": "TRUE_FALSE",
+    "Category": "Entertainment",
+    "question": "الإجابة الصحيحة لسؤال «What is the common traditional music in South Saudi Arabia?» هي «A».",
     "options": [
-      "بين تهامة وعسير ونجران",
-      "لا تختلف",
-      "حسب أوروبا",
-      "حسب آسيا"
+      "صحيح",
+      "خطأ"
     ],
     "answer": 0
   },
   {
-    "type": "OPEN_ENDED",
-    "Category": "Dating",
-    "question": "اشرح خطوات الترتيب للملكة جنوبًا.",
-    "options": [],
-    "answer": ""
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «What is the common traditional craft in South Saudi Arabia?» هي «A».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
   },
   {
-    "type": "OPEN_ENDED",
+    "type": "TRUE_FALSE",
     "Category": "Dating",
-    "question": "اذكر عادات خاصة في نجران/جازان.",
-    "options": [],
-    "answer": ""
+    "question": "الإجابة الصحيحة لسؤال «What is the name of the items the bride buys for her wedding in South Saudi Arabia?» هي «Mirwah».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
   },
   {
-    "type": "OPEN_ENDED",
+    "type": "TRUE_FALSE",
     "Category": "Dating",
-    "question": "كيف تُدار الميزانية؟",
-    "options": [],
-    "answer": ""
+    "question": "الإجابة الصحيحة لسؤال «What is the average amount of dowry presented to the wife in South Saudi Arabia?» هي «40,000–60,000 SAR».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
   },
   {
-    "type": "OPEN_ENDED",
-    "Category": "Dating",
-    "question": "قارن بين الأعراس في المدن والقرى.",
-    "options": [],
-    "answer": ""
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «In which region of Saudi Arabia is “Al-Maghsh” considered a traditional dish?» هي «Jazan».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
   },
   {
-    "type": "OPEN_ENDED",
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «“Al-Mashghoutha” is a traditional Saudi dish. Which region is known for preparing it?» هي «Asir».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «In which regions of Saudi Arabia is the traditional dish “Haneeth” popular?» هي «Southwestern Saudi Arabia».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «“Al-Haneeth” is a dish famous in which region of Saudi Arabia?» هي «Asir».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is the name of the traditional butter dish served in South Saudi Arabia?» هي «Radifah».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «In which region of Saudi Arabia is juniper wood (“Arar”) traditionally used in architecture?» هي «A».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «What is the most expensive part of a traditional Saudi Janbiya (dagger) that determines its price?» هي «Hilt».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «What is the most common traditional craft in Najran city?» هي «Making traditional white weapons».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «What material is traditionally used to make the “Janbiya” dagger in Najran?» هي «Iron».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «What is the name given to the artist who paints Al-Qatt Al-Asiri, the traditional Asiri wall art?» هي «A».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «What describes “Al-Qatt Al-Asiri,” a traditional art form in the Asir region?» هي «A women’s art of decoration and engraving».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Languages and Communication",
+    "question": "الإجابة الصحيحة لسؤال «What are the most common greeting phrases in Al-Baha?» هي «Marhaban Heel… ‘Ad A».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «“Beit Al-Esha” is a traditional architectural style. Which region in Saudi Arabia is known for this style?» هي «Jazan».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «In which region of Saudi Arabia do traditional sitting rooms (majalis) include a stone fireplace used for cooking and preparing coffee in front of guests?» هي «Asir».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «In which area is the “vegetative style” architecture, known as “Al-Ishash,” commonly found in the Asir region due to its ease of construction?» هي «Tihama».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Entertainment",
+    "question": "الإجابة الصحيحة لسؤال «The “Del’a Dance” is a traditional dance in Saudi Arabia. It is associated with which region?» هي «Southern Region».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Entertainment",
+    "question": "الإجابة الصحيحة لسؤال «What is the form of singing performed individually, relying on creative embellishments, and usually performed during travels in South Saudi Arabia?» هي «Tarq».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Entertainment",
+    "question": "الإجابة الصحيحة لسؤال «The “Sword Dance” is a traditional folk dance in Saudi Arabia associated with the people of which region?» هي «Jazan».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Entertainment",
+    "question": "الإجابة الصحيحة لسؤال «The “Janabi Dance” is a traditional folk dance popular in which region of Saudi Arabia?» هي «Jazan».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Entertainment",
+    "question": "الإجابة الصحيحة لسؤال «In which region of Saudi Arabia is the “Al-Azawi Dance” primarily performed?» هي «Jazan».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is the name of the traditional food served to guests in the afternoon in South Saudi Arabia?» هي «Wasl».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is the traditional oven or pot used for baking in South Saudi Arabia?» هي «Mifah».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
     "Category": "Dating",
-    "question": "صف الضيافة في حفلات الزواج.",
-    "options": [],
-    "answer": ""
+    "question": "الإجابة الصحيحة لسؤال «What is the name of the traditional folklore for weddings and greeting guests from different tribes in South Saudi Arabia?» هي «Medgal».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Crafts and Work",
+    "question": "الإجابة الصحيحة لسؤال «What does the guest room consist of in Jazan, Saudi Arabia?» هي «Beds».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Languages and Communication",
+    "question": "الإجابة الصحيحة لسؤال «Is it acceptable in South Saudi Arabia for the host to ask the guest about his updates before serving coffee?» هي «Not Acceptable».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What is correct about Al-Masoub and Al-Areeqa?» هي «A».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "TRUE_FALSE",
+    "Category": "Food",
+    "question": "الإجابة الصحيحة لسؤال «What are the other names for “Al-Mashghootha” in Saudi culture?» هي «A».",
+    "options": [
+      "صحيح",
+      "خطأ"
+    ],
+    "answer": 0
   }
 ]
