@@ -3,66 +3,132 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>استعادة كلمة المرور</title>
+  <title>نسيت كلمة المرور</title>
   <link rel="stylesheet" href="../assets/css/style.css"/>
+  <style>
+    body { direction: rtl; text-align: right; }
+    .app-header { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0 20px; border-bottom: 1px solid #eee; height: 72px; position: fixed; top: 0; left: 0; right: 0; z-index: 1100;}
+    .site-logo-fixed { height: 54px; margin-left: 12px; }
+    .brand { font-weight: bold; color: #14532d; font-size: 20px; }
+    .header-actions { display: flex; gap: 10px; }
+    .page { padding-top: 90px; }
+    .msg.error { color: crimson; margin-bottom: 10px; }
+    .msg.success { color: #14532d; margin-bottom: 10px; }
+    #code-section { display: none; margin-top: 15px; }
+    #timer { color: #0f5132; font-weight: bold; }
+  </style>
 </head>
 <body>
-  <header class="site-header">
+  <header class="app-header">
+    <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="site-logo-fixed">
     <div class="brand">منصة إثراء الثقافة السعودية</div>
-    <nav class="actions">
-      <button class="btn" onclick="history.back()">رجوع</button>
-    </nav>
+    <div class="header-actions">
+      <button class="btn-back" onclick="history.back()">رجوع</button>
+    </div>
   </header>
-
-  <main class="auth-page">
-    <section class="auth-card">
+  <div class="page">
+    <div class="container">
       <h1>استعادة كلمة المرور</h1>
-      <p>أدخل بريدك الإلكتروني لإرسال رمز التحقق</p>
-
-      <div id="msg" class="msg"></div>
-
-      <input id="email" type="email" placeholder="example@mail.com"/><br><br>
-      <button id="send">إرسال الرمز</button>
-
-      <div id="codeBox" style="display:none; margin-top:10px;">
-        <input id="code" maxlength="6" placeholder="أدخل الرمز"/>
-        <button id="check">تحقق</button>
+      <div id="resetMsg" class="msg"></div>
+      <div class="card">
+        <label>أدخل بريدك الإلكتروني</label>
+        <input id="fpEmail" type="email" placeholder="example@mail.com"/>
+        <button id="sendCodeBtn">إرسال رمز</button>
+        <div id="code-section">
+          <label>أدخل رمز التحقق</label>
+          <input id="verification-code" maxlength="6" />
+          <span id="timer"></span>
+          <span id="attempts"></span>
+          <button id="checkCodeBtn">تحقق من الرمز</button>
+          <div id="set-password-section" style="display:none;">
+            <label>كلمة المرور الجديدة</label>
+            <input id="new-password" type="password" minlength="8" />
+            <label>تأكيد كلمة المرور الجديدة</label>
+            <input id="confirm-password" type="password" minlength="8" />
+            <button id="saveNewPwBtn">حفظ كلمة المرور</button>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
-
+    </div>
+  </div>
   <script>
-    const msg = document.getElementById('msg');
-    const emailInput = document.getElementById('email');
-    const codeBox = document.getElementById('codeBox');
-    const codeInput = document.getElementById('code');
-    let sentCode = "";
+    let generatedCode = "";
+    let codeValidUntil = 0;
+    let timerInterval = null;
+    let attemptsLeft = 5;
+    let fpUser = null;
 
-    document.getElementById('send').onclick = function() {
-      const email = emailInput.value.trim();
-      if (!email) { msg.textContent = "يرجى إدخال البريد."; msg.className="msg error"; return; }
+    function startTimer() {
+      const timer = document.getElementById('timer');
+      function update() {
+        const remain = Math.max(0, Math.floor((codeValidUntil - Date.now())/1000));
+        timer.textContent = ` - الوقت المتبقي: ${Math.floor(remain/60)}:${('0'+(remain%60)).slice(-2)}`;
+        if (remain <= 0) {
+          clearInterval(timerInterval);
+          timer.textContent = "انتهت صلاحية الرمز! اطلب رمز جديد.";
+        }
+      }
+      update();
+      timerInterval = setInterval(update, 1000);
+    }
 
-      // مثال بسيط: افترض المستخدم موجود
-      sentCode = Math.floor(100000 + Math.random() * 900000).toString();
-      sessionStorage.setItem("resetCode", sentCode);
-      sessionStorage.setItem("resetEmail", email);
-
-      msg.textContent = "تم إرسال الرمز: " + sentCode + " (تجريبي)";
-      msg.className="msg success";
-      codeBox.style.display = "block";
+    document.getElementById("sendCodeBtn").onclick = function() {
+      const email = document.getElementById("fpEmail").value.trim();
+      const msg = document.getElementById("resetMsg");
+      msg.textContent = "";
+      if (!email) { msg.textContent = "يرجى إدخال البريد."; msg.className = "msg error"; return; }
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      fpUser = users.find(u => u.email === email);
+      if (!fpUser) { msg.textContent = "البريد غير موجود."; msg.className = "msg error"; return; }
+      generatedCode = Math.floor(100000 + Math.random() * 900000).toString();
+      codeValidUntil = Date.now() + 7*60*1000;
+      attemptsLeft = 5;
+      document.getElementById("code-section").style.display = "block";
+      document.getElementById("verification-code").value = "";
+      document.getElementById("attempts").textContent = ` - عدد المحاولات المتبقية: ${attemptsLeft}`;
+      document.getElementById("set-password-section").style.display = "none";
+      msg.textContent = `تم إرسال الرمز: ${generatedCode} (تجريبي)`;
+      startTimer();
     };
 
-    document.getElementById('check').onclick = function() {
-      const entered = codeInput.value.trim();
-      const real = sessionStorage.getItem("resetCode");
-      if (entered === real && entered !== "") {
-        msg.textContent = "تم التحقق بنجاح! سيتم نقلك لتعيين كلمة المرور...";
-        msg.className = "msg success";
-        setTimeout(() => window.location.href = "reset.html", 1500);
-      } else {
-        msg.textContent = "الرمز غير صحيح.";
-        msg.className = "msg error";
+    document.getElementById("checkCodeBtn").onclick = function() {
+      const code = document.getElementById("verification-code").value.trim();
+      const msg = document.getElementById("resetMsg");
+      if (Date.now() > codeValidUntil) {
+        msg.textContent = "انتهت صلاحية الرمز! اطلب رمز جديد."; msg.className = "msg error"; return;
       }
+      if (code !== generatedCode) {
+        attemptsLeft--;
+        document.getElementById("attempts").textContent = ` - عدد المحاولات المتبقية: ${attemptsLeft}`;
+        msg.textContent = "الرمز غير صحيح."; msg.className = "msg error";
+        if (attemptsLeft <= 0) {
+          msg.textContent = "تم استنفاد جميع المحاولات! اطلب رمز جديد.";
+          document.getElementById("code-section").style.display = "none";
+        }
+        return;
+      }
+      document.getElementById("set-password-section").style.display = "block";
+      msg.textContent = "تم التحقق من الرمز. أدخل كلمة مرور جديدة.";
+      msg.className = "msg success";
+    };
+
+    document.getElementById("saveNewPwBtn").onclick = function() {
+      const newPw = document.getElementById("new-password").value;
+      const confirmPw = document.getElementById("confirm-password").value;
+      const msg = document.getElementById("resetMsg");
+      if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(newPw)) {
+        msg.textContent = "كلمة المرور يجب أن تكون 8 أحرف على الأقل وتحتوي رقم وحرف كبير وصغير."; msg.className = "msg error"; return;
+      }
+      if (newPw !== confirmPw) {
+        msg.textContent = "كلمتا المرور غير متطابقتين."; msg.className = "msg error"; return;
+      }
+      let users = JSON.parse(localStorage.getItem("users") || "[]");
+      users = users.map(u => u.email === fpUser.email ? {...u, password: newPw} : u);
+      localStorage.setItem("users", JSON.stringify(users));
+      msg.textContent = "تم تغيير كلمة المرور بنجاح! يمكنك تسجيل الدخول الآن.";
+      msg.className = "msg success";
+      document.getElementById("set-password-section").style.display = "none";
+      document.getElementById("code-section").style.display = "none";
     };
   </script>
 </body>
