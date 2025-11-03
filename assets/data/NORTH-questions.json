@@ -120,6 +120,41 @@
     "answer": 0
   },
   {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "اذكر وصفات شعبية تُحضّر بزيت زيتون الجوف.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "صف فروقات المنسف/الكبسة بين مناطق الشمال.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "كيف تُقدَّم الضيافة في مضارب البادية؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما دور السمن البلدي في الأطباق الشمالية؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "أمثلة لحلويات تقليدية في الشمال.",
+    "options": [],
+    "answer": ""
+  },
+  {
     "type": "MCQ",
     "Category": "Clothes",
     "question": "زي الرجال في الشمال يتضمن:",
@@ -240,6 +275,41 @@
     "answer": 0
   },
   {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "اذكر تأثير البرد على خامات الأقمشة المستخدمة في الشمال.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "قارن بين الشماغ والغترة في الاستخدام شمالًا.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما دور السدو في ملحقات الملابس؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "صف تطوّر الأزياء النسائية البدوية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما رمزية البشت في المناسبات؟",
+    "options": [],
+    "answer": ""
+  },
+  {
     "type": "MCQ",
     "Category": "Celebration",
     "question": "رقصة الدحة تُشتهر في:",
@@ -358,6 +428,41 @@
       "لا شيء"
     ],
     "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "صف طقوس الدحة ومتى تؤدّى.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "كيف تُنظم المجالس الشمالية في المناسبات؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "أمثلة على قصيد نبطي مشهور في الشمال.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "دور الفزعة/العانية اجتماعيًا.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "اختلاف الاحتفال بين المدن والبادية.",
+    "options": [],
+    "answer": ""
   },
   {
     "type": "MCQ",
@@ -481,111 +586,6 @@
   },
   {
     "type": "OPEN_ENDED",
-    "Category": "Food",
-    "question": "اذكر وصفات شعبية تُحضّر بزيت زيتون الجوف.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Food",
-    "question": "صف فروقات المنسف/الكبسة بين مناطق الشمال.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Food",
-    "question": "كيف تُقدَّم الضيافة في مضارب البادية؟",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Food",
-    "question": "ما دور السمن البلدي في الأطباق الشمالية؟",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Food",
-    "question": "أمثلة لحلويات تقليدية في الشمال.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Clothes",
-    "question": "اذكر تأثير البرد على خامات الأقمشة المستخدمة في الشمال.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Clothes",
-    "question": "قارن بين الشماغ والغترة في الاستخدام شمالًا.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Clothes",
-    "question": "ما دور السدو في ملحقات الملابس؟",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Clothes",
-    "question": "صف تطوّر الأزياء النسائية البدوية.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Clothes",
-    "question": "ما رمزية البشت في المناسبات؟",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "صف طقوس الدحة ومتى تؤدّى.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "كيف تُنظم المجالس الشمالية في المناسبات؟",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "أمثلة على قصيد نبطي مشهور في الشمال.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "دور الفزعة/العانية اجتماعيًا.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
-    "Category": "Celebration",
-    "question": "اختلاف الاحتفال بين المدن والبادية.",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "type": "OPEN_ENDED",
     "Category": "Dating",
     "question": "اشرح خطوات الجاهة والاتفاق على المتطلبات.",
     "options": [],
@@ -618,698 +618,5 @@
     "question": "قارن بين أساليب الدعوة في الحضر والبادية.",
     "options": [],
     "answer": ""
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "تشتهر الجوف في الشمال بزيت الزيتون.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "طبق الجريش في الشمال يُطهى من الأرز.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 1
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "المنسف الحائلي يعتمد على اللحم والأرز واللبن.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "يُستخدم السمن البلدي في أطباق الشمال مثل الكبسات والجريش.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "القرص أكلة تُفرد وتُسقى بالسمن في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "التمر المشهور في الشمال هو الحلوة الجوفية.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "يُقدَّم خبز التنور الشمالي غالبًا مع اللحم/المرق.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "الروبيان هو الطبق البحري الأشهر في تبوك.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 1
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "تبوك تُعرف بأكلة القرص ضمن الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "اللبن من مشروبات البادية التقليدية في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "الشماغ الغالب في الشمال أحمر وأبيض.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "القحفية/الطاقية تُلبس تحت الغترة.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "المداس التقليدي في الشمال يصنع غالبًا من الجلد.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "البشت/المشلح يُستخدم في المناسبات في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "نقوش السدو تُستخدم في عناصر من الأزياء بالشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "الثوب الشتوي في الشمال قد يكون من صوف سميك.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "الحزام الجلدي يُستخدم لتثبيت الخنجر أحيانًا.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "الجاكيت الصوفي لا يُستخدم في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 1
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "الأحذية التقليدية الخشبية هي السائدة في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 1
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "الغترة لا تُستخدم في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 1
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "رقصة الدحة تُشتهر في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "توقيت صلاة العيد يكون بعد الشروق بقليل في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "العرضة الشمالية تعتمد على الإيقاع والهتاف الجماعي.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "الدحية تُصاحبها طبول وهتاف.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "الضيافة الأساسية تمر وقهوة عربية.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "في المناسبات الشتوية تُشعل شبة النار.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "القصيد النبطي يُلقى في الاحتفالات الشعبية.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "العانية/الفزعة تعني مساندة وتعاون اجتماعي.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "العرضة تؤدّى فقط في المدارس.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 1
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "لا توجد ضيافة في الأعراس الشمالية.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 1
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "يُستخدم السمن البلدي في أطباق الشمال التقليدية مثل الجريش.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "القرص أكلة شمالية من عجين يُفرد ويُسقى بالسمن أو المرق.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "تشتهر حائل بالمنسف المعتمد على اللبن.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "تنتشر القحفية تحت الغترة ضمن أزياء الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "المداس التقليدي في الشمال مصنوع من الجلد.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "رقصة الدحة تُؤدّى في مناسبات الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "شبة النار عادة مرتبطة بالمناسبات الشتوية في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Celebration",
-    "question": "القهوة العربية مع التمر من الضيافة الأساسية في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Food",
-    "question": "يُقدَّم خبز التنور الشمالي غالبًا مع اللحم أو المرق.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 0
-  },
-  {
-    "type": "TRUE_FALSE",
-    "Category": "Clothes",
-    "question": "الشماغ الأحمر والأبيض غير منتشر في الشمال.",
-    "options": [
-      "صحيح",
-      "خطأ"
-    ],
-    "answer": 1
-  },
-  {
-    "type": "LIST",
-    "Category": "Food",
-    "question": "اختر الأطباق التي تُنسب للمطبخ الشمالي:",
-    "options": [
-      "المنسف الحائلي",
-      "التيراميسو",
-      "الباستا",
-      "القرص",
-      "الجريش",
-      "السوشي"
-    ],
-    "answer": [
-      0,
-      3,
-      4
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Food",
-    "question": "اختر العناصر الشائعة في الضيافة الشمالية:",
-    "options": [
-      "الشاي المثلج",
-      "التمر",
-      "الكابتشينو",
-      "الموكا",
-      "القهوة العربية"
-    ],
-    "answer": [
-      1,
-      4
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Food",
-    "question": "اختر ما يُستخدم عادةً في أطباق الشمال:",
-    "options": [
-      "السمن البلدي",
-      "صلصة الصويا",
-      "القمح المجروش",
-      "الأفوكادو",
-      "الواسابي"
-    ],
-    "answer": [
-      0,
-      2
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Food",
-    "question": "اختر الأطباق التي تُقدَّم مع خبز التنور:",
-    "options": [
-      "المرق",
-      "الآيس كريم",
-      "السموثي",
-      "الجيلاتو",
-      "اللحم"
-    ],
-    "answer": [
-      0,
-      4
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Food",
-    "question": "اختر منتجات تُعرف بها الجوف:",
-    "options": [
-      "زيت الزيتون",
-      "جبنة ريكوتا",
-      "خردل",
-      "زبدة الفول السوداني"
-    ],
-    "answer": [
-      0
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Food",
-    "question": "اختر مشروبات بدوية تقليدية في الشمال:",
-    "options": [
-      "اللبن",
-      "سلاش",
-      "العصائر الغازية",
-      "الصودا"
-    ],
-    "answer": [
-      0
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Clothes",
-    "question": "اختر عناصر من أزياء الشمال:",
-    "options": [
-      "الساري",
-      "الغترة",
-      "القحفية",
-      "الكيمونو",
-      "الشماغ الأحمر والأبيض",
-      "البونشو"
-    ],
-    "answer": [
-      1,
-      2,
-      4
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Clothes",
-    "question": "اختر ما يناسب أجواء الشمال الباردة:",
-    "options": [
-      "الجاكيت الصوفي",
-      "الصندل",
-      "الشورت الرياضي",
-      "التيشيرت الخفيف"
-    ],
-    "answer": [
-      0
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Clothes",
-    "question": "اختر ملابس تُستخدم في المناسبات بالشمال:",
-    "options": [
-      "الزي الرياضي",
-      "البشت/المشلح",
-      "ملابس الغوص",
-      "بدلة التزلج"
-    ],
-    "answer": [
-      1
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Clothes",
-    "question": "اختر خامات شائعة في الأزياء التقليدية:",
-    "options": [
-      "القطن",
-      "ألياف الكربون",
-      "الجلد",
-      "البوليستر الصناعي الخشن",
-      "الصوف"
-    ],
-    "answer": [
-      0,
-      2,
-      4
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Clothes",
-    "question": "اختر مفردات تُصنّف ضمن الإكسسوارات التقليدية:",
-    "options": [
-      "الربطة الفراشة",
-      "رباط الكورسيه",
-      "الحزام الجلدي",
-      "تيارا"
-    ],
-    "answer": [
-      2
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Clothes",
-    "question": "اختر نقوش أو أساليب زخرفة مرتبطة بالتراث:",
-    "options": [
-      "السدو",
-      "الدانتيلا الفرنسية",
-      "التطريز الإسباني"
-    ],
-    "answer": [
-      0
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Clothes",
-    "question": "اختر أنواع أحذية ملائمة للزي التقليدي:",
-    "options": [
-      "المداس الجلدي",
-      "الحذاء الجلدي ذا الكعب العالي",
-      "القبقاب الخشبي"
-    ],
-    "answer": [
-      0
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Celebration",
-    "question": "اختر فنونًا شعبية مرتبطة بالشمال:",
-    "options": [
-      "السامري",
-      "الدحة",
-      "العلاوي",
-      "الدبكة"
-    ],
-    "answer": [
-      1
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Celebration",
-    "question": "اختر عناصر ضيافة في المناسبات الشمالية:",
-    "options": [
-      "القهوة العربية",
-      "الكابتشينو",
-      "الشوكولاتة السويسرية",
-      "التمر"
-    ],
-    "answer": [
-      0,
-      3
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Celebration",
-    "question": "اختر ممارسات تُرى في أمسيات الشتاء:",
-    "options": [
-      "إلقاء القصيد",
-      "العروض الضوئية الحديثة",
-      "الألعاب النارية",
-      "شبة النار"
-    ],
-    "answer": [
-      0,
-      3
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Celebration",
-    "question": "اختر ممارسات اجتماعية إيجابية:",
-    "options": [
-      "العانية/الفزعة",
-      "العزلة الاجتماعية",
-      "المقاطعة"
-    ],
-    "answer": [
-      0
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Celebration",
-    "question": "اختر أنشطة تُصاحب الرقصات الشعبية:",
-    "options": [
-      "العزف على البيانو الكلاسيكي",
-      "الإيقاع والهتاف"
-    ],
-    "answer": [
-      1
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Celebration",
-    "question": "اختر مناسبات يُؤدَّى فيها فن الدحة:",
-    "options": [
-      "الحصص المدرسية اليومية",
-      "الاحتفالات الشعبية",
-      "المؤتمرات التقنية",
-      "الأعراس"
-    ],
-    "answer": [
-      1,
-      3
-    ]
-  },
-  {
-    "type": "LIST",
-    "Category": "Celebration",
-    "question": "اختر عبارات مناسبة للمديح في المناسبات:",
-    "options": [
-      "قصيد نبطي",
-      "أهازيج لاتينية"
-    ],
-    "answer": [
-      0
-    ]
   }
 ]
