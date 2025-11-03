@@ -3,79 +3,38 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>استعادة كلمة المرور</title>
+  <title>تسجيل الدخول</title>
   <link rel="stylesheet" href="../assets/css/style.css"/>
 </head>
 <body>
   <header class="site-header">
-    <div class="header-left">
-      <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo">
-    </div>
-    <div class="brand">منصة إثراء الثقافة السعودية</div>
-    <nav class="actions">
-      <button class="btn-back" onclick="history.back()">رجوع</button>
-    </nav>
+    <div class="brand">منصّة إثراء الثقافة السعودية</div>
   </header>
 
   <main class="auth-page">
     <section class="auth-card">
-      <header class="auth-header">
-        <h1 class="auth-title">استعادة كلمة المرور</h1>
-        <p class="auth-subtitle">أدخل بريدك لتصلك شفرة تحقق</p>
-      </header>
-
-      <div id="resetMsg" class="msg" aria-live="polite"></div>
+      <h1>تسجيل الدخول</h1>
+      <div id="msg" class="msg" aria-live="polite"></div>
 
       <div class="form">
         <div class="form-group">
-          <label for="fpEmail">البريد الإلكتروني</label>
-          <input id="fpEmail" type="email" placeholder="example@mail.com" autocomplete="email" required/>
+          <label for="email">البريد الإلكتروني</label>
+          <input id="email" type="email" placeholder="example@mail.com" autocomplete="email" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="password">كلمة المرور</label>
+          <input id="password" type="password" placeholder="********" autocomplete="current-password" required/>
         </div>
 
         <div class="auth-actions">
-          <div class="left"><a href="./login.html">عودة لتسجيل الدخول</a></div>
-          <div class="right"><button id="sendCodeBtn" class="auth-submit" type="button">إرسال رمز</button></div>
+          <div class="left">
+            <a href="./forgot.html">هل نسيت كلمة المرور؟</a>
+          </div>
+          <div class="right">
+            <button id="loginBtn" class="auth-submit" type="button">دخول</button>
+          </div>
         </div>
-
-        <div id="code-section" style="display:none; margin-top:14px;">
-          <div class="form-row two-col">
-            <div class="form-group">
-              <label for="verification-code">رمز التحقق</label>
-              <input id="verification-code" inputmode="numeric" maxlength="6" placeholder="******"/>
-            </div>
-            <div class="form-group">
-              <label>الوقت والمحاولات</label>
-              <div>
-                <span id="timer">--:--</span>
-                <span id="attempts">المتبقي: 5</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="auth-actions">
-            <div class="right">
-              <button id="checkCodeBtn" class="auth-submit" type="button">تحقق من الرمز</button>
-            </div>
-          </div>
-
-          <div id="set-password-section" style="display:none; margin-top:14px;">
-            <div class="form-row two-col">
-              <div class="form-group">
-                <label for="new-password">كلمة المرور الجديدة</label>
-                <input id="new-password" type="password" minlength="8" autocomplete="new-password" placeholder="8+ أحرف"/>
-              </div>
-              <div class="form-group">
-                <label for="confirm-password">تأكيد كلمة المرور الجديدة</label>
-                <input id="confirm-password" type="password" minlength="8" autocomplete="new-password" placeholder="أعد الإدخال"/>
-              </div>
-            </div>
-            <div class="auth-actions">
-              <div class="right">
-                <button id="saveNewPwBtn" class="auth-submit" type="button">حفظ كلمة المرور</button>
-              </div>
-            </div>
-          </div>
-        </div><!-- /code-section -->
       </div>
     </section>
   </main>
@@ -83,102 +42,33 @@
   <script>
     (function(){
       'use strict';
+      const $ = id => document.getElementById(id);
+      const msgEl = $('msg'), emailEl = $('email'), pwEl = $('password'), loginBtn = $('loginBtn');
 
-      let generatedCode = "", codeValidUntil = 0, timerInterval = null, attemptsLeft = 5, fpUser = null;
+      function setMsg(t, type){ msgEl.textContent = t||''; msgEl.className = 'msg' + (type?(' '+type):''); }
 
-      const fpEmail        = document.getElementById('fpEmail');
-      const resetMsg       = document.getElementById('resetMsg');
-      const sendCodeBtn    = document.getElementById('sendCodeBtn');
-      const codeSection    = document.getElementById('code-section');
-      const codeInput      = document.getElementById('verification-code');
-      const attemptsEl     = document.getElementById('attempts');
-      const timerEl        = document.getElementById('timer');
-      const checkCodeBtn   = document.getElementById('checkCodeBtn');
-      const setPwSection   = document.getElementById('set-password-section');
-      const newPwEl        = document.getElementById('new-password');
-      const confirmPwEl    = document.getElementById('confirm-password');
-      const saveNewPwBtn   = document.getElementById('saveNewPwBtn');
-
-      function setMsg(txt, type){ resetMsg.textContent = txt || ""; resetMsg.className = "msg" + (type?(" "+type):""); }
-
-      function stopTimer(){ if (timerInterval){ clearInterval(timerInterval); timerInterval = null; } }
-      function startTimer(){
-        stopTimer();
-        function update(){
-          const remainSec = Math.max(0, Math.floor((codeValidUntil - Date.now())/1000));
-          const m = Math.floor(remainSec/60), s = ('0'+(remainSec%60)).slice(-2);
-          timerEl.textContent = `الوقت المتبقي: ${m}:${s}`;
-          if (remainSec <= 0){
-            stopTimer();
-            timerEl.textContent = "انتهت صلاحية الرمز! اطلب رمز جديد.";
-            checkCodeBtn.disabled = true;
-          }
-        }
-        update();
-        timerInterval = setInterval(update, 1000);
+      // مثال: إنشاء مستخدم تجريبي إذا ما فيه بيانات (تقدر تشيله)
+      if (!localStorage.getItem('users')) {
+        localStorage.setItem('users', JSON.stringify([
+          { email: 'example@mail.com', password: 'Aa123456' }
+        ]));
       }
 
-      const strongPw = (pw)=>/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(pw);
+      loginBtn.addEventListener('click', () => {
+        const email = (emailEl.value||'').trim().toLowerCase();
+        const pw = pwEl.value||'';
+        setMsg('', '');
+        if (!email || !pw){ setMsg('أدخل البريد وكلمة المرور.', 'error'); return; }
 
-      sendCodeBtn.addEventListener('click', function(){
-        const email = (fpEmail.value||"").trim().toLowerCase();
-        setMsg("", "");
-        if(!email){ setMsg("يرجى إدخال البريد.", "error"); return; }
+        const users = JSON.parse(localStorage.getItem('users')||'[]');
+        const user = users.find(u => (u && (u.email||'').toLowerCase() === email && (u.password||'') === pw));
 
-        const users = JSON.parse(localStorage.getItem("users") || "[]");
-        fpUser = users.find(u => (u && (u.email||"").toLowerCase() === email));
-        if(!fpUser){ setMsg("البريد غير موجود.", "error"); return; }
+        if (!user){ setMsg('بيانات الدخول غير صحيحة.', 'error'); return; }
 
-        generatedCode  = Math.floor(100000 + Math.random()*900000).toString();
-        codeValidUntil = Date.now() + 7*60*1000;
-        attemptsLeft   = 5;
-
-        codeSection.style.display = "block";
-        setPwSection.style.display = "none";
-        codeInput.value = "";
-        attemptsEl.textContent = `المتبقي: ${attemptsLeft}`;
-        checkCodeBtn.disabled = false;
-
-        setMsg(`تم إرسال الرمز: ${generatedCode} (للتجربة)`, "success");
-        startTimer();
-      });
-
-      checkCodeBtn.addEventListener('click', function(){
-        if (Date.now() > codeValidUntil){ setMsg("انتهت صلاحية الرمز! اطلب جديدًا.", "error"); return; }
-        const code = (codeInput.value||"").trim();
-        if (code !== generatedCode){
-          attemptsLeft = Math.max(0, attemptsLeft - 1);
-          attemptsEl.textContent = `المتبقي: ${attemptsLeft}`;
-          setMsg("الرمز غير صحيح.", "error");
-          if (attemptsLeft <= 0){
-            setMsg("استنفدت المحاولات! اطلب رمز جديد.", "error");
-            codeSection.style.display = "none";
-            setPwSection.style.display = "none";
-            stopTimer();
-          }
-          return;
-        }
-        setPwSection.style.display = "block";
-        setMsg("تم التحقق. أدخل كلمة مرور جديدة.", "success");
-      });
-
-      saveNewPwBtn.addEventListener('click', function(){
-        const newPw = newPwEl.value, confirmPw = confirmPwEl.value;
-        if (!strongPw(newPw)){ setMsg("كلمة المرور ضعيفة. يجب أن تحتوي على حرف صغير وكبير ورقم وطول 8+.", "error"); return; }
-        if (newPw !== confirmPw){ setMsg("كلمتا المرور غير متطابقتين.", "error"); return; }
-        if (!fpUser){ setMsg("انتهت الجلسة. أعد العملية.", "error"); return; }
-
-        let users = JSON.parse(localStorage.getItem("users") || "[]");
-        users = users.map(u => ((u.email||"").toLowerCase() === (fpUser.email||"").toLowerCase()) ? {...u, password:newPw} : u);
-        localStorage.setItem("users", JSON.stringify(users));
-
-        setMsg("تم تغيير كلمة المرور بنجاح!", "success");
-        setPwSection.style.display = "none";
-        codeSection.style.display = "none";
-        stopTimer();
-
-        generatedCode=""; codeValidUntil=0; attemptsLeft=5; fpUser=null;
-        codeInput.value=""; newPwEl.value=""; confirmPwEl.value=""; fpEmail.value="";
+        // نجاح
+        localStorage.setItem('currentUser', JSON.stringify({ email: user.email }));
+        setMsg('تم تسجيل الدخول بنجاح!', 'success');
+        setTimeout(()=>{ window.location.href = '../home/project-list.html'; }, 1000);
       });
     })();
   </script>
