@@ -27,37 +27,93 @@
 
       <div id="regMsg" class="msg"></div>
 
-      <form id="regForm" class="form" autocomplete="off" method="POST" action="register.php">
-    <div class="form-group">
-        <label>اسم المستخدم</label>
-        <input id="regUser" name="username" required pattern="[A-Za-z0-9]{3,20}" />
-        <span class="field-hint">3–20 حرفًا/رقمًا بدون مسافات</span>
+      <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>إنشاء حساب</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <script src="../assets/js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <img src="../assets/images/thaqafatna-circle.svg" alt="ثقافتنا" class="logo">
     </div>
-    <div class="form-group">
-        <label>البريد الإلكتروني</label>
-        <input id="regEmail" name="email" type="email" required />
-    </div>
-    <div class="form-row two-col">
+    <div class="brand">منصة إثراء الثقافة السعودية</div>
+    <nav class="actions">
+      <button class="btn-back" onclick="history.back()">رجوع</button>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-card">
+      <header class="auth-header">
+        <h1 class="auth-title">إنشاء حساب</h1>
+        <p class="auth-subtitle">انضم إلى منصّتنا وابدأ الرحلة 🎉</p>
+      </header>
+
+      <div id="regMsg" class="msg"></div>
+
+      <form id="regForm" class="form" autocomplete="off">
         <div class="form-group">
-            <label>كلمة المرور</label>
-            <input id="regPassword" name="password" type="password" minlength="8" required />
-            <span class="field-hint">8+ أحرف وتضم رقمًا وحرفًا كبيرًا وصغيرًا</span>
+          <label>اسم المستخدم</label>
+          <input id="regUser" required pattern="[A-Za-z0-9]{3,20}" />
+          <span class="field-hint">3–20 حرفًا/رقمًا بدون مسافات</span>
         </div>
         <div class="form-group">
+          <label>البريد الإلكتروني</label>
+          <input id="regEmail" type="email" required />
+        </div>
+        <div class="form-row two-col">
+          <div class="form-group">
+            <label>كلمة المرور</label>
+            <input id="regPassword" type="password" minlength="8" required />
+            <span class="field-hint">8+ أحرف وتضم رقمًا وحرفًا كبيرًا وصغيرًا</span>
+          </div>
+          <div class="form-group">
             <label>تأكيد كلمة المرور</label>
             <input id="regConfirm" type="password" minlength="8" required />
+          </div>
         </div>
-    </div>
 
-    <div class="auth-actions">
-        <div class="left">
+        <div class="auth-actions">
+          <div class="left">
             <a href="./login.html">لديك حساب؟ سجّل الدخول</a>
-        </div>
-        <div class="right">
+          </div>
+          <div class="right">
             <button type="submit" class="auth-submit">تسجيل</button>
+          </div>
         </div>
-    </div>
-</form>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("regForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const msg = regMsg; msg.textContent = ""; msg.className = "msg";
+      const username = regUser.value.trim();
+      const email = regEmail.value.trim();
+      const password = regPassword.value;
+      const confirm  = regConfirm.value;
+
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      if (users.find(u => u.username === username)) { msg.className="msg error"; msg.textContent="اسم المستخدم مستخدم سابقًا."; return; }
+      if (users.find(u => u.email === email))     { msg.className="msg error"; msg.textContent="البريد الإلكتروني مستخدم سابقًا."; return; }
+      if (!/^(?=.[a-z])(?=.[A-Z])(?=.*\d).{8,}$/.test(password)) { msg.className="msg error"; msg.textContent="كلمة المرور ضعيفة. اتبع المتطلبات أعلاه."; return; }
+      if (password !== confirm) { msg.className="msg error"; msg.textContent="كلمتا المرور غير متطابقتين."; return; }
+
+      users.push({username, email, password});
+      localStorage.setItem("users", JSON.stringify(users));
+      setCurrentUser({username, email});
+      msg.className="msg success"; msg.textContent="تم إنشاء الحساب! يتم تحويلك...";
+      setTimeout(()=>location.href="../home/select-role.html", 900);
+    });
+  </script>
+</body>
+</html>
     </section>
   </main>
 
