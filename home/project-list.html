@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="../assets/css/style.css"/>
   <script src="../assets/js/app.js"></script>
   <script src="../assets/js/mockData.js"></script>
+  <style>
+    /* بسيط لستايل المودال */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;z-index:2000}
+    .modal{background:#fff;border-radius:12px;padding:18px;max-width:760px;width:94%;box-shadow:0 8px 30px rgba(0,0,0,.25);direction:rtl;text-align:right}
+    .modal .chips{margin-top:8px}
+    .modal .type-btn{padding:8px 12px;border-radius:10px;border:1px solid #e5e7eb;background:#d1fae5;color:#14532d;margin:6px;cursor:pointer}
+    .modal .close-btn{background:#f3f4f6;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+    .modal-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .modal-body{margin-top:12px}
+  </style>
 </head>
 <body>
 
@@ -29,12 +39,72 @@
   </div>
 </div>
 
+<!-- مودال "فتح البطاقة" -->
+<div id="cardModalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+  <div class="modal" id="cardModal">
+    <div class="modal-header">
+      <div>
+        <h3 id="modalProjectName">اسم المشروع</h3>
+        <div id="modalProjectDesc" class="muted" style="max-width:560px"></div>
+      </div>
+      <div style="text-align:left">
+        <button class="close-btn" id="modalClose">إغلاق</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="chips" id="modalMeta"></div>
+      <div style="margin-top:12px">
+        <div style="margin-bottom:6px;font-weight:700;color:#14532d">ابدأ بجلسة حسب نوع السؤال:</div>
+        <div id="modalTypeBtns"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 function getParam(name){
   const u=new URL(window.location.href);
-  return u.searchParams.get(name)||"";
+  return u.searchParams.get(name)||'';
 }
 
+function openCardModal(projectId, role){
+  const projects = window.PROJECTS || [];
+  const p = projects.find(x=>x.id===projectId) || {};
+  document.getElementById('modalProjectName').textContent = p.name || projectId;
+  document.getElementById('modalProjectDesc').textContent = (role==='manager' ? (p.managerDescription||'') : (p.userDescription||''));
+  const total = p.stats?.totalTasks || (p.categories ? (p.categories.length * 10) : 0) || 0;
+  const types = (p.questionTypes || ['MCQ','OPEN_ENDED']).map(t=>String(t).toUpperCase());
+  document.getElementById('modalMeta').innerHTML = `<span class="chip">إجمالي الأسئلة: ${total}</span> <span class="chip">الأنواع المتاحة: ${types.join(', ')}</span>`;
+
+  // أزرار الأنواع
+  const wrap = document.getElementById('modalTypeBtns'); wrap.innerHTML = '';
+  types.forEach(t=>{
+    const btn = document.createElement('button');
+    btn.className='type-btn';
+    btn.textContent = t;
+    btn.addEventListener('click', ()=> {
+      const pageMap = { MCQ:'../annotate/mcq.html', TRUE_FALSE:'../annotate/true-false.html', LIST:'../annotate/list.html', OPEN_ENDED:'../annotate/open-ended.html' };
+      const page = pageMap[t] || pageMap.MCQ;
+      const url = new URL(page, location.href);
+      url.searchParams.set('id', projectId);
+      url.searchParams.set('role', role||'user');
+      url.searchParams.set('type', t);
+      // إغلاق المودال ثم الانتقال
+      closeCardModal();
+      location.href = url.toString();
+    });
+    wrap.appendChild(btn);
+  });
+
+  document.getElementById('cardModalBackdrop').style.display='flex';
+  document.getElementById('modalClose').focus();
+}
+function closeCardModal(){ document.getElementById('cardModalBackdrop').style.display='none'; }
+
+document.getElementById('modalClose').addEventListener('click', closeCardModal);
+document.getElementById('cardModalBackdrop').addEventListener('click', function(e){ if(e.target===this) closeCardModal(); });
+
+// init page
 document.addEventListener("DOMContentLoaded", function() {
   const role = getParam('role') || 'user';
   const projectsGrid = document.getElementById('projects-grid');
@@ -45,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
     title.textContent = "لوحة تحكم المدير: نظرة عامة على المشاريع";
     statsBar.innerHTML = `<button class="stats-btn" onclick="window.location.href='manager-stats.html'">إحصائيات جميع المستخدمين</button>`;
   } else {
-    title.textContent = "المشاريع المتاحة للعميل";
+    title.textContent = "المشاريع المتاحة للالعميل";
     statsBar.innerHTML = `<button class="stats-btn" onclick="window.location.href='my-stats.html'">إحصائياتي</button>`;
   }
 
@@ -53,27 +123,36 @@ document.addEventListener("DOMContentLoaded", function() {
     const card = document.createElement('div');
     card.className = 'card';
 
-    const btnLabel = role === 'manager' ? 'عرض التفاصيل' : 'متاح للتسجيل';
-    const btnHref = `./project-details.html?id=${project.id}&role=${role}`;
-    const extra = role === 'manager' ? `<span class="badge">عدد المقيمين: 3</span>` : '';
+    const btnLabel = role === 'manager' ? 'عرض تفاصيل المشروع' : 'متاح للتسجيل';
+    const btnHref = `./project-details.html?id=${encodeURIComponent(project.id)}&role=${role}`;
+
+    const extra = role === 'manager' ? `<span class="badge">عدد المقيمين: ${project.annotatorsCount || 3}</span>` : '';
 
     card.innerHTML = `
       <h2>${project.name}</h2>
       <p class="small">${role === 'manager' ? project.managerDescription : project.userDescription}</p>
       <div class="meta">
-        <span class="badge">عدد الأسئلة: 90</span>
+        <span class="badge">عدد الأسئلة: ${project.stats?.totalTasks || 90}</span>
         ${extra}
       </div>
-      <div class="actions-wrap">
-        <a class="link ${role==='manager'?'manager':'primary'}" href="${btnHref}">${btnLabel}</a>
-        <a class="btn-back" href="${btnHref}">فتح البطاقة</a>
+      <div class="actions-wrap" style="gap:8px;align-items:center">
+        <a class="link primary" href="${btnHref}">${btnLabel}</a>
+        <button class="btn-back" data-open-card="${project.id}">فتح البطاقة</button>
       </div>
     `;
 
+    // navigation by clicking card (avoid when clicking a link or the card-button)
     card.style.cursor = 'pointer';
     card.addEventListener('click', (ev)=> {
-      if (ev.target.tagName.toLowerCase() === 'a') return;
+      if (ev.target.tagName.toLowerCase() === 'a' || ev.target.closest('a') || ev.target.closest('button')) return;
       window.location.href = btnHref;
+    });
+
+    // زر "فتح البطاقة" داخل الكارد
+    const cardButton = card.querySelector('[data-open-card]');
+    cardButton.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      openCardModal(project.id, role);
     });
 
     projectsGrid.appendChild(card);
