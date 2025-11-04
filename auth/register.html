@@ -27,37 +27,37 @@
 
       <div id="regMsg" class="msg"></div>
 
-      <form id="regForm" class="form" autocomplete="off">
+      <form id="regForm" class="form" autocomplete="off" method="POST" action="register.php">
+    <div class="form-group">
+        <label>اسم المستخدم</label>
+        <input id="regUser" name="username" required pattern="[A-Za-z0-9]{3,20}" />
+        <span class="field-hint">3–20 حرفًا/رقمًا بدون مسافات</span>
+    </div>
+    <div class="form-group">
+        <label>البريد الإلكتروني</label>
+        <input id="regEmail" name="email" type="email" required />
+    </div>
+    <div class="form-row two-col">
         <div class="form-group">
-          <label>اسم المستخدم</label>
-          <input id="regUser" required pattern="[A-Za-z0-9]{3,20}" />
-          <span class="field-hint">3–20 حرفًا/رقمًا بدون مسافات</span>
-        </div>
-        <div class="form-group">
-          <label>البريد الإلكتروني</label>
-          <input id="regEmail" type="email" required />
-        </div>
-        <div class="form-row two-col">
-          <div class="form-group">
             <label>كلمة المرور</label>
-            <input id="regPassword" type="password" minlength="8" required />
+            <input id="regPassword" name="password" type="password" minlength="8" required />
             <span class="field-hint">8+ أحرف وتضم رقمًا وحرفًا كبيرًا وصغيرًا</span>
-          </div>
-          <div class="form-group">
+        </div>
+        <div class="form-group">
             <label>تأكيد كلمة المرور</label>
             <input id="regConfirm" type="password" minlength="8" required />
-          </div>
         </div>
+    </div>
 
-        <div class="auth-actions">
-          <div class="left">
+    <div class="auth-actions">
+        <div class="left">
             <a href="./login.html">لديك حساب؟ سجّل الدخول</a>
-          </div>
-          <div class="right">
-            <button type="submit" class="auth-submit">تسجيل</button>
-          </div>
         </div>
-      </form>
+        <div class="right">
+            <button type="submit" class="auth-submit">تسجيل</button>
+        </div>
+    </div>
+</form>
     </section>
   </main>
 
