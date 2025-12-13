@@ -1,0 +1,838 @@
+[
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the most common dish في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Hanini",
+      "Jareesh",
+      "Mansaf",
+      "Areeka"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the most common traditional street food في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Tanoor Bread",
+      "Areeka",
+      "Mutabbaq",
+      "Shawarma"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the most common breakfast dish في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Saleeq",
+      "Areeka",
+      "Ful Medames",
+      "Samboosa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish during Eid Al-Fitr في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Jareesh and Qursan",
+      "Areeka with Ghee",
+      "Mashghoutha",
+      "Kleija"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "In which region of المملكة العربية السعودية is “Al-Maghsh” considered a traditional dish؟",
+    "options": [
+      "Jazan",
+      "Medina",
+      "Mecca",
+      "Tabuk"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "“Al-Mashghoutha” is a traditional Saudi dish. Which region is known for preparing it؟",
+    "options": [
+      "Asir",
+      "Jazan",
+      "Mecca",
+      "Tabuk"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "In which regions of المملكة العربية السعودية is the traditional dish “Haneeth” popular؟",
+    "options": [
+      "Southwestern المملكة العربية السعودية",
+      "المنطقة الشرقية في المملكة العربية السعودية",
+      "Northeastern المملكة العربية السعودية",
+      "المنطقة الغربية في المملكة العربية السعودية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "“Al-Haneeth” is a dish famous in which region of المملكة العربية السعودية؟",
+    "options": [
+      "Asir",
+      "Jazan",
+      "Mecca",
+      "Medina"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the name of the traditional butter dish served في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Radifah",
+      "Hanini",
+      "Haneeth",
+      "Mandi"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the name of the traditional food served to guests in the afternoon في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Wasl",
+      "Ghada",
+      "Brunch",
+      "Coffee"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the most common dish في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Areeka, Mashghoutha, Raksh dish, Khameer, Lahoh, Haneeth, Aseedah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the common traditional street food في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Tanoor Bread, Barbary Fig (Prickly Pear), Corn, Tea"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the most common breakfast dish في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Areeka, Tanoor Bread, Ghee, Honey"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish during Eid Al-Fitr في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Wheat with Ghee and Honey, Mashghoutha, Areeka, Marsa, and Salted Fish"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the name of the traditional butter dish served في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Radifah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو a popular dish known in the southern region of المملكة العربية السعودية, served hot with honey, ghee, and dates؟",
+    "options": [],
+    "answer": "Mashghoutha"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "In which regions of المملكة العربية السعودية is the traditional dish “Haneeth” popular؟",
+    "options": [],
+    "answer": "Southern Region"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the name of the traditional food served to guests in the afternoon في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Wasel"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "In which region of المملكة العربية السعودية is “Al-Maghsh” considered a traditional dish؟",
+    "options": [],
+    "answer": "Jazan"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for men في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Al-Mirwaden",
+      "Al-Thobe and Al-Sudairi",
+      "Al-Dishdasha",
+      "Al-Mufraj"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for women في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Dara’aah",
+      "Thobe Asiri",
+      "Short Skirt",
+      "Al-Mufraj"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for men في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Mofraj, Izar (also called Ma’awiz, Maqtab, Fouta, or Musanaf) — a lower-body wrap garment worn by men"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for women في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Thobe Asiri"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most popular sweet في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Kleija",
+      "Marsa",
+      "Luqaimat",
+      "Kunafa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most common traditional drink في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Mango Juice",
+      "Rose Latte",
+      "Qishr",
+      "Almond Coffee"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the common traditional dances في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Al-Samri",
+      "Al-Qazoui",
+      "Al-Dabka",
+      "Al-Tarouq"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional music في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Al-Samri",
+      "Al-Mawal",
+      "Al-Damma",
+      "Al-Aghani Al-Bahriya"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Sadu Weaving",
+      "Al-Mawal",
+      "Al-Qatt Painting",
+      "Palm Weaving"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the items the bride buys for her wedding في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Shabka",
+      "Dabsh",
+      "Gold",
+      "Mirwah"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the average amount of dowry presented to the wife في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "30"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most expensive part of a traditional Saudi Janbiya (dagger) that determines its price؟",
+    "options": [
+      "Hilt",
+      "Belt",
+      "Blade",
+      "Sheath"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most common traditional craft in Najran city؟",
+    "options": [
+      "Making traditional white weapons",
+      "Pottery making",
+      "Weaving and carpet making",
+      "Wall decoration craftsmanship"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What material is traditionally used to make the “Janbiya” dagger in Najran؟",
+    "options": [
+      "Copper",
+      "Silver",
+      "Iron",
+      "Platinum"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name given to the artist who paints Al-Qatt Al-Asiri, the traditional Asiri wall art؟",
+    "options": [
+      "Al-Qattatah",
+      "Al-Musaqqifah",
+      "Al-Nassajah",
+      "Al-Rassamah"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What describes “Al-Qatt Al-Asiri,” a traditional art form in the Asir region؟",
+    "options": [
+      "A women’s art of decoration and engraving",
+      "A type of weaving practiced by men",
+      "A culinary tradition unique to the region",
+      "A performance art involving storytelling"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "“Beit Al-Esha” is a traditional architectural style. Which region in المملكة العربية السعودية is known for this style؟",
+    "options": [
+      "Jazan",
+      "Asir",
+      "Mecca",
+      "Medina"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية do traditional sitting rooms (majalis) include a stone fireplace used for cooking and preparing coffee in front of guests؟",
+    "options": [
+      "Asir",
+      "Najran",
+      "Jazan",
+      "Riyadh"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "In which area is the “vegetative style” architecture, known as “Al-Ishash,” commonly found in the Asir region due to its ease of construction؟",
+    "options": [
+      "Najran",
+      "Abha",
+      "Tihama",
+      "Jazan"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "The “Del’a Dance” is a traditional dance in المملكة العربية السعودية. It is associated with which region؟",
+    "options": [
+      "Southern Region",
+      "Eastern Region",
+      "Western Region",
+      "Northern Region"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the form of singing performed individually, relying on creative embellishments, and usually performed during travels في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Tarq",
+      "Mawal",
+      "Zamil",
+      "Shila"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "The “Sword Dance” is a traditional folk dance in المملكة العربية السعودية associated with the people of which region؟",
+    "options": [
+      "Riyadh",
+      "Asir",
+      "Tabuk",
+      "Jazan"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "The “Janabi Dance” is a traditional folk dance popular in which region of المملكة العربية السعودية؟",
+    "options": [
+      "Tabuk",
+      "Najran",
+      "Riyadh",
+      "Jazan"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية is the “Al-Azawi Dance” primarily performed؟",
+    "options": [
+      "Najran",
+      "Jazan",
+      "Al-Baha",
+      "Asir"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the traditional oven or pot used for baking في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Mahnadh",
+      "Mifah",
+      "Furn",
+      "Saj"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional folklore for weddings and greeting guests from different tribes في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [
+      "Medgal",
+      "Arduh",
+      "Dahha",
+      "Samri"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What does the guest room consist of in Jazan, المملكة العربية السعودية؟",
+    "options": [
+      "Floor Cushions",
+      "Beds",
+      "Wooden Seats",
+      "Sofas"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Is it acceptable في المنطقة الجنوبية من المملكة العربية السعودية for the host to ask the guest about his updates before serving coffee؟",
+    "options": [
+      "Acceptable",
+      "Not Acceptable",
+      "Depends on the guest",
+      "Only in formal gatherings"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية is “Al-Mukammam” considered a traditional women’s garment؟",
+    "options": [
+      "Najran",
+      "Mecca",
+      "Hail",
+      "Tabuk"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية is juniper wood (“Arar”) traditionally used in architecture؟",
+    "options": [
+      "Al-Baha",
+      "Asir",
+      "Najran",
+      "Jazan"
+    ],
+    "answer": "A. Al-Baha B. Asir"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هو correct about Al-Masoub and Al-Areeqa؟",
+    "options": [
+      "Al-Masoub is more urban and modern than Al-Areeqa.",
+      "Al-Areeqa is more rural and traditional than Al-Masoub.",
+      "Both are equally modern dishes.",
+      "Neither has cultural significance in Saudi cuisine."
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هي the other names for “Al-Mashghootha” in Saudi culture؟",
+    "options": [
+      "Al-Aseeda",
+      "Al-Laheeda",
+      "Al-Haneeni",
+      "Al-Jareesh"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هي the distinctive features of traditional jewelry from the southern region of المملكة العربية السعودية؟",
+    "options": [
+      "Large size",
+      "Minimal use of gemstones",
+      "Heavy gold decoration",
+      "Intricate gemstone inlays"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "Which of the following are traditional crafts known in the Al-Baha region؟",
+    "options": [
+      "Tar production",
+      "Sesame oil production",
+      "Heritage clothing making",
+      "Fishing"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "Which of the following are traditional crafts known in the Asir region؟",
+    "options": [
+      "Making traditional white weapons",
+      "Pottery making",
+      "Weaving and carpet making",
+      "Palm-frond crafts (Khoos)"
+    ],
+    "answer": "A, C, and D"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "Traditional المملكة العربية السعوديةn daggers, known as “Janabi,” come in various forms. Which of the following are considered authentic Saudi types؟",
+    "options": [
+      "Umm Fasous",
+      "Al-Mashtaf",
+      "Al-Saif",
+      "Bow"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "The “Zamil” is an ancient folk singing art traditionally known in which regions of المملكة العربية السعودية؟",
+    "options": [
+      "Riyadh",
+      "Asir",
+      "Al-Jouf",
+      "Najran"
+    ],
+    "answer": "B and D"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "The “Southern Ardah” is a traditional dance performed in which regions of southwestern المملكة العربية السعودية؟",
+    "options": [
+      "Najran",
+      "Asir",
+      "Al-Baha",
+      "Jazan"
+    ],
+    "answer": "A, B, C, and D (All)"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هو the “Al-Azawi Dance” known for؟",
+    "options": [
+      "A traditional folk dance performed individually"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the most common sweet في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Marsa (Jazan), Dates"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional drink في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Coffee, Qishr (Coffee Husk Drink)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the common traditional dances في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Gazwai, Ardah Janoubiyah, La’b Shahri, Khatwah Janoubiyah, Dammah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional music في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Damma"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Wood Dish Crafting (Sihaf), Al-Qatt Al-Asiri Art, Aromatic Plant Decoration (garlands, headbands, bouquets), Land Plowing Tools (Sabt)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the items the bride buys for her wedding في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Marwah (traditional bridal set)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the average amount of dowry presented to the wife in المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "40,000 SAR"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the traditional oven or pot used for baking في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Tannour"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional clothes in Tehama في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Wizra"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional folklore performed at weddings and for greeting guests from different tribes في المنطقة الجنوبية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Medgal"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "“Beit Al-Esha” is a traditional architectural style. Which region in المملكة العربية السعودية is known for this style؟",
+    "options": [],
+    "answer": "Jazan"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "In which area is the “vegetative style” architecture, known as “Al-Ishash,” commonly found in the Asir region due to its ease of construction؟",
+    "options": [],
+    "answer": "Tihama"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية is juniper wood (“Arar”) traditionally used in architecture؟",
+    "options": [],
+    "answer": "Baha, Asir, South"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What does the guest room consist of in Jazan, المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Beds"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية do traditional sitting rooms (majalis) include a stone fireplace used for cooking and preparing coffee in front of guests؟",
+    "options": [],
+    "answer": "Asir"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "The “Sword Dance” is a traditional folk dance in المملكة العربية السعودية associated with which region؟",
+    "options": [],
+    "answer": "Jazan"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the form of singing performed individually في المنطقة الجنوبية من المملكة العربية السعودية, relying on creative embellishments, often during travels؟",
+    "options": [],
+    "answer": "Tarq"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "The “Del’a Dance” is a traditional dance in المملكة العربية السعودية associated with which region؟",
+    "options": [],
+    "answer": "Southern Region"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "The “Janbiya Dance” is a traditional folk dance popular in which region of المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Jazan, South"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية is the “Al-Azawi Dance” primarily performed؟",
+    "options": [],
+    "answer": "Jazan"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Is it acceptable في المنطقة الجنوبية من المملكة العربية السعودية for the host to ask the guest about his updates before serving coffee؟",
+    "options": [],
+    "answer": "Not acceptable"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name given to the artist who paints Al-Qatt Al-Asiri, the traditional Asiri wall art؟",
+    "options": [],
+    "answer": "Al-Qattatah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the most expensive part of a traditional Saudi Janbiya (dagger) that determines its price؟",
+    "options": [],
+    "answer": "Hilt"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What material is traditionally used to make the “Janbiya” dagger in Najran؟",
+    "options": [],
+    "answer": "Iron"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What describes “Al-Qatt Al-Asiri,” a traditional art form in the Asir region؟",
+    "options": [],
+    "answer": "A women’s art of decoration and engraving"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the most common traditional craft in Najran city؟",
+    "options": [],
+    "answer": "Dagger making"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dialect",
+    "question": "ما هي the most common greeting phrases in Al-Baha؟",
+    "options": [
+      "Marhaban Heel… ‘Ad Al-Seel",
+      "Ya Hala",
+      "Ahlan wa Sahlan",
+      "Haywah"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dialect",
+    "question": "ما هي the most common greeting phrases in Al-Baha؟",
+    "options": [],
+    "answer": "“Marhaban Heel… Ad Al-Seel” (Welcome countless times, like the floodwaters)"
+  }
+]

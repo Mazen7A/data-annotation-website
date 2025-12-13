@@ -1,0 +1,655 @@
+[
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the most common dish في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Areeka",
+      "Ma’asoub",
+      "Mansaf",
+      "Al-Thareed"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "Which of the following is a common traditional street food في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Shawarma",
+      "Mutabbaq",
+      "Balila",
+      "All of the above"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish in Eid Al-Fitr في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Ful Medames",
+      "Haneeth",
+      "Mandi",
+      "Balaleet"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "Which of the following is a traditional breakfast dish enjoyed during Eid Al-Fitr في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Areeka",
+      "Zalabiya",
+      "Mansaf",
+      "Hanini"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the name of the dish في المنطقة الشرقية من المملكة العربية السعودية that is prepared using rice cooked with sugar and served with fried fish؟",
+    "options": [
+      "Jareesh",
+      "Marqooq",
+      "Mansaf",
+      "Muhammar"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the most common dish في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Mahammar, Al-Thareed, Al-Mufallaq Al-Hasawi, Al-Makbous"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the common traditional street food في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Samosa, Falafel, Mutabbaq"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the most common breakfast dish في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Balaleet (sweet vermicelli with egg)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish during Eid Al-Fitr في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Balaleet, Aseeda, Fateet, Liver, Zalabia"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "What type of dessert dish in the Eastern Province of المملكة العربية السعودية is made from starchy granules, water, sugar, and ghee؟",
+    "options": [],
+    "answer": "Sago (Al-Sago)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو a traditional dish of the Eastern Province, eaten on the first day of Eid Al-Fitr, made of mashed dates, ghee, and flour؟",
+    "options": [],
+    "answer": "Al-Mamroos"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the dish from the east that relies on rice cooked with sugar and served with fried fish؟",
+    "options": [],
+    "answer": "Al-Mahammar"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for men في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Al-Mirwaden",
+      "Al-Thobe and Al-Sudairi",
+      "Al-Dishdasha",
+      "Al-Mufraj"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for women في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Dara’aah",
+      "Thobe Asiri",
+      "Short Skirt",
+      "Al-Mufraj"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for men في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Dishdasha (Thobe)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for women في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Daraa, Thobe Hashemi, Masrah, Manthour, Thobe Al-Thuraya, Abaya, Sheilah, Nafnaf"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most popular sweet في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Kleija",
+      "Marsa",
+      "Al-Sago",
+      "Kunafa"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Which of the following is a common traditional drink في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Tea with Rose",
+      "Sobya",
+      "Toronj Juice",
+      "Qishr Coffee"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Which of the following are common traditional dances في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Ardah",
+      "Saifiya",
+      "Al-Qazzwai",
+      "Al-Dahha and Samri"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the common traditional dances في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Al-Fajri",
+      "Al-Qazoui",
+      "Al-Dabka",
+      "Al-Khutwa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the items the bride buys for her wedding في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Al-Dibsh",
+      "Al-Jihaz",
+      "Al-Mahr",
+      "Al-Shabka"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the average amount of dowry presented to the wife في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "10"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Woodwork",
+      "Bisht Making",
+      "Al-Qatt Painting",
+      "Flower Decoration"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Which Saudi dessert is known for its starchy granules؟",
+    "options": [
+      "Al-Mamroos",
+      "Al-Sago",
+      "Al-Aseeda",
+      "Al-Haneeni"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the main traditional dessert in the Eastern region of المملكة العربية السعودية, also known as “Masabeeb” or “Marageesh”؟",
+    "options": [
+      "Al-Aseeda",
+      "Al-Haneeni",
+      "Al-Mamroos",
+      "Al-Marasee’"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو Harees soup made of؟",
+    "options": [
+      "Hassawi Wheat",
+      "African Wheat",
+      "Egyptian Wheat",
+      "Yemeni Wheat"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the striped fabric traditionally worn by men around the lower body, especially by divers في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [
+      "Izaar",
+      "Thobe",
+      "Tannoura",
+      "Shemagh"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "The craft of making Mishlahs (traditional cloaks) is an inherited profession in which families؟",
+    "options": [
+      "Makkah Families",
+      "Al-Ahsa Families",
+      "Asir Families",
+      "Hail Families"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the traditional craft referred to as “Al-Qallafa” in Saudi culture؟",
+    "options": [
+      "Lock Repairing",
+      "Shipbuilding",
+      "Jewelry Making",
+      "Sword Repairing"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What handicraft, common in the East, is primarily made by women using palm tree products؟",
+    "options": [
+      "Khos",
+      "Safin",
+      "Sadu",
+      "Jewelry"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "There is a similarity between the jewelry in the eastern and northern regions of المملكة العربية السعودية and the jewelry of which other region؟",
+    "options": [
+      "Mecca",
+      "Medina",
+      "Riyadh",
+      "Asir"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "“Al-Frisi” is a traditional performing art in المملكة العربية السعودية that originated in which region؟",
+    "options": [
+      "Eastern Region",
+      "Jazan Region",
+      "Makkah Region",
+      "Asir Region"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What material is used for building ships in the east side of المملكة العربية السعودية؟",
+    "options": [
+      "Wood",
+      "Metal",
+      "Fiberglass",
+      "Plastic"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional game popular in Darin Center in the Eastern Region of المملكة العربية السعودية؟",
+    "options": [
+      "Jidir",
+      "Keram",
+      "Dominoes",
+      "Al-Sibba"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional dance performed in the east, considered an ancient heritage, particularly in the Al-Ahsa region؟",
+    "options": [
+      "Ardah",
+      "Al-Dahha",
+      "Al-Heyda",
+      "Al-Mizmar"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "“Al-Sankali” is a type of maritime art associated with:",
+    "options": [
+      "Sailors of the Eastern Region",
+      "Sailors of the Western Region",
+      "Merchants of المنطقة الشمالية في المملكة العربية السعودية",
+      "Merchants of المنطقة الجنوبية في المملكة العربية السعودية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the celebration observed in the east during Sha’ban or Ramadan؟",
+    "options": [
+      "Al-Fitr",
+      "Al-Adha",
+      "Al-Khidhab",
+      "Al-Qarqiaan"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the three main architectural planning styles in the Eastern Region of المملكة العربية السعودية؟",
+    "options": [
+      "Urban"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو Hassawi rice locally and regionally known as؟",
+    "options": [
+      "Yemeni Aish",
+      "Green Aish",
+      "Red Aish",
+      "Egyptian Aish"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What was the Nu’ayriyah market in المملكة العربية السعودية specialized in selling؟",
+    "options": [
+      "Livestock",
+      "Electrical Appliances",
+      "Electronics",
+      "Food Items"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Which Saudi region is known for its distinct types of gypsum, including “Al-Arabi,” “Al-Khikri,” and “Al-Dhikri”؟",
+    "options": [
+      "Riyadh",
+      "Al-Ahsa",
+      "Jazan",
+      "Najran"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "The “Hida Dance” is a traditional dance performed by the people of which region in المملكة العربية السعودية؟",
+    "options": [
+      "Western Region",
+      "Eastern Region",
+      "Southern Region",
+      "Northern Region"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هي the traditional jobs practiced in the coastal areas of المملكة العربية السعودية, deeply rooted in cultural heritage and economic history؟",
+    "options": [
+      "Fishing",
+      "Pearl Diving",
+      "Shipbuilding",
+      "Salt Harvesting"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "In which regions of المملكة العربية السعودية was the traditional craft of making “Midad” (woven mats) previously popular؟",
+    "options": [
+      "Riyadh",
+      "Jazan",
+      "Al-Ahsa",
+      "Al-Qatif"
+    ],
+    "answer": "C and D"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "Which of the following are traditional crafts in the Eastern Region of المملكة العربية السعودية؟",
+    "options": [
+      "Making Traditional Cloaks (Bishoot) and Headbands (Iqal)",
+      "Crafting Handmade Weapons",
+      "Creating Heritage Wooden Boxes",
+      "All of the Above"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "How is traditional gypsum (“Juss”) produced in المملكة العربية السعودية؟",
+    "options": [
+      "Extracted from beneath the earth as clay or limestone",
+      "Dried using palm-wood fires for a full day",
+      "Crushed into a fine powder after being burned",
+      "All of the above"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "Which of the following are styles of the “Laybooni” art form in المملكة العربية السعودية؟",
+    "options": [
+      "Al-Fajri and Al-Bahri",
+      "Al-Haddadi and Al-Adasani",
+      "Al-Makhlof and Al-Hassawi",
+      "Al-Najdi and Al-Hejazi"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the most common sweet في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Mafrouka, Al-Hanini, Al-Sago"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional drink في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Tea with Taif Rose"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the common traditional dances في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Ardah Saifiyah (Sword Dance), Fijri Art (Hasawi Style), Daq Al-Hubb, Harvest Dance, Freisa Dance"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional music في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Fijri, Nahhamah (sea chant), Liwa"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Pottery, Palm-Frond Weaving (Khoos), Cloak Weaving (Mishlah), Rope Making, Leatherwork, Sword Making, Basket Weaving, Metalwork, Fish Traps (Gargoor)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the items the bride buys for her wedding في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Shabkah (Bridal Jewelry Set)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the average amount of dowry presented to the wife في المنطقة الشرقية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "25,000–60,000 SAR"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو Harees soup made of in the east of المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Hassawi wheat"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the striped fabric worn by men around the lower body, especially by divers in the east؟",
+    "options": [],
+    "answer": "Izar"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional sea folklore of المملكة العربية السعودية, common in the east, especially in Qatif؟",
+    "options": [],
+    "answer": "Sanakli Art"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional game popular in Darin Center in the Eastern Region of المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Jadeer"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional dance performed in the east, considered an ancient heritage, particularly in the Al-Ahsa region؟",
+    "options": [],
+    "answer": "Al-Haida Dance"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the celebration observed in the east during Sha’ban or Ramadan؟",
+    "options": [],
+    "answer": "Garangao (Al-Garqee’an)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "The craft of making Mishlahs (traditional cloaks) is an inherited profession in which families؟",
+    "options": [],
+    "answer": "Al-Ahsa families"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "There is a similarity between the jewelry in the eastern and northern regions of المملكة العربية السعودية and the jewelry of which other region؟",
+    "options": [],
+    "answer": "Riyadh"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "“Al-Frisi” is a traditional performing art in المملكة العربية السعودية that originated in which region؟",
+    "options": [],
+    "answer": "Eastern Region"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the traditional craft referred to as “Al-Qallafa” in Saudi culture؟",
+    "options": [],
+    "answer": "Shipbuilding"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What handicraft, common in the east, is primarily made by women using palm tree products؟",
+    "options": [],
+    "answer": "Palm-Frond Weaving (Khoos)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What material is used for building ships in the east of المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Wood"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the three main architectural planning styles in the Eastern Region of المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Coastal architecture, Desert architecture, Agricultural (Oasis) architecture"
+  }
+]

@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@source "../../app/Views";
+@source "../../public/assets/js";
+
+/* ===================================
+   Saudi Culture Platform - Design System
+   Modern, Professional, Teal Theme
+   =================================== */
+
+@layer base {
+    :root {
+        /* Teal Theme (Default) */
+        --color-primary-50: #f0fdfa;
+        --color-primary-100: #ccfbf1;
+        --color-primary-200: #99f6e4;
+        --color-primary-300: #5eead4;
+        --color-primary-400: #2dd4bf;
+        --color-primary-500: #14b8a6;
+        --color-primary-600: #0d9488;
+        --color-primary-700: #0f766e;
+        --color-primary-800: #115e59;
+        --color-primary-900: #134e4a;
+
+        /* Semantic Colors */
+        --bg-body: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #0f172a;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+
+        /* Glassmorphism */
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.5);
+        --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    }
+
+    .dark {
+        /* Dark Mode Overrides */
+        --bg-body: #0f172a;
+        /* Slate 900 */
+        --bg-card: #1e293b;
+        /* Slate 800 */
+        --text-main: #f1f5f9;
+        /* Slate 100 */
+        --text-muted: #94a3b8;
+        /* Slate 400 */
+        --border-light: #334155;
+        /* Slate 700 */
+
+        /* Glassmorphism Dark */
+        --glass-bg: rgba(30, 41, 59, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+        @apply bg-[var(--bg-body)] text-[var(--text-main)] font-sans antialiased transition-colors duration-300;
+    }
+}
+
+@layer components {
+
+    /* Modern Card */
+    .card {
+        @apply bg-[var(--bg-card)] rounded-2xl border border-[var(--border-light)] shadow-sm hover:shadow-lg transition-all duration-300;
+    }
+
+    /* Glass Effect */
+    .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+    }
+
+    /* Buttons */
+    .btn {
+        @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 active:scale-95;
+    }
+
+    .btn-primary {
+        @apply bg-gradient-to-r from-[var(--color-primary-600)] to-[var(--color-primary-500)] text-white shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:-translate-y-0.5;
+    }
+
+    .btn-outline {
+        @apply border-2 border-[var(--color-primary-500)] text-[var(--color-primary-600)] hover:bg-[var(--color-primary-50)] dark:text-[var(--color-primary-400)] dark:hover:bg-[var(--color-primary-900)]/30;
+    }
+
+    .btn-ghost {
+        @apply text-[var(--text-muted)] hover:text-[var(--color-primary-600)] hover:bg-[var(--color-primary-50)] dark:hover:bg-[var(--color-primary-900)]/30;
+    }
+
+    /* Inputs */
+    .input-field {
+        @apply w-full px-4 py-3 rounded-xl bg-[var(--bg-body)] border border-[var(--border-light)] focus:border-[var(--color-primary-500)] focus:ring-2 focus:ring-[var(--color-primary-500)]/20 outline-none transition-all duration-300;
+    }
+
+    /* Typography */
+    .heading-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-primary-700)] to-[var(--color-primary-500)] dark:from-[var(--color-primary-400)] dark:to-[var(--color-primary-200)];
+    }
+}
+
+@layer utilities {
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .animation-delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .animation-delay-400 {
+        animation-delay: 0.4s;
+    }
+}
+
+/* Custom Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-scale {
+    animation: fadeInScale 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

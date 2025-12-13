@@ -1,0 +1,5 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ثقافتنا" xml:lang="ar">
+  <defs><style>.ring{fill:none;stroke:#b38b59;stroke-width:12}.txt{fill:#14532d;font-family:'Scheherazade New','Amiri','Noto Naskh Arabic','Traditional Arabic',serif;font-weight:700}</style></defs>
+  <circle cx="128" cy="128" r="108" class="ring"/>
+  <text x="128" y="145" class="txt" font-size="84" text-anchor="middle" direction="rtl">ثقافتنا</text>
+</svg>

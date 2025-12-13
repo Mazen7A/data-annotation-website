@@ -1,0 +1,517 @@
+[
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو ما هو الطبق الأكثر شيوعًا في المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Mansaf",
+      "Al-Saliq",
+      "Al-Mandi",
+      "Al-Haneeth"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the most popular street food in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Foul and Hummus",
+      "Shawarma",
+      "Mutabbaq",
+      "Falafel"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو ما هو طبق الإفطار الأكثر شيوعًا في المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Balaleet",
+      "Areeka",
+      "Foul and Tamees",
+      "Mrees Al-Tamr"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the traditional dish for breakfast on Eid Al-Fitr in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Hamisat Al-Lahm Wal-Kibdah",
+      "Al-Jareesh",
+      "Al-Marqooq",
+      "Al-Qursan"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هي some traditional meals associated with Eid Al-Adha in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Mansaf",
+      "Kabsa",
+      "Haneeth",
+      "Mufatah"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو a common dish served in Hail during Eid, showcasing housewives’ cooking skills؟",
+    "options": [
+      "Kabsa decorated with truffles and vegetables.",
+      "Jareesh.",
+      "Lamb Mandi.",
+      "Qursan."
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "How do families in Hail ensure everyone in the neighborhood tastes each other’s food during Eid breakfast؟",
+    "options": [
+      "By inviting all neighbors to one central home.",
+      "By delivering food to each home.",
+      "By sharing meals with travelers and passersby.",
+      "By rotating between plates and tables."
+    ],
+    "answer": 3
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو ما هو الطبق الأكثر شيوعًا في المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Marqooq"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the most popular street food in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Foul and Hummus"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو ما هو طبق الإفطار الأكثر شيوعًا في المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Mrees Al-Tamr"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the traditional dish for breakfast on Eid Al-Fitr in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Hamisat Al-Lahm Wal-Kibdah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هي some traditional meals associated with Eid Al-Adha in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Mansaf, Kabsa, Haneeth, Mufatah, Jareesh, Qursan"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional men’s clothing in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Sidriyah and Thobe",
+      "Al-Marodn",
+      "Al-Dishdashah",
+      "Al-Mufrij"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional women’s clothing in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Sharsh and Al-Madraqah",
+      "Al-Abayah",
+      "Al-Thuraya",
+      "Al-Nashl"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional men’s clothing in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Sidriyah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional women’s clothing in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Sharsh and Al-Madraqah"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most common dessert in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Bakliyah",
+      "Luqaimat",
+      "Kunafa",
+      "Al-Kleija"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most popular traditional drink in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Sobia",
+      "Qishr Al-Tamr",
+      "Cinnamon",
+      "Bitter Orange Juice"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the traditional musical style common in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Rababah",
+      "Al-Samri",
+      "Al-Mawal",
+      "Al-Dhahha"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the traditional crafts common in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Olive Pressing",
+      "Traditional Toolmaking",
+      "Embroidery and Tailoring",
+      "Honey Production"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the items a bride buys for her wedding in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Jihaz",
+      "Al-Zeena",
+      "Henna",
+      "Gold"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the average dowry given to a bride in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "30"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the most common greetings in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Yallah Haywah",
+      "Arhabu",
+      "Marhaba Alf",
+      "Ahlan Wa Sahlan"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the night before Eid in the Northern region of المملكة العربية السعودية؟",
+    "options": [
+      "Laylat Al-Henna",
+      "Laylat Al-Khidhab",
+      "Al-Mabruka",
+      "Laylat Al-Zeena"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Where is the traditional game \"Al-Fashaq\" popular in المملكة العربية السعودية؟",
+    "options": [
+      "المنطقة الشمالية في المملكة العربية السعودية",
+      "المنطقة الشرقية في المملكة العربية السعودية",
+      "المنطقة الغربية في المملكة العربية السعودية",
+      "المنطقة الجنوبية في المملكة العربية السعودية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the Saudi traditional game similar to bowling؟",
+    "options": [
+      "Al-Fashaq",
+      "Al-Bakkoura",
+      "Taq Taqiyyah",
+      "Sabaa Al-Hajar"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Where is the dance \"Al-Ashouri\" famous in المملكة العربية السعودية؟",
+    "options": [
+      "المنطقة الشمالية في المملكة العربية السعودية",
+      "المنطقة الوسطى في المملكة العربية السعودية",
+      "المنطقة الشرقية في المملكة العربية السعودية",
+      "المنطقة الغربية في المملكة العربية السعودية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "When is the game \"Adheem Lah Wayn Gada Wayn Rah\" played in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "During full moon nights",
+      "During Eid celebrations",
+      "During weddings",
+      "During winter evenings"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What does placing your hand over a coffee cup mean in Northern Saudi culture؟",
+    "options": [
+      "Request for more coffee",
+      "Refusal of more coffee",
+      "Thanking the host",
+      "Starting a conversation"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the typical amount of coffee served to guests in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Quarter of the cup",
+      "One-third of the cup",
+      "Half of the cup",
+      "Full cup"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the unique hospitality traditions in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Dates are served first"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Is it acceptable for the host to eat with the guests in Northern Saudi hospitality؟",
+    "options": [
+      "Yes"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What architectural planning system does traditional architecture in Al-Jouf rely on؟",
+    "options": [
+      "Linear architectural planning",
+      "Modular architectural design",
+      "Integrated architectural composition",
+      "Open courtyard planning"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هي the traditional dances common in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Dhahha",
+      "Al-Samri",
+      "Al-Ardah",
+      "Al-Rababah"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "What happens during \"Al-Shabbat\" in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "A person opens their home after Asr"
+    ],
+    "answer": "A, B, C, and D"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هو \"Khashrat Al-Eid\" in Hail, and how is it celebrated؟",
+    "options": [
+      "Preparing competition games for children.",
+      "A gathering of women and children in one home.",
+      "Enjoying light traditional foods"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the most common dessert in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Bakliyah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the most popular traditional drink in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Bitter Orange Juice"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the traditional dances common in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Samri and Al-Dhahha"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the traditional musical style common in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Rababah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the traditional crafts common in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Sadu, dairy products, soap, and olive pressing"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the items a bride buys for her wedding in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Jihaz"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the average dowry given to the bride in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "50,000 SAR"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the most common greetings in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Haywah, Yallah Haywah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What does placing your hand over a coffee cup mean in Northern Saudi culture؟",
+    "options": [],
+    "answer": "Enough (contentment)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the typical amount of coffee served to guests in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "One-third of the cup"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Is it acceptable for the host to eat with the guests in Northern Saudi hospitality؟",
+    "options": [],
+    "answer": "Not acceptable"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Is it acceptable to serve coffee before dates in Northern Saudi hospitality؟",
+    "options": [],
+    "answer": "Not acceptable"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the night before Eid in the Northern region of المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Laylat Al-Khidhab (Henna Night)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Where is the traditional game \"Al-Fashaq\" popular in المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Northern Saudi Arabia"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the Saudi traditional game similar to bowling in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Fashaq"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Where is the dance \"Al-Ashouri\" famous in المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Northern Saudi Arabia"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "When is the game \"Adheem Lah Wayn Gada Wayn Rah\" played in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "During full moon nights"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Places",
+    "question": "ما هي common gathering places in المنطقة الشمالية في المملكة العربية السعودية؟",
+    "options": [
+      "Roshan",
+      "Majlis",
+      "Qahwa",
+      "Shabbah"
+    ],
+    "answer": "B and C"
+  }
+]

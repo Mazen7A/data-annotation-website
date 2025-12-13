@@ -1,0 +1,932 @@
+[
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هي المكوّنات الأساسية لطبق الكبسة؟",
+    "options": [
+      "أرز ولحم وبهارات",
+      "برغل وسبانخ",
+      "ذرة وخبز",
+      "بطاطس ومكرونة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "طبق (الجريش) يعتمد أساسًا على:",
+    "options": [
+      "قمح مجروش",
+      "أرز بسمتي",
+      "برغل",
+      "ذرة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "طبق (السليق) يُطهى غالبًا بـ:",
+    "options": [
+      "الأرز والحليب",
+      "البرغل",
+      "الشعير",
+      "الكسكس"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "البهار الأشهر في القهوة السعودية:",
+    "options": [
+      "الهيل",
+      "الفلفل الأسود",
+      "القرنفل فقط",
+      "الزعتر"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "المشروب الذي يُقدّم مع التمر تقليديًا:",
+    "options": [
+      "القهوة السعودية",
+      "الشاي العدني",
+      "السوبيا",
+      "الكاكاو"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "المعصوب يُنسب غالبًا إلى:",
+    "options": [
+      "المنطقة الجنوبية",
+      "منطقة تبوك",
+      "المنطقة الشرقية",
+      "منطقة القصيم"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "طبق (القرصان) يصنع من:",
+    "options": [
+      "خبز رقيق يُفتت بالمرق",
+      "عجين محشو بالتمر",
+      "أرز مطبوخ باللبن",
+      "حبوب ذرة محمّصة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "نوع التمر الذي يشتهر به القصيم:",
+    "options": [
+      "سكري",
+      "عجوة",
+      "خلاص",
+      "برحي"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "تُقدّم القهوة السعودية تقليديًا في:",
+    "options": [
+      "دِلال وفناجيل صغيرة",
+      "أكواب كبيرة",
+      "أطباق",
+      "أكواب زجاجية كبيرة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "أي مما يلي يُعد وجبة شعبية في تهامة:",
+    "options": [
+      "اللحوح",
+      "البيتزا",
+      "الكسكسي",
+      "الكشري"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "صف خطوات إعداد القهوة السعودية منذ التحميص وحتى التقديم.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "اشرح اختلافات الكبسة بين نجد والحجاز والجنوب.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما دور التمر في الضيافة السعودية وكيف يُقدَّم؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "اذكر أطباقًا شعبية مميزة في المنطقة الشرقية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "كيف أثّر التنوع المناطقي على المطبخ السعودي؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الزي الرجالي الأساسي في المملكة:",
+    "options": [
+      "الثوب",
+      "الساري",
+      "البدلة الغربية",
+      "الجلباب القصير"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "غطاء الرأس الذي يلبس فوق الغترة:",
+    "options": [
+      "العقال",
+      "الشال",
+      "الكوفية",
+      "الطاقية فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "تُعرف العباءة السوداء بأنها:",
+    "options": [
+      "لباس يومي محتشم",
+      "لباس رياضي",
+      "ملابس عمل موحدة",
+      "زي تقليدي للرجال"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "يطلق على الثوب ذي الياقة المفتوحة في نجد:",
+    "options": [
+      "ثوب نجدي",
+      "ثوب حجازي",
+      "ثوب تهامي",
+      "ثوب شرقي"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "نقشة الشماغ الشائعة:",
+    "options": [
+      "أحمر وأبيض",
+      "أخضر",
+      "أصفر",
+      "أزرق"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "المداس أو النعل التقليدي يصنع غالبًا من:",
+    "options": [
+      "الجلد",
+      "الخشب",
+      "المعدن",
+      "القماش فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "تطريز السدو يُستخدم عادةً في:",
+    "options": [
+      "النسيج البدوي",
+      "الخزف",
+      "الخشب",
+      "الزجاج"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الزي النسائي في الجنوب يتميز بـ:",
+    "options": [
+      "ألوان زاهية وزخارف",
+      "لون واحد أسود",
+      "أكمام قصيرة جدًا",
+      "بدون تطريز"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "الغترة البيضاء تُستخدم عادةً في:",
+    "options": [
+      "المناسبات الرسمية واليومية",
+      "الرياضة فقط",
+      "الحج فقط",
+      "الأعمال اليدوية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما الفرق بين الشماغ والغترة؟",
+    "options": [
+      "الشماغ منقوش والغترة سادة",
+      "لا فرق",
+      "الغترة منقوشة",
+      "الشماغ أبيض فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "قارن فروق الياقات والأزرار في الثوب بين مناطق المملكة.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما رمزية ألوان الأزياء النسائية في الجنوب والحجاز؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "اشرح كيف أثرت الحياة البدوية على تصميم الأزيـاء.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "اذكر قطع الإكسسوار التقليدية المرافقة للزي النسائي.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "كيف تغيرت الخياطة التقليدية مع المصممين المعاصرين؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "من الحِرَف المشهورة في الأحساء:",
+    "options": [
+      "النسيج من سعف النخيل",
+      "صناعة الخزف الصيني",
+      "صناعة الذهب الإيطالي",
+      "نحت الجليد"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "يُستخدم السدو في:",
+    "options": [
+      "حياكة بيوت الشعر",
+      "صناعة الزجاج",
+      "صناعة القوارب",
+      "الحدادة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "الدلال النحاسية تُستخدم لـ:",
+    "options": [
+      "القهوة",
+      "اللبن",
+      "الماء فقط",
+      "الشاي فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "حرفة (القط العسيري) تُعد:",
+    "options": [
+      "فن زخرفي جداري",
+      "صناعة خزف",
+      "حياكة سجّاد",
+      "نقش خشب"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "الأدوات الجلدية التقليدية كانت تستخدم في:",
+    "options": [
+      "حفظ الماء والتنقّل",
+      "الزراعة المائية",
+      "الإلكترونيات",
+      "التعدين"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "السعف يُستخدم لصناعة:",
+    "options": [
+      "القفف والسلال",
+      "الأحذية الرياضية",
+      "الأثاث المعدني",
+      "الأقمشة الحريرية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "من الأسواق الشعبية التاريخية:",
+    "options": [
+      "القيصرية في الأحساء",
+      "خان الخليلي في القاهرة",
+      "سوق دمشق",
+      "سوق المباركية بالكويت"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "الفضة تُستخدم تقليديًا في:",
+    "options": [
+      "الحُلي النسائية",
+      "أوانٍ فخارية",
+      "أدوات حدادة",
+      "صناعة الورق"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "الأقمشة التي يشتهر بها الحجاز:",
+    "options": [
+      "الحرير والقطن",
+      "الكتان فقط",
+      "الصوف الخشن فقط",
+      "الجينز"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Crafts and Work",
+    "question": "مهنة حدادة الخناجر منتشرة في:",
+    "options": [
+      "نجران وجازان",
+      "تبوك",
+      "الجوف",
+      "حائل فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "اشرح أثر الأسواق الشعبية في حفظ الحرف التقليدية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "كيف أثّر النفط على تطور الحرف والصناعات؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "حلّل دور المرأة في الحرف اليدوية بالمناطق المختلفة.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "اذكر مبادرات حديثة لدعم الحرفيين محليًا.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Crafts and Work",
+    "question": "صف خطوات صناعة دِلّة القهوة التقليدية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "من عادات العيد:",
+    "options": [
+      "زيارة الأقارب وتبادل القهوة والتمر",
+      "تزيين شجرة الميلاد",
+      "صبغ البيض فقط",
+      "الألعاب النارية فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "تُقدّم (العيدية) عادةً لـ:",
+    "options": [
+      "الأطفال والأقارب",
+      "المعلمين فقط",
+      "الضيوف الأجانب فقط",
+      "كبار السن فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "ليلة الحناء تُرتبط بـ:",
+    "options": [
+      "الزواج",
+      "العقيقة",
+      "الختان",
+      "الخطوبة فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "في الأعراس تُقدّم الضيافة عادةً:",
+    "options": [
+      "قهوة وتمور وحلويات",
+      "أطباق بحرية فقط",
+      "مشروبات غازية فقط",
+      "لا شيء"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "توقيت صلاة العيد:",
+    "options": [
+      "بعد شروق الشمس بوقت قصير",
+      "قبل الفجر",
+      "بعد الظهر",
+      "بعد المغرب"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "العرضة تُؤدّى غالبًا في:",
+    "options": [
+      "المناسبات الوطنية",
+      "الأعياد المسيحية",
+      "المعارض الفنية فقط",
+      "المدارس فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "من مظاهر رمضان:",
+    "options": [
+      "مجالس الذكر والإفطار الجماعي",
+      "تزيين شجرة خاصة",
+      "رحلات صيد",
+      "كرنفال صيفي"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "في الحجاز، من الحلويات الرمضانية:",
+    "options": [
+      "الكنافة والقطايف",
+      "الجاتوه الفرنسي",
+      "المهلبية التركية",
+      "الزلابية المغربية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "في الجنوب، من العادات:",
+    "options": [
+      "الخطوة واللعب الشعبي",
+      "الدحة فقط",
+      "الدبكة",
+      "السامري النجدي"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Celebration",
+    "question": "تُسمّى وليمة ما بعد العقد في بعض المناطق:",
+    "options": [
+      "الملكة",
+      "الوليمة",
+      "المعمول",
+      "الخِطبة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "صف مراحل الزواج التقليدي من الخطبة حتى الزفاف.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "كيف تختلف مظاهر العيد بين المدن والقرى؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "اذكر أهازيج شعبية تقال في الأعراس.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "ما دور القصائد والحداء في المناسبات؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Celebration",
+    "question": "حلّل أثر المناسبات على الترابط الأسري.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "الرقصة الشعبية في نجد:",
+    "options": [
+      "العرضة",
+      "الدحة",
+      "الخطوة",
+      "العلاوي"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "آلة موسيقية تراثية:",
+    "options": [
+      "العود",
+      "البيانو",
+      "الساكسفون",
+      "الكمان الغربي"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "الدحة تُشتهر في:",
+    "options": [
+      "الشمال",
+      "الجنوب",
+      "الشرق",
+      "الغرب"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "السامري يرتبط بـ:",
+    "options": [
+      "منطقة القصيم والوسطى",
+      "تبوك",
+      "جازان",
+      "أبها"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "الخطوة رقصة في:",
+    "options": [
+      "عسير والجنوب",
+      "نجد",
+      "تبوك",
+      "الجوف"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "الشعر النبطي يُلقى في:",
+    "options": [
+      "المحافل الشعبية",
+      "المعارض الفنية فقط",
+      "المختبرات",
+      "المدارس فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "أهازيج البحر ارتبطت بمدينة:",
+    "options": [
+      "الدمام والأحساء",
+      "أبها",
+      "حائل",
+      "نجران"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "من الألعاب الشعبية:",
+    "options": [
+      "الطائرة الورقية والأحاجي",
+      "الشطرنج فقط",
+      "البلايستيشن",
+      "البيسبول"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "العرضة تحتاج إلى:",
+    "options": [
+      "طبول وسيوف",
+      "أجهزة صوت ضخمة",
+      "كمان فقط",
+      "بيانو"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Entertainment",
+    "question": "الفلكلور الحجازي يسمى:",
+    "options": [
+      "المجرور والمزمار",
+      "الدحة",
+      "الخطوة",
+      "العرضة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "اذكر ألوانًا فنية مميزة لكل منطقة في المملكة.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "صف دور الشعر النبطي في المناسبات الشعبية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "قارن بين العرضة والسمسمية في الأداء والإيقاع.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "ما أثر المهرجانات الوطنية على حفظ الفنون؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Entertainment",
+    "question": "اقترح أنشطة مدرسية لإحياء الفنون الشعبية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "من العادات الاجتماعية قبل الزواج:",
+    "options": [
+      "الخطبة الرسمية بحضور العائلة",
+      "السفر منفردين قبل العقد",
+      "العيش معًا قبل الزواج",
+      "عدم إشراك الأسرة إطلاقًا"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "تقديم المهر يكون غالبًا في:",
+    "options": [
+      "العقد/الملكة",
+      "بعد سنوات من الزواج",
+      "الخطوبة غير الرسمية فقط",
+      "بدون أي مراسم"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الدبلة وخاتم الزواج تُلبس عادةً:",
+    "options": [
+      "في المناسبات بحسب العادات",
+      "غير مستخدمة مطلقًا",
+      "للرجال فقط",
+      "للنساء فقط"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "زيارة العروس لأهل العريس قبل العقد:",
+    "options": [
+      "وفق العُرف والأسرة",
+      "ممنوعة دائمًا",
+      "واجبة شرعًا",
+      "لا تُعرف"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "دفاتر الدعوة والزفّة تُوزَّع:",
+    "options": [
+      "قبل المناسبة بوقت مناسب",
+      "بعد المناسبة",
+      "عشوائيًا",
+      "غير مهمة"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الملكة تشير إلى:",
+    "options": [
+      "إشهار العقد رسميًا",
+      "حفل وداعي",
+      "سهرة مع الأصحاب",
+      "خطبة غير رسمية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الشيلة والأهازيج تُستخدم:",
+    "options": [
+      "في الزفاف والاحتفال",
+      "في الدراسة",
+      "في العمل",
+      "في السفر"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الوليمة غالبًا تكون:",
+    "options": [
+      "بعد العقد أو الزفاف",
+      "قبل الخطبة",
+      "خلال الخطبة فقط",
+      "لا تقام"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "الجاهة/الوجاهة تشير إلى:",
+    "options": [
+      "وفد من وجهاء العائلة للخطبة",
+      "مأدبة طلابية",
+      "رحلة سياحية",
+      "فرقة فنية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dating",
+    "question": "تُقدّم الهدايا بين العائلتين:",
+    "options": [
+      "حسب التقاليد والاتفاق",
+      "ممنوع دائمًا",
+      "إلزامي بكميات كبيرة",
+      "لا يحدث أبدًا"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "اشرح دور العائلة في إتمام الزيجات التقليدية.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "اذكر خطوات الترتيب للملكة والدعوات.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "كيف تُدار الميزانية بين العائلتين في المناسبات؟",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "أمثلة لعادات محلية مميزة في الزواج.",
+    "options": [],
+    "answer": ""
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dating",
+    "question": "صف أساليب الضيافة الشائعة في حفلات الزواج.",
+    "options": [],
+    "answer": ""
+  }
+]

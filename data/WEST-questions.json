@@ -1,0 +1,714 @@
+[
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو ما هو الطبق الأكثر شيوعًا في the west of المملكة العربية السعودية؟",
+    "options": [
+      "Saleeg",
+      "Jareesh",
+      "Mashwai",
+      "Areeka"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو ما هو أشهر طعام شارع تقليدي في the west of المملكة العربية السعودية؟",
+    "options": [
+      "Tanoor bread",
+      "Balila",
+      "Falafel",
+      "Shawarma"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو ما هو طبق الإفطار الأكثر شيوعًا في the west of المملكة العربية السعودية؟",
+    "options": [
+      "Foul and Tamees",
+      "Areeka",
+      "Omelet",
+      "Cheese"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish during Eid Al-Fitr in the west of المملكة العربية السعودية؟",
+    "options": [
+      "Jareesh and Qursan",
+      "Areeka with Ghee",
+      "Mashghoutha",
+      "Nowashif"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the name of a famous spice blend in Madinah, المملكة العربية السعودية, known for its distinctive flavor and essential use in local dishes؟",
+    "options": [
+      "Daqah Al-Madinah",
+      "Baharat",
+      "Za'atar",
+      "Sumac"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "How can “Hubb Soup” be classified as a traditional Saudi stew, and what complementary foods are served with it؟",
+    "options": [
+      "Meat",
+      "Cheese",
+      "Rice",
+      "All of the above"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish in Eid Al-Adha؟",
+    "options": [
+      "Mugalgal",
+      "Jareesh",
+      "Areekah",
+      "Kabsa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the name of the dish prepared by the people of Medina for Eid breakfast؟",
+    "options": [
+      "Al-Harees",
+      "Al-Mathlootha",
+      "Al-Aseeda",
+      "Al-Dibiyaza"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the most common dish في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Saleeg, Sayadiyah, Kebab Al-Mirwa, Bukhari, Al-Ma’adousah, Salatat"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the common traditional street food في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Balila, Potatoes"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the most common breakfast dish في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Foul and Tamees"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish eaten after Eid في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Nowashif"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "How can \"Hubb Soup\" be classified as a traditional Saudi stew, and what complementary foods are served with it؟",
+    "options": [],
+    "answer": "Meat"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the name of a famous spice blend in Madinah, المملكة العربية السعودية, known for its distinctive flavor and essential use in local dishes؟",
+    "options": [],
+    "answer": "Al-Daq Al-Madani"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish in Eid Al-Adha؟",
+    "options": [],
+    "answer": "Liver (Mgalgal)"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for men in the west of المملكة العربية السعودية؟",
+    "options": [
+      "Al-Mirwaden",
+      "Al-Thobe and Al-Sudairi",
+      "Al-Dishdasha",
+      "Al-Mufraj"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for women in the west of المملكة العربية السعودية؟",
+    "options": [
+      "Dara’aah",
+      "Al-Kurta",
+      "Short Skirt",
+      "Al-Mufraj"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for men في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Thobe and Al-Sudairi, Al-Muharid (long-sleeved robe), Al-Aqal Al-Muqasab"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for women في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Kurta"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most popular sweet in the west of المملكة العربية السعودية؟",
+    "options": [
+      "Kleija",
+      "Labniah",
+      "Luqaimat",
+      "Kunafa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most common traditional drink in the west of المملكة العربية السعودية؟",
+    "options": [
+      "Mango Juice",
+      "Sobiah",
+      "Qishr",
+      "Almond Coffee"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the common traditional dances in the west of المملكة العربية السعودية؟",
+    "options": [
+      "Al-Samri",
+      "Al-Qazoui",
+      "Al-Mizmar",
+      "Al-Tarouq"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional music in central المملكة العربية السعودية؟",
+    "options": [
+      "Al-Samri",
+      "Al-Mawal",
+      "Al-Majroor",
+      "Al-Aghani Al-Bahriya"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft in the west of المملكة العربية السعودية؟",
+    "options": [
+      "Sadu Weaving",
+      "Al-Mawal",
+      "Al-Qatt Painting",
+      "Palm Weaving"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the items the bride buys for her wedding in west المملكة العربية السعودية؟",
+    "options": [
+      "Dabish",
+      "Jihaz",
+      "Mahr",
+      "Shabka"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the average amount of dowry presented to the wife in المملكة العربية السعودية؟",
+    "options": [
+      "20"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What type of rice turns brown and is always served with fried or grilled fish في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [
+      "Sayyadiah",
+      "Mandi",
+      "Haneeth",
+      "Kabsa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of a common drink in المنطقة الغربية في المملكة العربية السعودية during Ramadan؟",
+    "options": [
+      "Qamar Al-Din",
+      "Sahlab",
+      "Cinnamon Drink",
+      "Rose Water"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of a common drink in المنطقة الغربية في المملكة العربية السعودية in winter؟",
+    "options": [
+      "Sahlab",
+      "Tea",
+      "Orange Juice",
+      "Bitter Orange Juice"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the most famous pastries in the Western region of المملكة العربية السعودية؟",
+    "options": [
+      "Al-Sharik",
+      "Al-Ka'ak",
+      "Al-Fatoot",
+      "All"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What popular drink is usually served to celebrate the Islamic New Year في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [
+      "Saffron",
+      "Almond Coffee",
+      "Date Milk",
+      "Green Tea"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of a family gathering that happens before Ramadan؟",
+    "options": [
+      "Ramadhnah",
+      "Shabna",
+      "Mawlid Al-Nabi",
+      "Laylat Al-Qadr"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional job in Mecca that involved providing water to pilgrims and worshippers؟",
+    "options": [
+      "Al-Saqaya",
+      "Al-Qallafa",
+      "Al-Kassara",
+      "Al-Harasa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Which Saudi province is famous for rose distillation and producing rose water؟",
+    "options": [
+      "Taif Province",
+      "Al-Ahsa Province",
+      "Yanbu Province",
+      "Al-Rass Province"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the person responsible for assisting pilgrims coming from outside المملكة العربية السعودية, guiding them from their arrival in Mecca until their departure؟",
+    "options": [
+      "Imam",
+      "Moazen",
+      "Sheikh",
+      "Al-Mutawwif"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Which regions of المملكة العربية السعودية is the game of Carrom specifically known؟",
+    "options": [
+      "The regions of Mecca and Medina",
+      "Asir Region",
+      "Al-Baha Region",
+      "Najran Region"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the “Kasrah” in the context of the “Harabi Dance”؟",
+    "options": [
+      "A type of traditional drum used in the performance",
+      "A poetic form consisting of one or two couplets with a consistent rhythm",
+      "A dance move specific to the Harabi",
+      "A musical note played during the performance"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية is the “Al-Majroor” dance a popular folkloric tradition؟",
+    "options": [
+      "Western Region",
+      "Eastern Region",
+      "Southern Region",
+      "Northern Region"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Where is the dance “Al-Ashouri” famous in المملكة العربية السعودية؟",
+    "options": [
+      "North المملكة العربية السعودية",
+      "المنطقة الوسطى في المملكة العربية السعودية",
+      "East المملكة العربية السعودية",
+      "West المملكة العربية السعودية"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the method of greeting a guest in the Western region؟",
+    "options": [
+      "The Nose and Cheeks",
+      "Forehead",
+      "Hands",
+      "Head"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the event that happens to the bride before the wedding في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [
+      "Ghumrah",
+      "Al-Zayoon",
+      "Henna Night",
+      "Bridal Shower"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the surah in the Quran that is read to declare engagement في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [
+      "Surat Al-Fatiha",
+      "Surat Al-Baqarah",
+      "Surat Yasin",
+      "Surat Al-Ikhlas"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the financial amount that the mother of the bride receives upon the marriage contract؟",
+    "options": [
+      "5"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Where do the people of Mecca usually go the night the pilgrims spend the night at Arafat during the Hajj days؟",
+    "options": [
+      "Muzdalifah",
+      "Masjid Quba",
+      "Mina",
+      "Holy Mosque"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What color does the red “Mabroom” date tend to؟",
+    "options": [
+      "Honey-colored",
+      "Yellow",
+      "Brown",
+      "Black"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "What accompanies the “Harabi Dance”؟",
+    "options": [
+      "Rhythms of the Zeer drum and tambourines",
+      "Improvised poetry sung by group leaders (Rabbans)",
+      "Audience chants and shouts",
+      "Tambourine rhythms and poetic verses together"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "The “Yalli Dance” is a traditional group folk dance known in the western region of المملكة العربية السعودية. In which areas is it performed؟",
+    "options": [
+      "Makkah",
+      "Madinah",
+      "Riyadh",
+      "Jazan"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هو the traditional attire worn by the “Jassis” in المملكة العربية السعودية؟",
+    "options": [
+      "Turban worn on the head",
+      "Thobe with a sidari (vest)",
+      "Shawl draped over the shoulder",
+      "Traditional cloak"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft in the west of المملكة العربية السعودية؟",
+    "options": [
+      "Sadu Weaving",
+      "Rose Perfume Production",
+      "Al-Qatt Painting",
+      "Palm Weaving"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the most common sweet في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Qamar Al-Din, Al-Ladu, Al-Labiyah, Al-Ghraibah, Al-Hareesah, Al-Dubayzah, Al-Masiyyah, Al-Saqdanah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional drink في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Sobia, Raspberry Juice, Qamar Al-Din"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the common traditional dances في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Mizmar"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional music في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Majroor"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Rosaries and Taif rose perfume, Sadu, pottery products, leather tanning, Al-Dalw, Al-Sabt (land plowing)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the items the bride buys for her wedding في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Dabish"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the average amount of dowry presented to the wife in المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "30,000–40,000 SAR"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of a common drink in المنطقة الغربية في المملكة العربية السعودية during Ramadan؟",
+    "options": [],
+    "answer": "Qamar Al-Din"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What type of rice turns brown and is always served with fried or grilled fish في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Sayadiyah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the most famous pastries in the Western region of المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Sharik, Al-Kaak, Al-Fetout"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of a common drink in المنطقة الغربية في المملكة العربية السعودية in winter؟",
+    "options": [],
+    "answer": "Sahlab"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the method of greeting a guest in the Western region؟",
+    "options": [],
+    "answer": "Touching the nose and cheeks"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the financial amount that the mother of the bride receives upon the marriage contract؟",
+    "options": [],
+    "answer": "5,000 SAR"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the surah in the Quran that is read to declare engagement في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Surat Al-Fatiha"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the event that happens to the bride before the wedding في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Ghumrah (bride’s dressing ceremony)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What popular drink is usually served to celebrate the Islamic New Year في المنطقة الغربية من المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Almond Coffee (White Coffee)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of a family gathering that happens before Ramadan؟",
+    "options": [],
+    "answer": "Shabna"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Where do the people of Mecca usually go the night the pilgrims spend the night at Arafat؟",
+    "options": [],
+    "answer": "The Holy Mosque"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Which Saudi province is famous for rose distillation and producing rose water؟",
+    "options": [],
+    "answer": "Taif"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the person responsible for assisting pilgrims coming from outside المملكة العربية السعودية, guiding them from their arrival in Mecca until their departure؟",
+    "options": [],
+    "answer": "Mutawwif"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional job in Mecca that involved providing water to pilgrims and worshippers؟",
+    "options": [],
+    "answer": "Al-Siqayah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Which regions of المملكة العربية السعودية is the game of Carrom specifically known؟",
+    "options": [],
+    "answer": "The regions of Mecca and Medina"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the \"Kasrah\" in the context of the \"Harabi Dance\"؟",
+    "options": [],
+    "answer": "A poetic form consisting of one or two couplets with a consistent rhythm"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "In which region of المملكة العربية السعودية is the \"Al-Majroor\" dance a popular folkloric tradition؟",
+    "options": [],
+    "answer": "Western Region"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Where is the dance \"Al-Ashouri\" famous in المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Western Region"
+  }
+]

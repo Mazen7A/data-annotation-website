@@ -1,0 +1,752 @@
+[
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو ما هو الطبق الأكثر شيوعًا في المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Areeka",
+      "Jareesh",
+      "Mansaf",
+      "Burgers"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو ما هو أشهر طعام شارع تقليدي في المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Corn",
+      "French Fries",
+      "Mutabbaq",
+      "Shawarma"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو ما هو طبق الإفطار الأكثر شيوعًا في المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Liver (Kebda)",
+      "Areeka",
+      "Ful Medames",
+      "Samboosa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish during Eid-al-Fitr in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Jareesh and Qursan",
+      "Areeka with Ghee",
+      "Mashghoutha",
+      "Tannour Bread"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the traditional winter dish made from dates and brown bread in Al-Qassim؟",
+    "options": [
+      "Al-Hanini",
+      "Al-Areekah",
+      "Al-Jareesh",
+      "Al-Hamees"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هو the traditional Saudi food made from dried yogurt, shaped into white solid pieces؟",
+    "options": [
+      "Al-Aqit",
+      "Labneh",
+      "Ghee",
+      "Yogurt"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "In which region of المملكة العربية السعودية is \"Al-Marqooq\" considered a traditional dish؟",
+    "options": [
+      "Al-Qassim",
+      "Hail",
+      "Madinah",
+      "Riyadh"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "In which region of المملكة العربية السعودية is \"Al-Marasee’\" a main traditional dish؟",
+    "options": [
+      "Riyadh",
+      "Al-Baha",
+      "Al-Ahsa",
+      "Asir"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Food",
+    "question": "ما هي the essential ingredients used in preparing \"Al-Haneeni,\" a dish known for its connection to traditional Saudi cuisine؟",
+    "options": [
+      "Dates and wheat bread",
+      "Butter"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Food",
+    "question": "Which of the following traditional dishes are associated with Riyadh؟",
+    "options": [
+      "Al-Maraqooq",
+      "Al-Maras’ee",
+      "Al-Haneeth",
+      "Al-Arika"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Food",
+    "question": "How can the traditional Saudi dish \"Mathlootha\" be classified؟",
+    "options": [
+      "Winter dishes",
+      "Summer dishes",
+      "Seasonal dishes",
+      "Year-round dishes"
+    ],
+    "answer": "A and C"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو ما هو الطبق الأكثر شيوعًا في المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Jareesh"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the common traditional street food in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Grilled Corn, Fried Potatoes"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو ما هو طبق الإفطار الأكثر شيوعًا في المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Liver (Kibdah), Shakshouka"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the traditional breakfast dish during Eid in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Jareesh, Qursan, Meat with Rice"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the traditional winter dish made from dates and brown bread in Al-Qassim؟",
+    "options": [],
+    "answer": "Al-Hanini"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "ما هو the name of the traditional Saudi food made from dried yogurt, shaped into white solid pieces؟",
+    "options": [],
+    "answer": "Al-Aqit"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "In which region of المملكة العربية السعودية is “Al-Marqooq” considered a regional dish؟",
+    "options": [],
+    "answer": "Riyadh"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Food",
+    "question": "In which region of المملكة العربية السعودية is “Al-Marasee’” a main traditional dish؟",
+    "options": [],
+    "answer": "Riyadh"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for women in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Mirwaden",
+      "Al-Nashil Al-Najdi",
+      "Thobe Asiri",
+      "Al-Mufraj"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for men in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Mirwaden",
+      "Al-Thobe and Al-Sudairi",
+      "Al-Dishdasha",
+      "Al-Mufraj"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for men in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Murudan, Al-Mukammam"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Clothes",
+    "question": "ما هو the traditional clothing for women in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Nashl Al-Najdi"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most popular sweet in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Kleija",
+      "Cookies",
+      "Luqaimat",
+      "Kunafa"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the most common traditional drink in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Saudi Coffee (Qahwa)",
+      "Orange Juice",
+      "Mint Tea",
+      "Dates Milk"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هي the common traditional dances in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Ardha",
+      "Al-Qazou’i",
+      "Al-Huweili",
+      "Al-Tarouq"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional music in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Al-Samri",
+      "Al-Mawal",
+      "Al-Damma",
+      "Al-Aghani Al-Bahriya (Sea Songs)"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Shipment Making",
+      "Mud Building",
+      "Fishing",
+      "Clock Embroidery"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the items the bride buys for her wedding in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Dabish",
+      "Al-Jihaz",
+      "Maher",
+      "Shabka"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the average amount of dowry presented to the wife in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "20"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the main traditional sweet in the Al-Qassim region؟",
+    "options": [
+      "Al-Loubyah",
+      "Wheat Harees",
+      "Al-Marasee’",
+      "Millet Harees"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هيas in central المملكة العربية السعودية were historically known for making jewelry؟",
+    "options": [
+      "Al-Diriyah",
+      "Sudair",
+      "Buraidah",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "How many stages are involved in oud oil production in المملكة العربية السعودية؟",
+    "options": [
+      "5 stages",
+      "6 stages",
+      "7 stages",
+      "8 stages"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو \"Al-Kummar\" in traditional Najdi houses in المملكة العربية السعودية؟",
+    "options": [
+      "Food storage room",
+      "Architectural feature for storing tea and coffee utensils",
+      "Traditional projecting window",
+      "Type of wooden seating"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو \"Al-Liwan\" in traditional Najdi houses in Riyadh؟",
+    "options": [
+      "Open seating area",
+      "Storage room",
+      "Courtyard",
+      "Main entrance"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What describes traditional building styles in Al-Qassim؟",
+    "options": [
+      "Building residential clusters along trade and pilgrimage caravan routes",
+      "Constructing elevated stone palaces",
+      "Mud houses in oases",
+      "Square house designs"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "How many rows are formed in the Saudi Ardah dance؟",
+    "options": [
+      "One row",
+      "Two rows",
+      "Three rows",
+      "Four rows"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "In which musical mode are most Saudi Ardah poems composed and performed؟",
+    "options": [
+      "Hijaz",
+      "Saba",
+      "Sika",
+      "Nahawand"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the famous festival in Riyadh for arts and crafts؟",
+    "options": [
+      "Al-Janadriyah",
+      "Souq Okaz",
+      "Riyadh Season",
+      "Al-Qassim Heritage Festival"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Where do people in Riyadh usually go when the weather turns cold؟",
+    "options": [
+      "Desert",
+      "Mountains",
+      "Beach",
+      "Shopping Malls"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of a single beat of the large drum in the Saudi Ardah dance؟",
+    "options": [
+      "Al-Muthaniya",
+      "Al-Tathleeth",
+      "Al-Tafreedah",
+      "Al-Mawazeer"
+    ],
+    "answer": 2
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Where is the \"Al-La’ybouli\" dance popular in المملكة العربية السعودية؟",
+    "options": [
+      "المنطقة الشمالية في المملكة العربية السعودية",
+      "المنطقة الوسطى في المملكة العربية السعودية",
+      "المنطقة الشرقية في المملكة العربية السعودية",
+      "المنطقة الغربية في المملكة العربية السعودية"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What does the term \"Al-Ta’leelah\" mean in Saudi culture؟",
+    "options": [
+      "Coffee gathering",
+      "Evening storytelling",
+      "Wedding preparation",
+      "Night singing"
+    ],
+    "answer": 1
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "ما هو the name of the traditional Saudi dessert made of crispy biscuits filled with date molasses and black lime؟",
+    "options": [
+      "Kleija",
+      "Mamoul",
+      "Haneeni",
+      "Qursan"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Which of the following traditional crafts are practiced in the Qassim region؟",
+    "options": [
+      "Sadu weaving",
+      "Embroidery",
+      "Perfume and incense making (including Oud oil)",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Which of the following are traditional crafts in the Riyadh region of المملكة العربية السعودية؟",
+    "options": [
+      "Making traditional cloaks (Bishoot) and headbands (Iqal)",
+      "Crafting handmade weapons",
+      "Creating heritage wooden boxes",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "What colors are commonly used in Sadu weaving؟",
+    "options": [
+      "Red and yellow",
+      "White and black",
+      "Blue and yellow",
+      "Red and green"
+    ],
+    "answer": 3
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "How is the \"Al-Fann Al-Houti\" dance traditionally performed in terms of formation؟",
+    "options": [
+      "Performers line up in two straight rows facing each other",
+      "Performers form a circular shape",
+      "Performers form a single straight line",
+      "Performers stand randomly"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Where did the \"Naqoos\" or \"Najooz\" dance, a traditional dance and artistic singing style, originate in المملكة العربية السعودية؟",
+    "options": [
+      "Najd",
+      "Hejaz",
+      "Asir",
+      "Eastern Province"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ",
+    "Category": "Heritage",
+    "question": "Where did the traditional Saudi art of \"Samri\" originate before spreading to other regions؟",
+    "options": [
+      "Al-Qassim",
+      "Hail",
+      "Wadi Al-Dawasir",
+      "Southern Riyadh"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "Who traditionally prepares \"Maamoul Al-Dawasir\" in Saudi culture؟",
+    "options": [
+      "Women only",
+      "Men specialized in the herbal trade",
+      "Men only",
+      "Elderly men and women"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هي the traditional crafts famous in the Qassim region؟",
+    "options": [
+      "Making heritage doors",
+      "Crafting traditional utensils",
+      "Designing heritage windows",
+      "None of the above"
+    ],
+    "answer": "A, B, and C"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هو the main musical characteristic of the Saudi Ardah؟",
+    "options": [
+      "The melody does not exceed the fourth degree of the musical scale",
+      "The rhythm relies heavily on drums for dramatic effect",
+      "The melody is accompanied by string instruments like the Rababa",
+      "The melody is highly melodic and intricate"
+    ],
+    "answer": "A and B"
+  },
+  {
+    "type": "MCQ_MULTIPLE",
+    "Category": "Heritage",
+    "question": "ما هو the primary role of the poet in the Saudi Ardah؟",
+    "options": [
+      "To perform the melody on string instruments",
+      "To recite the opening verses"
+    ],
+    "answer": "C and D"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the most common sweet in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Kleija"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional drink in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Saudi Coffee (Gahwa)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the common traditional dances in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Ardah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional music in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Samri"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the common traditional craft in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Sadu Weaving, Palm-Frond Weaving (Khoos), Mud-Building"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the items the bride buys for her wedding in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Al-Jihaz (Bridal Set)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the average amount of dowry presented to the wife in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "50,000–100,000 SAR"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the main traditional sweet in the Al-Qassim region؟",
+    "options": [],
+    "answer": "Al-Kleijah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هيas in central المملكة العربية السعودية were historically known for making jewelry؟",
+    "options": [],
+    "answer": "Al-Diriyah, Sudair ,Buraidah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "How many stages does the process of producing oud oil in المملكة العربية السعودية go through؟",
+    "options": [],
+    "answer": "Seven stages"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو “Al-Kummar” in the context of traditional Najdi houses in المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "An architectural feature for storing tea and coffee utensils"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو “Al-Liwan” in traditional Najdi houses in Riyadh؟",
+    "options": [],
+    "answer": "An open seating area"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هي the traditional architectural styles in the Al-Qassim region؟",
+    "options": [],
+    "answer": "Building residential clusters along trade and pilgrimage caravan routes"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "How many rows are formed in the Saudi Ardah dance؟",
+    "options": [],
+    "answer": "Two rows"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "In which musical mode are most Saudi Ardah poems composed and performed؟",
+    "options": [],
+    "answer": "Sika (Al-Sika)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Where do people in Riyadh usually go when the weather turns cold؟",
+    "options": [],
+    "answer": "To the desert (Al-Barr)"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name given to a single strike of the large drum in the Saudi Ardah dance؟",
+    "options": [],
+    "answer": "Al-Tafreedah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "What does the term “Al-Ta’leelah” refer to in Saudi culture؟",
+    "options": [],
+    "answer": "Evening storytelling"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "ما هو the name of the famous festival in Riyadh for arts and crafts؟",
+    "options": [],
+    "answer": "Al-Janadriyah"
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Heritage",
+    "question": "Where is the “Al-La’ybouli” dance popular in المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Central Saudi Arabia"
+  },
+  {
+    "type": "MCQ",
+    "Category": "Dialect",
+    "question": "ما هي the most common welcoming phrases in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [
+      "Marhaba Alf",
+      "Arhabo",
+      "Marhabli",
+      "Ahlan wa Sahlan"
+    ],
+    "answer": 0
+  },
+  {
+    "type": "OPEN_ENDED",
+    "Category": "Dialect",
+    "question": "ما هي the most common welcoming phrases in المنطقة الوسطى في المملكة العربية السعودية؟",
+    "options": [],
+    "answer": "Marhaban Alf"
+  }
+]
